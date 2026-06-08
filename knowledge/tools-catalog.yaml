@@ -401,27 +401,18 @@ entries:
     installable: false
     kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）  - id: anthropic-frontend-design-2
-    name: Anthropic frontend-design
+  - id: awesome-design-md
+    name: awesome-design-md
     category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: Claude Code 原生插件
-    tags: [anthropic, frontend-design, agent-skill, claude-code, anti-slop]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md]
-    ingest_ids: [ING-20260608-008]
-  - id: impeccable-2
-    name: Impeccable
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 20 个设计斜杠命令，教 agent 排版/间距/层次；见本库 [专文](2026-06-08-impeccable-style-frontend-design.md)
-    tags: [awesome-list, frontend-design, anti-slop, agent-skill, mcp]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
-    ingest_ids: [ING-20260608-008]
+    positioning: 73 品牌 DESIGN.md 合集 · 复制即用设计变量
+    summary: VoltAgent 维护的 Stripe/Linear/Apple 等顶级产品设计规范 Markdown；复制到项目根目录供 Cursor/Stitch 遵循。
+    tags: [design-md, design-system, frontend-design, anti-slop, cursor]
+    homepage: https://github.com/VoltAgent/awesome-design-md
+    installable: true
+    registry_id: awesome-design-md
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md]
 
+# 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }
