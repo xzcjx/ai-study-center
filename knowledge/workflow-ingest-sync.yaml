@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260608-014"
+last_ingest_id: "ING-20260608-015"
 
 playbook_notes:
   fe-demo-shell:
@@ -29,6 +29,7 @@ playbook_notes:
     - notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md
     - notes/ai-tools/code-review/2026-06-08-ai-first-gate-review-experiment.md
     - notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md
+    - notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -142,6 +143,12 @@ keywords:
     - review-bottleneck
     - tool-landscape
     - team-rollout
+    - review-quality
+    - diff-context
+    - ci-cd
+    - test-generation
+    - team-style
+    - visualization
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -202,33 +209,33 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260608-014
-    note: notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md
-    kb_id: KB-AI-20260608-ai-code-review-next-wave-trend
+  - ingest_id: ING-20260608-015
+    note: notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md
+    kb_id: KB-AI-20260608-ai-review-quality-16-schemes
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08
-  - ingest_id: ING-20260608-014
-    note: notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md
-    kb_id: KB-AI-20260608-ai-coding-era-review-upgrade
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-08
-  - ingest_id: ING-20260608-014
-    note: notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md
-    kb_id: KB-AI-20260608-ai-code-review-workflow-methodology
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-08
-  - ingest_id: ING-20260608-014
+  - ingest_id: ING-20260608-015
     note: notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md
     kb_id: KB-AI-20260608-ai-code-review-prompt-guide
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08
-  - ingest_id: ING-20260608-014
-    note: notes/ai-tools/code-review/2026-06-08-ai-first-gate-review-experiment.md
-    kb_id: KB-AI-20260608-ai-first-gate-review-experiment
+  - ingest_id: ING-20260608-015
+    note: notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md
+    kb_id: KB-AI-20260608-ai-code-review-workflow-methodology
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08
-  - ingest_id: ING-20260608-014
+  - ingest_id: ING-20260608-015
     note: notes/ai-tools/code-review/2026-06-08-ai-business-code-review.md
     kb_id: KB-ARCH-20260608-ai-business-code-review
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-08
+  - ingest_id: ING-20260608-015
+    note: notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md
+    kb_id: KB-AI-20260608-ai-code-review-next-wave-trend
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-08
+  - ingest_id: ING-20260608-015
+    note: notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md
+    kb_id: KB-AI-20260608-ai-coding-era-review-upgrade
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08

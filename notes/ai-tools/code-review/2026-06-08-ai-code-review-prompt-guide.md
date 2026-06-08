@@ -11,7 +11,7 @@ source:
 tags: [code-review, prompt, cursor, claude, copilot, security-review, flask, sonarqube, codacy]
 difficulty: beginner
 status: active
-related: [KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend]
+related: [KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-review-quality-16-schemes]
 ingest_id: ING-20260608-010
 updated: 2026-06-08
 ---
@@ -225,6 +225,7 @@ cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
 - 项目内：[AI 编程时代 Review 升级](2026-06-08-ai-coding-era-review-upgrade.md)（`KB-AI-20260608-ai-coding-era-review-upgrade`，五维分维度 Prompt、团队清单）
 - 项目内：[AI 第一道 Review 两个月实验](2026-06-08-ai-first-gate-review-experiment.md)（`KB-AI-20260608-ai-first-gate-review-experiment`，固定 Prompt + PR 贴原文）
 - 项目内：[AI Code Review 下一波机会](2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`，工具版图与选型）
+- 项目内：[16 个提升评审质量方案](2026-06-08-ai-review-quality-16-schemes.md)（`KB-AI-20260608-ai-review-quality-16-schemes`，方案 1/5/8 深度索引）
 - [SonarQube 文档](https://docs.sonarqube.org/)
 - [Codacy 文档](https://docs.codacy.com/)
 
@@ -232,6 +233,7 @@ cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 16 方案质量提升笔记（ING-20260608-015） |
 | 2026-06-08 | 交叉引用下一波机会趋势笔记（ING-20260608-014） |
 | 2026-06-08 | 交叉引用第一道 Review 实验笔记（ING-20260608-013） |
 | 2026-06-08 | 交叉引用 Review 升级笔记（ING-20260608-012） |
