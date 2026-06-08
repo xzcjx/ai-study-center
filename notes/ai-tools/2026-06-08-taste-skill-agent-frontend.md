@@ -10,7 +10,7 @@ source:
 tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor, design-system, motion]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-impeccable-style-frontend-design, KB-AI-20260608-awesome-ai-tools-for-ui]
+related: [KB-AI-20260608-impeccable-style-frontend-design, KB-AI-20260608-awesome-ai-tools-for-ui, KB-AI-20260608-anthropic-frontend-design-skill]
 ingest_id: ING-20260608-001
 updated: 2026-06-08
 ---
@@ -166,11 +166,13 @@ Follow image-to-code: generate visual references first, analyze the selected fra
 - 社区导读：杰克王《AI 生成的界面丑成 PPT？taste-skill 22K Star》（粘贴入库，无独立 URL）
 - 项目内：[impeccable.style 设计词典与斜杠命令](2026-06-08-impeccable-style-frontend-design.md)（`KB-AI-20260608-impeccable-style-frontend-design`）
 - 项目内：[Awesome AI Tools for UI 工具导航](2026-06-08-awesome-ai-tools-for-ui.md)（`KB-AI-20260608-awesome-ai-tools-for-ui`，清单 ⭐️ 收录）
+- 项目内：[Anthropic Frontend Design Skill 三步反 Slop](2026-06-08-anthropic-frontend-design-skill.md)（`KB-AI-20260608-anthropic-frontend-design-skill`）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 Anthropic Frontend Design Skill 笔记（ING-20260608-005） |
 | 2026-06-08 | 交叉引用 Awesome AI Tools for UI 导航笔记（ING-20260608-004） |
 | 2026-06-08 | 交叉引用 impeccable.style 笔记（ING-20260608-003） |
 | 2026-06-08 | 合并更新（ING-20260608-002）：补充 Slop 定义、作者/Star 背景、Issues 反馈、Floria 示例、中文场景缺口、三种接入方式 |

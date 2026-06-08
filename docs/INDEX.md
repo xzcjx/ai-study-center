@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 3 |
+| AI 工具 | 4 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
 | 其他 | 0 |
-| **合计** | **3** |
+| **合计** | **4** |
 
 ---
 
@@ -44,6 +44,7 @@
 | 2026-06-08 | Taste Skill：为 AI Agent 前端生成注入设计纪律 | `taste-skill`, `agent-skill`, `frontend-design` | [笔记](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md) · `KB-AI-20260608-taste-skill-agent-frontend` |
 | 2026-06-08 | impeccable.style：用设计词典与斜杠命令对抗 AI 前端 Slop | `impeccable`, `frontend-design`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md) · `KB-AI-20260608-impeccable-style-frontend-design` |
 | 2026-06-08 | Awesome AI Tools for UI：对抗 AI 前端 Slop 的工具导航 | `awesome-list`, `frontend-design`, `anti-slop`, `mcp` | [笔记](../notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md) · `KB-AI-20260608-awesome-ai-tools-for-ui` |
+| 2026-06-08 | Anthropic Frontend Design Skill：三步告别 AI 前端 Slop | `anthropic`, `frontend-design`, `claude-code`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md) · `KB-AI-20260608-anthropic-frontend-design-skill` |
 
 ## DevOps · devops
 
@@ -73,12 +74,13 @@
 
 ## 标签云（手动维护）
 
-`taste-skill` · `impeccable` · `awesome-list` · `agent-skill` · `frontend-design` · `anti-slop` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation`
+`taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 新建 | [Anthropic Frontend Design Skill 三步反 Slop](../notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md)（ING-20260608-005） |
 | 2026-06-08 | 新建 | [Awesome AI Tools for UI 工具导航](../notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md)（ING-20260608-004） |
 | 2026-06-08 | 新建 | [impeccable.style 前端设计词典](../notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md)（ING-20260608-003） |
 | 2026-06-08 | 合并更新 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md)（ING-20260608-002） |

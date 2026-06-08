@@ -129,6 +129,63 @@ tools:
       已安装 impeccable。请按序执行：/audit 诊断 → /distill 简化 → /colorize 配色 → /polish 收尾。
       然后根据我的需求继续：{用户补充的场景描述}
 
+  - id: anthropic-frontend-design
+    name: Anthropic Frontend Design Skill
+    summary: >-
+      Anthropic 官方 agent skill：生成前 Design Thinking + 美学方向（aesthetic direction），
+      规避 Inter/紫渐变等 AI slop；Claude Code 插件或 npx 安装。
+    kb_id: KB-AI-20260608-anthropic-frontend-design-skill
+    note_path: notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
+    homepage: https://github.com/anthropics/skills/tree/main/skills/frontend-design
+    module: ai-tools
+    intents:
+      - frontend-design
+      - anti-slop
+      - ui-generation
+      - agent-skill
+      - claude-code
+    keywords:
+      - anthropic
+      - frontend-design
+      - claude-code
+      - aesthetic-direction
+      - coolors
+      - 好看
+      - 审美
+      - 前端界面
+      - slop
+      - minimax
+    agents: [claude-code, cursor, codex]
+    pairs_with: [taste-skill, impeccable]
+    install:
+      default_method: claude-plugin
+      methods:
+        - id: claude-plugin
+          label: "Claude Code 插件（推荐）"
+          type: manual
+          scope: global
+          agent: claude-code
+          instructions: >-
+            在 Claude Code 中执行 /plugin → Add Marketplace → 输入 anthropics/claude-code
+            → Browse and install plugins → 安装 frontend-design。
+        - id: npx-skill
+          label: "npx skills add（Cursor/Codex 等）"
+          type: shell
+          scope: project
+          command: npx skills add https://github.com/anthropics/skills --skill frontend-design
+        - id: paste
+          label: "粘贴 SKILL.md 到对话"
+          type: manual
+          scope: project
+          instructions: >-
+            从 https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md
+            复制全文到对话，任务末尾写 use frontend-design skill。
+    usage_prompt: |
+      use frontend-design skill
+      use aesthetic direction: {Minimalism|Dark Mode|organic/natural|…}
+      color palette: {从 coolors.co 复制的 CSS 变量}
+      {你的页面需求}
+
 # 意图 → 推荐工具（用于 /kb-recommend 无关键词时的默认映射）
 intent_aliases:
   好看的前端: [frontend-design, anti-slop, ui-generation]

@@ -10,7 +10,7 @@ source:
 tags: [awesome-list, frontend-design, anti-slop, agent-skill, mcp, cursor, ui-generation]
 difficulty: beginner
 status: active
-related: [KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-impeccable-style-frontend-design]
+related: [KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-impeccable-style-frontend-design, KB-AI-20260608-anthropic-frontend-design-skill]
 ingest_id: ING-20260608-004
 updated: 2026-06-08
 ---
@@ -71,7 +71,7 @@ updated: 2026-06-08
 | ⭐️ Swiss Design System | 瑞士风格：grotesque 字体、纪律网格、克制配色 + Tailwind 模式 |
 | UserInterface.wiki Skill | 152 条 UI 设计规则打包为 skill |
 | UI UX Pro Max Skill | 按项目类型与框架生成设计系统（色板、字体、布局） |
-| Anthropic Frontend Design Skill | 官方 skill，强化视觉方向、避免 generic 默认 |
+| Anthropic Frontend Design Skill | 官方 skill，强化视觉方向、避免 generic 默认；见本库 [专文](2026-06-08-anthropic-frontend-design-skill.md) |
 | shadcn/ui Skills | 让 agent 理解项目 shadcn 配置，生成正确组件代码 |
 | Web Design Guidelines Skill | 对照 Web 设计最佳实践检查 UI 代码 |
 | TypeUI Design Skills | 多风格 UI 设计 + 可下载 `skill.md` |
@@ -138,9 +138,11 @@ open https://github.com/maxbogo/awesome-ai-tools-for-ui
 - [impeccable.style](https://impeccable.style/)
 - 项目内：[Taste Skill 前端设计纪律](2026-06-08-taste-skill-agent-frontend.md)（`KB-AI-20260608-taste-skill-agent-frontend`）
 - 项目内：[impeccable.style 设计词典](2026-06-08-impeccable-style-frontend-design.md)（`KB-AI-20260608-impeccable-style-frontend-design`）
+- 项目内：[Anthropic Frontend Design Skill 三步反 Slop](2026-06-08-anthropic-frontend-design-skill.md)（`KB-AI-20260608-anthropic-frontend-design-skill`）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 Anthropic Frontend Design Skill 专文（ING-20260608-005） |
 | 2026-06-08 | 初稿（ING-20260608-004），整合社区导读与 GitHub README（37 项五类清单） |
