@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 8 |
+| AI 工具 | 9 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 1 |
 | 其他 | 0 |
-| **合计** | **9** |
+| **合计** | **10** |
 
 ---
 
@@ -49,6 +49,7 @@
 | 2026-06-08 | 三种方法去除 AI 编程 Slop：参考克隆、Gemini 壳层、Agent Skills | `anti-slop`, `aura-build`, `google-ai-studio`, `gemini` | [笔记](../notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md) · `KB-AI-20260608-three-ways-remove-ai-slop` |
 | 2026-06-08 | awesome-design-md：复制 DESIGN.md 让 AI 按顶级设计系统出 UI | `awesome-design-md`, `design-md`, `design-system`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md) · `KB-AI-20260608-awesome-design-md-agent-ui` |
 | 2026-06-08 | AI Code Review 实战：Prompt 模板、集成方式与人工协作 | `code-review`, `prompt`, `cursor`, `security-review` | [笔记](../notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md) · `KB-AI-20260608-ai-code-review-prompt-guide` |
+| 2026-06-08 | AI 辅助 Code Review 方法论：提 PR 前自查、分层检查与有效意见 | `code-review`, `self-review`, `layered-review`, `pr-description` | [笔记](../notes/ai-tools/2026-06-08-ai-code-review-workflow-methodology.md) · `KB-AI-20260608-ai-code-review-workflow-methodology` |
 
 ## DevOps · devops
 
@@ -78,12 +79,13 @@
 
 ## 标签云（手动维护）
 
-`code-review` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`code-review` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 新建 | [AI Code Review 方法论](../notes/ai-tools/2026-06-08-ai-code-review-workflow-methodology.md)（ING-20260608-011） |
 | 2026-06-08 | 新建 | [AI Code Review Prompt 实战指南](../notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md)（ING-20260608-010） |
 | 2026-06-08 | 新建 | [业务级 AI Code Review 全链路](../notes/architecture/2026-06-08-ai-business-code-review.md)（ING-20260608-009） |
 | 2026-06-08 | 新建 | [awesome-design-md DESIGN.md 设计系统](../notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md)（ING-20260608-008） |

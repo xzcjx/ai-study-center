@@ -10,7 +10,7 @@ source:
 tags: [code-review, prompt, cursor, claude, copilot, security-review, flask, sonarqube, codacy]
 difficulty: beginner
 status: active
-related: [KB-ARCH-20260608-ai-business-code-review]
+related: [KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-code-review-workflow-methodology]
 ingest_id: ING-20260608-010
 updated: 2026-06-08
 ---
@@ -219,6 +219,7 @@ cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
 
 ## 相关链接
 
+- 项目内：[AI Code Review 方法论](2026-06-08-ai-code-review-workflow-methodology.md)（`KB-AI-20260608-ai-code-review-workflow-methodology`）— 提 PR 前自查、分层检查、有效意见
 - 项目内：[业务级 AI Code Review 全链路](../architecture/2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）— Webhook、RAG、Diff 预处理
 - [SonarQube 文档](https://docs.sonarqube.org/)
 - [Codacy 文档](https://docs.codacy.com/)
@@ -227,4 +228,5 @@ cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 CR 方法论笔记（ING-20260608-011） |
 | 2026-06-08 | 初稿（ING-20260608-010），整合 AI Code Review Prompt 模板、Flask 案例与集成方式 |
