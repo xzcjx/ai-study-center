@@ -269,547 +269,139 @@ entries:
     kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
     starred: true
 
-# 分类筛选别名（/kb-recommend 汇总模式）  - id: tool
-    name: 需求
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 「小满造物」个人主页
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
+  # --- 设计辅助 · Vibe Coding 工具箱（ING-20260608-007）---
+  - id: realtime-colors
+    name: Realtime Colors
+    category: design-tools
+    positioning: 配色预览 · 抄 HEX 给 AI
+    summary: 调好色板直接预览网页真实效果，定好后把 HEX 色值写进 agent 约束。
+    tags: [color, palette, prompt, vibe-coding]
+    homepage: https://realtimecolors.com/
     installable: false
     kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 页面类型
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 头像、导航、卡片、列表齐全的单页
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 多模态解析倾向
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 丢失项
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 语义结构（导航在哪、栅格关系）
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 精准 HEX、阴影参数、字重层级
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: ui
-    name: 高频 UI 库默认样式「幻觉补偿」
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 「为什么好看」的设计 rationale
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 策略
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 上手成本
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 零约束
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 最低
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: prompt
-    name: 设计 Prompt
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 低
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 纯截图
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 低
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: realtime-colors-https-realtimecolors-com
-    name: [Realtime Colors](https://realtimecolors.com/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 调色板 + 网页真实预览
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: fontpair-https-www-fontpair-co
-    name: [Fontpair](https://www.fontpair.co/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 标题 + 正文字体搭配
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: typescale-https-typescale-com
-    name: [TypeScale](https://typescale.com/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 字号层级生成
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 资源
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 特点
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: designprompts-https-designprompts-dev
-    name: [designprompts](https://designprompts.dev)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: **主推**，约 30 种风格（极简→赛博朋克），本文 SaaS 案例来源
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: ui-prompt-explorer-https-uipromptexplorer-com
-    name: [UI Prompt Explorer](https://uipromptexplorer.com/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 按场景分组，主题覆盖更细
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: uiprompt-https-uiprompt-io
-    name: [uiprompt](https://uiprompt.io/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 20+ 高频风格，含移动端 Prompt
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: landinghero-library-https-landinghero-dev
-    name: [LandingHero Library](https://landinghero.dev/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 1000+ UI 区块截图，挑具体区块让 AI 搭骨架（非 prompt）
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: claudekit-frontend-demo-https-claudekit-cc
-    name: [ClaudeKit Frontend Demo](https://claudekit.cc/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 带交互/动效的 Prompt 样本，微动效需求可翻
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: ui-prompt-builder-https-uipromptbuilder-com
-    name: [UI Prompt Builder](https://uipromptbuilder.com/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 上传截图 → 自动提取色值、字号、间距 → 文字设计规范
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: ai-ux-playground-https-aiuxplayground-com
-    name: [AI/UX Playground](https://aiuxplayground.com/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 专用 Prompt 榨取截图视觉规律，先解析成设计系统再写代码
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 站点
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 适合
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: godly-https-godly-website
-    name: [godly](https://godly.website/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 前卫、创意整体 Vibe
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: mobbin-https-mobbin-com
-    name: [mobbin](https://mobbin.com/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 按页面类型/行业筛，解决「这个组件该怎么设计」
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: pageflows-https-pageflows-com
-    name: [pageflows](https://pageflows.com/)
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 完整交互流程录像，观察高级反馈链路
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 日期
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 说明
-    tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 症状
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 表现
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 配色
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 蓝紫渐变、高饱和默认色
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 装饰
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 满屏 emoji、过度图标
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 布局
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 圆角卡片套娃、三栏功能块、居中大标题
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 气质
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 各项目长得像同一个模板
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 上手难度
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: ⭐ 最低
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 结果可预期性
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 高（人选参考）
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 工具切换
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 无
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 适合页面
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 改版、个人站、落地页
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 与本库工具
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: —
-    tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
-    ingest_ids: [ING-20260608-007]
-  - id: tool-2
-    name: 拨盘
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 含义
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: design-variance
-    name: `DESIGN_VARIANCE`
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 布局实验程度
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: motion-intensity
-    name: `MOTION_INTENSITY`
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 动效丰富度
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: visual-density
-    name: `VISUAL_DENSITY`
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 信息密度
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: install-name
-    name: Install name
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 用途
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: design-taste-frontend
-    name: `design-taste-frontend`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 默认 v2，landing / portfolio / redesign
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: design-taste-frontend-v1
-    name: `design-taste-frontend-v1`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 稳定 v1，兼容旧工作流
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: gpt-taste
-    name: `gpt-taste`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: GPT/Codex 更严格版，更强 anti-slop
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: image-to-code
-    name: `image-to-code`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 参考图 → 分析 → 实现
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: redesign-existing-projects
-    name: `redesign-existing-projects`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 已有项目先审计再改版
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: high-end-visual-design
-    name: `high-end-visual-design`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 柔和、留白、高级感
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: full-output-enforcement
-    name: `full-output-enforcement`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 禁止半成品与 placeholder
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: minimalist-ui
-    name: `minimalist-ui`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: Notion/Linear 式克制编辑风
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: industrial-brutalist-ui
-    name: `industrial-brutalist-ui`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 瑞士排版、强对比粗野主义
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: stitch-design-taste
-    name: `stitch-design-taste`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: Google Stitch 兼容，可导出 `DESIGN.md`
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: imagegen-frontend-web
-    name: `imagegen-frontend-web`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 网站 hero、多区块排版参考
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: imagegen-frontend-mobile
-    name: `imagegen-frontend-mobile`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 移动端界面与流程参考
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: brandkit
-    name: `brandkit`
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 品牌板、配色、字体、VI 参考
-    tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
-    ingest_ids: [ING-20260608-007]
-  - id: impeccable-2
-    name: Impeccable
-    category: skills
-    positioning: 待补充（H13b 自动入库）
-    summary: 20 个设计斜杠命令，教 agent 排版/间距/层次；见本库 [专文](2026-06-08-impeccable-style-frontend-design.md)
-    tags: [awesome-list, frontend-design, anti-slop, agent-skill, mcp]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
-    ingest_ids: [ING-20260608-007]
 
+  - id: fontpair
+    name: Fontpair
+    category: design-tools
+    positioning: 标题+正文字体搭配
+    summary: 选一组标题/正文字体搭配，直接写进 design prompt 或 DESIGN.md。
+    tags: [typography, font, prompt]
+    homepage: https://www.fontpair.co/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: typescale
+    name: TypeScale
+    category: design-tools
+    positioning: 字号层级生成
+    summary: 生成 h1–body 字号层级，解决 AI UI 里字都一样大的问题。
+    tags: [typography, type-scale, prompt]
+    homepage: https://typescale.com/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: designprompts
+    name: designprompts
+    category: resources
+    positioning: 现成设计 Prompt 库 · 约 30 种风格
+    summary: 极简到赛博朋克的 MD 设计 prompt，Vibe Coding 快速改善单页性价比最高。
+    tags: [design-prompt, anti-slop, vibe-coding]
+    homepage: https://designprompts.dev
+    installable: false
+    starred: true
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: ui-prompt-explorer
+    name: UI Prompt Explorer
+    category: resources
+    positioning: 按场景分组的设计 Prompt
+    summary: 比 designprompts 主题覆盖更细，按场景挑选 MD prompt。
+    tags: [design-prompt, ui-generation]
+    homepage: https://uipromptexplorer.com/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: uiprompt-io
+    name: uiprompt
+    category: resources
+    positioning: 高频风格 Prompt · 含移动端
+    summary: 20+ 高频 UI 风格 prompt，额外提供移动端参考。
+    tags: [design-prompt, mobile]
+    homepage: https://uiprompt.io/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: landinghero-library
+    name: LandingHero Library
+    category: reference-site
+    positioning: 1000+ UI 区块截图库
+    summary: 非 prompt，挑中具体区块结构让 AI 照着搭骨架。
+    tags: [reference, landing-page, ui-reference]
+    homepage: https://landinghero.dev/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: claudekit-frontend-demo
+    name: ClaudeKit Frontend Demo
+    category: resources
+    positioning: 带交互/动效的 Prompt 样本
+    summary: 大量含微动效的 frontend prompt 样本，动效需求可翻。
+    tags: [design-prompt, motion, claude-code]
+    homepage: https://claudekit.cc/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: ui-prompt-builder
+    name: UI Prompt Builder
+    category: design-tools
+    positioning: 截图逆向 · 提取色值字号间距
+    summary: 上传网页截图自动提取设计变量，比裸喂图给 AI 漂移更小。
+    tags: [screenshot, reverse-engineering, design-system]
+    homepage: https://uipromptbuilder.com/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: ai-ux-playground
+    name: AI/UX Playground
+    category: design-tools
+    positioning: 截图 → 设计系统 Prompt
+    summary: 专用 prompt 榨取截图视觉规律，先解析成完整设计系统再写代码。
+    tags: [screenshot, reverse-engineering, design-system]
+    homepage: https://aiuxplayground.com/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: godly
+    name: godly
+    category: resources
+    positioning: 前卫创意站点灵感
+    summary: 汇聚极具创意的站点，适合找整体 Vibe 与调性。
+    tags: [inspiration, reference]
+    homepage: https://godly.website/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: mobbin
+    name: mobbin
+    category: resources
+    positioning: 按页面类型/行业筛组件灵感
+    summary: 解决「某个具体组件该怎么设计」的参考库。
+    tags: [inspiration, component, mobile]
+    homepage: https://mobbin.com/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+  - id: pageflows
+    name: pageflows
+    category: resources
+    positioning: 完整交互流程录像
+    summary: 观察高级页面的操作细节与反馈链路，适合 UX 流程参考。
+    tags: [inspiration, ux, flow]
+    homepage: https://pageflows.com/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+
+# 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }
