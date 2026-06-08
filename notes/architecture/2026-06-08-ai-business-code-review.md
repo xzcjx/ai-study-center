@@ -10,7 +10,7 @@ source:
 tags: [code-review, rag, gitlab, webhook, llm, devops, cursor, incident-response, diff-processing]
 difficulty: advanced
 status: active
-related: []
+related: [KB-AI-20260608-ai-code-review-prompt-guide]
 ingest_id: ING-20260608-009
 updated: 2026-06-08
 ---
@@ -247,10 +247,11 @@ class DiffProcessor {
 
 - [GitLab Webhooks 文档](https://docs.gitlab.com/user/project/integrations/webhooks/)
 - [Cursor CLI](https://cursor.com/docs/cli/overview)（未来侧边栏集成方向）
-- 项目内：暂无同主题笔记；与 DevOps 发布卡点、AI Agent 工具链可后续交叉入库
+- 项目内：[AI Code Review Prompt 实战指南](../ai-tools/2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）— 个人/团队轻量 Prompt 与 Cursor 集成
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 Prompt 实战指南（ING-20260608-010） |
 | 2026-06-08 | 初稿（ING-20260608-009），整合业务级 AI Code Review 全链路实践 |

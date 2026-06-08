@@ -412,7 +412,47 @@ entries:
     registry_id: awesome-design-md
     kb_notes: [notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）
+# 分类筛选别名（/kb-recommend 汇总模式）  - id: cursor
+    name: Cursor
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: [cursor.com](https://cursor.com)
+    tags: [code-review, prompt, cursor, claude, copilot]
+    homepage: 
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
+    ingest_ids: [ING-20260608-010]
+  - id: github-copilot-enterprise
+    name: GitHub Copilot Enterprise
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: GitHub PR
+    tags: [code-review, prompt, cursor, claude, copilot]
+    homepage: 
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
+    ingest_ids: [ING-20260608-010]
+  - id: codacy
+    name: Codacy
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: [codacy.com](https://www.codacy.com/)
+    tags: [code-review, prompt, cursor, claude, copilot]
+    homepage: 
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
+    ingest_ids: [ING-20260608-010]
+  - id: sonarqube
+    name: SonarQube
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: [sonarqube.org](https://www.sonarqube.org/)
+    tags: [code-review, prompt, cursor, claude, copilot]
+    homepage: 
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
+    ingest_ids: [ING-20260608-010]
+
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }

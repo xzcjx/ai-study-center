@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 7 |
+| AI 工具 | 8 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 1 |
 | 其他 | 0 |
-| **合计** | **8** |
+| **合计** | **9** |
 
 ---
 
@@ -48,6 +48,7 @@
 | 2026-06-08 | Vibe Coding UI 三策略：零约束、设计 Prompt 与截图参考 | `vibe-coding`, `design-prompt`, `anti-slop`, `ui-reference` | [笔记](../notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md) · `KB-AI-20260608-vibe-coding-ui-three-strategies` |
 | 2026-06-08 | 三种方法去除 AI 编程 Slop：参考克隆、Gemini 壳层、Agent Skills | `anti-slop`, `aura-build`, `google-ai-studio`, `gemini` | [笔记](../notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md) · `KB-AI-20260608-three-ways-remove-ai-slop` |
 | 2026-06-08 | awesome-design-md：复制 DESIGN.md 让 AI 按顶级设计系统出 UI | `awesome-design-md`, `design-md`, `design-system`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md) · `KB-AI-20260608-awesome-design-md-agent-ui` |
+| 2026-06-08 | AI Code Review 实战：Prompt 模板、集成方式与人工协作 | `code-review`, `prompt`, `cursor`, `security-review` | [笔记](../notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md) · `KB-AI-20260608-ai-code-review-prompt-guide` |
 
 ## DevOps · devops
 
@@ -77,12 +78,13 @@
 
 ## 标签云（手动维护）
 
-`code-review` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`code-review` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 新建 | [AI Code Review Prompt 实战指南](../notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md)（ING-20260608-010） |
 | 2026-06-08 | 新建 | [业务级 AI Code Review 全链路](../notes/architecture/2026-06-08-ai-business-code-review.md)（ING-20260608-009） |
 | 2026-06-08 | 新建 | [awesome-design-md DESIGN.md 设计系统](../notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md)（ING-20260608-008） |
 | 2026-06-08 | 新建 | [Vibe Coding UI 三策略对比](../notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md)（ING-20260608-007） |

@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260608-009"
+last_ingest_id: "ING-20260608-010"
 
 playbook_notes:
   fe-demo-shell:
@@ -24,6 +24,7 @@ playbook_notes:
     - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
     - notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md
     - notes/architecture/2026-06-08-ai-business-code-review.md
+    - notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md
   fe-polish-existing:
     - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
@@ -110,6 +111,13 @@ keywords:
     - devops
     - incident-response
     - diff-processing
+    - prompt
+    - claude
+    - copilot
+    - security-review
+    - flask
+    - sonarqube
+    - codacy
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -170,7 +178,12 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260608-009
+  - ingest_id: ING-20260608-010
+    note: notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md
+    kb_id: KB-AI-20260608-ai-code-review-prompt-guide
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-08
+  - ingest_id: ING-20260608-010
     note: notes/architecture/2026-06-08-ai-business-code-review.md
     kb_id: KB-ARCH-20260608-ai-business-code-review
     workflows: ["fe-full-pipeline"]
