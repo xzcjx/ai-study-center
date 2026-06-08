@@ -11,7 +11,7 @@ source:
 tags: [code-review, rag, gitlab, webhook, llm, devops, cursor, incident-response, diff-processing]
 difficulty: advanced
 status: active
-related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-code-review-workflow-methodology]
+related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-coding-era-review-upgrade]
 ingest_id: ING-20260608-009
 updated: 2026-06-08
 ---
@@ -250,11 +250,13 @@ class DiffProcessor {
 - [Cursor CLI](https://cursor.com/docs/cli/overview)（未来侧边栏集成方向）
 - 项目内：[AI Code Review 方法论](2026-06-08-ai-code-review-workflow-methodology.md)（`KB-AI-20260608-ai-code-review-workflow-methodology`）— 作者自查、分层检查、PR 描述
 - 项目内：[AI Code Review Prompt 实战指南](2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）— 个人/团队轻量 Prompt 与 Cursor 集成
+- 项目内：[AI 编程时代 Review 升级](2026-06-08-ai-coding-era-review-upgrade.md)（`KB-AI-20260608-ai-coding-era-review-upgrade`）— 团队清单与老代码五维 Review
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 Review 升级笔记（ING-20260608-012） |
 | 2026-06-08 | 目录迁移：迁入 ai-tools/code-review（topic 子目录） |
 | 2026-06-08 | 交叉引用 CR 方法论笔记（ING-20260608-011） |
 | 2026-06-08 | 交叉引用 Prompt 实战指南（ING-20260608-010） |

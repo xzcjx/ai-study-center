@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 10 |
+| AI 工具 | 11 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
 | 其他 | 0 |
-| **合计** | **10** |
+| **合计** | **11** |
 
 ---
 
@@ -45,6 +45,7 @@
 
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
+| 2026-06-08 | AI 编程时代 Code Review 升级：表面合格、熟悉度盲区与五维审查 | `code-review`, `ai-coding`, `legacy-code`, `vue` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md) · `KB-AI-20260608-ai-coding-era-review-upgrade` |
 | 2026-06-08 | AI 辅助 Code Review 方法论：提 PR 前自查、分层检查与有效意见 | `code-review`, `self-review`, `layered-review` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md) · `KB-AI-20260608-ai-code-review-workflow-methodology` |
 | 2026-06-08 | AI Code Review 实战：Prompt 模板、集成方式与人工协作 | `code-review`, `prompt`, `security-review` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md) · `KB-AI-20260608-ai-code-review-prompt-guide` |
 | 2026-06-08 | 业务级 AI Code Review：Webhook 触发 + Diff 语义化 + RAG 经验召回 | `code-review`, `rag`, `gitlab`, `webhook` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-business-code-review.md) · `KB-ARCH-20260608-ai-business-code-review` |
@@ -89,12 +90,13 @@
 
 ## 标签云（手动维护）
 
-`code-review` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`code-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 新建 | [AI 编程时代 Review 升级](../notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md)（ING-20260608-012） |
 | 2026-06-08 | 目录重构 | 按 topic 迁入 `code-review/`（3 篇）与 `frontend-design/`（7 篇） |
 | 2026-06-08 | 新建 | [AI Code Review 方法论](../notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md)（ING-20260608-011） |
 | 2026-06-08 | 新建 | [AI Code Review Prompt 实战指南](../notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md)（ING-20260608-010） |
