@@ -527,37 +527,30 @@ entries:
       - notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md
       - notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md
 
-# 分类筛选别名（/kb-recommend 汇总模式）  - id: zeng-skills
+  # --- 多 Agent Deep Review Skill（ING-20260608-016）---
+  - id: zeng-skills
     name: zeng-skills
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: Agent Skill 仓库
-    tags: [code-review, multi-agent, agent-skill, deep-review, fix-pass]
+    category: skills
+    positioning: 可治理智能体 Skill 合集 · 含 Deep Code Review
+    summary: GitHub 仓库，收录 zeng-code-review-deep 等多智能体工程化 Skill。
+    tags: [code-review, multi-agent, agent-skill, deep-review, governance]
     homepage: https://github.com/zengle22/zeng-skills
-    installable: false
+    installable: true
+    registry_id: zeng-skills
     kb_notes: [notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md]
-    ingest_ids: [ING-20260608-016]
+
   - id: zeng-code-review-deep
     name: zeng-code-review-deep
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: Agent Skill
-    tags: [code-review, multi-agent, agent-skill, deep-review, fix-pass]
+    category: skills
+    positioning: 多 Agent 深度审查 · 选角 + 仲裁 + 修复任务 + 独立审计
+    summary: 专项并行审查（一致性/规范/逻辑/数据结构 + 按需专家维度），产物落盘，可选补丁须人工确认。
+    tags: [code-review, multi-agent, deep-review, fix-pass, audit]
     homepage: https://github.com/zengle22/zeng-skills
-    installable: false
+    installable: true
+    registry_id: zeng-code-review-deep
     kb_notes: [notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md]
-    ingest_ids: [ING-20260608-016]
-  - id: github-copilot-code-review
-    name: GitHub Copilot code review
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 平台内置
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
-    homepage: https://docs.github.com/en/copilot/using-github-copilot/code-review
-    installable: false
-    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-016]
 
+# 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }
