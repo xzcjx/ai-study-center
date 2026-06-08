@@ -12,8 +12,8 @@ alwaysApply: true
 用户消息涉及「整合 / 收录 / 入库 / 文章 / 学习笔记 / /ingest」时：
 
 1. **立即读取** `AGENTS.md` 与 `docs/WORKFLOW.md`
-2. **执行** `.cursor/skills/knowledge-ingest/SKILL.md` 责任链 H01→H11
-3. **不可跳过** H10 Validate
+2. **执行** `.cursor/skills/knowledge-ingest/SKILL.md` 责任链 H01→H12
+3. **不可跳过** H10 Validate；H12 默认自动 commit + push（用户显式 `--no-push` 除外）
 
 用户消息涉及「查询 / 有没有 / 搜索笔记」时：
 
@@ -34,7 +34,7 @@ alwaysApply: true
 
 - 笔记 → `notes/{module}/`（8 模块，见 registry.yaml）
 - 每篇必须有 YAML frontmatter + TL;DR + 适用场景
-- 入库后必须更新 INDEX + 运行 `scripts/validate-note.sh`
+- 入库后必须更新 INDEX + 运行 `scripts/validate-note.sh` + `scripts/publish-ingest.sh`
 - 中文撰写，技术术语保留英文
 
 ## 禁止

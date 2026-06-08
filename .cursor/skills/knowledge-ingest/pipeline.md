@@ -127,8 +127,25 @@ exit 0 → 过；非 0 → 带错误回 H06。
 
 ---
 
+## H12 · Publish
+
+| 项 | 说明 |
+|----|------|
+| 输入 | H07 `paths[]` + H08/H09 额外改动 |
+| 输出 | `PublishReport { status, commit, branch, remote, error? }` |
+
+```bash
+scripts/publish-ingest.sh {ingest_id} "{title}" {paths...}
+```
+
+- 仅提交本次入库相关文件
+- 用户显式 `--no-push` / `不要推送` → `status: skipped`
+- 推送失败不阻断 H11，在报告中说明
+
+---
+
 ## H11 · Report
 
 模板：[templates/ingest-report.md](../../templates/ingest-report.md)
 
-用户可见 TL;DR ≤ 3 条；技术细节在笔记正文。
+用户可见 TL;DR ≤ 3 条；须汇报 H12 推送结果；技术细节在笔记正文。

@@ -5,7 +5,7 @@
 
 ## 启动条件
 
-在以下情况**必须**读取并执行 [`docs/WORKFLOW.md`](docs/WORKFLOW.md) 全链路（H01→H11）：
+在以下情况**必须**读取并执行 [`docs/WORKFLOW.md`](docs/WORKFLOW.md) 全链路（H01→H12）：
 
 - 用户要求整合/收录/入库文章或技巧
 - 用户发送 `/ingest`
@@ -24,7 +24,7 @@
 
 ## 硬性约束
 
-- **不可跳过 Handler**；H10 失败不得交付
+- **不可跳过 Handler**；H10 失败不得交付；H12 默认自动提交推送到 `origin`（用户 `--no-push` 除外）
 - **不可**整篇复制原文；提炼为 KnowledgeAtom
 - **不可**提交密钥；`.env` 类内容不入库
 - **不可**修改 PuSou 等无关仓库
@@ -37,6 +37,7 @@
 | 笔记正文 | `notes/{module}/*.md` |
 | 总索引 | `docs/INDEX.md` |
 | 入库报告 | 回复用户（模板 `templates/ingest-report.md`） |
+| Git 推送 | H12 `scripts/publish-ingest.sh` → Gitee `origin` |
 
 ## 快捷命令
 
@@ -56,5 +57,7 @@
 - [x] H02 Dedup
 - [x] H03 Research
 - [ ] H04 Classify
-...
+- [ ] … H10 Validate
+- [ ] H12 Publish
+- [ ] H11 Report
 ```

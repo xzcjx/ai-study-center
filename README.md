@@ -7,7 +7,7 @@
 **在 Cursor 中打开本文件夹**，然后：
 
 ```
-/ingest https://example.com/article     # 收录文章（全链路 H01→H11）
+/ingest https://example.com/article     # 收录文章（全链路 H01→H12，含自动推送）
 /ingest --module frontend [粘贴正文]      # 指定模块入库
 /query playwright                         # 只查已有笔记
 ```
@@ -17,7 +17,7 @@
 ```
 用户输入
    ↓
-责任链 H01→H11（见 docs/WORKFLOW.md）
+责任链 H01→H12（见 docs/WORKFLOW.md）
    ↓
 notes/{module}/*.md  +  docs/INDEX.md
 ```
@@ -27,7 +27,7 @@ notes/{module}/*.md  +  docs/INDEX.md
 | 路径 | 作用 |
 |------|------|
 | [`AGENTS.md`](AGENTS.md) | Agent 入口指令 |
-| [`docs/WORKFLOW.md`](docs/WORKFLOW.md) | **责任链 SSOT**（H01–H11） |
+| [`docs/WORKFLOW.md`](docs/WORKFLOW.md) | **责任链 SSOT**（H01–H12） |
 | [`docs/MODULES.md`](docs/MODULES.md) | 8 大知识模块 |
 | [`docs/KNOWLEDGE_SCHEMA.md`](docs/KNOWLEDGE_SCHEMA.md) | 笔记 Schema |
 | [`knowledge/registry.yaml`](knowledge/registry.yaml) | 模块机器可读注册表 |
@@ -35,6 +35,7 @@ notes/{module}/*.md  +  docs/INDEX.md
 | [`.cursor/rules/`](.cursor/rules/) | 全局 + 流水线规则 |
 | [`notes/`](notes/) | 知识正文（8 模块） |
 | [`scripts/validate-note.sh`](scripts/validate-note.sh) | 笔记校验工具 |
+| [`scripts/publish-ingest.sh`](scripts/publish-ingest.sh) | 入库后自动 commit + push |
 
 ## 知识模块
 
@@ -63,6 +64,7 @@ notes/{module}/*.md  +  docs/INDEX.md
 | H08 | Index | 更新 INDEX.md |
 | H09 | CrossLink | 交叉引用 |
 | H10 | Validate | 运行校验脚本 |
+| H12 | Publish | 提交并推送到 Gitee |
 | H11 | Report | 交付入库报告 |
 
 详见 [`docs/WORKFLOW.md`](docs/WORKFLOW.md)。
@@ -71,7 +73,8 @@ notes/{module}/*.md  +  docs/INDEX.md
 
 - 新增模块 → 改 `registry.yaml` + `MODULES.md` + `INDEX.md`
 - 每篇笔记必须通过 `scripts/validate-note.sh`
-- 整合完成后 Agent 回复 ingest-report
+- 校验通过后运行 `scripts/publish-ingest.sh` 推送到 `origin`
+- 整合完成后 Agent 回复 ingest-report（含推送结果）
 
 ---
 

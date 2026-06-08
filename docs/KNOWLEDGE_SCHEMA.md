@@ -94,6 +94,11 @@ dedup:
   similar_found: false
   merged_into: null
 validation: passed | failed
+publish:
+  status: pushed | skipped | failed
+  commit: "af78990"          # pushed 时填写
+  branch: main
+  error: null                # failed 时填写原因
 tldr:
   - "要点 1"
   - "要点 2"

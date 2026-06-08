@@ -18,7 +18,8 @@ flowchart LR
   H07 --> H08[Index]
   H08 --> H09[CrossLink]
   H09 --> H10[Validate]
-  H10 --> H11[Report]
+  H10 --> H12[Publish]
+  H12 --> H11[Report]
   H11 --> D[交付用户]
 ```
 
@@ -36,6 +37,7 @@ flowchart LR
 | **H08** | Index 索引 | 文件路径 | 更新 `INDEX.md` | 统计不一致 → 重算篇数 |
 | **H09** | CrossLink 交叉引用 | 笔记 id 列表 | 更新 related | 无相关 → 跳过 |
 | **H10** | Validate 校验 | 全部变更 | `ValidationReport` | 失败 → 回 H06 修复 |
+| **H12** | Publish 提交推送 | 校验通过的变更 | `PublishReport` | 推送失败 → H11 标注，不阻断交付 |
 | **H11** | Report 报告 | 全链路产物 | `IngestReport` + 用户摘要 | — |
 
 ---
@@ -172,7 +174,35 @@ scripts/validate-note.sh notes/{module}/{file}.md
 - [ ] 原文链接有效或标注「链接失效」
 - [ ] INDEX 行与文件路径一致
 
-**失败** → 回到 H06，不得进入 H11。
+**失败** → 回到 H06，不得进入 H12。
+
+---
+
+## H12 · Publish 提交推送
+
+**职责**：H10 通过后，将本次入库变更自动 commit 并 push 到远程。
+
+**执行**：
+```bash
+scripts/publish-ingest.sh {ingest_id} "{笔记标题}" {file1} [file2...]
+```
+
+**必须纳入提交的文件**（仅本次入库相关，禁止 `git add -A`）：
+- H07 新建/更新的 `notes/{module}/*.md`
+- H08 更新的 `docs/INDEX.md`
+- H09 交叉引用时改动的关联笔记
+
+**提交信息格式**：`docs(ingest): {标题}` + 正文含 `{ingest_id}`
+
+**默认远程**：`origin`（Gitee：`https://gitee.com/DestOwen/ai-study-center.git`）
+
+**跳过条件**（仅当用户显式要求）：
+- 用户消息含 `不要推送` / `--no-push` / `仅本地`
+- 否则 **必须执行** H12
+
+**失败处理**：
+- 无 `origin`、认证失败、网络错误 → 记录原因，H11 报告 `publish: failed`
+- 不得因推送失败回滚已写入的笔记
 
 ---
 
@@ -187,6 +217,7 @@ scripts/validate-note.sh notes/{module}/{file}.md
 2. 新建/更新的文件路径
 3. TL;DR ≤ 3 条
 4. 去重/合并说明（如有）
+5. H12 推送结果（commit hash / 失败原因 / 已跳过）
 
 ---
 
@@ -207,4 +238,4 @@ scripts/validate-note.sh notes/{module}/{file}.md
 | 触发词 | 行为 |
 |--------|------|
 | `查询` · `有没有` · `搜索笔记` | H02 only |
-| `整合` · `收录` · `/ingest` | H01–H11 全链 |
+| `整合` · `收录` · `/ingest` | H01–H12 全链（H11 报告在 H12 之后） |

@@ -1,7 +1,7 @@
 ---
 name: knowledge-ingest
 description: >-
-  将用户提供的文章、链接、技巧按责任链（H01–H11）结构化入库到 AI 学习中心知识库。
+  将用户提供的文章、链接、技巧按责任链（H01–H12）结构化入库到 AI 学习中心知识库。
   自动分类到 frontend/backend/testing/ai-tools/devops/database/architecture/misc 模块，
   更新 INDEX、去重、交叉引用并校验。Use when user says 整合/收录/入库/学习笔记/文章/帮我整理,
   sends /ingest, or asks to add knowledge to AI Learning Center.
@@ -31,10 +31,12 @@ description: >-
 - [ ] H08 Index       → 更新 docs/INDEX.md
 - [ ] H09 CrossLink   → related 双向链接
 - [ ] H10 Validate    → scripts/validate-note.sh
+- [ ] H12 Publish     → scripts/publish-ingest.sh（自动 commit + push）
 - [ ] H11 Report      → templates/ingest-report.md
 ```
 
-**H10 失败 → 回 H06 修复，禁止跳过。**
+**H10 失败 → 回 H06 修复，禁止跳过。**  
+**H12 默认执行**；用户显式 `--no-push` / `不要推送` 时可跳过。
 
 ## H01 Intake
 
@@ -90,9 +92,23 @@ updated: YYYY-MM-DD
 scripts/validate-note.sh notes/{module}/{file}.md
 ```
 
+## H12 Publish
+
+H10 通过后，仅 stage 本次入库文件并推送：
+
+```bash
+scripts/publish-ingest.sh ING-20260608-001 "笔记标题" \
+  notes/ai-tools/2026-06-08-example.md \
+  docs/INDEX.md
+```
+
+- 包含 H07 笔记、H08 INDEX、H09 改动的关联笔记
+- 禁止 `git add -A`
+- 推送目标：`origin` 当前分支
+
 ## H11 用户回复
 
-用 [templates/ingest-report.md](../../templates/ingest-report.md) 格式。
+用 [templates/ingest-report.md](../../templates/ingest-report.md) 格式，须含 H12 推送结果。
 
 ## 只读查询模式
 
