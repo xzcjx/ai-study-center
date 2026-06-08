@@ -13,9 +13,9 @@
 | AI 工具 | 7 |
 | DevOps | 0 |
 | 数据库 | 0 |
-| 架构 | 0 |
+| 架构 | 1 |
 | 其他 | 0 |
-| **合计** | **7** |
+| **合计** | **8** |
 
 ---
 
@@ -65,7 +65,7 @@
 
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
-| — | *暂无笔记* | — | — |
+| 2026-06-08 | 业务级 AI Code Review：Webhook 触发 + Diff 语义化 + RAG 经验召回 | `code-review`, `rag`, `gitlab`, `webhook` | [笔记](../notes/architecture/2026-06-08-ai-business-code-review.md) · `KB-ARCH-20260608-ai-business-code-review` |
 
 ## 其他 · misc
 
@@ -77,12 +77,13 @@
 
 ## 标签云（手动维护）
 
-`vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`code-review` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 新建 | [业务级 AI Code Review 全链路](../notes/architecture/2026-06-08-ai-business-code-review.md)（ING-20260608-009） |
 | 2026-06-08 | 新建 | [awesome-design-md DESIGN.md 设计系统](../notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md)（ING-20260608-008） |
 | 2026-06-08 | 新建 | [Vibe Coding UI 三策略对比](../notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md)（ING-20260608-007） |
 | 2026-06-08 | 新建 | [三种方法去除 AI 编程 Slop](../notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md)（ING-20260608-006） |

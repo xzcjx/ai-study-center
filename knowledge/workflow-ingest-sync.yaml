@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260608-008"
+last_ingest_id: "ING-20260608-009"
 
 playbook_notes:
   fe-demo-shell:
@@ -23,6 +23,7 @@ playbook_notes:
     - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
     - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
     - notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md
+    - notes/architecture/2026-06-08-ai-business-code-review.md
   fe-polish-existing:
     - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
@@ -101,6 +102,14 @@ keywords:
     - screenshot
     - awesome-design-md
     - design-md
+    - code-review
+    - rag
+    - gitlab
+    - webhook
+    - llm
+    - devops
+    - incident-response
+    - diff-processing
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -147,83 +156,22 @@ keywords:
 tool_refs:
   fe-from-scratch,:
     W02,:
-      - id: awesome-design-md
-        required: false
-        default_method: copy-design-md
-      - id: taste-skill
-        required: false
-        default_method: npx-default
-      - id: impeccable
-        required: false
-        default_method: cursor-project
-      - id: anthropic-frontend-design
-        required: false
-        default_method: claude-plugin
   fe-full-pipeline,:
     W03,:
-      - id: awesome-design-md
-        required: false
-        default_method: copy-design-md
-      - id: taste-skill
-        required: false
-        default_method: npx-default
-      - id: impeccable
-        required: false
-        default_method: cursor-project
-      - id: anthropic-frontend-design
-        required: false
-        default_method: claude-plugin
   fe-polish-existing,:
     W02,:
-      - id: impeccable
-        required: true
-        default_method: cursor-project
     W03,:
-      - id: impeccable
-        required: false
-        default_method: cursor-project
     W04,:
-      - id: impeccable
-        required: false
-        default_method: cursor-project
   fe-redesign-reference,:
     W03,:
-      - id: taste-skill
-        required: false
-        default_method: npx-default
 
 router_triggers:
   frontend-ui-router:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260608-008
-    note: notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md
-    kb_id: KB-AI-20260608-awesome-design-md-agent-ui
-    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing"]
-    at: 2026-06-08
-  - ingest_id: ING-20260608-008
-    note: notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
-    kb_id: KB-AI-20260608-vibe-coding-ui-three-strategies
-    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing", "fe-redesign-reference"]
-    at: 2026-06-08
-  - ingest_id: ING-20260608-008
-    note: notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
-    kb_id: KB-AI-20260608-taste-skill-agent-frontend
-    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing"]
-    at: 2026-06-08
-  - ingest_id: ING-20260608-008
-    note: notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
-    kb_id: KB-AI-20260608-impeccable-style-frontend-design
-    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing"]
-    at: 2026-06-08
-  - ingest_id: ING-20260608-008
-    note: notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
-    kb_id: KB-AI-20260608-anthropic-frontend-design-skill
-    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing"]
-    at: 2026-06-08
-  - ingest_id: ING-20260608-008
-    note: notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
-    kb_id: KB-AI-20260608-awesome-ai-tools-for-ui
-    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing"]
+  - ingest_id: ING-20260608-009
+    note: notes/architecture/2026-06-08-ai-business-code-review.md
+    kb_id: KB-ARCH-20260608-ai-business-code-review
+    workflows: ["fe-full-pipeline"]
     at: 2026-06-08
