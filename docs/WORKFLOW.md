@@ -18,7 +18,8 @@ flowchart LR
   H07 --> H08[Index]
   H08 --> H09[CrossLink]
   H09 --> H10[Validate]
-  H10 --> H12[Publish]
+  H10 --> H13[SyncWorkflow]
+  H13 --> H12[Publish]
   H12 --> H11[Report]
   H11 --> D[交付用户]
 ```
@@ -37,7 +38,8 @@ flowchart LR
 | **H08** | Index 索引 | 文件路径 | 更新 `INDEX.md` | 统计不一致 → 重算篇数 |
 | **H09** | CrossLink 交叉引用 | 笔记 id 列表 | 更新 related | 无相关 → 跳过 |
 | **H10** | Validate 校验 | 全部变更 | `ValidationReport` | 失败 → 回 H06 修复 |
-| **H12** | Publish 提交推送 | 校验通过的变更 | `PublishReport` | 推送失败 → H11 标注，不阻断交付 |
+| **H13** | SyncWorkflow 方法论同步 | 入库笔记 | `workflow-ingest-sync.yaml` | 失败 → 阻断 H12 |
+| **H12** | Publish 提交推送 | 校验+同步通过的变更 | `PublishReport` | 推送失败 → H11 标注，不阻断交付 |
 | **H11** | Report 报告 | 全链路产物 | `IngestReport` + 用户摘要 | — |
 
 ---
@@ -174,13 +176,34 @@ scripts/validate-note.sh notes/{module}/{file}.md
 - [ ] 原文链接有效或标注「链接失效」
 - [ ] INDEX 行与文件路径一致
 
-**失败** → 回到 H06，不得进入 H12。
+**失败** → 回到 H06，不得进入 H13/H12。
+
+---
+
+## H13 · SyncWorkflow 方法论同步
+
+**职责**：入库内容自动进入 `/kb-workflow` 工具流方法论。
+
+**执行**（`publish-ingest.sh` 内自动调用）：
+```bash
+scripts/sync-workflow.sh {ingest_id} notes/{module}/{file}.md
+```
+
+**规则 SSOT**：[`knowledge/workflow-sync-rules.yaml`](../knowledge/workflow-sync-rules.yaml)  
+**产出**：[`knowledge/workflow-ingest-sync.yaml`](../knowledge/workflow-ingest-sync.yaml)（与 `workflows-registry.yaml` 合并加载）
+
+**映射逻辑**：
+1. 笔记 `tags` → 关联 workflow 的 `playbook_notes` + `keywords`
+2. 同 `kb_id` 工具 → 按 intents 追加 `tool_refs`
+3. `module` 兜底 → 默认 workflow
+
+**失败** → 阻断 H12。
 
 ---
 
 ## H12 · Publish 提交推送
 
-**职责**：H10 通过后，将本次入库变更自动 commit 并 push 到远程。
+**职责**：H10 + H13 通过后，将本次入库变更自动 commit 并 push 到远程。
 
 **执行**：
 ```bash
@@ -191,6 +214,7 @@ scripts/publish-ingest.sh {ingest_id} "{笔记标题}" {file1} [file2...]
 - H07 新建/更新的 `notes/{module}/*.md`
 - H08 更新的 `docs/INDEX.md`
 - H09 交叉引用时改动的关联笔记
+- H13 更新的 `knowledge/workflow-ingest-sync.yaml`
 
 **提交信息格式**：`docs(ingest): {标题}` + 正文含 `{ingest_id}`
 

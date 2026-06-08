@@ -127,6 +127,30 @@ exit 0 → 过；非 0 → 带错误回 H06。
 
 ---
 
+## H13 · SyncWorkflow
+
+| 项 | 说明 |
+|----|------|
+| 输入 | H07 笔记路径 + `ingest_id` |
+| 输出 | 更新 `knowledge/workflow-ingest-sync.yaml` |
+| 规则 SSOT | `knowledge/workflow-sync-rules.yaml` |
+
+```bash
+scripts/sync-workflow.sh {ingest_id} notes/{module}/{file}.md
+```
+
+**自动映射**：
+1. 笔记 `tags` → `playbook_notes` + `keywords`（按 `tag_to_workflows`）
+2. 笔记 `module` 兜底 → 默认 workflow
+3. `tools-registry` 中同 `kb_id` 工具 → `tool_refs`（按 `intent_to_tool_refs`）
+4. 标题关键词 → `router_triggers`
+
+**消费侧**：`kb-workflow.sh` 加载时合并 base + sync 层，无需手改 `workflows-registry.yaml`。
+
+失败 → 阻断 H12（`publish-ingest.sh` exit 1）。
+
+---
+
 ## H12 · Publish
 
 | 项 | 说明 |

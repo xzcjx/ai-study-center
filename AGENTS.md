@@ -15,9 +15,9 @@
 
 - 用户问「有没有 X 相关笔记」
 
-在以下情况**跨项目消费**（C01–C05，见 [`docs/CONSUME.md`](docs/CONSUME.md)）：
+在以下情况**跨项目消费**（C00–C05，见 [`docs/CONSUME.md`](docs/CONSUME.md)）：
 
-- 用户在其他项目说 `/kb-recommend`、`/kb-install`、从学习中心找工具并安装
+- 用户在其他项目说 `/kb-workflow`、`/kb-recommend`、`/kb-install`、从学习中心找工具/方法论并安装
 
 ## 必读文件（按顺序）
 
@@ -51,6 +51,7 @@
 /ingest [URL 或正文]              # 全链路入库
 /ingest --module frontend [内容]  # 指定模块
 /query [关键词]                   # 只查笔记（本仓库内）
+/kb-workflow [场景]               # 跨项目：完整方法论+工具链+Prompt（首选）
 /kb-recommend [意图]              # 跨项目：检索工具 + 推荐对比
 /kb-install [tool-id] [--yes]     # 跨项目：预览/安装到业务项目
 ```

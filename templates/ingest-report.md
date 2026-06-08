@@ -22,6 +22,14 @@
 
 {无重复 / 已合并至 KB-xxx，原因：...}
 
+### 方法论同步（H13）
+
+| 项 | 值 |
+|----|-----|
+| 同步文件 | `knowledge/workflow-ingest-sync.yaml` |
+| 命中工作流 | `{workflow_ids}` |
+| 验证 | `kb-workflow.sh "{场景}"` |
+
 ### Git 推送（H12）
 
 - 远程：`origin` → `{branch}@{short_commit}` 或 `{失败原因}` 或 `已跳过（--no-push）`

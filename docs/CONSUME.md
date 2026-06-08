@@ -9,7 +9,8 @@
 
 ```mermaid
 flowchart LR
-  U[用户在其他项目] --> C01
+  U[用户在其他项目] --> C00
+  C00[Workflow 方法论] --> C01
   C01[Query 检索] --> C02[Recommend 推荐]
   C02 --> C03[用户选择]
   C03 --> C04[Install 安装]
@@ -20,6 +21,7 @@ flowchart LR
 
 | ID | 名称 | 输入 | 输出 | 说明 |
 |----|------|------|------|------|
+| **C00** | Workflow 方法论 | 场景描述 | 完整 playbook + 工具链 + Prompt | `scripts/kb-workflow.sh`（**推荐首选**） |
 | **C01** | Query 检索 | 关键词/意图 | 命中工具列表 + 分数 | `scripts/query-tools.sh` |
 | **C02** | Recommend 推荐 | 检索结果 | 对比表 + 简介 + TL;DR | Agent 格式化呈现 |
 | **C03** | Select 选择 | 用户回复 | `tool_id` + 可选 `method` | 必须等用户明确选择 |
@@ -29,11 +31,73 @@ flowchart LR
 ## 快捷命令
 
 ```
+/kb-workflow [场景]          # 生成完整方法论（工具+流程+Prompt）★ 首选
 /kb-query [关键词]           # 只检索笔记与工具
-/kb-recommend [意图]         # 检索 + 推荐对比（默认入口）
+/kb-recommend [意图]         # 检索 + 推荐对比
 /kb-install [tool-id]        # 预览安装（dry-run）
 /kb-install [tool-id] --yes  # 用户确认后执行
 ```
+
+## C00 · Workflow 方法论（首选）
+
+一条命令交付**可复用 playbook**：场景路由 → 分阶段 checklist → 工具安装命令 → 一键 Agent Prompt。
+
+```bash
+# 通用前端（自动路由到子工作流或完整管线）
+scripts/kb-workflow.sh "开发前端界面" --target /path/to/project
+
+# 明确场景
+scripts/kb-workflow.sh "优化丑组件" --target . --stack "Vue 3" --target-files "src/components/Foo.vue"
+
+# 仅复制 Prompt（不用反复写提示词）
+scripts/kb-workflow.sh "做落地页" --prompt-only --brief "B2B SaaS 技术向首页"
+
+# JSON 供 Agent 解析
+scripts/kb-workflow.sh "参考 aura 改版" --json
+
+# 列出全部工作流
+scripts/kb-workflow.sh --list
+```
+
+**SSOT**：
+- 手工编排：[`knowledge/workflows-registry.yaml`](../knowledge/workflows-registry.yaml)
+- 入库自动层：[`knowledge/workflow-ingest-sync.yaml`](../knowledge/workflow-ingest-sync.yaml)（**H13 产出**）
+- 映射规则：[`knowledge/workflow-sync-rules.yaml`](../knowledge/workflow-sync-rules.yaml)
+
+**入库即进方法论**：每次 `/ingest` 完成 H13 后，新笔记自动写入 sync 层，`/kb-workflow` 下一命令即可命中。  
+**与工具联动**：`tool_refs` 实时读取 `tools-registry.yaml`；新工具入库时按 intents 自动挂到对应 workflow 阶段。
+
+### 工具总表 SSOT（推荐）
+
+[`knowledge/tools-catalog.yaml`](../knowledge/tools-catalog.yaml) — **所有工具/网站**一张表维护：
+
+| 字段 | 说明 |
+|------|------|
+| `id` | 唯一标识 |
+| `name` | 显示名 |
+| `category` | skills / apps / mcp / reference-site / workflow / … |
+| `positioning` | 一句话定位 |
+| `summary` | 干什么、何时用 |
+| `tags` | 检索标签 |
+| `homepage` | 链接 |
+| `installable` + `registry_id` | 可安装项联动 `tools-registry.yaml` |
+| `kb_notes` | 深度阅读笔记路径 |
+
+`/kb-recommend 前端工具汇总` **优先读总表**，不再从笔记表格临时解析。
+
+入库 **H13b**（`sync-catalog.sh`）自动：笔记表格中新工具 → 追加总表草稿；registry 工具 → 关联 `kb_notes`。
+
+**内置工作流**：
+
+| ID | 场景 |
+|----|------|
+| `fe-full-pipeline` | 前端总管线（自动分流 A/B/C/D） |
+| `fe-polish-existing` | 已有组件迭代抛光 |
+| `fe-from-scratch` | 从零生成页面 |
+| `fe-redesign-reference` | aura.build 参考克隆 |
+| `fe-demo-shell` | Gemini 壳层 + Agent 业务 |
+
+Agent 必须用 [`templates/workflow-report.md`](../templates/workflow-report.md) 呈现，并维护阶段勾选进度。
 
 ## C01 · Query
 
@@ -104,12 +168,20 @@ export AI_LEARNING_CENTER=/Users/alu0901/AI-Agent/AI-Learning-Center
 
 1. 入库笔记 `notes/{module}/`
 2. 在 `knowledge/tools-registry.yaml` 添加条目（intents、keywords、install.methods）
-3. 更新 `docs/INDEX.md`
-4. 运行 `scripts/query-tools.sh <关键词>` 验证可检索
+3. 在 `knowledge/workflows-registry.yaml` 的对应阶段 `tool_refs` 中引用（如有适用场景）
+4. 更新 `docs/INDEX.md`
+5. 运行 `scripts/query-tools.sh <关键词>` 与 `scripts/kb-workflow.sh "<场景>"` 验证
+
+### 新增方法论工作流
+
+1. 入库 playbook 笔记 `notes/{module}/`
+2. 在 `knowledge/workflows-registry.yaml` 添加 `workflows` 条目（phases、tool_refs、playbook_notes）
+3. 可选：在 `routers` / `workflow_aliases` 增加路由
+4. 运行 `scripts/kb-workflow.sh --list` 验证
 
 ## 与入库流程的关系
 
 | 流程 | 方向 | 触发 |
 |------|------|------|
 | Ingest H01–H12 | 写入学习中心 | `/ingest`、收录 |
-| Consume C01–C05 | 从学习中心读出并安装到业务项目 | `/kb-recommend`、`/kb-install` |
+| Consume C00–C05 | 从学习中心读出方法论并安装到业务项目 | `/kb-workflow`、`/kb-recommend`、`/kb-install` |

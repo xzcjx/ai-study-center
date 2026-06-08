@@ -31,6 +31,8 @@ description: >-
 - [ ] H08 Index       → 更新 docs/INDEX.md
 - [ ] H09 CrossLink   → related 双向链接
 - [ ] H10 Validate    → scripts/validate-note.sh
+- [ ] H13 SyncWorkflow → scripts/sync-workflow.sh（自动进方法论，H12 内执行）
+- [ ] H13b SyncCatalog → scripts/sync-catalog.sh（自动进 tools-catalog 总表，H12 内执行）
 - [ ] H12 Publish     → scripts/publish-ingest.sh（自动 commit + push）
 - [ ] H11 Report      → templates/ingest-report.md
 ```
@@ -92,9 +94,29 @@ updated: YYYY-MM-DD
 scripts/validate-note.sh notes/{module}/{file}.md
 ```
 
+## H13 SyncWorkflow
+
+H10 通过后、H12 之前，将本次入库笔记同步到方法论（`publish-ingest.sh` 内自动调用）：
+
+```bash
+scripts/sync-workflow.sh {ingest_id} notes/{module}/{file}.md
+```
+
+- 读取 `workflow-sync-rules.yaml`，写入 `workflow-ingest-sync.yaml`
+- 与 `workflows-registry.yaml` 合并后 `/kb-workflow` 实时可用
+- 若登记了 `tools-registry`，按 intents 追加 `tool_refs`
+
+## H13b SyncCatalog
+
+`publish-ingest.sh` 内自动调用，维护 [`knowledge/tools-catalog.yaml`](../../knowledge/tools-catalog.yaml)：
+
+- **可安装工具**：完善 `positioning` / `tags` / `homepage`，设 `registry_id`
+- **文章里新工具**：从笔记表格追加草稿行（`positioning: 待补充`），人工或下次 ingest 补全
+- **验证**：`scripts/query-tools.sh "前端工具汇总"`
+
 ## H12 Publish
 
-H10 通过后，仅 stage 本次入库文件并推送：
+H10 + H13 通过后，仅 stage 本次入库文件并推送：
 
 ```bash
 scripts/publish-ingest.sh ING-20260608-001 "笔记标题" \
@@ -102,7 +124,7 @@ scripts/publish-ingest.sh ING-20260608-001 "笔记标题" \
   docs/INDEX.md
 ```
 
-- 包含 H07 笔记、H08 INDEX、H09 改动的关联笔记
+- 包含 H07 笔记、H08 INDEX、H09 关联笔记、H13 `workflow-ingest-sync.yaml`、H13b `tools-catalog.yaml`
 - 禁止 `git add -A`
 - 推送目标：`origin` 当前分支
 

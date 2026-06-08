@@ -9,7 +9,7 @@ alwaysApply: true
 
 ```
 H01 Intake → H02 Dedup → H03 Research → H04 Classify → H05 Decompose
-→ H06 Structure → H07 Persist → H08 Index → H09 CrossLink → H10 Validate → H12 Publish → H11 Report
+→ H06 Structure → H07 Persist → H08 Index → H09 CrossLink → H10 Validate → H13 SyncWorkflow → H12 Publish → H11 Report
 ```
 
 ## 每步最小产出
@@ -24,6 +24,7 @@ H01 Intake → H02 Dedup → H03 Research → H04 Classify → H05 Decompose
 | H07 | 磁盘文件路径 |
 | H08 | INDEX.md 已更新 |
 | H10 | validate-note.sh exit 0 |
+| H13 | workflow-ingest-sync.yaml 已更新，`/kb-workflow` 可命中 |
 | H12 | publish-ingest.sh 已推送或已标注跳过/失败 |
 | H11 | ingest-report 格式回复用户（含推送结果） |
 
