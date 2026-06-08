@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 5 |
+| AI 工具 | 6 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
 | 其他 | 0 |
-| **合计** | **5** |
+| **合计** | **6** |
 
 ---
 
@@ -45,6 +45,7 @@
 | 2026-06-08 | impeccable.style：用设计词典与斜杠命令对抗 AI 前端 Slop | `impeccable`, `frontend-design`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md) · `KB-AI-20260608-impeccable-style-frontend-design` |
 | 2026-06-08 | Awesome AI Tools for UI：对抗 AI 前端 Slop 的工具导航 | `awesome-list`, `frontend-design`, `anti-slop`, `mcp` | [笔记](../notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md) · `KB-AI-20260608-awesome-ai-tools-for-ui` |
 | 2026-06-08 | Anthropic Frontend Design Skill：三步告别 AI 前端 Slop | `anthropic`, `frontend-design`, `claude-code`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md) · `KB-AI-20260608-anthropic-frontend-design-skill` |
+| 2026-06-08 | Vibe Coding UI 三策略：零约束、设计 Prompt 与截图参考 | `vibe-coding`, `design-prompt`, `anti-slop`, `ui-reference` | [笔记](../notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md) · `KB-AI-20260608-vibe-coding-ui-three-strategies` |
 | 2026-06-08 | 三种方法去除 AI 编程 Slop：参考克隆、Gemini 壳层、Agent Skills | `anti-slop`, `aura-build`, `google-ai-studio`, `gemini` | [笔记](../notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md) · `KB-AI-20260608-three-ways-remove-ai-slop` |
 
 ## DevOps · devops
@@ -75,12 +76,13 @@
 
 ## 标签云（手动维护）
 
-`taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 新建 | [Vibe Coding UI 三策略对比](../notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md)（ING-20260608-007） |
 | 2026-06-08 | 新建 | [三种方法去除 AI 编程 Slop](../notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md)（ING-20260608-006） |
 | 2026-06-08 | 新建 | [Anthropic Frontend Design Skill 三步反 Slop](../notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md)（ING-20260608-005） |
 | 2026-06-08 | 新建 | [Awesome AI Tools for UI 工具导航](../notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md)（ING-20260608-004） |

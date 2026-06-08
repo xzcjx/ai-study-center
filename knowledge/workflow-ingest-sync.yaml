@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-BOOTSTRAP-001"
+last_ingest_id: "ING-20260608-007"
 
 playbook_notes:
   fe-demo-shell:
@@ -13,20 +13,24 @@ playbook_notes:
     - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
     - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
     - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
   fe-full-pipeline:
     - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
     - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
     - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
     - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
   fe-polish-existing:
     - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
     - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
     - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
     - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
   fe-redesign-reference:
     - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
 
 keywords:
   fe-demo-shell:
@@ -60,6 +64,10 @@ keywords:
     - google-ai-studio
     - gemini
     - ui-reference
+    - vibe-coding
+    - design-prompt
+    - designprompts
+    - screenshot
   fe-full-pipeline:
     - anthropic
     - frontend-design
@@ -82,6 +90,10 @@ keywords:
     - google-ai-studio
     - gemini
     - ui-reference
+    - vibe-coding
+    - design-prompt
+    - designprompts
+    - screenshot
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -104,6 +116,10 @@ keywords:
     - google-ai-studio
     - gemini
     - ui-reference
+    - vibe-coding
+    - design-prompt
+    - designprompts
+    - screenshot
   fe-redesign-reference:
     - anti-slop
     - aura-build
@@ -113,26 +129,55 @@ keywords:
     - taste-skill
     - claude-code
     - ui-reference
+    - vibe-coding
+    - frontend-design
+    - design-prompt
+    - designprompts
+    - screenshot
 
 tool_refs:
   fe-from-scratch,:
     W02,:
+      - id: taste-skill
+        required: false
+        default_method: npx-default
   fe-full-pipeline,:
     W03,:
+      - id: taste-skill
+        required: false
+        default_method: npx-default
   fe-polish-existing,:
     W02,:
     W03,:
     W04,:
   fe-redesign-reference,:
     W03,:
+      - id: taste-skill
+        required: false
+        default_method: npx-default
 
 router_triggers:
   frontend-ui-router:
     - 前端
 
 sync_log:
-  - ingest_id: ING-BOOTSTRAP-001
+  - ingest_id: ING-20260608-007
+    note: notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
+    kb_id: KB-AI-20260608-vibe-coding-ui-three-strategies
+    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing", "fe-redesign-reference"]
+    at: 2026-06-08
+  - ingest_id: ING-20260608-007
     note: notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
     kb_id: KB-AI-20260608-three-ways-remove-ai-slop
     workflows: ["fe-demo-shell", "fe-from-scratch", "fe-full-pipeline", "fe-polish-existing", "fe-redesign-reference"]
+    at: 2026-06-08
+  - ingest_id: ING-20260608-007
+    note: notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
+    kb_id: KB-AI-20260608-taste-skill-agent-frontend
+    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing"]
+    at: 2026-06-08
+  - ingest_id: ING-20260608-007
+    note: notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
+    kb_id: KB-AI-20260608-awesome-ai-tools-for-ui
+    workflows: ["fe-from-scratch", "fe-full-pipeline", "fe-polish-existing"]
     at: 2026-06-08

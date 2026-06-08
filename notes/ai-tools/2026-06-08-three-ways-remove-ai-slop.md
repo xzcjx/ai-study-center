@@ -10,7 +10,7 @@ source:
 tags: [anti-slop, aura-build, google-ai-studio, gemini, agent-skill, taste-skill, claude-code, ui-reference]
 difficulty: beginner
 status: active
-related: [KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-anthropic-frontend-design-skill, KB-AI-20260608-awesome-ai-tools-for-ui]
+related: [KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-anthropic-frontend-design-skill, KB-AI-20260608-awesome-ai-tools-for-ui, KB-AI-20260608-vibe-coding-ui-three-strategies]
 ingest_id: ING-20260608-006
 updated: 2026-06-08
 ---
@@ -185,9 +185,11 @@ Follow design-taste-frontend skill. Build a forum website homepage.
 - 项目内：[Taste Skill 前端设计纪律](2026-06-08-taste-skill-agent-frontend.md)（`KB-AI-20260608-taste-skill-agent-frontend`）
 - 项目内：[Anthropic Frontend Design Skill](2026-06-08-anthropic-frontend-design-skill.md)（`KB-AI-20260608-anthropic-frontend-design-skill`）
 - 项目内：[Awesome AI Tools for UI 导航](2026-06-08-awesome-ai-tools-for-ui.md)（`KB-AI-20260608-awesome-ai-tools-for-ui`）
+- 项目内：[Vibe Coding UI 三策略对比](2026-06-08-vibe-coding-ui-three-strategies.md)（`KB-AI-20260608-vibe-coding-ui-three-strategies`，同主题不同方法：Prompt 形态 A/B）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 Vibe Coding 三策略笔记（ING-20260608-007） |
 | 2026-06-08 | 初稿（ING-20260608-006），整合轩辕社区导读三种去 AI 味方法论 |
