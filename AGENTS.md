@@ -15,12 +15,18 @@
 
 - 用户问「有没有 X 相关笔记」
 
+在以下情况**跨项目消费**（C01–C05，见 [`docs/CONSUME.md`](docs/CONSUME.md)）：
+
+- 用户在其他项目说 `/kb-recommend`、`/kb-install`、从学习中心找工具并安装
+
 ## 必读文件（按顺序）
 
 1. [`docs/WORKFLOW.md`](docs/WORKFLOW.md) — 责任链 SSOT
 2. [`knowledge/registry.yaml`](knowledge/registry.yaml) — 模块注册表
 3. [`docs/KNOWLEDGE_SCHEMA.md`](docs/KNOWLEDGE_SCHEMA.md) — 笔记 Schema
-4. [`.cursor/skills/knowledge-ingest/SKILL.md`](.cursor/skills/knowledge-ingest/SKILL.md) — 执行 Skill
+4. [`.cursor/skills/knowledge-ingest/SKILL.md`](.cursor/skills/knowledge-ingest/SKILL.md) — 入库 Skill
+5. [`.cursor/skills/knowledge-consume/SKILL.md`](.cursor/skills/knowledge-consume/SKILL.md) — 消费 Skill
+6. [`docs/CONSUME.md`](docs/CONSUME.md) — 跨项目查询/推荐/安装
 
 ## 硬性约束
 
@@ -44,7 +50,9 @@
 ```
 /ingest [URL 或正文]              # 全链路入库
 /ingest --module frontend [内容]  # 指定模块
-/query [关键词]                   # 只查不重写
+/query [关键词]                   # 只查笔记（本仓库内）
+/kb-recommend [意图]              # 跨项目：检索工具 + 推荐对比
+/kb-install [tool-id] [--yes]     # 跨项目：预览/安装到业务项目
 ```
 
 ## 进度追踪

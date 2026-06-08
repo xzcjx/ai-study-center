@@ -1,0 +1,138 @@
+# AI 学习中心 · 可安装工具注册表（SSOT）
+# 消费流程见 docs/CONSUME.md · 查询 scripts/query-tools.sh · 安装 scripts/install-tool.sh
+# 新增工具：录入此处 + 对应 notes/ 笔记 + 更新 docs/INDEX.md
+
+version: "1.0"
+
+tools:
+  - id: taste-skill
+    name: Taste Skill
+    summary: >-
+      Agent Skill 设计导演手册：生成前 brief inference、三拨盘（布局/动效/密度）、
+      设计系统映射与 anti-slop 规则，适合从零做 landing / portfolio。
+    kb_id: KB-AI-20260608-taste-skill-agent-frontend
+    note_path: notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
+    homepage: https://github.com/Leonxlnx/taste-skill
+    module: ai-tools
+    intents:
+      - frontend-design
+      - anti-slop
+      - landing-page
+      - portfolio
+      - agent-skill
+      - ui-generation
+      - redesign
+    keywords:
+      - taste-skill
+      - taste
+      - design-taste-frontend
+      - slop
+      - 审美
+      - 好看
+      - 前端界面
+      - cursor
+      - codex
+      - claude
+    agents: [cursor, claude-code, codex, chatgpt]
+    pairs_with: [impeccable]
+    install:
+      default_method: npx-default
+      methods:
+        - id: npx-default
+          label: "默认 design-taste-frontend (v2 experimental)"
+          type: shell
+          scope: project
+          command: npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"
+        - id: npx-all
+          label: "安装全部技能"
+          type: shell
+          scope: project
+          command: npx skills add https://github.com/Leonxlnx/taste-skill
+        - id: npx-v1
+          label: "固定 v1 行为"
+          type: shell
+          scope: project
+          command: npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend-v1"
+        - id: paste
+          label: "粘贴 SKILL 到对话（无需 CLI）"
+          type: manual
+          scope: project
+          instructions: >-
+            从 https://github.com/Leonxlnx/taste-skill 复制 skills/taste-skill/SKILL.md，
+            粘贴到 Cursor / ChatGPT 对话，并在任务中写 Follow design-taste-frontend skill。
+    usage_prompt: |
+      Follow the design-taste-frontend skill. Build a landing page.
+      Brand: precise, restrained, developer-friendly — closer to GitHub Primer than generic AI gradients.
+
+  - id: impeccable
+    name: impeccable.style
+    summary: >-
+      设计「词典」+ 20 个斜杠命令（/audit /polish /colorize 等）：
+      诊断并迭代抛光已有 AI 页面，解决 Inter+灰底+卡片套娃等 slop 问题。
+    kb_id: KB-AI-20260608-impeccable-style-frontend-design
+    note_path: notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
+    homepage: https://impeccable.style
+    module: ai-tools
+    intents:
+      - frontend-design
+      - anti-slop
+      - polish
+      - audit
+      - slash-commands
+      - ui-refinement
+      - landing-page
+    keywords:
+      - impeccable
+      - pbakaus
+      - paul bakaus
+      - audit
+      - polish
+      - colorize
+      - 好看
+      - 审美
+      - 前端界面
+      - slop
+      - 斜杠命令
+    agents: [cursor, claude-code, codex, gemini-cli]
+    pairs_with: [taste-skill]
+    install:
+      default_method: cursor-project
+      requires_download:
+        url: https://impeccable.style
+        hint: "从官网下载 ZIP 并解压到临时目录，设置 IMPPECCABLE_DIST 指向解压后的 dist 目录"
+      methods:
+        - id: cursor-project
+          label: "Cursor 项目级"
+          type: shell
+          scope: project
+          agent: cursor
+          command: 'cp -r "${IMPECCABLE_DIST:?请设置 IMPECCABLE_DIST}/cursor/.cursor" "${TARGET:-.}/"'
+        - id: claude-project
+          label: "Claude Code 项目级"
+          type: shell
+          scope: project
+          agent: claude-code
+          command: 'cp -r "${IMPECCABLE_DIST:?请设置 IMPECCABLE_DIST}/claude-code/.claude" "${TARGET:-.}/"'
+        - id: codex-project
+          label: "Codex CLI 项目级"
+          type: shell
+          scope: project
+          agent: codex
+          command: 'cp -r "${IMPECCABLE_DIST:?请设置 IMPECCABLE_DIST}/codex-cli/.codex" "${TARGET:-.}/"'
+        - id: claude-global
+          label: "Claude Code 全局"
+          type: shell
+          scope: global
+          agent: claude-code
+          command: 'cp -r "${IMPECCABLE_DIST:?请设置 IMPECCABLE_DIST}/claude-code/.claude/"* "${HOME}/"'
+    usage_prompt: |
+      已安装 impeccable。请按序执行：/audit 诊断 → /distill 简化 → /colorize 配色 → /polish 收尾。
+      然后根据我的需求继续：{用户补充的场景描述}
+
+# 意图 → 推荐工具（用于 /kb-recommend 无关键词时的默认映射）
+intent_aliases:
+  好看的前端: [frontend-design, anti-slop, ui-generation]
+  前端审美: [frontend-design, anti-slop]
+  ai slop: [anti-slop, polish]
+  落地页: [landing-page, frontend-design]
+  landing page: [landing-page, frontend-design]

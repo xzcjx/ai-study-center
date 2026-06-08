@@ -19,6 +19,11 @@ alwaysApply: true
 
 - 仅执行 H02 Dedup，**不写文件**
 
+用户消息涉及「/kb-recommend / /kb-install / 从学习中心找工具 / 推荐工具并安装」时：
+
+1. 读 `docs/CONSUME.md` 与 `.cursor/skills/knowledge-consume/SKILL.md`
+2. 执行 C01→C05；**C03 必须等用户选择后再安装**
+
 ## SSOT 文件
 
 | 用途 | 路径 |
@@ -28,6 +33,9 @@ alwaysApply: true
 | 模块注册 | `knowledge/registry.yaml` + `docs/MODULES.md` |
 | 笔记 Schema | `docs/KNOWLEDGE_SCHEMA.md` |
 | 入库 Skill | `.cursor/skills/knowledge-ingest/SKILL.md` |
+| 消费 Skill | `.cursor/skills/knowledge-consume/SKILL.md` |
+| 工具目录 | `knowledge/tools-registry.yaml` |
+| 消费工作流 | `docs/CONSUME.md` |
 | 总索引 | `docs/INDEX.md` |
 
 ## 产出约束
@@ -50,4 +58,6 @@ alwaysApply: true
 ```
 /ingest [URL或正文] [--module frontend]
 /query [关键词]
+/kb-recommend [意图]
+/kb-install [tool-id]
 ```
