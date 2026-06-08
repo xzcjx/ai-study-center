@@ -10,7 +10,7 @@ source:
 tags: [anthropic, frontend-design, agent-skill, claude-code, anti-slop, aesthetic-direction, coolors]
 difficulty: beginner
 status: active
-related: [KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-awesome-ai-tools-for-ui]
+related: [KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-awesome-ai-tools-for-ui, KB-AI-20260608-three-ways-remove-ai-slop]
 ingest_id: ING-20260608-005
 updated: 2026-06-08
 ---
@@ -178,9 +178,11 @@ npx skills add https://github.com/anthropics/skills --skill frontend-design
 - 项目内：[Awesome AI Tools for UI 导航](2026-06-08-awesome-ai-tools-for-ui.md)（`KB-AI-20260608-awesome-ai-tools-for-ui`）
 - 项目内：[Taste Skill 前端设计纪律](2026-06-08-taste-skill-agent-frontend.md)（`KB-AI-20260608-taste-skill-agent-frontend`）
 - 项目内：[impeccable.style 设计词典](2026-06-08-impeccable-style-frontend-design.md)（`KB-AI-20260608-impeccable-style-frontend-design`）
+- 项目内：[三种方法去除 AI 编程 Slop](2026-06-08-three-ways-remove-ai-slop.md)（`KB-AI-20260608-three-ways-remove-ai-slop`）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用三种去 Slop 方法论笔记（ING-20260608-006） |
 | 2026-06-08 | 初稿（ING-20260608-005），整合社区三步实验导读与 anthropics/skills SKILL.md |
