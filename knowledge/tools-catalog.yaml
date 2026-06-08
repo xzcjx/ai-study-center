@@ -430,7 +430,9 @@ entries:
     tags: [code-review, copilot, github, pr]
     homepage: https://github.com/features/copilot
     installable: false
-    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md]
+    kb_notes:
+      - notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md
+      - notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md
 
   - id: codacy
     name: Codacy
@@ -452,87 +454,78 @@ entries:
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）  - id: github-copilot-code-review
-    name: GitHub Copilot code review
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 平台内置
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
-    homepage: https://docs.github.com/en/copilot/using-github-copilot/code-review
-    installable: false
-    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-014]
+  # --- AI Code Review 工具版图（ING-20260608-014）---
   - id: coderabbit
     name: CodeRabbit
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 独立 AI Review
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    category: workflow
+    positioning: 独立 PR AI Review · 摘要 + 逐行建议 + 风险分级
+    summary: 专注 PR 审查的 SaaS，自动摘要变更、逐文件建议，可接入 GitHub/GitLab。
+    tags: [code-review, pr, github, gitlab]
     homepage: https://coderabbit.ai
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-014]
+
   - id: greptile
     name: Greptile
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 独立 AI Review
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    category: workflow
+    positioning: 全库上下文 PR Review · 懂代码库历史的审查
+    summary: 索引整个仓库后做 PR 审查，强调跨文件影响与架构一致性。
+    tags: [code-review, pr, context]
     homepage: https://greptile.com
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-014]
+
   - id: graphite
     name: Graphite
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 独立 AI Review
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    category: workflow
+    positioning: PR 栈 + AI Review 工作流 · 小 PR 文化
+    summary:  stacked PR 工具链，配合 AI 审查推动小批量、快合并的 Review 节奏。
+    tags: [code-review, pr, stacked-pr]
     homepage: https://graphite.dev
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-014]
+
   - id: snyk
     name: Snyk
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 安全扫描
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    category: workflow
+    positioning: 依赖漏洞扫描 + AI 修复建议
+    summary: 开源依赖与容器镜像安全扫描，CI 集成后在 PR 侧提示漏洞与升级路径。
+    tags: [code-review, security, dependency, ci]
     homepage: https://snyk.io
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-014]
+
   - id: semgrep
     name: Semgrep
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 安全扫描
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    category: workflow
+    positioning: 可定制规则的 SAST · 团队安全策略代码化
+    summary: 静态分析引擎，支持自定义 Semgrep 规则，适合把团队安全规范写成可扫描策略。
+    tags: [code-review, security, static-analysis, sast]
     homepage: https://semgrep.dev
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-014]
+
   - id: codeql
     name: CodeQL
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 安全扫描
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    category: workflow
+    positioning: GitHub 语义代码分析 · 深度数据流漏洞检测
+    summary: GitHub 原生 CodeQL 查询，适合在 GitHub 生态做 PR 安全门禁与供应链分析。
+    tags: [code-review, security, github, static-analysis]
     homepage: https://codeql.github.com
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-014]
+
   - id: anthropic-code-review
-    name: Anthropic code review
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 平台能力
-    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    name: Anthropic Code Review
+    category: apps
+    positioning: 针对 AI 生成代码洪流的审查能力
+    summary: Anthropic 发布的 code review 能力，面向 Copilot/Agent 大量产出后的质量把关。
+    tags: [code-review, claude, anthropic]
     homepage: https://www.anthropic.com/news/code-review
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260608-014]
 
+# 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }
