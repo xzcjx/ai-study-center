@@ -1,0 +1,46 @@
+---
+description: 知识入库责任链执行规范 — 触发整合/收录时强制遵循
+alwaysApply: true
+---
+
+# 责任链执行规范
+
+## 链式结构（不可乱序）
+
+```
+H01 Intake → H02 Dedup → H03 Research → H04 Classify → H05 Decompose
+→ H06 Structure → H07 Persist → H08 Index → H09 CrossLink → H10 Validate → H11 Report
+```
+
+## 每步最小产出
+
+| Handler | 必须留下 |
+|---------|----------|
+| H01 | `ingest_id` |
+| H02 | 去重结论 create/merge/split |
+| H04 | `module` + `module_id`（来自 registry.yaml） |
+| H05 | ≥3 个 KnowledgeAtom |
+| H06 | 符合 KNOWLEDGE_SCHEMA 的 DraftNote |
+| H07 | 磁盘文件路径 |
+| H08 | INDEX.md 已更新 |
+| H10 | validate-note.sh exit 0 |
+| H11 | ingest-report 格式回复用户 |
+
+## 回复格式
+
+入库任务回复**开头**必须含进度块：
+
+```
+入库 {ingest_id} · {action} · {module}
+- [x] H01 … H11 勾选状态
+```
+
+## 失败回退
+
+- H10 失败 → 回 H06 修 frontmatter/章节
+- H02 建议 merge → 默认 merge，除非用户明确要求新建
+- H04 多模块 → split，禁止强行塞进 misc
+
+## 详细细则
+
+见 `.cursor/skills/knowledge-ingest/pipeline.md`

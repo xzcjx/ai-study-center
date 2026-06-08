@@ -1,0 +1,30 @@
+---
+description: 知识库笔记输出格式与模块路径规范
+globs: notes/**/*.md
+alwaysApply: false
+---
+
+# 笔记输出规范
+
+编辑 `notes/**/*.md` 时遵循 `docs/KNOWLEDGE_SCHEMA.md`。
+
+## frontmatter 必填
+
+`id`, `module`, `module_id`, `title`, `source`, `tags`, `difficulty`, `status`, `related`, `ingest_id`, `updated`
+
+## id 格式
+
+`KB-{PREFIX}-{YYYYMMDD}-{slug}`
+
+PREFIX 对照：FE/BE/TEST/AI/OPS/DB/ARCH/MISC（见 registry tags_prefix）
+
+## 正文必填章节
+
+`## TL;DR` · `## 适用场景` · `## 知识要点` · `## 相关链接` · `## 变更记录`
+
+## 修改已有笔记时
+
+- 更新 frontmatter `updated`
+- 「变更记录」表追加一行
+- 同步 `docs/INDEX.md` 若标题/tags 变更
+- 运行 `scripts/validate-note.sh`

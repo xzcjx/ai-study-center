@@ -1,0 +1,53 @@
+---
+description: AI 学习中心全局入口 — 知识库责任链与 Agent 行为
+alwaysApply: true
+---
+
+# AI 学习中心 · 全局规则
+
+本仓库 = **结构化知识库（Knowledge Base）**，不是应用代码仓库。
+
+## 第一优先级
+
+用户消息涉及「整合 / 收录 / 入库 / 文章 / 学习笔记 / /ingest」时：
+
+1. **立即读取** `AGENTS.md` 与 `docs/WORKFLOW.md`
+2. **执行** `.cursor/skills/knowledge-ingest/SKILL.md` 责任链 H01→H11
+3. **不可跳过** H10 Validate
+
+用户消息涉及「查询 / 有没有 / 搜索笔记」时：
+
+- 仅执行 H02 Dedup，**不写文件**
+
+## SSOT 文件
+
+| 用途 | 路径 |
+|------|------|
+| Agent 入口 | `AGENTS.md` |
+| 责任链 | `docs/WORKFLOW.md` |
+| 模块注册 | `knowledge/registry.yaml` + `docs/MODULES.md` |
+| 笔记 Schema | `docs/KNOWLEDGE_SCHEMA.md` |
+| 入库 Skill | `.cursor/skills/knowledge-ingest/SKILL.md` |
+| 总索引 | `docs/INDEX.md` |
+
+## 产出约束
+
+- 笔记 → `notes/{module}/`（8 模块，见 registry.yaml）
+- 每篇必须有 YAML frontmatter + TL;DR + 适用场景
+- 入库后必须更新 INDEX + 运行 `scripts/validate-note.sh`
+- 中文撰写，技术术语保留英文
+
+## 禁止
+
+- 跳过责任链 Handler
+- 整篇搬运原文
+- 引入 package.json / Docker 等运行时（除非用户明确要求）
+- 修改本仓库外的项目
+- 入库含密钥的内容
+
+## 快捷指令
+
+```
+/ingest [URL或正文] [--module frontend]
+/query [关键词]
+```

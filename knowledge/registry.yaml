@@ -1,0 +1,82 @@
+# AI 学习中心 · 知识模块注册表（SSOT）
+# 新增模块须同步更新：docs/MODULES.md、docs/INDEX.md、.cursor/skills/knowledge-ingest/pipeline.md
+
+version: "1.0"
+
+modules:
+  frontend:
+    id: MOD-FE
+    label: 前端
+    path: notes/frontend
+    description: React/Vue/CSS/性能/工程化/UX/浏览器 API
+    keywords: [react, vue, css, html, webpack, vite, ui, ux, 前端, 组件]
+    tags_prefix: fe
+
+  backend:
+    id: MOD-BE
+    label: 后端
+    path: notes/backend
+    description: API 设计、语言框架、并发、缓存、中间件
+    keywords: [api, java, python, go, node, spring, fastapi, 后端, 服务端]
+    tags_prefix: be
+
+  testing:
+    id: MOD-TEST
+    label: 测试
+    path: notes/testing
+    description: 单元/E2E/性能/测试策略/TDD
+    keywords: [test, jest, playwright, cypress, vitest, e2e, tdd, 测试]
+    tags_prefix: test
+
+  ai-tools:
+    id: MOD-AI
+    label: AI 工具
+    path: notes/ai-tools
+    description: Cursor/Copilot/LLM/Prompt/Agent/RAG
+    keywords: [cursor, copilot, llm, gpt, claude, prompt, agent, rag, ai]
+    tags_prefix: ai
+
+  devops:
+    id: MOD-OPS
+    label: DevOps
+    path: notes/devops
+    description: CI/CD、Docker、K8s、监控、部署
+    keywords: [docker, kubernetes, ci, cd, github actions, 部署, 监控]
+    tags_prefix: ops
+
+  database:
+    id: MOD-DB
+    label: 数据库
+    path: notes/database
+    description: SQL/NoSQL、迁移、索引、查询优化
+    keywords: [sql, postgres, mysql, redis, mongodb, orm, 数据库]
+    tags_prefix: db
+
+  architecture:
+    id: MOD-ARCH
+    label: 架构
+    path: notes/architecture
+    description: 系统设计、设计模式、微服务、DDD
+    keywords: [architecture, microservice, ddd, design pattern, 架构, 系统设计]
+    tags_prefix: arch
+
+  misc:
+    id: MOD-MISC
+    label: 其他
+    path: notes/misc
+    description: 工具链、效率、职业发展等兜底分类
+    keywords: [tool, productivity, git, shell, 效率, 工具]
+    tags_prefix: misc
+
+# 笔记动作类型
+actions:
+  create: 新建笔记（无重复主题）
+  merge: 合并到已有笔记（同主题扩展）
+  split: 拆分为多篇（内容跨多模块）
+  deprecate: 标记过时（保留但注明替代方案）
+
+# 文件命名
+naming:
+  pattern: "{date}-{slug}.md"
+  date_format: "YYYY-MM-DD"
+  slug_rules: kebab-case, english, max 60 chars

@@ -1,0 +1,134 @@
+# Handler 细则（knowledge-ingest 子文档）
+
+> 主 Skill：[SKILL.md](SKILL.md) · 工作流：[docs/WORKFLOW.md](../../docs/WORKFLOW.md)
+
+---
+
+## H01 · Intake
+
+| 项 | 说明 |
+|----|------|
+| 输入 | 用户原始消息 |
+| 输出 | `IngestRequest`（见 KNOWLEDGE_SCHEMA §1） |
+| 停止条件 | 无 URL、无正文、无截图描述 |
+
+**ingest_id 生成**：查 `docs/INDEX.md`「最近更新」表当日已有条数 +1。
+
+---
+
+## H02 · Dedup
+
+| 项 | 说明 |
+|----|------|
+| 输入 | `IngestRequest` |
+| 输出 | `DedupReport { similar_found, candidates[], recommended_action }` |
+
+**搜索策略**（按优先级）：
+1. INDEX 标题精确/模糊匹配
+2. `grep -ri` notes/ 正文
+3. tags 交集
+
+**merge 条件**：同主题 + 已有笔记 status=active + 用户未要求独立成篇。
+
+---
+
+## H03 · Research
+
+| 项 | 说明 |
+|----|------|
+| 输入 | `IngestRequest` |
+| 输出 | `EnrichedContext { raw, fetched, official_refs[] }` |
+
+- URL → WebFetch
+- 版本敏感技术 → WebSearch 核实最新 API
+- 失败不阻断，标注 `source.reliability: user-only`
+
+---
+
+## H04 · Classify
+
+| 项 | 说明 |
+|----|------|
+| 输入 | `EnrichedContext` |
+| 输出 | `ModuleAssignment[] { module, module_id, score, action }` |
+
+**打分**：registry.yaml keywords 每命中 +1；标题命中 +2；用户 hint +5。
+
+**split 示例**：
+- 「Docker 跑 Playwright CI」→ testing(0.6) + devops(0.5) → split 两篇
+
+---
+
+## H05 · Decompose
+
+| 项 | 说明 |
+|----|------|
+| 输入 | `EnrichedContext` + `ModuleAssignment` |
+| 输出 | `KnowledgeAtom[]` |
+
+**Atom 质量门禁**：
+- title ≤ 80 字符
+- summary 一句话可独立理解
+- 必须可归类到单一 module
+
+---
+
+## H06 · Structure
+
+| 项 | 说明 |
+|----|------|
+| 输入 | `KnowledgeAtom[]` |
+| 输出 | `DraftNote`（含 frontmatter + 正文） |
+
+模板：[templates/article.md](../../templates/article.md)
+
+**merge 模式**：保留原 frontmatter.id，更新 `updated`，变更记录追加。
+
+---
+
+## H07 · Persist
+
+| 项 | 说明 |
+|----|------|
+| 输入 | `DraftNote[]` |
+| 输出 | `paths[]` |
+
+- create → 新文件
+- merge → 覆盖/追加已有文件（保留变更记录）
+- 文件名冲突 → `{slug}-2.md`
+
+---
+
+## H08 · Index
+
+更新 [docs/INDEX.md](../../docs/INDEX.md) 四处：
+1. 统计表篇数 +N
+2. 分类表新行（日期|标题|标签|链接|KB-id）
+3. 标签云追加新 tag
+4. 最近更新表
+
+---
+
+## H09 · CrossLink
+
+- 读 DedupReport.candidates → 写入 `related: [KB-...]`
+- 打开关联笔记，追加 reciprocal link
+- 正文「相关链接」章节同步
+
+---
+
+## H10 · Validate
+
+```bash
+scripts/validate-note.sh <file.md>
+```
+
+exit 0 → 过；非 0 → 带错误回 H06。
+
+---
+
+## H11 · Report
+
+模板：[templates/ingest-report.md](../../templates/ingest-report.md)
+
+用户可见 TL;DR ≤ 3 条；技术细节在笔记正文。
