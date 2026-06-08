@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 1 |
+| AI 工具 | 2 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
 | 其他 | 0 |
-| **合计** | **1** |
+| **合计** | **2** |
 
 ---
 
@@ -42,6 +42,7 @@
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
 | 2026-06-08 | Taste Skill：为 AI Agent 前端生成注入设计纪律 | `taste-skill`, `agent-skill`, `frontend-design` | [笔记](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md) · `KB-AI-20260608-taste-skill-agent-frontend` |
+| 2026-06-08 | impeccable.style：用设计词典与斜杠命令对抗 AI 前端 Slop | `impeccable`, `frontend-design`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md) · `KB-AI-20260608-impeccable-style-frontend-design` |
 
 ## DevOps · devops
 
@@ -71,12 +72,13 @@
 
 ## 标签云（手动维护）
 
-`taste-skill` · `agent-skill` · `frontend-design` · `anti-slop` · `cursor` · `design-system` · `motion`
+`taste-skill` · `impeccable` · `agent-skill` · `frontend-design` · `anti-slop` · `cursor` · `slash-commands` · `design-system` · `motion`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 新建 | [impeccable.style 前端设计词典](../notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md)（ING-20260608-003） |
 | 2026-06-08 | 合并更新 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md)（ING-20260608-002） |
 | 2026-06-08 | 新建 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md) |
 | 2026-06-08 | 初始化项目 | — |
