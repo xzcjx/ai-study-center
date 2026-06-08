@@ -186,6 +186,55 @@ tools:
       color palette: {从 coolors.co 复制的 CSS 变量}
       {你的页面需求}
 
+  - id: awesome-design-md
+    name: awesome-design-md
+    summary: >-
+      73 个顶级品牌 DESIGN.md 合集（Stripe/Linear/Apple 等）：复制到项目根目录，
+      让 Cursor/Claude Code/Stitch 按精确设计变量生成风格一致的 UI；MIT，零依赖。
+    kb_id: KB-AI-20260608-awesome-design-md-agent-ui
+    note_path: notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md
+    homepage: https://github.com/VoltAgent/awesome-design-md
+    module: ai-tools
+    intents:
+      - frontend-design
+      - anti-slop
+      - design-system
+      - ui-generation
+      - landing-page
+    keywords:
+      - awesome-design-md
+      - design-md
+      - design.md
+      - getdesign
+      - voltagent
+      - stripe
+      - linear
+      - 设计系统
+      - 好看
+      - 审美
+      - 前端界面
+      - slop
+    agents: [cursor, claude-code, google-stitch, windsurf, codex]
+    pairs_with: [taste-skill, anthropic-frontend-design, impeccable]
+    install:
+      default_method: copy-design-md
+      methods:
+        - id: copy-design-md
+          label: "复制品牌 DESIGN.md 到项目根目录"
+          type: manual
+          scope: project
+          instructions: >-
+            从 https://github.com/VoltAgent/awesome-design-md 选定品牌目录，
+            将 DESIGN.md 复制到目标项目根目录；对话中写「请严格遵循 DESIGN.md 实现页面」。
+        - id: clone-repo
+          label: "克隆仓库后按需复制"
+          type: shell
+          scope: project
+          command: git clone https://github.com/VoltAgent/awesome-design-md.git
+    usage_prompt: |
+      请严格遵循项目根目录 DESIGN.md 中的设计系统实现：{页面需求}
+      使用文档色板与组件规范，禁止默认 AI 模板配色。
+
 # 意图 → 推荐工具（用于 /kb-recommend 无关键词时的默认映射）
 intent_aliases:
   好看的前端: [frontend-design, anti-slop, ui-generation]

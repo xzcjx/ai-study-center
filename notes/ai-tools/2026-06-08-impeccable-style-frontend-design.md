@@ -10,7 +10,7 @@ source:
 tags: [impeccable, frontend-design, anti-slop, cursor, agent-skill, slash-commands, paul-bakaus]
 difficulty: beginner
 status: active
-related: [KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-awesome-ai-tools-for-ui]
+related: [KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-awesome-ai-tools-for-ui, KB-AI-20260608-awesome-design-md-agent-ui]
 ingest_id: ING-20260608-003
 updated: 2026-06-08
 ---
@@ -167,10 +167,12 @@ Cursor / Codex CLI / Gemini CLI 选用 ZIP 内对应 `dist/{tool}/` 目录。
 - [命令速查表](https://impeccable.style/cheatsheet)
 - 项目内：[Taste Skill 前端设计纪律](2026-06-08-taste-skill-agent-frontend.md)（`KB-AI-20260608-taste-skill-agent-frontend`）
 - 项目内：[Awesome AI Tools for UI 工具导航](2026-06-08-awesome-ai-tools-for-ui.md)（`KB-AI-20260608-awesome-ai-tools-for-ui`，清单 ⭐️ 收录）
+- 项目内：[awesome-design-md DESIGN.md](2026-06-08-awesome-design-md-agent-ui.md)（`KB-AI-20260608-awesome-design-md-agent-ui`，从零定 token；impeccable 抛光已有页）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 awesome-design-md 笔记（ING-20260608-008） |
 | 2026-06-08 | 交叉引用 Awesome AI Tools for UI 导航笔记（ING-20260608-004） |
 | 2026-06-08 | 初稿（ING-20260608-003），整合用户提供的公众号导读与 GitHub 信息 |

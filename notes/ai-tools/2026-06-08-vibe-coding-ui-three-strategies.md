@@ -10,7 +10,7 @@ source:
 tags: [anti-slop, vibe-coding, frontend-design, design-prompt, ui-reference, claude-code, designprompts, screenshot]
 difficulty: beginner
 status: active
-related: [KB-AI-20260608-three-ways-remove-ai-slop, KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-awesome-ai-tools-for-ui, KB-AI-20260608-anthropic-frontend-design-skill]
+related: [KB-AI-20260608-three-ways-remove-ai-slop, KB-AI-20260608-taste-skill-agent-frontend, KB-AI-20260608-awesome-ai-tools-for-ui, KB-AI-20260608-anthropic-frontend-design-skill, KB-AI-20260608-awesome-design-md-agent-ui]
 ingest_id: ING-20260608-007
 updated: 2026-06-08
 ---
@@ -109,7 +109,7 @@ updated: 2026-06-08
 
 - 日常 agent：设计 Prompt 或 Agent Skill（Taste / Anthropic）定纪律
 - 有明确参考图：截图 → UI Prompt Builder 逆向 → 文字约束 → 再生成
-- 系列预告：用 **`DESIGN.md`** 让 AI 跨 session 记住审美（下一篇）
+- 系列续篇：用 **`DESIGN.md`** 持久化审美 → 见 [awesome-design-md](2026-06-08-awesome-design-md-agent-ui.md)
 
 ### 6. 视觉三件套：AI 最常翻车的三个点
 
@@ -191,7 +191,7 @@ updated: 2026-06-08
 - 「DeepSeek V4 Pro」为文章原文表述；模型版本迭代快，三策略结论（约束 > 无约束、文字 > 裸图）可复验于其他 agent。
 - designprompts 等第三方 prompt 体积大，注意上下文窗口——可只粘贴「色彩 /  typography / 组件 / 禁止项」章节。
 - 本文与 [三种方法去除 AI 编程 Slop](2026-06-08-three-ways-remove-ai-slop.md) **方法不同、主题相关**：彼文为 aura 克隆 / Gemini 壳层 / Agent Skills；本文为同需求下的** Prompt 形态**对比，宜交叉阅读而非合并。
-- 系列下一篇「用一个 DESIGN.md 让 AI 记住你的审美」尚未入库，可关注后续 `/ingest`。
+- 系列续篇已入库：[awesome-design-md DESIGN.md](2026-06-08-awesome-design-md-agent-ui.md)（`KB-AI-20260608-awesome-design-md-agent-ui`）。
 
 ## 相关链接
 
@@ -204,9 +204,11 @@ updated: 2026-06-08
 - 项目内：[Taste Skill 前端设计纪律](2026-06-08-taste-skill-agent-frontend.md)（`KB-AI-20260608-taste-skill-agent-frontend`）
 - 项目内：[Anthropic Frontend Design Skill](2026-06-08-anthropic-frontend-design-skill.md)（`KB-AI-20260608-anthropic-frontend-design-skill`）
 - 项目内：[Awesome AI Tools for UI 工具导航](2026-06-08-awesome-ai-tools-for-ui.md)（`KB-AI-20260608-awesome-ai-tools-for-ui`）
+- 项目内：[awesome-design-md DESIGN.md 设计系统](2026-06-08-awesome-design-md-agent-ui.md)（`KB-AI-20260608-awesome-design-md-agent-ui`）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉链接：关联系列续篇 awesome-design-md（ING-20260608-008） |
 | 2026-06-08 | 初稿（ING-20260608-007），整合「给 AI 装上审美（一）」系列：零约束 / 设计 Prompt / 截图参考三策略与工具箱 |

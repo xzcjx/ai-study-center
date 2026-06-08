@@ -401,7 +401,27 @@ entries:
     installable: false
     kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）
+# 分类筛选别名（/kb-recommend 汇总模式）  - id: anthropic-frontend-design-2
+    name: Anthropic frontend-design
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: Claude Code 原生插件
+    tags: [anthropic, frontend-design, agent-skill, claude-code, anti-slop]
+    homepage: 
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md]
+    ingest_ids: [ING-20260608-008]
+  - id: impeccable-2
+    name: Impeccable
+    category: skills
+    positioning: 待补充（H13b 自动入库）
+    summary: 20 个设计斜杠命令，教 agent 排版/间距/层次；见本库 [专文](2026-06-08-impeccable-style-frontend-design.md)
+    tags: [awesome-list, frontend-design, anti-slop, agent-skill, mcp]
+    homepage: 
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    ingest_ids: [ING-20260608-008]
+
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }

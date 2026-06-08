@@ -10,7 +10,7 @@ source:
 tags: [taste-skill, agent-skill, frontend-design, anti-slop, cursor, design-system, motion]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-impeccable-style-frontend-design, KB-AI-20260608-awesome-ai-tools-for-ui, KB-AI-20260608-anthropic-frontend-design-skill, KB-AI-20260608-three-ways-remove-ai-slop, KB-AI-20260608-vibe-coding-ui-three-strategies]
+related: [KB-AI-20260608-impeccable-style-frontend-design, KB-AI-20260608-awesome-ai-tools-for-ui, KB-AI-20260608-anthropic-frontend-design-skill, KB-AI-20260608-three-ways-remove-ai-slop, KB-AI-20260608-vibe-coding-ui-three-strategies, KB-AI-20260608-awesome-design-md-agent-ui]
 ingest_id: ING-20260608-001
 updated: 2026-06-08
 ---
@@ -169,11 +169,13 @@ Follow image-to-code: generate visual references first, analyze the selected fra
 - 项目内：[Anthropic Frontend Design Skill 三步反 Slop](2026-06-08-anthropic-frontend-design-skill.md)（`KB-AI-20260608-anthropic-frontend-design-skill`）
 - 项目内：[三种方法去除 AI 编程 Slop](2026-06-08-three-ways-remove-ai-slop.md)（`KB-AI-20260608-three-ways-remove-ai-slop`，方法 3 实测案例）
 - 项目内：[Vibe Coding UI 三策略对比](2026-06-08-vibe-coding-ui-three-strategies.md)（`KB-AI-20260608-vibe-coding-ui-three-strategies`，image-to-code 与截图约束）
+- 项目内：[awesome-design-md DESIGN.md](2026-06-08-awesome-design-md-agent-ui.md)（`KB-AI-20260608-awesome-design-md-agent-ui`，Stitch 兼容导出与 73 品牌 token）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 awesome-design-md 笔记（ING-20260608-008） |
 | 2026-06-08 | 交叉引用 Vibe Coding 三策略笔记（ING-20260608-007） |
 | 2026-06-08 | 交叉引用三种去 Slop 方法论笔记（ING-20260608-006） |
 | 2026-06-08 | 交叉引用 Anthropic Frontend Design Skill 笔记（ING-20260608-005） |
