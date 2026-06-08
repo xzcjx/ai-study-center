@@ -412,47 +412,47 @@ entries:
     registry_id: awesome-design-md
     kb_notes: [notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）  - id: cursor
+  - id: cursor-ide
     name: Cursor
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: [cursor.com](https://cursor.com)
-    tags: [code-review, prompt, cursor, claude, copilot]
-    homepage: 
+    category: apps
+    positioning: AI IDE · 对话审查当前文件
+    summary: Cmd/Ctrl+L 对当前文件做 Bug/安全/质量 Review，适合开发时边写边审。
+    tags: [code-review, cursor, claude, agent]
+    homepage: https://cursor.com
     installable: false
     kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
-    ingest_ids: [ING-20260608-010]
+
   - id: github-copilot-enterprise
     name: GitHub Copilot Enterprise
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: GitHub PR
-    tags: [code-review, prompt, cursor, claude, copilot]
-    homepage: 
+    category: apps
+    positioning: PR 页 Copilot 自动代码审查（企业版）
+    summary: 在 GitHub PR 的 Copilot tab 自动分析变更并给出审查意见。
+    tags: [code-review, copilot, github, pr]
+    homepage: https://github.com/features/copilot
     installable: false
     kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
-    ingest_ids: [ING-20260608-010]
+
   - id: codacy
     name: Codacy
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: [codacy.com](https://www.codacy.com/)
-    tags: [code-review, prompt, cursor, claude, copilot]
-    homepage: 
+    category: workflow
+    positioning: 多语言自动代码扫描 · 团队规模化
+    summary: SaaS 代码质量与安全扫描，接入 CI 做 PR 门禁与趋势报表。
+    tags: [code-review, ci, security, static-analysis]
+    homepage: https://www.codacy.com/
     installable: false
     kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
-    ingest_ids: [ING-20260608-010]
+
   - id: sonarqube
     name: SonarQube
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: [sonarqube.org](https://www.sonarqube.org/)
-    tags: [code-review, prompt, cursor, claude, copilot]
-    homepage: 
+    category: workflow
+    positioning: 本地/企业部署代码质量管理
+    summary: 自托管静态分析，适合安全要求高、敏感代码不出内网的企业场景。
+    tags: [code-review, ci, security, static-analysis, self-hosted]
+    homepage: https://www.sonarqube.org/
     installable: false
     kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
-    ingest_ids: [ING-20260608-010]
 
+# 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }
