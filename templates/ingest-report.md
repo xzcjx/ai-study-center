@@ -30,6 +30,14 @@
 | 命中工作流 | `{workflow_ids}` |
 | 验证 | `kb-workflow.sh "{场景}"` |
 
+### Catalog 同步（H13b / H13c）
+
+| 项 | 值 |
+|----|-----|
+| 总表 | `knowledge/tools-catalog.yaml` |
+| H13b 新增 | `{catalog_added}` 条 |
+| H13c 校验 | `{catalog_validation}` |
+
 ### Git 推送（H12）
 
 - 远程：`origin` → `{branch}@{short_commit}` 或 `{失败原因}` 或 `已跳过（--no-push）`

@@ -151,6 +151,47 @@ scripts/sync-workflow.sh {ingest_id} notes/{module}/{file}.md
 
 ---
 
+## H13b · SyncCatalog
+
+| 项 | 说明 |
+|----|------|
+| 输入 | H07 笔记路径 + `ingest_id` |
+| 输出 | `knowledge/tools-catalog.yaml` 增量 |
+| 解析 SSOT | `scripts/kb_tools.py` `_extract_catalog_entries` |
+
+```bash
+scripts/sync-catalog.sh {ingest_id} notes/{module}/{file}.md
+```
+
+- 仅工具清单表 / 含 http 链接的行 → 新草稿或 `kb_notes` 关联
+- 对比矩阵、变更记录表 → **跳过**
+
+失败 → 阻断 H12。
+
+---
+
+## H13c · ValidateCatalog
+
+| 项 | 说明 |
+|----|------|
+| 输入 | sync 后的 `tools-catalog.yaml` + sync 前 baseline |
+| 输出 | exit 0 / 1 |
+| 脚本 | `scripts/validate-catalog.sh` |
+
+```bash
+scripts/validate-catalog.sh --baseline /tmp/catalog-before.yaml
+```
+
+**Agent 复核**（失败或草稿 > 3 时 mandatory）：
+
+```bash
+git diff knowledge/tools-catalog.yaml
+```
+
+修 catalog 或笔记 → 重跑 `publish-ingest.sh`。**禁止**带 junk catalog push。
+
+---
+
 ## H12 · Publish
 
 | 项 | 说明 |

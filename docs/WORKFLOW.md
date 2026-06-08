@@ -19,7 +19,9 @@ flowchart LR
   H08 --> H09[CrossLink]
   H09 --> H10[Validate]
   H10 --> H13[SyncWorkflow]
-  H13 --> H12[Publish]
+  H13 --> H13b[SyncCatalog]
+  H13b --> H13c[ValidateCatalog]
+  H13c --> H12[Publish]
   H12 --> H11[Report]
   H11 --> D[交付用户]
 ```
@@ -39,6 +41,8 @@ flowchart LR
 | **H09** | CrossLink 交叉引用 | 笔记 id 列表 | 更新 related | 无相关 → 跳过 |
 | **H10** | Validate 校验 | 全部变更 | `ValidationReport` | 失败 → 回 H06 修复 |
 | **H13** | SyncWorkflow 方法论同步 | 入库笔记 | `workflow-ingest-sync.yaml` | 失败 → 阻断 H12 |
+| **H13b** | SyncCatalog 工具总表同步 | 入库笔记 | `tools-catalog.yaml` 增量 | 失败 → 阻断 H12 |
+| **H13c** | ValidateCatalog 总表校验 | sync 后 catalog | `CatalogValidationReport` | 失败 → 手改 catalog/笔记后重跑 H13b |
 | **H12** | Publish 提交推送 | 校验+同步通过的变更 | `PublishReport` | 推送失败 → H11 标注，不阻断交付 |
 | **H11** | Report 报告 | 全链路产物 | `IngestReport` + 用户摘要 | — |
 
@@ -201,9 +205,65 @@ scripts/sync-workflow.sh {ingest_id} notes/{module}/{file}.md
 
 ---
 
+## H13b · SyncCatalog 工具总表同步
+
+**职责**：将入库笔记中的**工具清单表**同步到 [`knowledge/tools-catalog.yaml`](../knowledge/tools-catalog.yaml)。
+
+**执行**（`publish-ingest.sh` 内、`H13c` 之前自动调用）：
+
+```bash
+scripts/sync-catalog.sh {ingest_id} notes/{module}/{file}.md
+```
+
+**解析规则**（`scripts/kb_tools.py` `_extract_catalog_entries`）：
+
+- 仅解析表头首列为 `工具` / `资源` / `站点` 的清单表，或首列含 `[名称](http…)` 链接的行
+- **跳过**对比矩阵、实验记录、变更记录、选型表等非工具表
+
+**产出**：
+
+- 新工具 → 追加草稿行（`positioning: 待补充（H13b 自动入库）`），Agent 或下次入库补全
+- 已有 registry 工具 → 关联 `kb_notes`
+
+**失败** → 阻断 H12。
+
+---
+
+## H13c · ValidateCatalog 总表校验
+
+**职责**：H13b 之后、H12 之前的 **catalog 质量门禁**，防止表格误解析污染 SSOT。
+
+**执行**（`publish-ingest.sh` 内自动调用；也可单独跑）：
+
+```bash
+# publish 内带 baseline 增量校验
+scripts/validate-catalog.sh --baseline /tmp/catalog-before.yaml
+
+# 单独全量校验
+scripts/validate-catalog.sh
+```
+
+**阻断条件**（任一命中即 exit 1，**禁止 push**）：
+
+- `catalog_filters:` 区块被 entries 污染或 YAML 结构损坏
+- 重复 `id`
+- 单次 sync 新增 H13b 草稿 **> 8 条**（疑似误解析）
+- 新增草稿 id 为 `tool` / `tool-2` / `ui` / `prompt` 等泛化 slug
+- 新增草稿名称为表格维度词（如 `策略`、`配色`、`维度`）
+
+**Agent 复核清单**（H13c 失败或草稿 > 3 条时**必须**人工介入）：
+
+1. `git diff knowledge/tools-catalog.yaml` — 确认无 junk 行
+2. 误解析 → 修笔记工具表 **或** 手改 catalog 为 curated 条目（含 `homepage` / `positioning`）
+3. 重跑 `scripts/publish-ingest.sh …`（或 `--no-push` 仅本地验证）
+
+**失败** → 阻断 H12；**不得** push 后再补 fix commit 作为常规路径。
+
+---
+
 ## H12 · Publish 提交推送
 
-**职责**：H10 + H13 通过后，将本次入库变更自动 commit 并 push 到远程。
+**职责**：H10 + H13 + H13b + **H13c** 通过后，将本次入库变更自动 commit 并 push 到远程。
 
 **执行**：
 ```bash
@@ -215,6 +275,7 @@ scripts/publish-ingest.sh {ingest_id} "{笔记标题}" {file1} [file2...]
 - H08 更新的 `docs/INDEX.md`
 - H09 交叉引用时改动的关联笔记
 - H13 更新的 `knowledge/workflow-ingest-sync.yaml`
+- H13b 更新的 `knowledge/tools-catalog.yaml`（须已通过 H13c）
 
 **提交信息格式**：`docs(ingest): {标题}` + 正文含 `{ingest_id}`
 

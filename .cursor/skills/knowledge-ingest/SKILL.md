@@ -31,13 +31,15 @@ description: >-
 - [ ] H08 Index       → 更新 docs/INDEX.md
 - [ ] H09 CrossLink   → related 双向链接
 - [ ] H10 Validate    → scripts/validate-note.sh
-- [ ] H13 SyncWorkflow → scripts/sync-workflow.sh（自动进方法论，H12 内执行）
-- [ ] H13b SyncCatalog → scripts/sync-catalog.sh（自动进 tools-catalog 总表，H12 内执行）
-- [ ] H12 Publish     → scripts/publish-ingest.sh（自动 commit + push）
+- [ ] H13 SyncWorkflow → scripts/sync-workflow.sh（H12 内，方法论）
+- [ ] H13b SyncCatalog → scripts/sync-catalog.sh（H12 内，tools-catalog 增量）
+- [ ] H13c ValidateCatalog → scripts/validate-catalog.sh（H12 内，**阻断 push**）
+- [ ] H12 Publish     → scripts/publish-ingest.sh（H13c 通过后 commit + push）
 - [ ] H11 Report      → templates/ingest-report.md
 ```
 
 **H10 失败 → 回 H06 修复，禁止跳过。**  
+**H13c 失败 → 修 catalog 或笔记工具表，禁止 push。**  
 **H12 默认执行**；用户显式 `--no-push` / `不要推送` 时可跳过。
 
 ## H01 Intake
@@ -108,15 +110,31 @@ scripts/sync-workflow.sh {ingest_id} notes/{module}/{file}.md
 
 ## H13b SyncCatalog
 
-`publish-ingest.sh` 内自动调用，维护 [`knowledge/tools-catalog.yaml`](../../knowledge/tools-catalog.yaml)：
+`publish-ingest.sh` 内、`H13c` 之前自动调用，维护 [`knowledge/tools-catalog.yaml`](../../knowledge/tools-catalog.yaml)：
 
+- **解析范围**：仅「工具/资源/站点」清单表，或含 `[名](http…)` 的行；**不**解析对比矩阵/实验/变更表
 - **可安装工具**：完善 `positioning` / `tags` / `homepage`，设 `registry_id`
-- **文章里新工具**：从笔记表格追加草稿行（`positioning: 待补充`），人工或下次 ingest 补全
-- **验证**：`scripts/query-tools.sh "前端工具汇总"`
+- **文章里新工具**：追加草稿行（`positioning: 待补充（H13b 自动入库）`），Agent 复核后补全
+
+## H13c ValidateCatalog
+
+`publish-ingest.sh` 在 H13b 之后、git commit 之前**强制**调用：
+
+```bash
+scripts/validate-catalog.sh --baseline <sync前快照>
+```
+
+**Agent 必须**（H13c 失败或单次新增草稿 > 3 条时）：
+
+1. 执行 `git diff knowledge/tools-catalog.yaml` 人工确认
+2. 删除 junk / 改为 curated 条目（含 `homepage`、`positioning`）
+3. 重跑 `publish-ingest.sh`；**不得**先 push 再 fix
+
+**阻断条件**：YAML 结构损坏、重复 id、单次草稿 > 8、泛化 id（`tool-2` 等）、表格维度词误入。
 
 ## H12 Publish
 
-H10 + H13 通过后，仅 stage 本次入库文件并推送：
+H10 + H13 + **H13c** 通过后，仅 stage 本次入库文件并推送：
 
 ```bash
 scripts/publish-ingest.sh ING-20260608-001 "笔记标题" \

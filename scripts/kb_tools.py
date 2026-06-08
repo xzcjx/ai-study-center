@@ -245,6 +245,24 @@ INSTALLABLE_NAME_MAP = {
     "anthropic frontend design skill": "anthropic-frontend-design",
 }
 
+# H13b：仅解析「工具清单表」，跳过对比/实验/变更类表格
+TOOL_TABLE_HEADER_CELLS = frozenset({"工具", "资源", "站点"})
+SKIP_SECTION_KEYWORDS = ("矩阵", "对比", "选型", "实验", "症状", "变更", "控制变量", "拨盘", "Install name")
+SKIP_ROW_NAMES = frozenset({
+    "工具", "思路", "对比维度", "典型代表", "实验", "配色方案", "风格",
+    "步骤", "动作", "效果", "维度", "实验 1 基础", "实验 2 +Skill",
+    "---", "对比维度", "需求", "页面类型", "策略", "资源", "站点",
+    "日期", "症状", "配色", "装饰", "布局", "气质", "上手难度",
+    "结果可预期性", "工具切换", "适合页面", "与本库工具", "拨盘",
+    "Install name", "多模态解析倾向", "零约束", "设计 Prompt", "纯截图",
+    "语义结构（导航在哪、栅格关系）", "高频 UI 库默认样式「幻觉补偿」",
+})
+SKIP_SUMMARY_HEADERS = frozenset({
+    "表现", "含义", "特点", "适合", "说明", "设定", "丢失项", "用途",
+    "机制", "要点", "维度", "步骤", "效果", "动作", "对比维度", "最低", "高", "无", "—",
+})
+GENERIC_CATALOG_IDS = frozenset({"tool", "tool-2", "ui", "prompt", "install-name"})
+
 
 def _is_catalog_intent(query: str) -> bool:
     q = query.lower()
@@ -290,13 +308,25 @@ def _search_notes(kb_root: Path, query: str, limit: int = 8) -> list[tuple[Path,
     return hits[:limit]
 
 
+def _extract_link_name_url(cell: str) -> tuple[str, str]:
+    m = re.search(r"\[([^\]]+)\]\((https?://[^)]+)\)", cell)
+    if m:
+        return m.group(1).strip(), m.group(2).strip()
+    return cell.strip(), ""
+
+
 def _extract_catalog_entries(note_path: Path) -> list[dict[str, str]]:
     text = note_path.read_text(encoding="utf-8")
     entries: list[dict[str, str]] = []
     current_category = "其他"
+    skip_section = False
+    in_tool_table = False
+
     for line in text.splitlines():
         if line.startswith("### "):
             sec = line[4:].strip()
+            skip_section = any(kw in sec for kw in SKIP_SECTION_KEYWORDS)
+            in_tool_table = False
             if "Skills" in sec or "技能" in sec:
                 current_category = "Skills"
             elif "Apps" in sec or "应用" in sec:
@@ -309,40 +339,65 @@ def _extract_catalog_entries(note_path: Path) -> list[dict[str, str]]:
                 current_category = "Resources"
             elif "方法" in sec:
                 current_category = "方法论"
-        m = re.match(r"^\|\s*(?:⭐️\s*)?([^|]+?)\s*\|\s*([^|]+?)\s*\|", line)
-        skip_names = {
-            "工具", "思路", "对比维度", "典型代表", "实验", "配色方案", "风格",
-            "步骤", "动作", "效果", "维度", "实验 1 基础", "实验 2 +Skill",
-            "---", "对比维度",
-        }
-        if m and not m.group(1).strip().startswith("-") and m.group(1).strip() not in skip_names:
-            name = m.group(1).strip()
-            summary = m.group(2).strip()
-            if not name or name.startswith("---") or len(name) > 80:
-                continue
-            if summary.startswith("---"):
-                continue
-            if re.match(r"^\d{4}-\d{2}-\d{2}$", name):
-                continue
-            if name.startswith("喂") and current_category == "其他":
-                continue
-            if name.startswith("实验") or name.startswith("方法"):
-                continue
-            installable = INSTALLABLE_NAME_MAP.get(name.lower().replace(".style", "").strip())
-            if not installable:
-                for key, tid in INSTALLABLE_NAME_MAP.items():
-                    if key in name.lower():
-                        installable = tid
-                        break
-            entries.append(
-                {
-                    "category": current_category,
-                    "name": name,
-                    "summary": summary[:120],
-                    "starred": "⭐️" in line,
-                    "installable_id": installable or "",
-                }
-            )
+            elif any(k in sec for k in ("工具箱", "Prompt", "截图", "灵感", "三件套")):
+                current_category = "Resources"
+            continue
+
+        if skip_section:
+            continue
+
+        if re.match(r"^\|\s*-+\s*\|", line):
+            continue
+
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) < 2:
+            in_tool_table = False
+            continue
+
+        first, summary = cells[0], cells[1]
+        if first in TOOL_TABLE_HEADER_CELLS:
+            in_tool_table = True
+            continue
+
+        link_name, homepage = _extract_link_name_url(first)
+        has_http_link = bool(homepage)
+
+        if not has_http_link and not in_tool_table:
+            continue
+
+        name = link_name.replace("⭐️", "").strip()
+        if not name or name.startswith("---") or len(name) > 80:
+            continue
+        if name in SKIP_ROW_NAMES or summary in SKIP_SUMMARY_HEADERS:
+            continue
+        if summary.startswith("---"):
+            continue
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", name):
+            continue
+        if name.startswith("喂") and current_category == "其他":
+            continue
+        if name.startswith("实验") or name.startswith("方法"):
+            continue
+        if not has_http_link and (len(summary) < 6 or name.startswith("`")):
+            continue
+
+        installable = INSTALLABLE_NAME_MAP.get(name.lower().replace(".style", "").strip())
+        if not installable:
+            for key, tid in INSTALLABLE_NAME_MAP.items():
+                if key in name.lower():
+                    installable = tid
+                    break
+
+        entries.append(
+            {
+                "category": current_category,
+                "name": name,
+                "summary": summary[:120],
+                "starred": "⭐️" in first,
+                "installable_id": installable or "",
+                "homepage": homepage,
+            }
+        )
     return entries
 
 
@@ -1119,6 +1174,74 @@ def _append_catalog_entries_to_yaml(catalog_path: Path, new_entries: list[dict[s
     return len(new_entries)
 
 
+def validate_catalog_file(catalog_path: Path, baseline_path: Path | None = None) -> tuple[bool, list[str]]:
+    """H13b 质量门禁：校验 tools-catalog.yaml 结构与增量条目。"""
+    errors: list[str] = []
+    if not catalog_path.is_file():
+        errors.append(f"文件不存在: {catalog_path}")
+        return False, errors
+
+    text = catalog_path.read_text(encoding="utf-8")
+
+    if re.search(r"catalog_filters:\s+- id:", text):
+        errors.append("catalog_filters 区块被 entries 污染（YAML 结构损坏）")
+    if "catalog_filters:" not in text:
+        errors.append("缺少 catalog_filters 区块")
+    elif "\ncatalog_filters:\n" not in text:
+        errors.append("catalog_filters 未独立成行（可能与 entries 粘连）")
+
+    entries, _, filters = load_tools_catalog(catalog_path)
+    if not filters and "catalog_filters:" in text:
+        errors.append("catalog_filters 解析为空，YAML 可能已损坏")
+
+    ids = [e["id"] for e in entries if e.get("id")]
+    dupes = sorted({i for i in ids if ids.count(i) > 1})
+    if dupes:
+        errors.append(f"重复 id: {dupes}")
+
+    baseline_ids: set[str] = set()
+    if baseline_path and baseline_path.is_file():
+        baseline_entries, _, _ = load_tools_catalog(baseline_path)
+        baseline_ids = {e["id"] for e in baseline_entries if e.get("id")}
+
+    new_entries = [e for e in entries if e.get("id") not in baseline_ids]
+    draft_new = [e for e in new_entries if "待补充（H13b 自动入库）" in e.get("positioning", "")]
+
+    if len(draft_new) > 8:
+        errors.append(
+            f"单次 sync 新增 {len(draft_new)} 条 H13b 草稿，超过阈值 8，疑似 Markdown 表格误解析"
+        )
+
+    for e in draft_new:
+        name = e.get("name", "")
+        eid = e.get("id", "")
+        if eid in GENERIC_CATALOG_IDS:
+            errors.append(f"可疑草稿 id `{eid}`（名称: {name}）")
+        if name in SKIP_ROW_NAMES:
+            errors.append(f"可疑草稿名称 `{name}`（像表格表头/对比维度行）")
+        if name.startswith("`") and name.endswith("`"):
+            errors.append(f"可疑草稿名称 `{name}`（像 Skill 参数名而非工具）")
+
+    return len(errors) == 0, errors
+
+
+def cmd_validate_catalog(args: argparse.Namespace) -> int:
+    kb_root = Path(args.kb_root)
+    catalog_path = kb_root / "knowledge/tools-catalog.yaml"
+    baseline = Path(args.baseline) if args.baseline else None
+    ok, errors = validate_catalog_file(catalog_path, baseline)
+    if ok:
+        print(f"✅ catalog 校验通过: {catalog_path.relative_to(kb_root)}")
+        if baseline:
+            print(f"   baseline: {baseline}")
+        return 0
+    print(f"❌ catalog 校验失败: {catalog_path.relative_to(kb_root)}", file=sys.stderr)
+    for err in errors:
+        print(f"   - {err}", file=sys.stderr)
+    print("\n修复：手改 tools-catalog.yaml 或修正笔记工具表格后重跑 sync-catalog。", file=sys.stderr)
+    return 1
+
+
 def cmd_sync_catalog(args: argparse.Namespace) -> int:
     kb_root = Path(args.kb_root)
     ingest_id = args.ingest_id
@@ -1163,7 +1286,7 @@ def cmd_sync_catalog(args: argparse.Namespace) -> int:
                     "positioning": "待补充（H13b 自动入库）",
                     "summary": row.get("summary", "")[:200],
                     "tags": fm.get("tags", [])[:5],
-                    "homepage": "",
+                    "homepage": row.get("homepage", ""),
                     "kb_note": rel,
                     "ingest_id": ingest_id,
                 }
@@ -1571,6 +1694,10 @@ def main() -> int:
     sc.add_argument("ingest_id")
     sc.add_argument("notes", nargs="+")
     sc.set_defaults(func=cmd_sync_catalog)
+
+    vc = sub.add_parser("validate-catalog", help="H13b：校验 tools-catalog.yaml")
+    vc.add_argument("--baseline", default="", help="sync 前 catalog 快照，仅校验增量")
+    vc.set_defaults(func=cmd_validate_catalog)
 
     args = parser.parse_args()
     if args.cmd == "install" and not args.yes:

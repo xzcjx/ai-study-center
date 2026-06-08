@@ -30,7 +30,7 @@
 
 ## 硬性约束
 
-- **不可跳过 Handler**；H10 失败不得交付；H12 默认自动提交推送到 `origin`（用户 `--no-push` 除外）
+- **不可跳过 Handler**；H10 / **H13c** 失败不得 push；H12 默认自动提交推送到 `origin`（用户 `--no-push` 除外）
 - **不可**整篇复制原文；提炼为 KnowledgeAtom
 - **不可**提交密钥；`.env` 类内容不入库
 - **不可**修改 PuSou 等无关仓库
@@ -67,6 +67,7 @@
 - [x] H03 Research
 - [ ] H04 Classify
 - [ ] … H10 Validate
+- [ ] H13 SyncWorkflow · H13b SyncCatalog · H13c ValidateCatalog
 - [ ] H12 Publish
 - [ ] H11 Report
 ```

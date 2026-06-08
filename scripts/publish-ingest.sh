@@ -41,14 +41,33 @@ if [[ ${#NOTE_FILES[@]} -gt 0 ]] && [[ -x "$REPO_ROOT/scripts/sync-workflow.sh" 
     STAGED+=("$SYNC_FILE")
   fi
   if [[ -x "$REPO_ROOT/scripts/sync-catalog.sh" ]]; then
+    CATALOG_FILE="$REPO_ROOT/knowledge/tools-catalog.yaml"
+    CATALOG_BASELINE=""
+    if [[ -f "$CATALOG_FILE" ]]; then
+      CATALOG_BASELINE="$(mktemp)"
+      cp "$CATALOG_FILE" "$CATALOG_BASELINE"
+    fi
     "$REPO_ROOT/scripts/sync-catalog.sh" "$INGEST_ID" "${NOTE_FILES[@]}" || {
       echo "❌ H13b SyncCatalog 失败" >&2
+      [[ -n "$CATALOG_BASELINE" ]] && rm -f "$CATALOG_BASELINE"
       exit 1
     }
-    CATALOG_FILE="$REPO_ROOT/knowledge/tools-catalog.yaml"
     if [[ -f "$CATALOG_FILE" ]]; then
       STAGED+=("$CATALOG_FILE")
     fi
+    if [[ -x "$REPO_ROOT/scripts/validate-catalog.sh" ]]; then
+      VALIDATE_ARGS=()
+      if [[ -n "$CATALOG_BASELINE" ]]; then
+        VALIDATE_ARGS=(--baseline "$CATALOG_BASELINE")
+      fi
+      "$REPO_ROOT/scripts/validate-catalog.sh" "${VALIDATE_ARGS[@]}" || {
+        echo "❌ H13b ValidateCatalog 失败（阻断 H12）" >&2
+        echo "   请检查 git diff knowledge/tools-catalog.yaml，修 catalog 或笔记工具表后重跑 publish-ingest.sh" >&2
+        [[ -n "$CATALOG_BASELINE" ]] && rm -f "$CATALOG_BASELINE"
+        exit 1
+      }
+    fi
+    [[ -n "$CATALOG_BASELINE" ]] && rm -f "$CATALOG_BASELINE"
   fi
 fi
 
