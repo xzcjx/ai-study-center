@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 14 |
+| AI 工具 | 15 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
 | 其他 | 0 |
-| **合计** | **14** |
+| **合计** | **15** |
 
 ---
 
@@ -52,6 +52,7 @@
 | 2026-06-08 | 业务级 AI Code Review：Webhook 触发 + Diff 语义化 + RAG 经验召回 | `code-review`, `rag`, `gitlab`, `webhook` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-business-code-review.md) · `KB-ARCH-20260608-ai-business-code-review` |
 | 2026-06-08 | AI Code Review 下一波机会：从写代码提速到 PR 入口治理 | `code-review`, `market-trend`, `pr-workflow`, `tool-landscape` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md) · `KB-AI-20260608-ai-code-review-next-wave-trend` |
 | 2026-06-08 | 提升 AI 代码评审质量的 16 个落地方案 | `code-review`, `review-quality`, `diff-context`, `test-generation` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md) · `KB-AI-20260608-ai-review-quality-16-schemes` |
+| 2026-06-08 | zeng-code-review-deep：多智能体深度代码审查 Skill 设计 | `code-review`, `multi-agent`, `agent-skill`, `deep-review` | [笔记](../notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md) · `KB-AI-20260608-zeng-deep-code-review-skill` |
 
 ### frontend-design · AI 前端设计
 
@@ -93,12 +94,13 @@
 
 ## 标签云（手动维护）
 
-`code-review` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 新建 | [zeng-code-review-deep 多智能体 Skill](../notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md)（ING-20260608-016） |
 | 2026-06-08 | 新建 | [16 个提升 AI 评审质量方案](../notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md)（ING-20260608-015） |
 | 2026-06-08 | 新建 | [AI Code Review 下一波机会](../notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md)（ING-20260608-014） |
 | 2026-06-08 | 新建 | [AI 第一道 Review 两个月实验](../notes/ai-tools/code-review/2026-06-08-ai-first-gate-review-experiment.md)（ING-20260608-013） |

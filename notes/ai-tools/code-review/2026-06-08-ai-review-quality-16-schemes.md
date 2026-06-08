@@ -12,7 +12,7 @@ source:
 tags: [code-review, review-quality, prompt, diff-context, rag, ci-cd, test-generation, security-review, team-style, visualization]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-code-review-workflow-methodology, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-coding-era-review-upgrade]
+related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-code-review-workflow-methodology, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-zeng-deep-code-review-skill]
 ingest_id: ING-20260608-015
 updated: 2026-06-08
 ---
@@ -247,9 +247,11 @@ ai_code_review:
 - 项目内：[业务级 AI Code Review 流水线](2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）
 - 项目内：[AI Code Review 下一波机会](2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`）
 - 项目内：[AI 编程时代 Review 升级](2026-06-08-ai-coding-era-review-upgrade.md)（`KB-AI-20260608-ai-coding-era-review-upgrade`）
+- 项目内：[zeng-code-review-deep Skill](2026-06-08-zeng-deep-code-review-skill.md)（`KB-AI-20260608-zeng-deep-code-review-skill`，多 Agent 落地实例）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 zeng Deep Review Skill 笔记（ING-20260608-016） |
 | 2026-06-08 | 初稿（ING-20260608-015），整合 CodeReview 教程第 17 节「16 个提升评审质量方案」 |

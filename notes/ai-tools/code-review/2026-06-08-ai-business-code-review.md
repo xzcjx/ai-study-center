@@ -11,7 +11,7 @@ source:
 tags: [code-review, rag, gitlab, webhook, llm, devops, cursor, incident-response, diff-processing]
 difficulty: advanced
 status: active
-related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-review-quality-16-schemes]
+related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-review-quality-16-schemes, KB-AI-20260608-zeng-deep-code-review-skill]
 ingest_id: ING-20260608-009
 updated: 2026-06-08
 ---
@@ -254,11 +254,13 @@ class DiffProcessor {
 - 项目内：[AI 第一道 Review 两个月实验](2026-06-08-ai-first-gate-review-experiment.md)（`KB-AI-20260608-ai-first-gate-review-experiment`）— 轻量流程验证后上流水线
 - 项目内：[AI Code Review 下一波机会](2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`）— PR 入口与工具生态
 - 项目内：[16 个提升评审质量方案](2026-06-08-ai-review-quality-16-schemes.md)（`KB-AI-20260608-ai-review-quality-16-schemes`）— 方案 2/3/4/14 工程落地
+- 项目内：[zeng-code-review-deep Skill](2026-06-08-zeng-deep-code-review-skill.md)（`KB-AI-20260608-zeng-deep-code-review-skill`）— 仓库内多 Agent 深度审查
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 zeng Deep Review Skill 笔记（ING-20260608-016） |
 | 2026-06-08 | 交叉引用 16 方案质量提升笔记（ING-20260608-015） |
 | 2026-06-08 | 交叉引用下一波机会趋势笔记（ING-20260608-014） |
 | 2026-06-08 | 交叉引用第一道 Review 实验笔记（ING-20260608-013） |

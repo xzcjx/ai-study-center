@@ -12,7 +12,7 @@ source:
 tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck, tool-landscape, team-rollout, cursor, copilot]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-first-gate-review-experiment, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-review-quality-16-schemes]
+related: [KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-first-gate-review-experiment, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-review-quality-16-schemes, KB-AI-20260608-zeng-deep-code-review-skill]
 ingest_id: ING-20260608-014
 updated: 2026-06-08
 ---
@@ -213,10 +213,12 @@ rules:
 - 项目内：[AI 第一道 Review 实验](2026-06-08-ai-first-gate-review-experiment.md)（`KB-AI-20260608-ai-first-gate-review-experiment`）
 - 项目内：[业务级 AI Code Review 流水线](2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）
 - 项目内：[16 个提升评审质量方案](2026-06-08-ai-review-quality-16-schemes.md)（`KB-AI-20260608-ai-review-quality-16-schemes`，战术落地清单）
+- 项目内：[zeng-code-review-deep Skill](2026-06-08-zeng-deep-code-review-skill.md)（`KB-AI-20260608-zeng-deep-code-review-skill`，深度质量门实现）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用 zeng Deep Review Skill 笔记（ING-20260608-016） |
 | 2026-06-08 | 交叉引用 16 方案质量提升笔记（ING-20260608-015） |
 | 2026-06-08 | 初稿（ING-20260608-014），整合鲁大猿「AI Code Review 下一波机会」行业观点：瓶颈转移、PR 入口、工具版图、四类风险、五阶段落地 |
