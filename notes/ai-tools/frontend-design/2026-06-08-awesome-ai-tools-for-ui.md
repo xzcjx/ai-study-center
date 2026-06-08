@@ -2,6 +2,7 @@
 id: KB-AI-20260608-awesome-ai-tools-for-ui
 module: ai-tools
 module_id: MOD-AI
+topic: frontend-design
 title: "Awesome AI Tools for UI：对抗 AI 前端 Slop 的工具导航"
 source:
   type: url

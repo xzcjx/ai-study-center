@@ -36,8 +36,8 @@ workflows:
       根据你的场景自动分支：抛光已有组件 / 参考克隆 / Gemini 壳层 / 从零生成；
       串联工具安装、执行 Prompt、验收清单，一次交付可复用 playbook。
     playbook_notes:
-      - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
-      - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
+      - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
+      - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
     triggers:
       keywords: [前端, ui, 界面, slop, 审美, frontend]
       intents: [frontend-design, anti-slop, ui-generation, ui-refinement]
@@ -97,8 +97,8 @@ workflows:
       针对已有 Vue/React/HTML 组件：impeccable 斜杠命令诊断 → 简化 → 配色 → 抛光；
       最适合 AIQuantX 类「能跑但丑」的迭代场景。
     playbook_notes:
-      - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
-      - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+      - notes/ai-tools/frontend-design/2026-06-08-impeccable-style-frontend-design.md
+      - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
     triggers:
       keywords: [抛光, polish, 优化, 优化组件, 改丑, 迭代, refine, slop, 丑, 组件, 难看, 丑组件]
       intents: [ui-refinement, polish, anti-slop]
@@ -163,8 +163,8 @@ workflows:
       新 landing/作品集/活动页：生成前注入设计 Skill（Taste Skill 或 Anthropic frontend-design），
       可选 coolors 配色与 aesthetic direction。
     playbook_notes:
-      - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
-      - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
+      - notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md
+      - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     triggers:
       keywords: [从零, 新建, landing, portfolio, 新页面, 生成页面]
       intents: [ui-generation, landing-page, frontend-design, anti-slop]
@@ -231,7 +231,7 @@ workflows:
     summary: >-
       从 aura.build 等挑选参考源码，让 Agent 比照样式重构现有页面；审美方向由人选定，结果可预期。
     playbook_notes:
-      - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+      - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
     triggers:
       keywords: [参考, 克隆, aura, 仿照, 改版, redesign, 模板]
       intents: [redesign, frontend-design, ui-reference]
@@ -290,7 +290,7 @@ workflows:
     summary: >-
       Google AI Studio 用 Gemini 快速搭高颜值 UI 壳层，下载后由 Codex/Claude Code 接入业务逻辑。
     playbook_notes:
-      - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+      - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
     triggers:
       keywords: [demo, 壳层, 原型, gemini, ai studio, 分工]
       intents: [ui-generation, frontend-design]

@@ -10,7 +10,7 @@ alwaysApply: false
 
 ## frontmatter 必填
 
-`id`, `module`, `module_id`, `title`, `source`, `tags`, `difficulty`, `status`, `related`, `ingest_id`, `updated`
+`id`, `module`, `module_id`, `topic`, `title`, `source`, `tags`, `difficulty`, `status`, `related`, `ingest_id`, `updated`
 
 ## id 格式
 

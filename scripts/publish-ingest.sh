@@ -2,7 +2,7 @@
 # 入库完成后提交并推送到远程（H12 Publish）
 # 用法: scripts/publish-ingest.sh <ingest_id> <简短标题> <file1> [file2...]
 # 示例: scripts/publish-ingest.sh ING-20260608-001 "Taste Skill" \
-#         notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md docs/INDEX.md
+#         notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md docs/INDEX.md
 set -euo pipefail
 
 INGEST_ID="${1:?用法: publish-ingest.sh <ingest_id> <title> <file...>}"

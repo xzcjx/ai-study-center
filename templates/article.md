@@ -2,6 +2,7 @@
 id: "KB-{PREFIX}-{YYYYMMDD}-{slug}"
 module: frontend
 module_id: MOD-FE
+topic: null
 title: "{标题}"
 source:
   type: url

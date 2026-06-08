@@ -10,10 +10,10 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 9 |
+| AI 工具 | 10 |
 | DevOps | 0 |
 | 数据库 | 0 |
-| 架构 | 1 |
+| 架构 | 0 |
 | 其他 | 0 |
 | **合计** | **10** |
 
@@ -39,17 +39,27 @@
 
 ## AI 工具 · ai-tools
 
+> 主题子目录见 [`registry.yaml`](../knowledge/registry.yaml) → `topics`
+
+### code-review · AI 代码审查
+
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
-| 2026-06-08 | Taste Skill：为 AI Agent 前端生成注入设计纪律 | `taste-skill`, `agent-skill`, `frontend-design` | [笔记](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md) · `KB-AI-20260608-taste-skill-agent-frontend` |
-| 2026-06-08 | impeccable.style：用设计词典与斜杠命令对抗 AI 前端 Slop | `impeccable`, `frontend-design`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md) · `KB-AI-20260608-impeccable-style-frontend-design` |
-| 2026-06-08 | Awesome AI Tools for UI：对抗 AI 前端 Slop 的工具导航 | `awesome-list`, `frontend-design`, `anti-slop`, `mcp` | [笔记](../notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md) · `KB-AI-20260608-awesome-ai-tools-for-ui` |
-| 2026-06-08 | Anthropic Frontend Design Skill：三步告别 AI 前端 Slop | `anthropic`, `frontend-design`, `claude-code`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md) · `KB-AI-20260608-anthropic-frontend-design-skill` |
-| 2026-06-08 | Vibe Coding UI 三策略：零约束、设计 Prompt 与截图参考 | `vibe-coding`, `design-prompt`, `anti-slop`, `ui-reference` | [笔记](../notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md) · `KB-AI-20260608-vibe-coding-ui-three-strategies` |
-| 2026-06-08 | 三种方法去除 AI 编程 Slop：参考克隆、Gemini 壳层、Agent Skills | `anti-slop`, `aura-build`, `google-ai-studio`, `gemini` | [笔记](../notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md) · `KB-AI-20260608-three-ways-remove-ai-slop` |
-| 2026-06-08 | awesome-design-md：复制 DESIGN.md 让 AI 按顶级设计系统出 UI | `awesome-design-md`, `design-md`, `design-system`, `anti-slop` | [笔记](../notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md) · `KB-AI-20260608-awesome-design-md-agent-ui` |
-| 2026-06-08 | AI Code Review 实战：Prompt 模板、集成方式与人工协作 | `code-review`, `prompt`, `cursor`, `security-review` | [笔记](../notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md) · `KB-AI-20260608-ai-code-review-prompt-guide` |
-| 2026-06-08 | AI 辅助 Code Review 方法论：提 PR 前自查、分层检查与有效意见 | `code-review`, `self-review`, `layered-review`, `pr-description` | [笔记](../notes/ai-tools/2026-06-08-ai-code-review-workflow-methodology.md) · `KB-AI-20260608-ai-code-review-workflow-methodology` |
+| 2026-06-08 | AI 辅助 Code Review 方法论：提 PR 前自查、分层检查与有效意见 | `code-review`, `self-review`, `layered-review` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md) · `KB-AI-20260608-ai-code-review-workflow-methodology` |
+| 2026-06-08 | AI Code Review 实战：Prompt 模板、集成方式与人工协作 | `code-review`, `prompt`, `security-review` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md) · `KB-AI-20260608-ai-code-review-prompt-guide` |
+| 2026-06-08 | 业务级 AI Code Review：Webhook 触发 + Diff 语义化 + RAG 经验召回 | `code-review`, `rag`, `gitlab`, `webhook` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-business-code-review.md) · `KB-ARCH-20260608-ai-business-code-review` |
+
+### frontend-design · AI 前端设计
+
+| 日期 | 标题 | 标签 | 文件 |
+|------|------|------|------|
+| 2026-06-08 | Taste Skill：为 AI Agent 前端生成注入设计纪律 | `taste-skill`, `agent-skill`, `frontend-design` | [笔记](../notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md) · `KB-AI-20260608-taste-skill-agent-frontend` |
+| 2026-06-08 | impeccable.style：用设计词典与斜杠命令对抗 AI 前端 Slop | `impeccable`, `frontend-design`, `anti-slop` | [笔记](../notes/ai-tools/frontend-design/2026-06-08-impeccable-style-frontend-design.md) · `KB-AI-20260608-impeccable-style-frontend-design` |
+| 2026-06-08 | Awesome AI Tools for UI：对抗 AI 前端 Slop 的工具导航 | `awesome-list`, `frontend-design`, `anti-slop`, `mcp` | [笔记](../notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md) · `KB-AI-20260608-awesome-ai-tools-for-ui` |
+| 2026-06-08 | Anthropic Frontend Design Skill：三步告别 AI 前端 Slop | `anthropic`, `frontend-design`, `claude-code`, `anti-slop` | [笔记](../notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md) · `KB-AI-20260608-anthropic-frontend-design-skill` |
+| 2026-06-08 | Vibe Coding UI 三策略：零约束、设计 Prompt 与截图参考 | `vibe-coding`, `design-prompt`, `anti-slop`, `ui-reference` | [笔记](../notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md) · `KB-AI-20260608-vibe-coding-ui-three-strategies` |
+| 2026-06-08 | 三种方法去除 AI 编程 Slop：参考克隆、Gemini 壳层、Agent Skills | `anti-slop`, `aura-build`, `google-ai-studio`, `gemini` | [笔记](../notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md) · `KB-AI-20260608-three-ways-remove-ai-slop` |
+| 2026-06-08 | awesome-design-md：复制 DESIGN.md 让 AI 按顶级设计系统出 UI | `awesome-design-md`, `design-md`, `design-system`, `anti-slop` | [笔记](../notes/ai-tools/frontend-design/2026-06-08-awesome-design-md-agent-ui.md) · `KB-AI-20260608-awesome-design-md-agent-ui` |
 
 ## DevOps · devops
 
@@ -67,7 +77,7 @@
 
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
-| 2026-06-08 | 业务级 AI Code Review：Webhook 触发 + Diff 语义化 + RAG 经验召回 | `code-review`, `rag`, `gitlab`, `webhook` | [笔记](../notes/architecture/2026-06-08-ai-business-code-review.md) · `KB-ARCH-20260608-ai-business-code-review` |
+| — | *暂无笔记* | — | — |
 
 ## 其他 · misc
 
@@ -85,15 +95,16 @@
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
-| 2026-06-08 | 新建 | [AI Code Review 方法论](../notes/ai-tools/2026-06-08-ai-code-review-workflow-methodology.md)（ING-20260608-011） |
-| 2026-06-08 | 新建 | [AI Code Review Prompt 实战指南](../notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md)（ING-20260608-010） |
-| 2026-06-08 | 新建 | [业务级 AI Code Review 全链路](../notes/architecture/2026-06-08-ai-business-code-review.md)（ING-20260608-009） |
-| 2026-06-08 | 新建 | [awesome-design-md DESIGN.md 设计系统](../notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md)（ING-20260608-008） |
-| 2026-06-08 | 新建 | [Vibe Coding UI 三策略对比](../notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md)（ING-20260608-007） |
-| 2026-06-08 | 新建 | [三种方法去除 AI 编程 Slop](../notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md)（ING-20260608-006） |
-| 2026-06-08 | 新建 | [Anthropic Frontend Design Skill 三步反 Slop](../notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md)（ING-20260608-005） |
-| 2026-06-08 | 新建 | [Awesome AI Tools for UI 工具导航](../notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md)（ING-20260608-004） |
-| 2026-06-08 | 新建 | [impeccable.style 前端设计词典](../notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md)（ING-20260608-003） |
-| 2026-06-08 | 合并更新 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md)（ING-20260608-002） |
-| 2026-06-08 | 新建 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md) |
+| 2026-06-08 | 目录重构 | 按 topic 迁入 `code-review/`（3 篇）与 `frontend-design/`（7 篇） |
+| 2026-06-08 | 新建 | [AI Code Review 方法论](../notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md)（ING-20260608-011） |
+| 2026-06-08 | 新建 | [AI Code Review Prompt 实战指南](../notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md)（ING-20260608-010） |
+| 2026-06-08 | 新建 | [业务级 AI Code Review 全链路](../notes/ai-tools/code-review/2026-06-08-ai-business-code-review.md)（ING-20260608-009） |
+| 2026-06-08 | 新建 | [awesome-design-md DESIGN.md 设计系统](../notes/ai-tools/frontend-design/2026-06-08-awesome-design-md-agent-ui.md)（ING-20260608-008） |
+| 2026-06-08 | 新建 | [Vibe Coding UI 三策略对比](../notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md)（ING-20260608-007） |
+| 2026-06-08 | 新建 | [三种方法去除 AI 编程 Slop](../notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md)（ING-20260608-006） |
+| 2026-06-08 | 新建 | [Anthropic Frontend Design Skill 三步反 Slop](../notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md)（ING-20260608-005） |
+| 2026-06-08 | 新建 | [Awesome AI Tools for UI 工具导航](../notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md)（ING-20260608-004） |
+| 2026-06-08 | 新建 | [impeccable.style 前端设计词典](../notes/ai-tools/frontend-design/2026-06-08-impeccable-style-frontend-design.md)（ING-20260608-003） |
+| 2026-06-08 | 合并更新 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md)（ING-20260608-002） |
+| 2026-06-08 | 新建 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md) |
 | 2026-06-08 | 初始化项目 | — |

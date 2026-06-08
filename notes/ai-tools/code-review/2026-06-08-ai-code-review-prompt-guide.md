@@ -2,6 +2,7 @@
 id: KB-AI-20260608-ai-code-review-prompt-guide
 module: ai-tools
 module_id: MOD-AI
+topic: code-review
 title: "AI Code Review 实战：Prompt 模板、集成方式与人工协作"
 source:
   type: paste
@@ -24,7 +25,7 @@ updated: 2026-06-08
 - 提供三套可复制 **Prompt 模板**：基础审查、安全专项、代码规范；输出统一为 🔴/🟡/🟢 分级 + 行号 + 修复建议。
 - 集成方式：GitHub Copilot Enterprise PR 审查、**Cursor 对话审查当前文件**、独立工具（Codacy / SonarQube）做规模化扫描。
 - 补足局限：在 Prompt 中注入**业务规则**；勿直接粘贴 AI 修复代码；敏感代码用本地/企业内工具。
-- 企业级 Webhook + RAG 全链路见架构专文 [业务级 AI Code Review](../architecture/2026-06-08-ai-business-code-review.md)。
+- 企业级 Webhook + RAG 全链路见架构专文 [业务级 AI Code Review](2026-06-08-ai-business-code-review.md)。
 
 ## 适用场景
 
@@ -37,7 +38,7 @@ updated: 2026-06-08
 
 **何时不用：**
 
-- 核心业务、有历史事故知识库——应上 [Webhook + RAG 流水线](../architecture/2026-06-08-ai-business-code-review.md)，而非仅粘贴代码到聊天窗。
+- 核心业务、有历史事故知识库——应上 [Webhook + RAG 流水线](2026-06-08-ai-business-code-review.md)，而非仅粘贴代码到聊天窗。
 - 高度敏感源码——避免公有云 LLM，改 SonarQube 本地部署或内网模型。
 - 期望 AI 100% 替代人工——关键路径与核心逻辑仍需人工确认。
 
@@ -148,7 +149,7 @@ updated: 2026-06-08
 | GitHub Copilot Enterprise | PR 页 Copilot tab 自动分析 | 已购企业版团队 |
 | Cursor 内置 | `Cmd/Ctrl+L` →「请审查当前文件，关注 Bug、安全、质量」 | 开发时边写边审 |
 | 独立扫描工具 | Codacy / SonarQube 等 | 团队规模化、CI 门禁 |
-| 企业流水线 | GitLab Webhook + RAG | 见 [架构专文](../architecture/2026-06-08-ai-business-code-review.md) |
+| 企业流水线 | GitLab Webhook + RAG | 见 [架构专文](2026-06-08-ai-business-code-review.md) |
 
 **团队协作建议**：
 
@@ -214,13 +215,13 @@ cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
 - 文章称 AI Review「比人工快 10 倍」为经验口径，实际取决于模型、代码复杂度与 Prompt 质量。
 - DeepCode 已被 GitHub 收购，选型时以 GitHub Advanced Security 等现行产品为准。
 - Flask 案例中 `hashlib.sha256` 仅作示意；生产环境应使用 **bcrypt / argon2** 等专用口令哈希。
-- 本篇为**个人/团队轻量流程**；与 [业务级流水线](../architecture/2026-06-08-ai-business-code-review.md) 互补，非替代关系。
+- 本篇为**个人/团队轻量流程**；与 [业务级流水线](2026-06-08-ai-business-code-review.md) 互补，非替代关系。
 - 系列预告：第 5 篇「用 AI 重构旧代码」尚未入库。
 
 ## 相关链接
 
 - 项目内：[AI Code Review 方法论](2026-06-08-ai-code-review-workflow-methodology.md)（`KB-AI-20260608-ai-code-review-workflow-methodology`）— 提 PR 前自查、分层检查、有效意见
-- 项目内：[业务级 AI Code Review 全链路](../architecture/2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）— Webhook、RAG、Diff 预处理
+- 项目内：[业务级 AI Code Review 全链路](2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）— Webhook、RAG、Diff 预处理
 - [SonarQube 文档](https://docs.sonarqube.org/)
 - [Codacy 文档](https://docs.codacy.com/)
 

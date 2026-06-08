@@ -2,6 +2,7 @@
 id: KB-AI-20260608-ai-code-review-workflow-methodology
 module: ai-tools
 module_id: MOD-AI
+topic: code-review
 title: "AI 辅助 Code Review 方法论：提 PR 前自查、分层检查与有效意见"
 source:
   type: paste
@@ -23,7 +24,7 @@ updated: 2026-06-08
 - 三种失效模式：**只看风格**（lint 能查）、**只看新增不看影响**（连带 bug 高发）、**只有作者懂上下文**（「为什么这么写」从未被 Review 触及）。
 - **好 Review 从提 PR 前开始**：作者先用 AI 自查逻辑/边界/异常/一致性/性能，修掉能修的再提交。
 - Reviewer 侧：**先让 AI 生成改动理解摘要**（目的、影响图谱、重点区域），再分层检查——业务逻辑 → 异常边界 → 连带影响，而非「整体扫一遍」。
-- AI 不替代 Reviewer，而是帮**作者与 Reviewer 两端**补齐上下文；企业级自动化流水线见 [架构专文](../architecture/2026-06-08-ai-business-code-review.md)，通用 Prompt 模板见 [实战指南](2026-06-08-ai-code-review-prompt-guide.md)。
+- AI 不替代 Reviewer，而是帮**作者与 Reviewer 两端**补齐上下文；企业级自动化流水线见 [架构专文](2026-06-08-ai-business-code-review.md)，通用 Prompt 模板见 [实战指南](2026-06-08-ai-code-review-prompt-guide.md)。
 
 ## 适用场景
 
@@ -215,7 +216,7 @@ sequenceDiagram
 |------|------|
 | **本篇** | 人机协作流程：作者自查、PR 描述、Reviewer 分层 |
 | [Prompt 实战指南](2026-06-08-ai-code-review-prompt-guide.md) | 通用审查模板、工具集成、Flask 安全案例 |
-| [业务级流水线](../architecture/2026-06-08-ai-business-code-review.md) | GitLab Webhook、Diff 预处理、RAG 事故召回 |
+| [业务级流水线](2026-06-08-ai-business-code-review.md) | GitLab Webhook、Diff 预处理、RAG 事故召回 |
 
 ## 代码 / 命令
 
@@ -249,7 +250,7 @@ sequenceDiagram
 ## 相关链接
 
 - 项目内：[AI Code Review Prompt 实战指南](2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）
-- 项目内：[业务级 AI Code Review 全链路](../architecture/2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）
+- 项目内：[业务级 AI Code Review 全链路](2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）
 
 ## 变更记录
 

@@ -2,6 +2,7 @@
 id: KB-AI-20260608-impeccable-style-frontend-design
 module: ai-tools
 module_id: MOD-AI
+topic: frontend-design
 title: "impeccable.style：用设计词典与斜杠命令对抗 AI 前端 Slop"
 source:
   type: url
@@ -167,7 +168,7 @@ Cursor / Codex CLI / Gemini CLI 选用 ZIP 内对应 `dist/{tool}/` 目录。
 - [命令速查表](https://impeccable.style/cheatsheet)
 - 项目内：[Taste Skill 前端设计纪律](2026-06-08-taste-skill-agent-frontend.md)（`KB-AI-20260608-taste-skill-agent-frontend`）
 - 项目内：[Awesome AI Tools for UI 工具导航](2026-06-08-awesome-ai-tools-for-ui.md)（`KB-AI-20260608-awesome-ai-tools-for-ui`，清单 ⭐️ 收录）
-- 项目内：[awesome-design-md DESIGN.md](2026-06-08-awesome-design-md-agent-ui.md)（`KB-AI-20260608-awesome-design-md-agent-ui`，从零定 token；impeccable 抛光已有页）
+- 项目内：[awesome-design-md DESIGN.md](2026-06-08-awesome-design-md-agent-ui.md)（`KB-AI-20260608-awesome-design-md-agent-ui`，从零定设计变量；impeccable 抛光已有页）
 
 ## 变更记录
 

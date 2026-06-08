@@ -2,6 +2,7 @@
 id: KB-AI-20260608-vibe-coding-ui-three-strategies
 module: ai-tools
 module_id: MOD-AI
+topic: frontend-design
 title: "Vibe Coding UI 三策略对比：零约束、设计 Prompt 与截图参考"
 source:
   type: paste

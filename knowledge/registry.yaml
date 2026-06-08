@@ -75,8 +75,26 @@ actions:
   split: 拆分为多篇（内容跨多模块）
   deprecate: 标记过时（保留但注明替代方案）
 
+# 主题子目录（module 下的二级分类，H04 之后 H07 写入）
+# 路径：notes/{module}/{topic}/{date}-{slug}.md
+topics:
+  code-review:
+    label: AI Code Review
+    module: ai-tools
+    path: notes/ai-tools/code-review
+    description: AI 辅助代码审查、PR 流程、RAG 审计、Review Prompt
+    keywords: [code-review, review, pr, gitlab, webhook, rag, 代码审查, 代码评审]
+
+  frontend-design:
+    label: AI 前端设计
+    module: ai-tools
+    path: notes/ai-tools/frontend-design
+    description: AI 生成 UI、anti-slop、设计 Skill、DESIGN.md、Vibe Coding
+    keywords: [frontend-design, anti-slop, ui, design-md, slop, vibe-coding, 前端审美, 好看]
+
 # 文件命名
 naming:
   pattern: "{date}-{slug}.md"
   date_format: "YYYY-MM-DD"
   slug_rules: kebab-case, english, max 60 chars
+  path_with_topic: "notes/{module}/{topic}/{date}-{slug}.md"

@@ -2,6 +2,7 @@
 id: KB-AI-20260608-three-ways-remove-ai-slop
 module: ai-tools
 module_id: MOD-AI
+topic: frontend-design
 title: "三种方法去除 AI 编程 Slop：参考克隆、Gemini 壳层、Agent Skills"
 source:
   type: paste

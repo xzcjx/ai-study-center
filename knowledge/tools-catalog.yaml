@@ -25,7 +25,7 @@ entries:
     homepage: https://github.com/Leonxlnx/taste-skill
     installable: true
     registry_id: taste-skill
-    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md]
     starred: true
 
   - id: impeccable
@@ -37,7 +37,7 @@ entries:
     homepage: https://impeccable.style
     installable: true
     registry_id: impeccable
-    kb_notes: [notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-impeccable-style-frontend-design.md]
     starred: true
 
   - id: anthropic-frontend-design
@@ -49,7 +49,7 @@ entries:
     homepage: https://github.com/anthropics/skills/tree/main/skills/frontend-design
     installable: true
     registry_id: anthropic-frontend-design
-    kb_notes: [notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md]
     starred: true
 
   - id: swiss-design-system
@@ -60,7 +60,7 @@ entries:
     tags: [frontend-design, design-system, tailwind]
     homepage: https://swiss.ziki.boo/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: userinterface-wiki-skill
     name: UserInterface.wiki Skill
@@ -70,7 +70,7 @@ entries:
     tags: [frontend-design, design-rules]
     homepage: https://www.userinterface.wiki/skill
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: ui-ux-pro-max-skill
     name: UI UX Pro Max Skill
@@ -80,7 +80,7 @@ entries:
     tags: [design-system, ui-generation]
     homepage: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: shadcn-ui-skills
     name: shadcn/ui Skills
@@ -90,7 +90,7 @@ entries:
     tags: [shadcn, react, component]
     homepage: https://ui.shadcn.com/docs/skills
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: web-design-guidelines-skill
     name: Web Design Guidelines Skill
@@ -100,7 +100,7 @@ entries:
     tags: [audit, best-practices]
     homepage: https://github.com/vercel-labs/agent-skills
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: typeui-design-skills
     name: TypeUI Design Skills
@@ -110,7 +110,7 @@ entries:
     tags: [design-system, multi-style]
     homepage: https://www.typeui.sh/design-skills
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   # --- Apps ---
   - id: variant
@@ -122,7 +122,7 @@ entries:
     homepage: https://variant.com/
     installable: false
     starred: true
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: stitch-google
     name: Stitch by Google
@@ -133,7 +133,7 @@ entries:
     homepage: https://stitch.withgoogle.com/
     installable: false
     starred: true
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: 21st-dev
     name: 21st.dev
@@ -144,7 +144,7 @@ entries:
     homepage: https://21st.dev/home
     installable: false
     starred: true
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: ai-website-cloner
     name: AI Website Cloner
@@ -154,7 +154,7 @@ entries:
     tags: [clone, nextjs, reference]
     homepage: https://github.com/JCodesMore/ai-website-cloner-template
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md, notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md, notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md]
 
   - id: superdesign
     name: Superdesign
@@ -164,7 +164,7 @@ entries:
     tags: [ui-generation]
     homepage: https://app.superdesign.dev/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: khroma
     name: Khroma
@@ -174,7 +174,7 @@ entries:
     tags: [color, palette]
     homepage: https://www.khroma.co/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md, notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md, notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md]
 
   # --- MCP ---
   - id: magic-mcp
@@ -185,7 +185,7 @@ entries:
     tags: [mcp, component-generation, cursor]
     homepage: https://github.com/21st-dev/magic-mcp
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: ui-layouts-mcp
     name: UI Layouts MCP
@@ -195,7 +195,7 @@ entries:
     tags: [mcp, component-library]
     homepage: https://www.ui-layouts.com/mcp
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: lazyweb-mcp
     name: Lazyweb
@@ -205,7 +205,7 @@ entries:
     tags: [mcp, research, reference]
     homepage: https://www.lazyweb.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: design-and-refine
     name: Design and Refine
@@ -215,7 +215,7 @@ entries:
     tags: [mcp, claude-code, iteration]
     homepage: https://github.com/0xdesign/design-plugin
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   - id: interface-design-plugin
     name: Interface Design
@@ -225,7 +225,7 @@ entries:
     tags: [mcp, claude-code, design-system]
     homepage: https://github.com/Dammyjay93/interface-design
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
 
   # --- 参考站 / 工作流 ---
   - id: aura-build
@@ -236,7 +236,7 @@ entries:
     tags: [reference, clone, ui-reference, gemini]
     homepage: https://aura.build
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md]
 
   - id: google-ai-studio
     name: Google AI Studio
@@ -246,7 +246,7 @@ entries:
     tags: [gemini, demo, ui-generation, workflow]
     homepage: https://aistudio.google.com
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md]
 
   - id: coolors
     name: coolors.co
@@ -256,7 +256,7 @@ entries:
     tags: [color, palette, prompt]
     homepage: https://coolors.co/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md]
 
   - id: awesome-ai-tools-for-ui
     name: Awesome AI Tools for UI
@@ -266,7 +266,7 @@ entries:
     tags: [awesome-list, catalog, navigation]
     homepage: https://github.com/maxbogo/awesome-ai-tools-for-ui
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md]
     starred: true
 
   # --- 设计辅助 · Vibe Coding 工具箱（ING-20260608-007）---
@@ -278,7 +278,7 @@ entries:
     tags: [color, palette, prompt, vibe-coding]
     homepage: https://realtimecolors.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: fontpair
     name: Fontpair
@@ -288,7 +288,7 @@ entries:
     tags: [typography, font, prompt]
     homepage: https://www.fontpair.co/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: typescale
     name: TypeScale
@@ -298,7 +298,7 @@ entries:
     tags: [typography, type-scale, prompt]
     homepage: https://typescale.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: designprompts
     name: designprompts
@@ -309,7 +309,7 @@ entries:
     homepage: https://designprompts.dev
     installable: false
     starred: true
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: ui-prompt-explorer
     name: UI Prompt Explorer
@@ -319,7 +319,7 @@ entries:
     tags: [design-prompt, ui-generation]
     homepage: https://uipromptexplorer.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: uiprompt-io
     name: uiprompt
@@ -329,7 +329,7 @@ entries:
     tags: [design-prompt, mobile]
     homepage: https://uiprompt.io/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: landinghero-library
     name: LandingHero Library
@@ -339,7 +339,7 @@ entries:
     tags: [reference, landing-page, ui-reference]
     homepage: https://landinghero.dev/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: claudekit-frontend-demo
     name: ClaudeKit Frontend Demo
@@ -349,7 +349,7 @@ entries:
     tags: [design-prompt, motion, claude-code]
     homepage: https://claudekit.cc/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: ui-prompt-builder
     name: UI Prompt Builder
@@ -359,7 +359,7 @@ entries:
     tags: [screenshot, reverse-engineering, design-system]
     homepage: https://uipromptbuilder.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: ai-ux-playground
     name: AI/UX Playground
@@ -369,7 +369,7 @@ entries:
     tags: [screenshot, reverse-engineering, design-system]
     homepage: https://aiuxplayground.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: godly
     name: godly
@@ -379,7 +379,7 @@ entries:
     tags: [inspiration, reference]
     homepage: https://godly.website/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: mobbin
     name: mobbin
@@ -389,7 +389,7 @@ entries:
     tags: [inspiration, component, mobile]
     homepage: https://mobbin.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: pageflows
     name: pageflows
@@ -399,7 +399,7 @@ entries:
     tags: [inspiration, ux, flow]
     homepage: https://pageflows.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md]
 
   - id: awesome-design-md
     name: awesome-design-md
@@ -410,7 +410,7 @@ entries:
     homepage: https://github.com/VoltAgent/awesome-design-md
     installable: true
     registry_id: awesome-design-md
-    kb_notes: [notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md]
+    kb_notes: [notes/ai-tools/frontend-design/2026-06-08-awesome-design-md-agent-ui.md]
 
   - id: cursor-ide
     name: Cursor
@@ -420,7 +420,7 @@ entries:
     tags: [code-review, cursor, claude, agent]
     homepage: https://cursor.com
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md]
 
   - id: github-copilot-enterprise
     name: GitHub Copilot Enterprise
@@ -430,7 +430,7 @@ entries:
     tags: [code-review, copilot, github, pr]
     homepage: https://github.com/features/copilot
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md]
 
   - id: codacy
     name: Codacy
@@ -440,7 +440,7 @@ entries:
     tags: [code-review, ci, security, static-analysis]
     homepage: https://www.codacy.com/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md]
 
   - id: sonarqube
     name: SonarQube
@@ -450,7 +450,7 @@ entries:
     tags: [code-review, ci, security, static-analysis, self-hosted]
     homepage: https://www.sonarqube.org/
     installable: false
-    kb_notes: [notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md]
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md]
 
 # 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:

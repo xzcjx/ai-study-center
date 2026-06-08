@@ -2,6 +2,7 @@
 id: KB-AI-20260608-taste-skill-agent-frontend
 module: ai-tools
 module_id: MOD-AI
+topic: frontend-design
 title: "Taste Skill：为 AI Agent 前端生成注入设计纪律"
 source:
   type: url
@@ -169,7 +170,7 @@ Follow image-to-code: generate visual references first, analyze the selected fra
 - 项目内：[Anthropic Frontend Design Skill 三步反 Slop](2026-06-08-anthropic-frontend-design-skill.md)（`KB-AI-20260608-anthropic-frontend-design-skill`）
 - 项目内：[三种方法去除 AI 编程 Slop](2026-06-08-three-ways-remove-ai-slop.md)（`KB-AI-20260608-three-ways-remove-ai-slop`，方法 3 实测案例）
 - 项目内：[Vibe Coding UI 三策略对比](2026-06-08-vibe-coding-ui-three-strategies.md)（`KB-AI-20260608-vibe-coding-ui-three-strategies`，image-to-code 与截图约束）
-- 项目内：[awesome-design-md DESIGN.md](2026-06-08-awesome-design-md-agent-ui.md)（`KB-AI-20260608-awesome-design-md-agent-ui`，Stitch 兼容导出与 73 品牌 token）
+- 项目内：[awesome-design-md DESIGN.md](2026-06-08-awesome-design-md-agent-ui.md)（`KB-AI-20260608-awesome-design-md-agent-ui`，Stitch 兼容导出与 73 品牌设计变量）
 
 ## 变更记录
 

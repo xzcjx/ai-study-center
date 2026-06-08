@@ -11,7 +11,7 @@ tools:
       Agent Skill 设计导演手册：生成前 brief inference、三拨盘（布局/动效/密度）、
       设计系统映射与 anti-slop 规则，适合从零做 landing / portfolio。
     kb_id: KB-AI-20260608-taste-skill-agent-frontend
-    note_path: notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
+    note_path: notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md
     homepage: https://github.com/Leonxlnx/taste-skill
     module: ai-tools
     intents:
@@ -70,7 +70,7 @@ tools:
       设计「词典」+ 20 个斜杠命令（/audit /polish /colorize 等）：
       诊断并迭代抛光已有 AI 页面，解决 Inter+灰底+卡片套娃等 slop 问题。
     kb_id: KB-AI-20260608-impeccable-style-frontend-design
-    note_path: notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
+    note_path: notes/ai-tools/frontend-design/2026-06-08-impeccable-style-frontend-design.md
     homepage: https://impeccable.style
     module: ai-tools
     intents:
@@ -135,7 +135,7 @@ tools:
       Anthropic 官方 agent skill：生成前 Design Thinking + 美学方向（aesthetic direction），
       规避 Inter/紫渐变等 AI slop；Claude Code 插件或 npx 安装。
     kb_id: KB-AI-20260608-anthropic-frontend-design-skill
-    note_path: notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
+    note_path: notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     homepage: https://github.com/anthropics/skills/tree/main/skills/frontend-design
     module: ai-tools
     intents:
@@ -192,7 +192,7 @@ tools:
       73 个顶级品牌 DESIGN.md 合集（Stripe/Linear/Apple 等）：复制到项目根目录，
       让 Cursor/Claude Code/Stitch 按精确设计变量生成风格一致的 UI；MIT，零依赖。
     kb_id: KB-AI-20260608-awesome-design-md-agent-ui
-    note_path: notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md
+    note_path: notes/ai-tools/frontend-design/2026-06-08-awesome-design-md-agent-ui.md
     homepage: https://github.com/VoltAgent/awesome-design-md
     module: ai-tools
     intents:

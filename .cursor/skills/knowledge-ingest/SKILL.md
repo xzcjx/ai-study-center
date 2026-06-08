@@ -86,9 +86,12 @@ updated: YYYY-MM-DD
 ---
 ```
 
-## H07 文件命名
+## H07 文件命名与路径
 
-`notes/{module}/{YYYY-MM-DD}-{kebab-slug}.md`
+1. H04 选定 `module` 后，读 `registry.yaml` → `topics`，按 keywords 选 `topic`（若有）
+2. 有 topic：`notes/{module}/{topic}/{YYYY-MM-DD}-{kebab-slug}.md`
+3. 无 topic：`notes/{module}/{YYYY-MM-DD}-{kebab-slug}.md`
+4. frontmatter 必填 `topic: {id}`（当写入 topic 子目录时）
 
 ## H10 Validate
 
@@ -138,7 +141,7 @@ H10 + H13 + **H13c** 通过后，仅 stage 本次入库文件并推送：
 
 ```bash
 scripts/publish-ingest.sh ING-20260608-001 "笔记标题" \
-  notes/ai-tools/2026-06-08-example.md \
+  notes/ai-tools/frontend-design/2026-06-08-example.md \
   docs/INDEX.md
 ```
 

@@ -93,6 +93,9 @@
 | 输入 | `DraftNote[]` |
 | 输出 | `paths[]` |
 
+- 读 `registry.yaml` → `topics`，H04 后按 keywords 选 `topic`
+- 有 topic：`notes/{module}/{topic}/{date}-{slug}.md`，frontmatter 填 `topic`
+- 无 topic：`notes/{module}/{date}-{slug}.md`
 - create → 新文件
 - merge → 覆盖/追加已有文件（保留变更记录）
 - 文件名冲突 → `{slug}-2.md`

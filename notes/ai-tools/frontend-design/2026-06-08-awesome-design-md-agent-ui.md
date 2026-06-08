@@ -2,6 +2,7 @@
 id: KB-AI-20260608-awesome-design-md-agent-ui
 module: ai-tools
 module_id: MOD-AI
+topic: frontend-design
 title: "awesome-design-md：复制 DESIGN.md 让 AI 按顶级设计系统出 UI"
 source:
   type: paste

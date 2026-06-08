@@ -6,37 +6,37 @@ last_ingest_id: "ING-20260608-011"
 
 playbook_notes:
   fe-demo-shell:
-    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
   fe-from-scratch:
-    - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
-    - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
-    - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
-    - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
-    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
-    - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
-    - notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md
+    - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
+    - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
+    - notes/ai-tools/frontend-design/2026-06-08-impeccable-style-frontend-design.md
+    - notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md
+    - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md
+    - notes/ai-tools/frontend-design/2026-06-08-awesome-design-md-agent-ui.md
   fe-full-pipeline:
-    - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
-    - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
-    - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
-    - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
-    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
-    - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
-    - notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md
-    - notes/architecture/2026-06-08-ai-business-code-review.md
-    - notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md
-    - notes/ai-tools/2026-06-08-ai-code-review-workflow-methodology.md
+    - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
+    - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
+    - notes/ai-tools/frontend-design/2026-06-08-impeccable-style-frontend-design.md
+    - notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md
+    - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md
+    - notes/ai-tools/frontend-design/2026-06-08-awesome-design-md-agent-ui.md
+    - notes/ai-tools/code-review/2026-06-08-ai-business-code-review.md
+    - notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md
+    - notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md
   fe-polish-existing:
-    - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
-    - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
-    - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
-    - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
-    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
-    - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
-    - notes/ai-tools/2026-06-08-awesome-design-md-agent-ui.md
+    - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
+    - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
+    - notes/ai-tools/frontend-design/2026-06-08-impeccable-style-frontend-design.md
+    - notes/ai-tools/frontend-design/2026-06-08-taste-skill-agent-frontend.md
+    - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md
+    - notes/ai-tools/frontend-design/2026-06-08-awesome-design-md-agent-ui.md
   fe-redesign-reference:
-    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
-    - notes/ai-tools/2026-06-08-vibe-coding-ui-three-strategies.md
+    - notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
+    - notes/ai-tools/frontend-design/2026-06-08-vibe-coding-ui-three-strategies.md
 
 keywords:
   fe-demo-shell:
@@ -185,17 +185,17 @@ router_triggers:
 
 sync_log:
   - ingest_id: ING-20260608-011
-    note: notes/ai-tools/2026-06-08-ai-code-review-workflow-methodology.md
+    note: notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md
     kb_id: KB-AI-20260608-ai-code-review-workflow-methodology
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08
   - ingest_id: ING-20260608-011
-    note: notes/ai-tools/2026-06-08-ai-code-review-prompt-guide.md
+    note: notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md
     kb_id: KB-AI-20260608-ai-code-review-prompt-guide
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08
   - ingest_id: ING-20260608-011
-    note: notes/architecture/2026-06-08-ai-business-code-review.md
+    note: notes/ai-tools/code-review/2026-06-08-ai-business-code-review.md
     kb_id: KB-ARCH-20260608-ai-business-code-review
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08

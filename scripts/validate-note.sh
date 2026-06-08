@@ -20,6 +20,15 @@ fi
 
 # 必填 frontmatter 字段
 REQUIRED_FIELDS=(id module module_id title ingest_id updated status difficulty)
+# topic：ai-tools 下已注册主题的笔记必填
+MODULE=$(sed -n '/^---$/,/^---$/p' "$FILE" | grep '^module:' | head -1 | sed 's/module: *//' | tr -d '"'"'"'"')
+TOPIC=$(sed -n '/^---$/,/^---$/p' "$FILE" | grep '^topic:' | head -1 | sed 's/topic: *//' | tr -d '"'"'"'"')
+if [[ "$MODULE" == "ai-tools" && -z "$TOPIC" ]]; then
+  red "ai-tools 模块笔记须填写 topic（见 registry.yaml topics）"
+fi
+if [[ -n "$TOPIC" && "$FILE" != *"/${TOPIC}/"* ]]; then
+  red "文件路径应与 topic 一致: 期望路径含 /${TOPIC}/，当前: ${FILE}"
+fi
 for field in "${REQUIRED_FIELDS[@]}"; do
   if ! sed -n '/^---$/,/^---$/p' "$FILE" | grep -q "^${field}:"; then
     red "frontmatter 缺少字段: ${field}"

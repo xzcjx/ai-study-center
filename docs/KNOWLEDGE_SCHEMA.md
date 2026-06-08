@@ -43,8 +43,9 @@ tags: ["react", "performance"]
 ```yaml
 ---
 id: "KB-{MODULE}-{YYYYMMDD}-{slug}"   # 如 KB-FE-20260608-react-memo
-module: frontend                       # 对应 registry.yaml
+module: frontend                       # 对应 registry.yaml modules
 module_id: MOD-FE
+topic: null                            # 可选；有则对应 registry.yaml topics，决定子目录
 title: "React memo 性能优化要点"
 source:
   type: url
@@ -72,13 +73,21 @@ updated: "2026-06-08"
 | `## 相关链接` | ✅ | 原文 + 项目内交叉引用 |
 | `## 变更记录` | ✅ | 日期 + 说明 |
 
-## 5. 索引行格式（docs/INDEX.md）
+## 5. 目录与 topic
+
+- **模块**（8 个）：`notes/{module}/` — H04 Classify 产出
+- **主题**（可选）：`notes/{module}/{topic}/` — 同模块内按用户意图细分（见 `registry.yaml` → `topics`）
+- 已有 topic 的模块，新笔记**必须**写入对应子目录并在 frontmatter 填 `topic`
+
+## 6. 索引行格式（docs/INDEX.md）
 
 ```markdown
 | 2026-06-08 | React memo 性能优化 | `react`, `performance` | [笔记](../notes/frontend/2026-06-08-react-memo.md) | `KB-FE-20260608-react-memo` |
 ```
 
-## 6. 入库报告（IngestReport）
+模块内可按 topic 分组展示（如 `ai-tools` → `code-review` / `frontend-design`）。
+
+## 7. 入库报告（IngestReport）
 
 **H11 Report** 输出给用户：
 

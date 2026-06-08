@@ -21,6 +21,8 @@
 ```
 内容是否关于 AI/LLM/Cursor/Agent？
   ├─ 是 → MOD-AI (ai-tools)
+  │        ├─ Code Review / PR / 代码审查？ → topic: code-review
+  │        └─ 前端 UI / anti-slop / 设计 Skill？ → topic: frontend-design
   └─ 否 → 是否关于测试？
            ├─ 是 → MOD-TEST
            └─ 否 → 是否关于部署/CI/容器？
@@ -36,6 +38,17 @@
                                                         └─ 否 → MOD-MISC
 ```
 
+## 主题子目录（topic）
+
+在模块之下按**用户意图**细分（`registry.yaml` → `topics`）。路径：`notes/{module}/{topic}/`。
+
+| Topic ID | 所属模块 | 目录 | 涵盖 |
+|----------|----------|------|------|
+| `code-review` | ai-tools | `notes/ai-tools/code-review` | AI 代码审查、PR 流程、RAG 审计 |
+| `frontend-design` | ai-tools | `notes/ai-tools/frontend-design` | AI 前端设计、anti-slop、DESIGN.md |
+
+**H04 之后**：对 `ai-tools` 模块内容，优先匹配 topic keywords；命中则 H07 写入对应子目录，frontmatter 填 `topic`。
+
 ## 跨模块内容
 
 一篇输入可产生**多篇笔记**（H04 Classify → action: split）：
@@ -47,5 +60,5 @@
 | Handler | 职责 |
 |---------|------|
 | H04 Classify | 读 registry.yaml keywords，打分选模块 |
-| H07 Persist | 写入 `modules[].path` |
+| H07 Persist | 写入 `modules[].path` 或 `topics[].path` |
 | H08 Index | 更新 INDEX.md 对应分区 |

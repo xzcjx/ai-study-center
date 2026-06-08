@@ -2,6 +2,7 @@
 id: KB-AI-20260608-anthropic-frontend-design-skill
 module: ai-tools
 module_id: MOD-AI
+topic: frontend-design
 title: "Anthropic Frontend Design Skill：三步告别 AI 前端 Slop"
 source:
   type: paste

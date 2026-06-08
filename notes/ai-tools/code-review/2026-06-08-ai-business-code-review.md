@@ -1,7 +1,8 @@
 ---
 id: KB-ARCH-20260608-ai-business-code-review
-module: architecture
-module_id: MOD-ARCH
+module: ai-tools
+module_id: MOD-AI
+topic: code-review
 title: "业务级 AI Code Review：Webhook 触发 + Diff 语义化 + RAG 经验召回"
 source:
   type: paste
@@ -247,13 +248,14 @@ class DiffProcessor {
 
 - [GitLab Webhooks 文档](https://docs.gitlab.com/user/project/integrations/webhooks/)
 - [Cursor CLI](https://cursor.com/docs/cli/overview)（未来侧边栏集成方向）
-- 项目内：[AI Code Review 方法论](../ai-tools/2026-06-08-ai-code-review-workflow-methodology.md)（`KB-AI-20260608-ai-code-review-workflow-methodology`）— 作者自查、分层检查、PR 描述
-- 项目内：[AI Code Review Prompt 实战指南](../ai-tools/2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）— 个人/团队轻量 Prompt 与 Cursor 集成
+- 项目内：[AI Code Review 方法论](2026-06-08-ai-code-review-workflow-methodology.md)（`KB-AI-20260608-ai-code-review-workflow-methodology`）— 作者自查、分层检查、PR 描述
+- 项目内：[AI Code Review Prompt 实战指南](2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）— 个人/团队轻量 Prompt 与 Cursor 集成
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 目录迁移：迁入 ai-tools/code-review（topic 子目录） |
 | 2026-06-08 | 交叉引用 CR 方法论笔记（ING-20260608-011） |
 | 2026-06-08 | 交叉引用 Prompt 实战指南（ING-20260608-010） |
 | 2026-06-08 | 初稿（ING-20260608-009），整合业务级 AI Code Review 全链路实践 |
