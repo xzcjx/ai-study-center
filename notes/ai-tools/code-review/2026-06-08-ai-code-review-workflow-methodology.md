@@ -11,7 +11,7 @@ source:
 tags: [code-review, prompt, pr-description, self-review, layered-review, reviewer-workflow, backend]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-coding-era-review-upgrade]
+related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment]
 ingest_id: ING-20260608-011
 updated: 2026-06-08
 ---
@@ -252,10 +252,12 @@ sequenceDiagram
 - 项目内：[AI Code Review Prompt 实战指南](2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）
 - 项目内：[业务级 AI Code Review 全链路](2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）
 - 项目内：[AI 编程时代 Review 升级](2026-06-08-ai-coding-era-review-upgrade.md)（`KB-AI-20260608-ai-coding-era-review-upgrade`，表面合格、五维 Prompt、老代码案例）
+- 项目内：[AI 第一道 Review 两个月实验](2026-06-08-ai-first-gate-review-experiment.md)（`KB-AI-20260608-ai-first-gate-review-experiment`，PR 流程与团队数据）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用第一道 Review 实验笔记（ING-20260608-013） |
 | 2026-06-08 | 交叉引用 Review 升级笔记（ING-20260608-012） |
 | 2026-06-08 | 初稿（ING-20260608-011），整合 AI 辅助 CR 方法论：失效模式、自查、PR 描述、分层检查、有效意见 |

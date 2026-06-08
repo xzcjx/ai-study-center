@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260608-012"
+last_ingest_id: "ING-20260608-013"
 
 playbook_notes:
   fe-demo-shell:
@@ -27,6 +27,7 @@ playbook_notes:
     - notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md
     - notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md
     - notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md
+    - notes/ai-tools/code-review/2026-06-08-ai-first-gate-review-experiment.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -132,6 +133,10 @@ keywords:
     - legacy-code
     - over-engineering
     - review-checklist
+    - team-process
+    - human-review
+    - review-atrophy
+    - pr-workflow
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -192,22 +197,27 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260608-012
+  - ingest_id: ING-20260608-013
+    note: notes/ai-tools/code-review/2026-06-08-ai-first-gate-review-experiment.md
+    kb_id: KB-AI-20260608-ai-first-gate-review-experiment
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-08
+  - ingest_id: ING-20260608-013
     note: notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md
     kb_id: KB-AI-20260608-ai-coding-era-review-upgrade
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08
-  - ingest_id: ING-20260608-012
+  - ingest_id: ING-20260608-013
     note: notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md
     kb_id: KB-AI-20260608-ai-code-review-workflow-methodology
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08
-  - ingest_id: ING-20260608-012
+  - ingest_id: ING-20260608-013
     note: notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md
     kb_id: KB-AI-20260608-ai-code-review-prompt-guide
     workflows: ["fe-full-pipeline"]
     at: 2026-06-08
-  - ingest_id: ING-20260608-012
+  - ingest_id: ING-20260608-013
     note: notes/ai-tools/code-review/2026-06-08-ai-business-code-review.md
     kb_id: KB-ARCH-20260608-ai-business-code-review
     workflows: ["fe-full-pipeline"]
