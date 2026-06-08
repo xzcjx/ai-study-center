@@ -11,7 +11,7 @@ source:
 tags: [code-review, rag, gitlab, webhook, llm, devops, cursor, incident-response, diff-processing]
 difficulty: advanced
 status: active
-related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment]
+related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend]
 ingest_id: ING-20260608-009
 updated: 2026-06-08
 ---
@@ -252,11 +252,13 @@ class DiffProcessor {
 - 项目内：[AI Code Review Prompt 实战指南](2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）— 个人/团队轻量 Prompt 与 Cursor 集成
 - 项目内：[AI 编程时代 Review 升级](2026-06-08-ai-coding-era-review-upgrade.md)（`KB-AI-20260608-ai-coding-era-review-upgrade`）— 团队清单与老代码五维 Review
 - 项目内：[AI 第一道 Review 两个月实验](2026-06-08-ai-first-gate-review-experiment.md)（`KB-AI-20260608-ai-first-gate-review-experiment`）— 轻量流程验证后上流水线
+- 项目内：[AI Code Review 下一波机会](2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`）— PR 入口与工具生态
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用下一波机会趋势笔记（ING-20260608-014） |
 | 2026-06-08 | 交叉引用第一道 Review 实验笔记（ING-20260608-013） |
 | 2026-06-08 | 交叉引用 Review 升级笔记（ING-20260608-012） |
 | 2026-06-08 | 目录迁移：迁入 ai-tools/code-review（topic 子目录） |

@@ -11,7 +11,7 @@ source:
 tags: [code-review, ai-coding, frontend, vue, java, self-review, legacy-code, over-engineering, review-checklist]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-first-gate-review-experiment]
+related: [KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend]
 ingest_id: ING-20260608-012
 updated: 2026-06-08
 ---
@@ -219,10 +219,12 @@ function shouldBackToPrevPage(total: number, page: number, pageSize: number) {
 - 项目内：[AI Code Review Prompt 实战](2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）
 - 项目内：[业务级 AI Code Review 流水线](2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）
 - 项目内：[AI 第一道 Review 两个月实验](2026-06-08-ai-first-gate-review-experiment.md)（`KB-AI-20260608-ai-first-gate-review-experiment`，团队数据与副作用）
+- 项目内：[AI Code Review 下一波机会](2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`，行业趋势与 PR 入口）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用下一波机会趋势笔记（ING-20260608-014） |
 | 2026-06-08 | 交叉引用第一道 Review 实验笔记（ING-20260608-013） |
 | 2026-06-08 | 初稿（ING-20260608-012），整合「团队 AI 编程后 Review 更重要」与「AI Review 老代码删 31%」两篇实战 |

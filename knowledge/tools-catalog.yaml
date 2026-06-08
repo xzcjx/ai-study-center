@@ -452,7 +452,87 @@ entries:
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-prompt-guide.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）
+# 分类筛选别名（/kb-recommend 汇总模式）  - id: github-copilot-code-review
+    name: GitHub Copilot code review
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 平台内置
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://docs.github.com/en/copilot/using-github-copilot/code-review
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260608-014]
+  - id: coderabbit
+    name: CodeRabbit
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 独立 AI Review
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://coderabbit.ai
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260608-014]
+  - id: greptile
+    name: Greptile
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 独立 AI Review
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://greptile.com
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260608-014]
+  - id: graphite
+    name: Graphite
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 独立 AI Review
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://graphite.dev
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260608-014]
+  - id: snyk
+    name: Snyk
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 安全扫描
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://snyk.io
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260608-014]
+  - id: semgrep
+    name: Semgrep
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 安全扫描
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://semgrep.dev
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260608-014]
+  - id: codeql
+    name: CodeQL
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 安全扫描
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://codeql.github.com
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260608-014]
+  - id: anthropic-code-review
+    name: Anthropic code review
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 平台能力
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://www.anthropic.com/news/code-review
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260608-014]
+
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }

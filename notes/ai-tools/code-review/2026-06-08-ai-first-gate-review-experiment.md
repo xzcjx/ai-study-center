@@ -11,7 +11,7 @@ source:
 tags: [code-review, team-process, ai-coding, claude, human-review, review-atrophy, pr-workflow]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review]
+related: [KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-code-review-next-wave-trend]
 ingest_id: ING-20260608-013
 updated: 2026-06-08
 ---
@@ -190,9 +190,11 @@ updated: 2026-06-08
 - 项目内：[AI Code Review 方法论](2026-06-08-ai-code-review-workflow-methodology.md)（`KB-AI-20260608-ai-code-review-workflow-methodology`）
 - 项目内：[AI Code Review Prompt 实战](2026-06-08-ai-code-review-prompt-guide.md)（`KB-AI-20260608-ai-code-review-prompt-guide`）
 - 项目内：[业务级 AI Code Review 流水线](2026-06-08-ai-business-code-review.md)（`KB-ARCH-20260608-ai-business-code-review`）
+- 项目内：[AI Code Review 下一波机会](2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`，战略背景与五阶段落地）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 交叉引用下一波机会趋势笔记（ING-20260608-014） |
 | 2026-06-08 | 初稿（ING-20260608-013），整合 AI 第一道 Review 两个月团队实验复盘 |
