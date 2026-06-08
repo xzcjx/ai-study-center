@@ -1,0 +1,138 @@
+# 入库自动同步层（H13 产出，与 workflows-registry.yaml 合并后供 kb-workflow 使用）
+# 由 scripts/sync-workflow.sh 维护
+
+version: "1.0"
+last_ingest_id: "ING-BOOTSTRAP-001"
+
+playbook_notes:
+  fe-demo-shell:
+    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+  fe-from-scratch:
+    - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
+    - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
+    - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
+    - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
+    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+  fe-full-pipeline:
+    - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
+    - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
+    - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
+    - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
+    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+  fe-polish-existing:
+    - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
+    - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
+    - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
+    - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
+    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+  fe-redesign-reference:
+    - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+
+keywords:
+  fe-demo-shell:
+    - anti-slop
+    - aura-build
+    - google-ai-studio
+    - gemini
+    - agent-skill
+    - taste-skill
+    - claude-code
+    - ui-reference
+  fe-from-scratch:
+    - anthropic
+    - frontend-design
+    - agent-skill
+    - claude-code
+    - anti-slop
+    - aesthetic-direction
+    - coolors
+    - awesome-list
+    - mcp
+    - cursor
+    - ui-generation
+    - impeccable
+    - slash-commands
+    - paul-bakaus
+    - taste-skill
+    - design-system
+    - motion
+    - aura-build
+    - google-ai-studio
+    - gemini
+    - ui-reference
+  fe-full-pipeline:
+    - anthropic
+    - frontend-design
+    - agent-skill
+    - claude-code
+    - anti-slop
+    - aesthetic-direction
+    - coolors
+    - awesome-list
+    - mcp
+    - cursor
+    - ui-generation
+    - impeccable
+    - slash-commands
+    - paul-bakaus
+    - taste-skill
+    - design-system
+    - motion
+    - aura-build
+    - google-ai-studio
+    - gemini
+    - ui-reference
+  fe-polish-existing:
+    - anthropic
+    - frontend-design
+    - agent-skill
+    - claude-code
+    - anti-slop
+    - aesthetic-direction
+    - coolors
+    - awesome-list
+    - mcp
+    - cursor
+    - ui-generation
+    - impeccable
+    - slash-commands
+    - paul-bakaus
+    - taste-skill
+    - design-system
+    - motion
+    - aura-build
+    - google-ai-studio
+    - gemini
+    - ui-reference
+  fe-redesign-reference:
+    - anti-slop
+    - aura-build
+    - google-ai-studio
+    - gemini
+    - agent-skill
+    - taste-skill
+    - claude-code
+    - ui-reference
+
+tool_refs:
+  fe-from-scratch,:
+    W02,:
+  fe-full-pipeline,:
+    W03,:
+  fe-polish-existing,:
+    W02,:
+    W03,:
+    W04,:
+  fe-redesign-reference,:
+    W03,:
+
+router_triggers:
+  frontend-ui-router:
+    - 前端
+
+sync_log:
+  - ingest_id: ING-BOOTSTRAP-001
+    note: notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    kb_id: KB-AI-20260608-three-ways-remove-ai-slop
+    workflows: ["fe-demo-shell", "fe-from-scratch", "fe-full-pipeline", "fe-polish-existing", "fe-redesign-reference"]
+    at: 2026-06-08

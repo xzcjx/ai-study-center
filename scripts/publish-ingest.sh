@@ -18,13 +18,39 @@ REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_ROOT"
 
 STAGED=()
+NOTE_FILES=()
 for f in "$@"; do
   if [[ ! -f "$f" ]]; then
     echo "❌ 文件不存在: $f"
     exit 1
   fi
   STAGED+=("$f")
+  if [[ "$f" == notes/* ]]; then
+    NOTE_FILES+=("$f")
+  fi
 done
+
+# H13 SyncWorkflow：入库笔记自动同步方法论
+if [[ ${#NOTE_FILES[@]} -gt 0 ]] && [[ -x "$REPO_ROOT/scripts/sync-workflow.sh" ]]; then
+  "$REPO_ROOT/scripts/sync-workflow.sh" "$INGEST_ID" "${NOTE_FILES[@]}" || {
+    echo "❌ H13 SyncWorkflow 失败" >&2
+    exit 1
+  }
+  SYNC_FILE="$REPO_ROOT/knowledge/workflow-ingest-sync.yaml"
+  if [[ -f "$SYNC_FILE" ]]; then
+    STAGED+=("$SYNC_FILE")
+  fi
+  if [[ -x "$REPO_ROOT/scripts/sync-catalog.sh" ]]; then
+    "$REPO_ROOT/scripts/sync-catalog.sh" "$INGEST_ID" "${NOTE_FILES[@]}" || {
+      echo "❌ H13b SyncCatalog 失败" >&2
+      exit 1
+    }
+    CATALOG_FILE="$REPO_ROOT/knowledge/tools-catalog.yaml"
+    if [[ -f "$CATALOG_FILE" ]]; then
+      STAGED+=("$CATALOG_FILE")
+    fi
+  fi
+fi
 
 if ! git rev-parse --is-inside-work-tree &>/dev/null; then
   echo "❌ 当前目录不是 git 仓库"
@@ -46,7 +72,7 @@ fi
 git commit -m "$(cat <<EOF
 docs(ingest): ${TITLE}
 
-入库单 ${INGEST_ID}：更新笔记与索引。
+入库单 ${INGEST_ID}：更新笔记、索引与方法论同步层。
 EOF
 )"
 

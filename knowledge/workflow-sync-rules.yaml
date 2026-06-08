@@ -1,0 +1,67 @@
+# 入库 → 方法论自动同步规则（H13 SyncWorkflow SSOT）
+# 由 scripts/sync-workflow.sh 读取；命中规则后写入 workflow-ingest-sync.yaml
+
+version: "1.0"
+
+# 笔记 tags 命中任一 → 关联 workflow（追加 playbook_notes + keywords）
+tag_to_workflows:
+  anti-slop: [fe-full-pipeline, fe-polish-existing, fe-from-scratch]
+  frontend-design: [fe-full-pipeline, fe-from-scratch, fe-polish-existing]
+  polish: [fe-polish-existing]
+  ui-refinement: [fe-polish-existing]
+  slash-commands: [fe-polish-existing]
+  impeccable: [fe-polish-existing]
+  taste-skill: [fe-from-scratch, fe-full-pipeline]
+  agent-skill: [fe-from-scratch, fe-full-pipeline]
+  aura-build: [fe-redesign-reference, fe-full-pipeline]
+  ui-reference: [fe-redesign-reference]
+  google-ai-studio: [fe-demo-shell, fe-full-pipeline]
+  gemini: [fe-demo-shell]
+  anthropic: [fe-from-scratch]
+  aesthetic-direction: [fe-from-scratch]
+  claude-code: [fe-from-scratch, fe-polish-existing]
+  awesome-list: [fe-full-pipeline]
+  mcp: [fe-full-pipeline]
+  ui-generation: [fe-from-scratch, fe-full-pipeline]
+  coolors: [fe-from-scratch]
+
+# 工具 intents → 追加 workflow 阶段 tool_refs（与 tools-registry 联动）
+intent_to_tool_refs:
+  polish:
+    - { workflow: fe-polish-existing, phase: W02, required: true }
+    - { workflow: fe-polish-existing, phase: W04, required: false }
+  ui-refinement:
+    - { workflow: fe-polish-existing, phase: W02, required: true }
+  slash-commands:
+    - { workflow: fe-polish-existing, phase: W02, required: true }
+  audit:
+    - { workflow: fe-polish-existing, phase: W03, required: false }
+  ui-generation:
+    - { workflow: fe-from-scratch, phase: W02, required: true }
+  landing-page:
+    - { workflow: fe-from-scratch, phase: W02, required: true }
+  agent-skill:
+    - { workflow: fe-from-scratch, phase: W02, required: false }
+    - { workflow: fe-full-pipeline, phase: W03, required: false }
+  frontend-design:
+    - { workflow: fe-from-scratch, phase: W02, required: false }
+    - { workflow: fe-full-pipeline, phase: W03, required: false }
+  anti-slop:
+    - { workflow: fe-full-pipeline, phase: W03, required: false }
+  redesign:
+    - { workflow: fe-redesign-reference, phase: W03, required: false }
+  claude-code:
+    - { workflow: fe-from-scratch, phase: W02, required: false }
+
+# 模块默认 workflow（tags 无命中时兜底）
+module_default_workflows:
+  ai-tools: [fe-full-pipeline]
+  frontend: [fe-full-pipeline, fe-from-scratch]
+
+# 标题关键词 → 追加 router triggers（frontend-ui-router）
+title_keywords_to_router:
+  - 前端
+  - slop
+  - 审美
+  - 界面
+  - ui

@@ -1,0 +1,345 @@
+# AI 学习中心 · 方法论工作流注册表（SSOT）
+# 消费：scripts/kb-workflow.sh · 与 tools-registry.yaml 联动（工具变更后工作流自动取最新）
+# 新增工作流：录入此处 + 关联 notes/ playbook + 更新 docs/CONSUME.md
+
+version: "1.0"
+
+# 场景路由：自然语言 → 具体工作流 id（按顺序匹配，先命中先用）
+routers:
+  - id: frontend-ui-router
+    triggers:
+      - 开发前端
+      - 前端界面
+      - 做页面
+      - ui开发
+      - 前端开发
+      - 好看的前端
+      - 去ai味
+      - 去 slop
+      - anti-slop
+    routes:
+      - match: [抛光, 优化, 改丑, 迭代, 组件, polish, 已有, 现有, refine]
+        workflow: fe-polish-existing
+      - match: [参考, 克隆, 仿照, aura, 模板, 改版, redesign]
+        workflow: fe-redesign-reference
+      - match: [demo, 壳层, 原型, gemini, ai studio, 从零壳]
+        workflow: fe-demo-shell
+      - match: [从零, 新建, landing, 新页面, 作品集, portfolio, scratch]
+        workflow: fe-from-scratch
+    default: fe-full-pipeline
+
+workflows:
+  - id: fe-full-pipeline
+    name: 前端 UI 开发 · 完整方法论（自动选路径）
+    version: "1.0"
+    summary: >-
+      根据你的场景自动分支：抛光已有组件 / 参考克隆 / Gemini 壳层 / 从零生成；
+      串联工具安装、执行 Prompt、验收清单，一次交付可复用 playbook。
+    playbook_notes:
+      - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+      - notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md
+    triggers:
+      keywords: [前端, ui, 界面, slop, 审美, frontend]
+      intents: [frontend-design, anti-slop, ui-generation, ui-refinement]
+    phases:
+      - id: W01
+        name: 场景分流
+        gate: must_pass
+        instructions: |
+          先判断任务类型（只选一项）：
+          - **A 抛光已有**：Vue/React 组件能跑但丑 → 转 `fe-polish-existing`
+          - **B 参考克隆**：有 aura.build 等参考稿 → 转 `fe-redesign-reference`
+          - **C Demo 壳层**：早期原型、要高颜值壳 → 转 `fe-demo-shell`
+          - **D 从零生成**：新 landing/作品集 → 转 `fe-from-scratch`
+        checklist:
+          - 已确认任务属于 A/B/C/D 之一
+          - 已明确目标文件或页面范围
+
+      - id: W02
+        name: 执行子工作流
+        gate: must_pass
+        instructions: |
+          运行子工作流（将 {scenario} 替换为你的描述）：
+          `{kb}/scripts/kb-workflow.sh "{子工作流关键词}" --target {project}`
+        checklist:
+          - 子工作流 W01–W05 全部勾选完成
+
+      - id: W03
+        name: 组合增强（可选）
+        gate: optional
+        instructions: |
+          常见组合：
+          - 从零生成后抛光：`fe-from-scratch` → `fe-polish-existing`
+          - 参考克隆后统一纪律：安装 taste-skill 约束后续改动
+        tool_refs:
+          - taste-skill
+          - impeccable
+
+      - id: W04
+        name: 验收
+        gate: must_pass
+        checklist:
+          - 无典型 AI slop（蓝紫渐变、满屏 emoji、三卡套娃）
+          - 间距与字号层次清晰
+          - 响应式与可访问性未回退
+          - 品牌/配色与 brief 一致
+
+      - id: W05
+        name: 沉淀
+        gate: optional
+        instructions: |
+          将本次有效的 prompt 片段记入项目 `.cursor/rules/` 或 PR 描述，便于团队复用。
+
+  - id: fe-polish-existing
+    name: 前端组件迭代抛光（已有代码）
+    version: "1.0"
+    summary: >-
+      针对已有 Vue/React/HTML 组件：impeccable 斜杠命令诊断 → 简化 → 配色 → 抛光；
+      最适合 AIQuantX 类「能跑但丑」的迭代场景。
+    playbook_notes:
+      - notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md
+      - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    triggers:
+      keywords: [抛光, polish, 优化, 优化组件, 改丑, 迭代, refine, slop, 丑, 组件, 难看, 丑组件]
+      intents: [ui-refinement, polish, anti-slop]
+    phases:
+      - id: W01
+        name: 场景确认
+        gate: must_pass
+        checklist:
+          - 目标是**已有**页面/组件，非从零新建
+          - 已列出待改文件路径（如 src/components/*.vue）
+          - 已确认技术栈（Vue/React/纯 HTML）
+
+      - id: W02
+        name: 工具安装
+        gate: must_pass
+        tool_refs:
+          - id: impeccable
+            required: true
+            default_method: cursor-project
+        instructions: |
+          预览：`{kb}/scripts/install-tool.sh impeccable --target {project}`
+          确认后：`{kb}/scripts/install-tool.sh impeccable --yes --target {project}`
+          需先设置 `IMPECCABLE_DIST` 指向官网 ZIP 解压后的 dist/。
+
+      - id: W03
+        name: 执行抛光（严格顺序）
+        gate: must_pass
+        prompt: |
+          已安装 impeccable。请对以下文件按序执行斜杠命令，**每步完成后等我确认再继续**：
+          1. `/audit` — 诊断 AI slop（Inter、gray-50、卡片套娃、紫渐变等）
+          2. `/distill` — 简化多余装饰与冗余层级
+          3. `/colorize` — 统一配色，避免默认蓝紫
+          4. `/polish` — 间距、字号层次、微交互收尾
+          5. `/optimize` — 生产级加固（可选）
+
+          目标文件：{target_files}
+          项目栈：{stack}
+          品牌调性：{brand_tone}
+
+      - id: W04
+        name: 辅助增强（可选）
+        gate: optional
+        tool_refs:
+          - id: taste-skill
+            required: false
+        instructions: |
+          若整体风格仍漂移，可加装 taste-skill 作为后续改动的生成前纪律。
+
+      - id: W05
+        name: 验收
+        gate: must_pass
+        checklist:
+          - /audit 列出的 high-severity slop 已处理
+          - 配色统一且非默认 AI 模板色
+          - 组件间距、对齐、字号层次可评审
+          - 功能与交互未破坏
+
+  - id: fe-from-scratch
+    name: 从零生成前端页面
+    version: "1.0"
+    summary: >-
+      新 landing/作品集/活动页：生成前注入设计 Skill（Taste Skill 或 Anthropic frontend-design），
+      可选 coolors 配色与 aesthetic direction。
+    playbook_notes:
+      - notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md
+      - notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md
+    triggers:
+      keywords: [从零, 新建, landing, portfolio, 新页面, 生成页面]
+      intents: [ui-generation, landing-page, frontend-design, anti-slop]
+    phases:
+      - id: W01
+        name: 场景确认
+        gate: must_pass
+        checklist:
+          - 页面类型已明确（landing / portfolio / 活动页）
+          - 已写 brief：受众、品牌调性、技术栈约束
+          - 非复杂 dashboard / 数据后台
+
+      - id: W02
+        name: 工具安装（二选一或都装）
+        gate: must_pass
+        tool_refs:
+          - id: taste-skill
+            required: false
+            default_method: npx-default
+            when: Cursor / Codex / 要三拨盘参数化
+          - id: anthropic-frontend-design
+            required: false
+            default_method: npx-skill
+            when: Claude Code 用户
+        instructions: |
+          Cursor/Codex：`{kb}/scripts/install-tool.sh taste-skill --yes --target {project}`
+          Claude Code：`/plugin` → anthropics/claude-code → frontend-design
+          或：`{kb}/scripts/install-tool.sh anthropic-frontend-design --yes --target {project}`
+
+      - id: W03
+        name: 生成执行
+        gate: must_pass
+        prompt: |
+          {skill_invoke}
+
+          页面需求：{page_brief}
+          技术栈：{stack}
+          配色（可选，来自 coolors.co）：
+          {color_palette}
+          美学方向（可选）：{aesthetic_direction}
+
+          交付要求：可运行代码 + 响应式 + 避免 AI slop（无紫渐变、无 Inter 泛用、无三卡套娃）
+
+      - id: W04
+        name: 抛光（推荐）
+        gate: optional
+        tool_refs:
+          - id: impeccable
+            required: false
+        prompt: |
+          生成完成后执行：/audit → /polish 收尾。
+
+      - id: W05
+        name: 验收
+        gate: must_pass
+        checklist:
+          - 有明确美学立场，非 generic 模板
+          - 功能与 brief 一致
+          - 动效克制且服务于层次
+
+  - id: fe-redesign-reference
+    name: 参考 UI 克隆改版
+    version: "1.0"
+    summary: >-
+      从 aura.build 等挑选参考源码，让 Agent 比照样式重构现有页面；审美方向由人选定，结果可预期。
+    playbook_notes:
+      - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    triggers:
+      keywords: [参考, 克隆, aura, 仿照, 改版, redesign, 模板]
+      intents: [redesign, frontend-design, ui-reference]
+    resources:
+      - id: aura-build
+        name: aura.build
+        url: https://aura.build
+        type: reference
+    phases:
+      - id: W01
+        name: 选定参考
+        gate: must_pass
+        instructions: |
+          1. 打开 https://aura.build 浏览 Free Templates / Trending
+          2. 选定案例并复制**完整源代码**
+          3. 确认许可证（部分 Pro/付费）
+        checklist:
+          - 参考源码已复制到本地或粘贴区
+          - 明确要重构的目标页面/组件
+
+      - id: W02
+        name: 比照重构
+        gate: must_pass
+        prompt: |
+          请参考以下 aura.build 案例的**风格、配色、排版、动效与空间节奏**，
+          重构我的 {target_page}。保留我现有的内容与业务逻辑，主要改视觉与布局。
+
+          【参考源码】
+          {reference_source}
+
+          【我的现状】
+          {current_files}
+
+          避免：蓝紫渐变、满屏 emoji、千篇一律圆角卡片套娃。
+
+      - id: W03
+        name: Skill 约束（可选）
+        gate: optional
+        tool_refs:
+          - id: taste-skill
+            required: false
+        instructions: |
+          重构后用 taste-skill 约束后续增量改动，防止风格漂移。
+
+      - id: W04
+        name: 验收
+        gate: must_pass
+        checklist:
+          - 视觉明显接近参考质感，AI 味降低
+          - 原功能未破坏
+          - 未整页抄袭受限许可的 Pro 模板
+
+  - id: fe-demo-shell
+    name: Gemini 壳层 + Agent 业务开发
+    version: "1.0"
+    summary: >-
+      Google AI Studio 用 Gemini 快速搭高颜值 UI 壳层，下载后由 Codex/Claude Code 接入业务逻辑。
+    playbook_notes:
+      - notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md
+    triggers:
+      keywords: [demo, 壳层, 原型, gemini, ai studio, 分工]
+      intents: [ui-generation, frontend-design]
+    resources:
+      - id: google-ai-studio
+        name: Google AI Studio
+        url: https://aistudio.google.com
+        type: service
+    phases:
+      - id: W01
+        name: Studio 出壳
+        gate: must_pass
+        instructions: |
+          1. 打开 https://aistudio.google.com
+          2. 选择 Gemini 3.x，用自然语言描述 UI
+          3. 在线预览满意后导出/下载项目
+        checklist:
+          - UI 壳层已下载到本地
+
+      - id: W02
+        name: Agent 接业务
+        gate: must_pass
+        prompt: |
+          基于已下载的 UI 壳层（路径：{shell_path}），在现有项目中实现：
+          {business_requirements}
+
+          技术栈：{stack}
+          保持壳层视觉风格，接入真实数据与交互。
+
+      - id: W03
+        name: 抛光（可选）
+        gate: optional
+        tool_refs:
+          - id: impeccable
+            required: false
+
+      - id: W04
+        name: 验收
+        gate: must_pass
+        checklist:
+          - 壳层颜值保留
+          - 业务逻辑完整
+          - 与主工程栈集成无冲突
+
+# 工作流意图别名（供 kb-workflow.sh 匹配）
+workflow_aliases:
+  开发前端界面: frontend-ui-router
+  前端审美: frontend-ui-router
+  优化丑组件: fe-polish-existing
+  抛光前端: fe-polish-existing
+  做落地页: fe-from-scratch
+  参考aura改版: fe-redesign-reference
