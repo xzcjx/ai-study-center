@@ -19,11 +19,12 @@ updated: 2026-06-08
 
 ## TL;DR
 
-- Taste Skill 是一组可安装的 **Agent Skills**（`SKILL.md`），不是 npm UI 组件库；定位为「The Anti-Slop Frontend Framework for AI Agents」，在写代码前先做设计判断、选型与交付自检。
-- 默认技能 `design-taste-frontend` 已切到 **v2 experimental**，通过三个拨盘（`DESIGN_VARIANCE` / `MOTION_INTENSITY` / `VISUAL_DENSITY`）控制布局实验度、动效强度与信息密度。
-- v2 强化 brief inference、官方设计系统映射（Fluent / Material / Carbon / Primer 等）、anti-AI-tell 规则、动效工程纪律与 pre-flight 交付检查。
-- 技能分 **实现类**（直接产出代码）与 **图像生成类**（先出参考图再实现）；一行 `npx skills add` 即可安装到 Cursor、Codex、Claude Code 等环境。
-- 更适合 landing page、portfolio、改版场景；不适合复杂 dashboard、数据表、多步表单等系统型产品界面。
+- Taste Skill 是一组可安装的 **Agent Skills**（`SKILL.md`），不是 npm UI 组件库；定位为「The Anti-Slop Frontend Framework for AI Agents」——**Slop** 指 AI 生成、毫无个性、照本宣科的界面与内容。
+- 默认技能 `design-taste-frontend` 已切到 **v2 experimental**，通过三个独立拨盘（`DESIGN_VARIANCE` / `MOTION_INTENSITY` / `VISUAL_DENSITY`）控制布局实验度、动效强度与信息密度，同一套规则可服务极简落地页与密集 dashboard。
+- v2 强化 brief inference、设计系统映射、anti-AI-tell（含 em dash 滥用禁令）、GSAP 动效骨架开箱即用、pre-flight 交付检查。
+- 一行 `npx skills add` 安装，或直接把 `SKILL.md` 粘贴进 ChatGPT / Codex 对话——不依赖 CLI；支持 Cursor、Claude Code、Codex。
+- 典型 AI 模板腔：蓝白配色、居中标题、标准 Tailwind 三卡一排、2019 Bootstrap 既视感；装上后同样 prompt 可显著改善排版与视觉节奏（如 Floria 示例）。
+- 更适合 landing page、portfolio、改版场景；**中文场景**尚无官方 Skill（Issue #33 仍 open），文化语境下的「坏品味」模式可能与英文不同。
 
 ## 适用场景
 
@@ -47,6 +48,15 @@ Taste Skill 通过 `SKILL.md` 的 frontmatter 与正文规则，指导 agent 在
 
 仓库明确声明：**无官方 coin 或 crypto 项目**，任何借名发行的资产均非官方背书。
 
+**项目背景**：作者 Leon Lin（GitHub: Leonxlnx），2026 年 2 月起维护；截至 2026-05-27 约 22,580 Stars / 1,782 Forks（后续持续增长）。核心判断：模型不缺 CSS 能力，缺的是「设计品味」与「先别套默认模板」的纪律。
+
+**社区反馈（Issues）**：
+- #15：Skill 过多，用户难以选型（共性困惑）
+- #33：请求中文版 Skill——中文 AI 写作/界面有独立的「坏品味」模式，至今 open
+- #28：未读文档直接上手导致报错，侧面反映吸引力强
+
+**趋势意义**：Taste Skill 代表面向 AI Agent 的「规范层」——除代码、文档、测试外，用 Skill 文件编码领域内的该做/不该做，是可复用的工作流样本。
+
 ### 2. 三个核心拨盘（1–10）
 
 | 拨盘 | 含义 | 低值 | 高值 |
@@ -55,7 +65,7 @@ Taste Skill 通过 `SKILL.md` 的 frontmatter 与正文规则，指导 agent 在
 | `MOTION_INTENSITY` | 动效丰富度 | 悬停反馈 | 滚动视差、磁性效果 |
 | `VISUAL_DENSITY` | 信息密度 | 宽松留白 | 密集后台风格 |
 
-三个参数可按 brief 灵活调整，避免锁死在单一审美。
+三个拨盘**独立调节、互不干扰**——不必每次重写风格 prompt，即可在同一套规则下切换「极简 SaaS 页」与「信息密集运营后台」。
 
 ### 3. v2 experimental 关键协议
 
@@ -98,7 +108,12 @@ Taste Skill 通过 `SKILL.md` 的 frontmatter 与正文规则，指导 agent 在
 
 ### 5. 与 Cursor / 其他 Agent 的协作方式
 
-在任务中显式要求 agent **follow design-taste-frontend**，并补充页面类型、受众、品牌调性与参考网站。也可将 `SKILL.md` 复制进项目或粘贴到对话中。
+在任务中显式要求 agent **follow design-taste-frontend**，并补充页面类型、受众、品牌调性与参考网站。
+
+**三种接入方式**：
+1. `npx skills add` 安装到项目（Claude Code / Codex / Cursor 自动读取）
+2. 复制 `SKILL.md` 到仓库
+3. 不装 CLI，直接粘贴 SKILL 正文进 ChatGPT 对话
 
 Image-first 流程示例：先 `imagegen-frontend-web` 出帧，再 `image-to-code` 分析并实现，避免 agent 直接跳到默认模板。
 
@@ -107,6 +122,7 @@ Image-first 流程示例：先 `imagegen-frontend-web` 出帧，再 `image-to-co
 - 效果依赖模型是否认真遵守 SKILL.md；不同 agent 支持程度、上下文长度、项目已有设计系统与用户 brief 清晰度均会影响产出。
 - v2 为 experimental，API 与细节会持续迭代至 v2.0.0 stable；生产流程应关注 CHANGELOG。
 - 强规则可能误伤合法品牌风格，需用 brief 显式覆盖默认约束。
+- 中文本地化 Skill 尚未发布（Issue #33）；国内公众号导读类文章与 GitHub README 信息可能有 Star 数、技能数量的表述差异，以仓库为准。
 
 ## 代码 / 命令
 
@@ -147,9 +163,11 @@ Follow image-to-code: generate visual references first, analyze the selected fra
 - [项目站点 tasteskill.dev](https://tasteskill.dev)
 - [Agent Skills CLI（vercel-labs/agent-skills）](https://github.com/vercel-labs/agent-skills)
 - 微信导读（链接可能需验证）：[让 AI 前端从「丑爆」到「惊艳」](https://mp.weixin.qq.com/s/T9c4UeM9iw_bN6BsqiK49Q)
+- 社区导读：杰克王《AI 生成的界面丑成 PPT？taste-skill 22K Star》（粘贴入库，无独立 URL）
 
 ## 变更记录
 
 | 日期 | 说明 |
 |------|------|
+| 2026-06-08 | 合并更新（ING-20260608-002）：补充 Slop 定义、作者/Star 背景、Issues 反馈、Floria 示例、中文场景缺口、三种接入方式 |
 | 2026-06-08 | 初稿（ING-20260608-001），整合 GitHub README 与用户提供的导读正文 |

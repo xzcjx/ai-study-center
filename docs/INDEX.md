@@ -77,5 +77,6 @@
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-08 | 合并更新 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md)（ING-20260608-002） |
 | 2026-06-08 | 新建 | [Taste Skill Agent 前端设计纪律](../notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md) |
 | 2026-06-08 | 初始化项目 | — |
