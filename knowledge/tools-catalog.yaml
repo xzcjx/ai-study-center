@@ -1,0 +1,277 @@
+# AI 学习中心 · 工具总目录（SSOT）
+# 汇总 /kb-recommend 读此文件；可安装项通过 registry_id 联动 tools-registry.yaml
+# 入库 H13b：scripts/sync-catalog.sh 从笔记补充/更新条目
+# 字段：id, name, category, positioning, summary, tags, homepage, installable, registry_id, kb_notes, starred
+
+version: "1.0"
+
+categories:
+  skills: Agent Skills · 生成前设计约束
+  apps: AI 设计/生成应用
+  mcp: MCP / 插件 · 编辑器内拼装组件
+  design-tools: 设计辅助（非 AI）
+  resources: 学习资料 / 灵感站
+  reference-site: 参考案例 / 模板库
+  workflow: 工作流 / 平台（非单一工具）
+
+entries:
+  # --- 可安装 · Skills ---
+  - id: taste-skill
+    name: Taste Skill
+    category: skills
+    positioning: 生成前设计纪律 · 三拨盘参数化 anti-slop
+    summary: Agent Skill（SKILL.md）：brief inference、布局/动效/密度拨盘、GSAP 动效、pre-flight 检查；适合 landing/portfolio。
+    tags: [anti-slop, agent-skill, landing-page, portfolio, cursor, codex]
+    homepage: https://github.com/Leonxlnx/taste-skill
+    installable: true
+    registry_id: taste-skill
+    kb_notes: [notes/ai-tools/2026-06-08-taste-skill-agent-frontend.md]
+    starred: true
+
+  - id: impeccable
+    name: impeccable.style
+    category: skills
+    positioning: 生成后抛光 · 20 个斜杠命令 + 设计词典
+    summary: /audit /polish /colorize 等命令诊断并迭代已有 AI 页面，解决 Inter+灰底+卡片套娃。
+    tags: [anti-slop, polish, slash-commands, ui-refinement, audit]
+    homepage: https://impeccable.style
+    installable: true
+    registry_id: impeccable
+    kb_notes: [notes/ai-tools/2026-06-08-impeccable-style-frontend-design.md]
+    starred: true
+
+  - id: anthropic-frontend-design
+    name: Anthropic Frontend Design Skill
+    category: skills
+    positioning: 官方 Skill · Design Thinking + aesthetic direction
+    summary: 生成前明确 Purpose/Tone/Differentiation；Claude Code 插件或 npx；配合 coolors 配色效果更佳。
+    tags: [anti-slop, agent-skill, claude-code, aesthetic-direction, frontend-design]
+    homepage: https://github.com/anthropics/skills/tree/main/skills/frontend-design
+    installable: true
+    registry_id: anthropic-frontend-design
+    kb_notes: [notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md]
+    starred: true
+
+  - id: swiss-design-system
+    name: Swiss Design System
+    category: skills
+    positioning: 瑞士风格 Skill · 网格与克制配色
+    summary: grotesque 字体、纪律网格、克制配色 + Tailwind 模式，教 agent 瑞士设计原则。
+    tags: [frontend-design, design-system, tailwind]
+    homepage: https://swiss.ziki.boo/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: userinterface-wiki-skill
+    name: UserInterface.wiki Skill
+    category: skills
+    positioning: UI 规则打包 · 152 条设计规范
+    summary: 将 UserInterface.wiki 的 UI 设计规则打包为可安装 skill 文件。
+    tags: [frontend-design, design-rules]
+    homepage: https://www.userinterface.wiki/skill
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: ui-ux-pro-max-skill
+    name: UI UX Pro Max Skill
+    category: skills
+    positioning: 按项目类型生成设计系统
+    summary: 根据项目类型与框架生成色板、字体、布局等设计系统建议。
+    tags: [design-system, ui-generation]
+    homepage: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: shadcn-ui-skills
+    name: shadcn/ui Skills
+    category: skills
+    positioning: shadcn 项目上下文 Skill
+    summary: 让 agent 理解项目 shadcn/ui 配置，生成正确组件代码而非猜 API。
+    tags: [shadcn, react, component]
+    homepage: https://ui.shadcn.com/docs/skills
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: web-design-guidelines-skill
+    name: Web Design Guidelines Skill
+    category: skills
+    positioning: 设计规范检查 Skill
+    summary: 对照 Web 设计最佳实践检查 UI 代码并标注违规项。
+    tags: [audit, best-practices]
+    homepage: https://github.com/vercel-labs/agent-skills
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: typeui-design-skills
+    name: TypeUI Design Skills
+    category: skills
+    positioning: 多风格 UI + 可下载 skill.md
+    summary: 收录多种 UI 设计风格，每种提供可下载 skill.md 供 agent 使用。
+    tags: [design-system, multi-style]
+    homepage: https://www.typeui.sh/design-skills
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  # --- Apps ---
+  - id: variant
+    name: Variant
+    category: apps
+    positioning: AI 设计变体浏览 · 定方向
+    summary: 滚动浏览同一需求的多种 AI 生成设计变体，快速选定审美方向。
+    tags: [reference, design-exploration]
+    homepage: https://variant.com/
+    installable: false
+    starred: true
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: stitch-google
+    name: Stitch by Google
+    category: apps
+    positioning: Google AI 界面生成
+    summary: Google 出品的 AI 设计工具，用 prompt 快速生成 UI 稿。
+    tags: [ui-generation, google]
+    homepage: https://stitch.withgoogle.com/
+    installable: false
+    starred: true
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: 21st-dev
+    name: 21st.dev
+    category: apps
+    positioning: AI 产品 UI 组件库
+    summary: 面向 AI 产品的 UI 组件库与模板，适合快速拼装产品界面。
+    tags: [component-library, ai-product]
+    homepage: https://21st.dev/home
+    installable: false
+    starred: true
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: ai-website-cloner
+    name: AI Website Cloner
+    category: apps
+    positioning: 网站克隆 → Next.js 代码库
+    summary: 一键将参考网站克隆为 Next.js 项目，适合「比照样板」工作流。
+    tags: [clone, nextjs, reference]
+    homepage: https://github.com/JCodesMore/ai-website-cloner-template
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md, notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
+
+  - id: superdesign
+    name: Superdesign
+    category: apps
+    positioning: 浏览器内 AI 界面生成
+    summary: 在浏览器中通过 AI 生成界面设计稿。
+    tags: [ui-generation]
+    homepage: https://app.superdesign.dev/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: khroma
+    name: Khroma
+    category: apps
+    positioning: AI 配色学习 · 个性化色板
+    summary: 学习你的配色偏好并生成可搜索、可保存的色板；可配合 Anthropic Skill 使用。
+    tags: [color, palette]
+    homepage: https://www.khroma.co/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md, notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md]
+
+  # --- MCP ---
+  - id: magic-mcp
+    name: Magic MCP
+    category: mcp
+    positioning: 文本 prompt 生成 UI 组件
+    summary: 在 Cursor / Windsurf / VSCode 内用自然语言生成 UI 组件代码。
+    tags: [mcp, component-generation, cursor]
+    homepage: https://github.com/21st-dev/magic-mcp
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: ui-layouts-mcp
+    name: UI Layouts MCP
+    category: mcp
+    positioning: 搜索真实 UI 组件库
+    summary: 让 AI 编辑器搜索并使用真实 UI 组件，而非猜测组件 API。
+    tags: [mcp, component-library]
+    homepage: https://www.ui-layouts.com/mcp
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: lazyweb-mcp
+    name: Lazyweb
+    category: mcp
+    positioning: 先调研真实 App 界面再设计
+    summary: MCP + skills，先研究真实产品界面截图再生成 UI，减少空想 slop。
+    tags: [mcp, research, reference]
+    homepage: https://www.lazyweb.com/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: design-and-refine
+    name: Design and Refine
+    category: mcp
+    positioning: Claude Code 多版 UI 对比迭代
+    summary: Claude Code 插件：生成、对比、精炼多个 UI 变体。
+    tags: [mcp, claude-code, iteration]
+    homepage: https://github.com/0xdesign/design-plugin
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  - id: interface-design-plugin
+    name: Interface Design
+    category: mcp
+    positioning: 跨 session 记住 UI 决策
+    summary: Claude Code 插件，跨对话保持界面决策一致，防止风格漂移。
+    tags: [mcp, claude-code, design-system]
+    homepage: https://github.com/Dammyjay93/interface-design
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+
+  # --- 参考站 / 工作流 ---
+  - id: aura-build
+    name: aura.build
+    category: reference-site
+    positioning: UI 案例源码库 · 比照重构
+    summary: 大量 Web/移动端 UI demo，以源代码形式提供；免费区够用于个人项目参考克隆。
+    tags: [reference, clone, ui-reference, gemini]
+    homepage: https://aura.build
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
+
+  - id: google-ai-studio
+    name: Google AI Studio
+    category: workflow
+    positioning: Gemini 壳层生成 · 再交 Codex/Claude 填业务
+    summary: 免费在线用 Gemini 3.x 快速搭高颜值 UI 壳层并预览，下载后由编程 agent 接业务逻辑。
+    tags: [gemini, demo, ui-generation, workflow]
+    homepage: https://aistudio.google.com
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-three-ways-remove-ai-slop.md]
+
+  - id: coolors
+    name: coolors.co
+    category: design-tools
+    positioning: 专业配色生成 · 附到 prompt
+    summary: 挑选和谐配色方案，复制 CSS 变量 HEX/HSL 写入 agent prompt，配合 frontend-design Skill。
+    tags: [color, palette, prompt]
+    homepage: https://coolors.co/
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-anthropic-frontend-design-skill.md]
+
+  - id: awesome-ai-tools-for-ui
+    name: Awesome AI Tools for UI
+    category: resources
+    positioning: 社区策展清单 · 37+ 项导航
+    summary: maxbogo 维护的 GitHub Awesome 清单，按 Skills/Apps/MCP/Design Tools/Resources 五类收录。
+    tags: [awesome-list, catalog, navigation]
+    homepage: https://github.com/maxbogo/awesome-ai-tools-for-ui
+    installable: false
+    kb_notes: [notes/ai-tools/2026-06-08-awesome-ai-tools-for-ui.md]
+    starred: true
+
+# 分类筛选别名（/kb-recommend 汇总模式）
+catalog_filters:
+  前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
+  前端skills: { categories: [skills] }
+  前端mcp: { categories: [mcp] }
+  参考克隆: { categories: [reference-site, apps], tags_any: [reference, clone] }

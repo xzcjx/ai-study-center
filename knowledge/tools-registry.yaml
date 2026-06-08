@@ -190,6 +190,9 @@ tools:
 intent_aliases:
   好看的前端: [frontend-design, anti-slop, ui-generation]
   前端审美: [frontend-design, anti-slop]
+  前端工具汇总: [awesome-list, frontend-design, anti-slop, ui-generation]
+  工具汇总: [awesome-list, frontend-design]
+  前端工具有哪些: [awesome-list, frontend-design]
   ai slop: [anti-slop, polish]
   落地页: [landing-page, frontend-design]
   landing page: [landing-page, frontend-design]
