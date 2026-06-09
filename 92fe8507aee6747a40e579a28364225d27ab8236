@@ -1,0 +1,23 @@
+knowledge/tools-catalog.yaml
+  eeacf909e56d1c7c 573,575-578,583
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "92fe8507aee6747a40e579a28364225d27ab8236",
+  "prompts": {
+    "eeacf909e56d1c7c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "5f03eaac-6a1c-49b0-9740-0f41411fae79",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 6,
+      "total_deletions": 6,
+      "accepted_lines": 6,
+      "overriden_lines": 0
+    }
+  }
+}
