@@ -1,0 +1,27 @@
+notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md
+  eeacf909e56d1c7c 15,126
+notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md
+  eeacf909e56d1c7c 1-158
+docs/INDEX.md
+  eeacf909e56d1c7c 13,18,49,105,111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "99eab9dec9ed5d15bbf5c8b9feddb6edfd0c76e2",
+  "prompts": {
+    "eeacf909e56d1c7c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "5f03eaac-6a1c-49b0-9740-0f41411fae79",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 165,
+      "total_deletions": 4,
+      "accepted_lines": 165,
+      "overriden_lines": 0
+    }
+  }
+}
