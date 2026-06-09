@@ -1,0 +1,67 @@
+templates/publish-redbook.md
+  c85d1c749a11e8ee 1-29
+templates/publish-report.md
+  c85d1c749a11e8ee 1-25
+scripts/kb-publish.sh
+  c85d1c749a11e8ee 1-69
+.cursor/rules/publish-pipeline.mdc
+  c85d1c749a11e8ee 1-25
+publish/.gitkeep
+  c85d1c749a11e8ee 1
+templates/publish-taobao.md
+  c85d1c749a11e8ee 1-46
+docs/PUBLISH.md
+  c85d1c749a11e8ee 1-64,66-95,97
+  36c34e70bee82fcd 65,96
+AGENTS.md
+  c85d1c749a11e8ee 22-26,35-36,53,65-69
+templates/publish-xianyu.md
+  c85d1c749a11e8ee 1-40
+.cursor/skills/knowledge-publish/SKILL.md
+  36c34e70bee82fcd 102,104-105
+  c85d1c749a11e8ee 1-101,103,106-139
+knowledge/platforms-registry.yaml
+  c85d1c749a11e8ee 1-118
+templates/publish-wechat.md
+  c85d1c749a11e8ee 1-41
+README.md
+  c85d1c749a11e8ee 13-16,60,63,70-72
+.cursor/rules/global.mdc
+  c85d1c749a11e8ee 27-31,42,45-46,71-74
+scripts/kb_publish.py
+  c85d1c749a11e8ee 1-168,181-207,210-322
+  36c34e70bee82fcd 169-180,208-209
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "392b47004998cf91d907223558545e10100975b9",
+  "prompts": {
+    "36c34e70bee82fcd": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "114efa46-3c6a-48bf-83b0-92c560c3ca58",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 63,
+      "total_deletions": 5,
+      "accepted_lines": 63,
+      "overriden_lines": 0
+    },
+    "c85d1c749a11e8ee": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "54d6bcc6-e4f5-48b9-810a-e308a552dbe2",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 1025,
+      "total_deletions": 53,
+      "accepted_lines": 967,
+      "overriden_lines": 0
+    }
+  }
+}
