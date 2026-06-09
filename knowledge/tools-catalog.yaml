@@ -602,6 +602,28 @@ entries:
     kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md]
     ingest_ids: [ING-20260609-004]
 
+  - id: seedance
+    name: Seedance 2.0
+    category: apps
+    positioning: 字节 AI 视频生成 · 电商内容工厂
+    summary: 字节系 AI 视频生成工具；文中视为击穿内容产能瓶颈的代表信号。
+    tags: [ai-ecommerce, content-factory, video-generation, seedance, market-trend]
+    homepage: https://www.volcengine.com/product/seedance
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md]
+    ingest_ids: [ING-20260609-005]
+
+  - id: feishu-base
+    name: 飞书多维表格
+    category: apps
+    positioning: 协作数据库 · MCN/KOC 排期与进度看板
+    summary: 文中 MCN 智能工作流载体：达人进度、内容排期、产出回收与仪表盘监控。
+    tags: [ai-ecommerce, koc, workflow, feishu, market-trend]
+    homepage: https://www.feishu.cn/product/base
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md]
+    ingest_ids: [ING-20260609-005]
+
 # 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }

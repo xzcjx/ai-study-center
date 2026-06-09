@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 18 |
+| AI 工具 | 19 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
 | 其他 | 0 |
-| **合计** | **18** |
+| **合计** | **19** |
 
 ---
 
@@ -46,6 +46,7 @@
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
 | 2026-06-09 | AI 电商时代：GEO 思维、意图经济与品牌双主体营销 | `geo`, `ai-ecommerce`, `intent-economy`, `brand-marketing`, `market-trend` | [笔记](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md) · `KB-AI-20260609-ai-ecommerce-geo-brand-strategy` |
+| 2026-06-09 | 2026 AI+电商趋势：内容产能击穿、KOC 组织力与六部门政策红利 | `ai-ecommerce`, `market-trend`, `koc`, `content-factory`, `seedance`, `policy`, `sme` | [笔记](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md) · `KB-AI-20260609-ai-ecommerce-trend-policy-koc` |
 | 2026-06-09 | 微信 AI 带货与 AI+电商落地：入口变革、数字人爆发与叫好叫座之辩 | `ai-live-commerce`, `digital-human`, `wechat`, `jd-tencent`, `compliance`, `sme` | [笔记](../notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md) · `KB-AI-20260609-wechat-ai-live-commerce-landscape` |
 | 2026-06-09 | AI+电商一人店：低成本测试系统与选品出图上架 SOP | `ai-ecommerce`, `solo-store`, `product-selection`, `prompt`, `deepseek`, `sme` | [笔记](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md) · `KB-AI-20260609-ai-ecommerce-solo-store-playbook` |
 
@@ -103,12 +104,13 @@
 
 ## 标签云（手动维护）
 
-`geo` · `ai-ecommerce` · `solo-store` · `product-selection` · `deepseek` · `ai-live-commerce` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`geo` · `ai-ecommerce` · `koc` · `content-factory` · `seedance` · `policy` · `super-individual` · `solo-store` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-09 | 新建 | [2026 AI+电商趋势与政策红利](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md)（ING-20260609-005） |
 | 2026-06-09 | 新建 | [AI+电商一人店 SOP](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md)（ING-20260609-004） |
 | 2026-06-09 | 新建 | [微信 AI 带货与 AI+电商落地](../notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md)（ING-20260609-003） |
 | 2026-06-09 | 新建 | [AI 电商时代 GEO 品牌策略](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md)（ING-20260609-002） |
