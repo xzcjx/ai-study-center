@@ -157,12 +157,10 @@ updated: 2026-06-09
 
 ## 工具与平台（文中提及）
 
-| 工具 | 说明 |
-|------|------|
-| LLM / 「AI 超级工作流」 | 商业分析、视觉策划、提示词撰写（作者使用自定义工作流，无公开链接） |
-| Nano Banana | 文中 **产品精修** 模型，细节保留较好（具体产品以作者环境为准） |
-| [通义万象](https://tongyi.aliyun.com/wanxiang/) 等文生图 | 场景图生成；可与 [一人店主图 Prompt](2026-06-09-ai-ecommerce-solo-store-playbook.md) 并用 |
-| Adobe Photoshop | 精修、曲线/锐化、文案与 LOGO 排版（必需终稿环节） |
+- **LLM / 自定义工作流**：商业分析、视觉策划、提示词撰写（DeepSeek 等通用 LLM 可替代；作者「AI 超级工作流」无公开链接）
+- **Nano Banana**：文中产品 **精修** 模型（以作者环境为准，可替换为团队在用的抠图/精修模型）
+- **[通义万象](https://tongyi.aliyun.com/wanxiang/)** 等文生图：场景图生成；可与 [一人店主图 Prompt](2026-06-09-ai-ecommerce-solo-store-playbook.md) 并用
+- **[Adobe Photoshop](https://www.adobe.com/products/photoshop.html)**：曲线/锐化/文案与 LOGO 排版（必需终稿环节）
 
 ## 注意事项
 

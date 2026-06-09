@@ -657,37 +657,18 @@ entries:
     kb_notes: [notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md]
     ingest_ids: [ING-20260609-006]
 
-# 分类筛选别名（/kb-recommend 汇总模式）  - id: llm-ai
-    name: LLM / 「AI 超级工作流」
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 商业分析、视觉策划、提示词撰写（作者使用自定义工作流，无公开链接）
-    tags: [ai-ecommerce, ecom-design, main-image, brand-poster, prompt]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-design-main-image-poster-workflow.md]
-    ingest_ids: [ING-20260609-007]
-  - id: nano-banana
-    name: Nano Banana
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 文中 **产品精修** 模型，细节保留较好（具体产品以作者环境为准）
-    tags: [ai-ecommerce, ecom-design, main-image, brand-poster, prompt]
-    homepage: 
-    installable: false
-    kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-design-main-image-poster-workflow.md]
-    ingest_ids: [ING-20260609-007]
   - id: adobe-photoshop
     name: Adobe Photoshop
-    category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 精修、曲线/锐化、文案与 LOGO 排版（必需终稿环节）
-    tags: [ai-ecommerce, ecom-design, main-image, brand-poster, prompt]
-    homepage: 
+    category: apps
+    positioning: 电商视觉终稿 · 精修/曲线/文案排版
+    summary: 设计师终稿环节：光影质感、锐化、卖点文案与 LOGO 排版；与 AI 生图配合使用。
+    tags: [ai-ecommerce, ecom-design, main-image, brand-poster, photoshop]
+    homepage: https://www.adobe.com/products/photoshop.html
     installable: false
     kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-design-main-image-poster-workflow.md]
     ingest_ids: [ING-20260609-007]
 
+# 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }

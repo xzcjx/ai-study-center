@@ -267,13 +267,3 @@ sync_log:
     kb_id: KB-AI-20260609-ai-ecommerce-design-main-image-poster-workflow
     workflows: ["fe-full-pipeline"]
     at: 2026-06-09
-  - ingest_id: ING-20260609-007
-    note: notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md
-    kb_id: KB-AI-20260609-ai-ecommerce-solo-store-playbook
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-09
-  - ingest_id: ING-20260609-007
-    note: notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md
-    kb_id: KB-AI-20260609-618-ai-ecommerce-platform-landscape
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-09
