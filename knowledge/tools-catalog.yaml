@@ -550,17 +550,27 @@ entries:
     registry_id: zeng-code-review-deep
     kb_notes: [notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）  - id: github-copilot-code-review
+  - id: github-copilot-code-review
     name: GitHub Copilot code review
     category: resources
-    positioning: 待补充（H13b 自动入库）
-    summary: 平台内置
+    positioning: GitHub PR 内置 AI Review · 平台原生
+    summary: GitHub Copilot 在 Pull Request 侧提供的代码审查能力，与 IDE 写码 Agent 互补。
     tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
     homepage: https://docs.github.com/en/copilot/using-github-copilot/code-review
     installable: false
     kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
-    ingest_ids: [ING-20260609-002]
 
+  - id: aidso-geo
+    name: AIDSO爱搜
+    category: apps
+    positioning: GEO 数据分析 · 品牌诊断与多平台监测
+    summary: 覆盖通义、Kimi、元宝、豆包、文心、DeepSeek 等主流 AI 的品牌提及率、场景推荐率与诊断。
+    tags: [geo, ai-ecommerce, brand-marketing, market-trend, aidso]
+    homepage: https://geo.aidso.com
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md]
+
+# 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }
