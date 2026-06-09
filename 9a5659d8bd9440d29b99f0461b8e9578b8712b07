@@ -1,0 +1,31 @@
+notes/ai-tools/geo/2026-06-09-ai-ecommerce-design-main-image-poster-workflow.md
+  8d47fd72ce921204 1-185
+knowledge/workflow-ingest-sync.yaml
+  8d47fd72ce921204 5,40,200-204,265-267,270,275-277
+knowledge/tools-catalog.yaml
+  8d47fd72ce921204 660-690
+notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md
+  8d47fd72ce921204 15
+docs/INDEX.md
+  8d47fd72ce921204 13,18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "9a5659d8bd9440d29b99f0461b8e9578b8712b07",
+  "prompts": {
+    "8d47fd72ce921204": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "dcf3a64d-1e36-400e-b7a9-27e2e98022d0",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 234,
+      "total_deletions": 23,
+      "accepted_lines": 234,
+      "overriden_lines": 0
+    }
+  }
+}
