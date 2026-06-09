@@ -1,0 +1,31 @@
+docs/INDEX.md
+  21667e1e7200c2ff 48,104
+notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md
+  21667e1e7200c2ff 14,258
+notes/ai-tools/code-review/2026-06-09-production-incident-review-checkpoints.md
+  21667e1e7200c2ff 1-285
+templates/review-report.md
+  21667e1e7200c2ff 1-64
+notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md
+  21667e1e7200c2ff 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "e517a9a09dfd2c6a824065e652f21a31ce35d1ed",
+  "prompts": {
+    "21667e1e7200c2ff": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "34e23550-9ccd-4d61-b890-3f1519ea163d",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 639,
+      "total_deletions": 287,
+      "accepted_lines": 354,
+      "overriden_lines": 0
+    }
+  }
+}
