@@ -1,0 +1,39 @@
+templates/publish-report.md
+  c85d1c749a11e8ee 24,26-29
+.cursor/skills/knowledge-publish/SKILL.md
+  c85d1c749a11e8ee 34-35,110-121,128,131,141-142,153
+.cursor/rules/publish-pipeline.mdc
+  c85d1c749a11e8ee 14-15,25-26
+scripts/publish-content.sh
+  c85d1c749a11e8ee 1-75
+AGENTS.md
+  c85d1c749a11e8ee 22,40,54-55,71-84
+"publish/taobao/2026-06-09-微信 AI 带货与 AI+电商落地-入口变革、数字人爆发与叫好叫座之辩.md"
+  c85d1c749a11e8ee 1-141
+.cursor/rules/global.mdc
+  c85d1c749a11e8ee 30
+docs/PUBLISH.md
+  c85d1c749a11e8ee 16-17,29-30,40-41,44-60,70-72,109,122-123
+README.md
+  c85d1c749a11e8ee 71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "8125c2e6d73873fd3ec6a3fc34b5a71050595fa9",
+  "prompts": {
+    "c85d1c749a11e8ee": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "54d6bcc6-e4f5-48b9-810a-e308a552dbe2",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 296,
+      "total_deletions": 18,
+      "accepted_lines": 294,
+      "overriden_lines": 0
+    }
+  }
+}
