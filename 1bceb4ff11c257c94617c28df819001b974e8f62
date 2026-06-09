@@ -1,0 +1,38 @@
+notes/ai-tools/code-review/2026-06-09-production-incident-review-checkpoints.md
+  21667e1e7200c2ff 9,20,27,90,132,140-141,155,171,173,196-197,217-219,222,238-248,294,302-303
+docs/INDEX.md
+  21667e1e7200c2ff 104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "1bceb4ff11c257c94617c28df819001b974e8f62",
+  "prompts": {
+    "21667e1e7200c2ff": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "34e23550-9ccd-4d61-b890-3f1519ea163d",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 34,
+      "total_deletions": 15,
+      "accepted_lines": 32,
+      "overriden_lines": 0
+    },
+    "7fa54576bfcc83ee": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "28e19e8e-ea90-4333-b261-7b23a7b6957d",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 72,
+      "total_deletions": 0,
+      "accepted_lines": 72,
+      "overriden_lines": 0
+    }
+  }
+}
