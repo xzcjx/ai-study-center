@@ -580,6 +580,28 @@ entries:
     installable: false
     kb_notes: [notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md]
 
+  - id: deepseek
+    name: DeepSeek
+    category: resources
+    positioning: 通用 LLM · 电商选品/文案/详情结构
+    summary: 选品建议、带货文案、详情页结构；文中一人店 SOP 主用 LLM。
+    tags: [ai-ecommerce, solo-store, product-selection, prompt, llm]
+    homepage: https://www.deepseek.com/
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md]
+    ingest_ids: [ING-20260609-004]
+
+  - id: tongyi-wanxiang
+    name: 通义万象
+    category: apps
+    positioning: 阿里文生图 · 电商主图/场景图批量生成
+    summary: 电商白底图、场景图、多风格测款图生成，配合主图 A/B 测试。
+    tags: [ai-ecommerce, solo-store, product-selection, image-generation, tongyi]
+    homepage: https://tongyi.aliyun.com/wanxiang/
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md]
+    ingest_ids: [ING-20260609-004]
+
 # 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }

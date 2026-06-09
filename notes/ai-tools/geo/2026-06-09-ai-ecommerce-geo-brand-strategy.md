@@ -12,7 +12,7 @@ source:
 tags: [geo, ai-ecommerce, intent-economy, brand-marketing, llm, doubao, content-strategy, market-trend, aidso]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260609-wechat-ai-live-commerce-landscape]
+related: [KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260609-wechat-ai-live-commerce-landscape, KB-AI-20260609-ai-ecommerce-solo-store-playbook]
 ingest_id: ING-20260609-002
 updated: 2026-06-09
 ---
@@ -124,6 +124,7 @@ updated: 2026-06-09
 - 工具：[AIDSO爱搜 GEO 平台](https://geo.aidso.com)
 - 项目内：[AI Code Review 下一波机会](../code-review/2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`，同为 AI 时代入口变迁类趋势）
 - 项目内：[微信 AI 带货与 AI+电商落地](2026-06-09-wechat-ai-live-commerce-landscape.md)（`KB-AI-20260609-wechat-ai-live-commerce-landscape`，带货执行与平台落地）
+- 项目内：[AI+电商一人店 SOP](2026-06-09-ai-ecommerce-solo-store-playbook.md)（`KB-AI-20260609-ai-ecommerce-solo-store-playbook`，测款执行与 Prompt）
 
 ## 变更记录
 
