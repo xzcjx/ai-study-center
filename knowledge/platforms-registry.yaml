@@ -1,0 +1,118 @@
+# 内容发布平台规范 · /kb-publish 读取此文件
+# 用法: scripts/kb-publish.sh -redbook notes/xxx.md
+
+version: 1
+
+# 全局写作约束（所有平台共用）
+global_style:
+  language: zh-CN
+  anti_ai_slop:
+    - 禁用「首先/其次/最后/综上所述/值得一提的是/在当今/随着…的发展」等套话开头
+    - 禁用过度排比、三段式升华、空洞形容词堆砌（「极致/赋能/深耕/全方位」）
+    - 禁用 emoji 墙；小红书最多 3–5 个点缀，公众号几乎不用
+    - 句子长短交替，允许口语化、具体数字、个人观察口吻
+    - 保留笔记中的可核实事实与数据，不编造案例
+    - 技术术语保留英文，不强行翻译
+  tone: 像懂行的从业者写给同行/感兴趣的人，不是营销号洗稿
+
+platforms:
+  redbook:
+    id: redbook
+    aliases: [xiaohongshu, 小红书, -redbook]
+    type: article
+    label: 小红书
+    max_chars: 1000
+    ideal_chars: 600-900
+    structure:
+      - 封面标题（≤20 字，带钩子，可含 1 个 emoji）
+      - 开篇 1–2 句抓痛点/反常识（≤50 字）
+      - 正文 3–5 段，每段 2–4 行，段间空行
+      - 要点用「·」或「→」，少用 markdown 表格
+      - 结尾 1 句互动问句 + 3–5 个话题标签（#话题）
+    formatting:
+      - 段落短，手机一屏 3–4 行
+      - 数字、对比、清单优先
+      - 标签格式 #AI带货 #数字人直播 #微信电商
+    avoid:
+      - 长表格、多级标题、代码块
+      - 「点赞收藏不迷路」类陈词
+      - 硬广导流链接（可写「主页/私信」）
+    output_template: templates/publish-redbook.md
+
+  wechat:
+    id: wechat
+    aliases: [weixin, 公众号, 微信公众号, -wechat]
+    type: article
+    label: 微信公众号
+    max_chars: 8000
+    ideal_chars: 1500-3500
+    structure:
+      - 标题（≤26 字，信息密度高，可带数字）
+      - 导语（100–200 字，交代背景 + 读者收益）
+      - 二级小标题 3–5 个（##），每节 200–500 字
+      - 关键数据/对比可保留精简表格（≤5 行）
+      - 结尾：小结 3 条 bullet + 可选「延伸阅读」1–2 条
+    formatting:
+      - 正式但不官腔，适合深度阅读
+      - 小标题用问句或结论句
+      - 引用来源标注「据…」「文中案例需交叉验证」
+    avoid:
+      - 过多 emoji、网络梗
+      - 小红书式 hashtag
+      - 整段复制笔记 TL;DR
+    output_template: templates/publish-wechat.md
+
+  taobao:
+    id: taobao
+    aliases: [tb, 淘宝, -taobao]
+    type: product
+    label: 淘宝商品
+    max_title_chars: 60
+    structure:
+      - 商品标题（SEO 关键词堆叠，核心词前置）
+      - 5 条卖点 bullet（每条 ≤15 字，含利益点）
+      - 详情页分段：痛点 → 方案 → 规格/包含内容 → 适用人群 → 售后说明
+      - 主图文案建议（3 张：封面/对比/信任背书）
+      - 建议类目 + 属性标签
+      - 定价区间建议（低/中/高三档 + 理由）
+    formatting:
+      - 买家视角，强调「得到什么」
+      - 数字具体：页数、更新频率、格式、交付方式
+      - 虚拟资料类注明「自动发货/网盘/电子版」
+    avoid:
+      - 虚假宣传、绝对化用语（最好/第一/100%）
+      - 与笔记无关的实物描述
+    output_template: templates/publish-taobao.md
+
+  xianyu:
+    id: xianyu
+    aliases: [闲鱼, 咸鱼, -xianyu]
+    type: product
+    label: 闲鱼/咸鱼
+    max_title_chars: 30
+    structure:
+      - 标题（口语化 + 关键词，≤30 字）
+      - 首段 2–3 句：是什么 + 为什么卖 + 适合谁
+      - 清单式交付内容（· 条目）
+      - 价格说明（可小刀/打包/限时）
+      - 3 条常见问答（Q&A）
+    formatting:
+      - 语气像个人卖家，真实、略随意
+      - 「自用整理/学习笔记/持续更新」等可信表述
+      - 强调即时交付、无套路
+    avoid:
+      - 淘宝式 SEO 标题堆砌
+      - 企业客服腔
+      - 过长详情（闲鱼用户扫读）
+    output_template: templates/publish-xianyu.md
+
+# 笔记 → 商品默认映射（Agent 可 override）
+product_defaults:
+  digital_knowledge:
+    delivery: 网盘链接 / PDF / Notion 分享
+    category_hint: 电子资料 > 学习/考试/职场技能
+    price_tiers:
+      low: 9.9-19.9
+      mid: 29.9-49.9
+      high: 69.9-99.9
+    rationale: 按页数/深度/更新频率定价；闲鱼偏低，淘宝可组合套餐

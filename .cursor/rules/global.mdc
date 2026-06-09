@@ -24,6 +24,11 @@ alwaysApply: true
 1. 读 `docs/CONSUME.md` 与 `.cursor/skills/knowledge-consume/SKILL.md`
 2. 执行 C01→C05；**C03 必须等用户选择后再安装**
 
+用户消息涉及「/kb-publish / -redbook / -wechat / -taobao / -xianyu / 生成小红书 / 闲鱼商品」时：
+
+1. 读 `docs/PUBLISH.md` 与 `.cursor/skills/knowledge-publish/SKILL.md`
+2. 执行 P01→P06；默认写入 `publish/{platform}/`（用户 `--no-save` 除外）
+
 ## SSOT 文件
 
 | 用途 | 路径 |
@@ -34,8 +39,11 @@ alwaysApply: true
 | 笔记 Schema | `docs/KNOWLEDGE_SCHEMA.md` |
 | 入库 Skill | `.cursor/skills/knowledge-ingest/SKILL.md` |
 | 消费 Skill | `.cursor/skills/knowledge-consume/SKILL.md` |
+| 发布 Skill | `.cursor/skills/knowledge-publish/SKILL.md` |
 | 工具目录 | `knowledge/tools-registry.yaml` |
 | 消费工作流 | `docs/CONSUME.md` |
+| 发布工作流 | `docs/PUBLISH.md` |
+| 平台规范 | `knowledge/platforms-registry.yaml` |
 | 总索引 | `docs/INDEX.md` |
 
 ## 产出约束
@@ -60,4 +68,8 @@ alwaysApply: true
 /query [关键词]
 /kb-recommend [意图]
 /kb-install [tool-id]
+/kb-publish -redbook @notes/...
+/kb-publish -wechat @notes/...
+/kb-publish -taobao @notes/...
+/kb-publish -xianyu @notes/...
 ```

@@ -1,0 +1,25 @@
+---
+description: 内容发布责任链 — /kb-publish 笔记转平台成稿
+globs:
+  - publish/**/*
+  - knowledge/platforms-registry.yaml
+  - templates/publish-*.md
+---
+
+# 发布流水线规范
+
+用户触发 `/kb-publish` 时：
+
+1. 读 `.cursor/skills/knowledge-publish/SKILL.md` 与 `docs/PUBLISH.md`
+2. 按 P01→P06 执行，**不可跳过** P03 平台规范与 anti-AI-slop 自检
+3. 默认写入 `publish/{platform}/`；`--no-save` 时仅聊天输出
+
+## 平台 flag
+
+`-redbook` · `-wechat` · `-taobao` · `-xianyu`
+
+## 禁止
+
+- 整段复制 `notes/` 原文
+- 编造笔记中不存在的案例与数据
+- 与入库链混淆（不更新 INDEX、不自动 commit）

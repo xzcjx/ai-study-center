@@ -19,6 +19,11 @@
 
 - 用户在其他项目说 `/kb-workflow`、`/kb-recommend`、`/kb-install`、从学习中心找工具/方法论并安装
 
+在以下情况**内容发布**（P01–P06，见 [`docs/PUBLISH.md`](docs/PUBLISH.md)）：
+
+- 用户说 `/kb-publish`、`/kb-publish -redbook`、`/kb-publish -wechat`、`-taobao`、`-xianyu`
+- 要求把某篇 `notes/` 笔记生成小红书/公众号文章或淘宝/闲鱼商品
+
 ## 必读文件（按顺序）
 
 1. [`docs/WORKFLOW.md`](docs/WORKFLOW.md) — 责任链 SSOT
@@ -27,6 +32,8 @@
 4. [`.cursor/skills/knowledge-ingest/SKILL.md`](.cursor/skills/knowledge-ingest/SKILL.md) — 入库 Skill
 5. [`.cursor/skills/knowledge-consume/SKILL.md`](.cursor/skills/knowledge-consume/SKILL.md) — 消费 Skill
 6. [`docs/CONSUME.md`](docs/CONSUME.md) — 跨项目查询/推荐/安装
+7. [`.cursor/skills/knowledge-publish/SKILL.md`](.cursor/skills/knowledge-publish/SKILL.md) — 发布 Skill
+8. [`docs/PUBLISH.md`](docs/PUBLISH.md) — 笔记 → 平台内容
 
 ## 硬性约束
 
@@ -43,6 +50,7 @@
 | 笔记正文 | `notes/{module}/*.md` |
 | 总索引 | `docs/INDEX.md` |
 | 入库报告 | 回复用户（模板 `templates/ingest-report.md`） |
+| 发布成稿 | `publish/{platform}/`（模板 `templates/publish-*.md`） |
 | Git 推送 | H12 `scripts/publish-ingest.sh` → Gitee `origin` |
 
 ## 快捷命令
@@ -54,6 +62,11 @@
 /kb-workflow [场景]               # 跨项目：完整方法论+工具链+Prompt（首选）
 /kb-recommend [意图]              # 跨项目：检索工具 + 推荐对比
 /kb-install [tool-id] [--yes]     # 跨项目：预览/安装到业务项目
+/kb-publish -redbook @notes/...   # 笔记 → 小红书/公众号/淘宝/闲鱼
+/kb-publish -wechat @notes/...
+/kb-publish -taobao @notes/...
+/kb-publish -xianyu @notes/...
+/kb-publish --list                # 列出支持平台
 ```
 
 ## 进度追踪

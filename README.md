@@ -10,6 +10,10 @@
 /ingest https://example.com/article     # 收录文章（全链路 H01→H12，含自动推送）
 /ingest --module frontend [粘贴正文]      # 指定模块入库
 /query playwright                         # 只查已有笔记（本仓库内）
+/kb-publish -redbook @notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md  # 笔记→小红书
+/kb-publish -wechat @notes/.../xxx.md   # 笔记→公众号
+/kb-publish -taobao @notes/.../xxx.md   # 笔记→淘宝商品
+/kb-publish -xianyu @notes/.../xxx.md   # 笔记→闲鱼 listing
 ```
 
 **在任意其他项目中**（需全局 Skill `ai-learning-center-consume`）：
@@ -53,14 +57,19 @@ notes/{module}/*.md  +  docs/INDEX.md
 | [`knowledge/workflow-sync-rules.yaml`](knowledge/workflow-sync-rules.yaml) | 入库→方法论映射规则 |
 | [`knowledge/tools-catalog.yaml`](knowledge/tools-catalog.yaml) | **工具总表 SSOT**（汇总查询） |
 | [`docs/CONSUME.md`](docs/CONSUME.md) | 跨项目消费 SSOT（C01–C05） |
+| [`docs/PUBLISH.md`](docs/PUBLISH.md) | 笔记 → 平台发布 SSOT（P01–P06） |
 | [`.cursor/skills/knowledge-ingest/`](.cursor/skills/knowledge-ingest/) | 入库 Skill |
 | [`.cursor/skills/knowledge-consume/`](.cursor/skills/knowledge-consume/) | 消费 Skill |
+| [`.cursor/skills/knowledge-publish/`](.cursor/skills/knowledge-publish/) | 发布 Skill |
 | [`.cursor/rules/`](.cursor/rules/) | 全局 + 流水线规则 |
 | [`notes/`](notes/) | 知识正文（8 模块） |
 | [`scripts/validate-note.sh`](scripts/validate-note.sh) | 笔记校验工具 |
 | [`scripts/publish-ingest.sh`](scripts/publish-ingest.sh) | 入库后自动 commit + push |
 | [`scripts/query-tools.sh`](scripts/query-tools.sh) | 检索可安装工具 |
 | [`scripts/install-tool.sh`](scripts/install-tool.sh) | 预览/安装工具到业务项目 |
+| [`scripts/kb-publish.sh`](scripts/kb-publish.sh) | 笔记 → 平台发布 brief |
+| [`knowledge/platforms-registry.yaml`](knowledge/platforms-registry.yaml) | 小红书/公众号/淘宝/闲鱼规范 |
+| [`publish/`](publish/) | 发布成稿输出目录 |
 
 ## 知识模块
 
