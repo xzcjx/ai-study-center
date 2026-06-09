@@ -68,6 +68,7 @@ notes/{module}/*.md  +  docs/INDEX.md
 | [`scripts/query-tools.sh`](scripts/query-tools.sh) | 检索可安装工具 |
 | [`scripts/install-tool.sh`](scripts/install-tool.sh) | 预览/安装工具到业务项目 |
 | [`scripts/kb-publish.sh`](scripts/kb-publish.sh) | 笔记 → 平台发布 brief |
+| [`scripts/publish-content.sh`](scripts/publish-content.sh) | 发布成稿后自动 commit + push |
 | [`knowledge/platforms-registry.yaml`](knowledge/platforms-registry.yaml) | 小红书/公众号/淘宝/闲鱼规范 |
 | [`publish/`](publish/) | 发布成稿输出目录 |
 

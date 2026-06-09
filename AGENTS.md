@@ -19,7 +19,7 @@
 
 - 用户在其他项目说 `/kb-workflow`、`/kb-recommend`、`/kb-install`、从学习中心找工具/方法论并安装
 
-在以下情况**内容发布**（P01–P06，见 [`docs/PUBLISH.md`](docs/PUBLISH.md)）：
+在以下情况**内容发布**（P01–P07，见 [`docs/PUBLISH.md`](docs/PUBLISH.md)）：
 
 - 用户说 `/kb-publish`、`/kb-publish -redbook`、`/kb-publish -wechat`、`-taobao`、`-xianyu`
 - 要求把某篇 `notes/` 笔记生成小红书/公众号文章或淘宝/闲鱼商品
@@ -37,7 +37,7 @@
 
 ## 硬性约束
 
-- **不可跳过 Handler**；H10 / **H13c** 失败不得 push；H12 默认自动提交推送到 `origin`（用户 `--no-push` 除外）
+- **不可跳过 Handler**；H10 / **H13c** 失败不得 push；H12 / **P07** 默认自动提交推送到 `origin`（用户 `--no-push` 除外）
 - **不可**整篇复制原文；提炼为 KnowledgeAtom
 - **不可**提交密钥；`.env` 类内容不入库
 - **不可**修改 PuSou 等无关仓库
@@ -51,7 +51,8 @@
 | 总索引 | `docs/INDEX.md` |
 | 入库报告 | 回复用户（模板 `templates/ingest-report.md`） |
 | 发布成稿 | `publish/{platform}/`（模板 `templates/publish-*.md`） |
-| Git 推送 | H12 `scripts/publish-ingest.sh` → Gitee `origin` |
+| Git 推送（入库） | H12 `scripts/publish-ingest.sh` → Gitee `origin` |
+| Git 推送（发布） | P07 `scripts/publish-content.sh` → Gitee `origin` |
 
 ## 快捷命令
 
@@ -67,6 +68,20 @@
 /kb-publish -taobao @notes/...
 /kb-publish -xianyu @notes/...
 /kb-publish --list                # 列出支持平台
+/kb-publish ... --no-push         # 成稿入库但不推送
+```
+
+## 发布进度追踪
+
+```
+发布进度 PUB-YYYYMMDD-NNN
+- [x] P01 Intake
+- [x] P02 Load
+- [x] P03 Platform
+- [x] P04 Transform
+- [x] P05 Persist
+- [ ] P07 Publish
+- [ ] P06 Report
 ```
 
 ## 进度追踪

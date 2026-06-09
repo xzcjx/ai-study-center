@@ -21,5 +21,9 @@
 
 - [ ] 人工通读，替换为你的个人经历/口吻
 - [ ] 核对数据与合规表述（尤其带货/收入类）
-- [ ] 配图后发布
+- [ ] 配图后发布到 {platform_label}
 - [ ] 需要改平台：`/kb-publish -{other_platform} @{note_path}`
+
+### Git 推送（P07）
+
+- 远程：`origin` → `{branch}@{short_commit}` 或 `{失败原因}` 或 `已跳过（--no-push / --no-save）`

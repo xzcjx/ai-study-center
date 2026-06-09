@@ -27,7 +27,7 @@ alwaysApply: true
 用户消息涉及「/kb-publish / -redbook / -wechat / -taobao / -xianyu / 生成小红书 / 闲鱼商品」时：
 
 1. 读 `docs/PUBLISH.md` 与 `.cursor/skills/knowledge-publish/SKILL.md`
-2. 执行 P01→P06；默认写入 `publish/{platform}/`（用户 `--no-save` 除外）
+2. 执行 P01→P07→P06；默认写入 `publish/` 并 P07 推送（用户 `--no-push` / `--no-save` 除外）
 
 ## SSOT 文件
 

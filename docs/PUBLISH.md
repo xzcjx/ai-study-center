@@ -12,8 +12,9 @@ flowchart LR
   P01[Intake] --> P02[Load brief]
   P02 --> P03[Platform 规范]
   P03 --> P04[Transform 生成]
-  P04 --> P05[Persist 可选]
-  P05 --> P06[Report 交付]
+  P04 --> P05[Persist]
+  P05 --> P07[Publish 推送]
+  P07 --> P06[Report 交付]
 ```
 
 ## 责任链
@@ -25,7 +26,8 @@ flowchart LR
 | **P03** | Platform | platform id | structure / anti-slop 规则 |
 | **P04** | Transform | brief + 规则 | 平台成稿（Agent） |
 | **P05** | Persist | 成稿 | `publish/{platform}/`（默认写入） |
-| **P06** | Report | 全链路 | 用户可粘贴正文 + 备忘 |
+| **P07** | Publish | 成稿文件 | `PublishReport`（commit + push） |
+| **P06** | Report | 全链路 | 用户可粘贴正文 + 推送结果 |
 
 ## 快捷命令
 
@@ -35,7 +37,27 @@ flowchart LR
 /kb-publish -taobao @notes/{module}/xxx.md     # 淘宝商品页
 /kb-publish -xianyu @notes/{module}/xxx.md     # 闲鱼 listing
 /kb-publish --list                             # 列出平台
+/kb-publish ... --no-push                      # 成稿入库但不推送
+/kb-publish ... --no-save                        # 仅聊天输出，不写文件、不推送
 ```
+
+## P07 · Publish 提交推送
+
+P05 写入成稿后，**默认**执行（用户 `--no-push` / `不要推送` / `--no-save` 时跳过）：
+
+```bash
+scripts/publish-content.sh {publish_id} {platform} "{成稿标题}" publish/{platform}/{file}.md
+# 跳过推送
+scripts/publish-content.sh --no-push {publish_id} {platform} "{标题}" publish/...
+```
+
+**跳过条件**：
+
+- 用户消息含 `不要推送` / `--no-push` / `仅本地`
+- 用户消息含 `--no-save`（无文件可提交）
+- 无 `origin` 远程 → 仅本地 commit，P06 标注原因
+
+**失败**：推送失败不阻断 P06 交付，报告内标注 `publish: failed`。
 
 ## 脚本
 
@@ -45,6 +67,9 @@ scripts/kb-publish.sh --list
 
 # 生成 Agent brief（JSON）
 scripts/kb-publish.sh -redbook notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md
+
+# P07 提交推送（Agent 在 P05 后自动调用）
+scripts/publish-content.sh PUB-20260609-001 taobao "微信AI带货淘宝文案" publish/taobao/xxx.md
 ```
 
 ## 支持平台
@@ -81,7 +106,7 @@ scripts/kb-publish.sh -redbook notes/ai-tools/geo/2026-06-09-wechat-ai-live-comm
 | C00–C05 Consume | 跨项目装工具 / 方法论 |
 | **P01–P06 Publish** | 已有笔记 → 对外发布内容 |
 
-Publish **不**更新 INDEX、**不**自动 git commit（除非用户明确要求）。
+Publish **不**更新 INDEX；P07 默认 `scripts/publish-content.sh` 提交推送 `publish/`（用户 `--no-push` / `--no-save` 除外）。
 
 ## 示例
 
@@ -94,4 +119,5 @@ Agent 将：
 1. 运行 `kb-publish.sh` 加载笔记摘要
 2. 按小红书规范生成 600–900 字成稿
 3. 写入 `publish/redbook/2026-06-09-微信 AI 带货与 AI+电商落地-入口变革、数字人爆发与叫好叫座之辩.md`
-4. 在回复中贴出可直接发布的正文
+4. P07 自动 commit + push 到 `origin`
+5. 在回复中贴出可直接发布的正文
