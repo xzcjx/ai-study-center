@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260609-005"
+last_ingest_id: "ING-20260609-006"
 
 playbook_notes:
   fe-demo-shell:
@@ -36,6 +36,7 @@ playbook_notes:
     - notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md
     - notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md
     - notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md
+    - notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -190,6 +191,11 @@ keywords:
     - seedance
     - policy
     - super-individual
+    - 618
+    - intent-commerce
+    - qianwen
+    - jd-ai-shop
+    - rufus
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -250,23 +256,28 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260609-005
-    note: notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md
-    kb_id: KB-AI-20260609-ai-ecommerce-trend-policy-koc
+  - ingest_id: ING-20260609-006
+    note: notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md
+    kb_id: KB-AI-20260609-618-ai-ecommerce-platform-landscape
     workflows: ["fe-full-pipeline"]
     at: 2026-06-09
-  - ingest_id: ING-20260609-005
+  - ingest_id: ING-20260609-006
     note: notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md
     kb_id: KB-AI-20260609-ai-ecommerce-solo-store-playbook
     workflows: ["fe-full-pipeline"]
     at: 2026-06-09
-  - ingest_id: ING-20260609-005
+  - ingest_id: ING-20260609-006
     note: notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md
     kb_id: KB-AI-20260609-wechat-ai-live-commerce-landscape
     workflows: ["fe-full-pipeline"]
     at: 2026-06-09
-  - ingest_id: ING-20260609-005
+  - ingest_id: ING-20260609-006
     note: notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md
     kb_id: KB-AI-20260609-ai-ecommerce-geo-brand-strategy
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-09
+  - ingest_id: ING-20260609-006
+    note: notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md
+    kb_id: KB-AI-20260609-ai-ecommerce-trend-policy-koc
     workflows: ["fe-full-pipeline"]
     at: 2026-06-09

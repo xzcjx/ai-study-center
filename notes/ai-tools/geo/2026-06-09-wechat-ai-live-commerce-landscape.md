@@ -12,7 +12,7 @@ source:
 tags: [ai-ecommerce, ai-live-commerce, digital-human, wechat, jd-tencent, agent, compliance, sme, market-trend, geo]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260609-ai-ecommerce-geo-brand-strategy, KB-AI-20260609-ai-ecommerce-solo-store-playbook, KB-AI-20260609-ai-ecommerce-trend-policy-koc]
+related: [KB-AI-20260609-ai-ecommerce-geo-brand-strategy, KB-AI-20260609-ai-ecommerce-solo-store-playbook, KB-AI-20260609-ai-ecommerce-trend-policy-koc, KB-AI-20260609-618-ai-ecommerce-platform-landscape]
 ingest_id: ING-20260609-003
 updated: 2026-06-09
 ---
@@ -152,6 +152,7 @@ updated: 2026-06-09
 - 项目内：[AI 电商时代 GEO 品牌策略](2026-06-09-ai-ecommerce-geo-brand-strategy.md)（`KB-AI-20260609-ai-ecommerce-geo-brand-strategy`）
 - 项目内：[AI+电商一人店 SOP](2026-06-09-ai-ecommerce-solo-store-playbook.md)（`KB-AI-20260609-ai-ecommerce-solo-store-playbook`，货架测款与 Prompt 执行）
 - 项目内：[2026 AI+电商趋势与政策](2026-06-09-ai-ecommerce-trend-policy-koc.md)（`KB-AI-20260609-ai-ecommerce-trend-policy-koc`，内容产能/KOC/政策）
+- 项目内：[2026 618 AI 电商平台格局](2026-06-09-618-ai-ecommerce-platform-landscape.md)（`KB-AI-20260609-618-ai-ecommerce-platform-landscape`，千问/豆包/京东AI购/答案时代）
 
 ## 变更记录
 

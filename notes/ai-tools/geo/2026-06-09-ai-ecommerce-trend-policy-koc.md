@@ -12,7 +12,7 @@ source:
 tags: [ai-ecommerce, market-trend, koc, content-factory, seedance, sme, policy, super-individual, geo]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260609-wechat-ai-live-commerce-landscape, KB-AI-20260609-ai-ecommerce-solo-store-playbook, KB-AI-20260609-ai-ecommerce-geo-brand-strategy]
+related: [KB-AI-20260609-wechat-ai-live-commerce-landscape, KB-AI-20260609-ai-ecommerce-solo-store-playbook, KB-AI-20260609-ai-ecommerce-geo-brand-strategy, KB-AI-20260609-618-ai-ecommerce-platform-landscape]
 ingest_id: ING-20260609-005
 updated: 2026-06-09
 ---

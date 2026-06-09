@@ -624,6 +624,39 @@ entries:
     kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md]
     ingest_ids: [ING-20260609-005]
 
+  - id: qianwen-app
+    name: 通义千问 App
+    category: apps
+    positioning: 阿里 AI 超级入口 · 千问×淘宝全链路购物
+    summary: 对话选品/对比/下单/售后；已打通淘宝、闪购、飞猪、高德等，618 AI 电商主入口之一。
+    tags: [ai-ecommerce, 618, intent-commerce, qianwen, geo]
+    homepage: https://tongyi.aliyun.com/
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md]
+    ingest_ids: [ING-20260609-006]
+
+  - id: doubao
+    name: 豆包
+    category: apps
+    positioning: 字节 AI 助手 · 豆包×抖音商城闭环购物
+    summary: 对话推荐商品卡并完成支付；DAU 峰值约 1.45 亿，618「买前问豆包」入口。
+    tags: [ai-ecommerce, 618, intent-commerce, doubao, geo]
+    homepage: https://www.doubao.com/
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md]
+    ingest_ids: [ING-20260609-006]
+
+  - id: amazon-rufus
+    name: Amazon Rufus
+    category: apps
+    positioning: 亚马逊 App 内 AI 购物助手 · 农夫模式参照
+    summary: 对话导购、比价、价格追踪；累计用户 2.5 亿+，使用 Rufus 下单概率更高（官方称）。
+    tags: [ai-ecommerce, 618, intent-commerce, rufus, market-trend]
+    homepage: https://www.amazon.com/
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md]
+    ingest_ids: [ING-20260609-006]
+
 # 分类筛选别名（/kb-recommend 汇总模式）
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
