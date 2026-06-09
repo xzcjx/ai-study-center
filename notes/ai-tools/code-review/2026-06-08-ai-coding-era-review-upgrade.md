@@ -11,7 +11,7 @@ source:
 tags: [code-review, ai-coding, frontend, vue, java, self-review, legacy-code, over-engineering, review-checklist]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-review-quality-16-schemes, KB-AI-20260608-zeng-deep-code-review-skill]
+related: [KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-review-quality-16-schemes, KB-AI-20260608-zeng-deep-code-review-skill, KB-AI-20260609-production-incident-review-checkpoints]
 ingest_id: ING-20260608-012
 updated: 2026-06-08
 ---

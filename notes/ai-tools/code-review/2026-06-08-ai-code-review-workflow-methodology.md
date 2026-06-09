@@ -11,7 +11,7 @@ source:
 tags: [code-review, prompt, pr-description, self-review, layered-review, reviewer-workflow, backend]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-review-quality-16-schemes]
+related: [KB-AI-20260608-ai-code-review-prompt-guide, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-first-gate-review-experiment, KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260608-ai-review-quality-16-schemes, KB-AI-20260609-production-incident-review-checkpoints]
 ingest_id: ING-20260608-011
 updated: 2026-06-08
 ---
@@ -255,6 +255,7 @@ sequenceDiagram
 - 项目内：[AI 第一道 Review 两个月实验](2026-06-08-ai-first-gate-review-experiment.md)（`KB-AI-20260608-ai-first-gate-review-experiment`，PR 流程与团队数据）
 - 项目内：[AI Code Review 下一波机会](2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`，负责人五阶段落地）
 - 项目内：[16 个提升评审质量方案](2026-06-08-ai-review-quality-16-schemes.md)（`KB-AI-20260608-ai-review-quality-16-schemes`，系统化改进路线图）
+- 项目内：[生产事故 DR 责任链 R01–R08](2026-06-09-production-incident-review-checkpoints.md)（`KB-AI-20260609-production-incident-review-checkpoints`，判定标准 + review-report 格式）
 
 ## 变更记录
 

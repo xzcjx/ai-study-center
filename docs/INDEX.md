@@ -45,6 +45,7 @@
 
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
+| 2026-06-09 | 生产质量报告沉淀：AI Code Review 责任链 R01–R08 + DR 检测规则 | `code-review`, `detection-rule`, `responsibility-chain`, `quality-audit`, `p0-gate` | [笔记](../notes/ai-tools/code-review/2026-06-09-production-incident-review-checkpoints.md) · `KB-AI-20260609-production-incident-review-checkpoints` |
 | 2026-06-08 | AI 第一道 Code Review 两个月实验：数据、副作用与规则调整 | `code-review`, `team-process`, `review-atrophy`, `claude` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-first-gate-review-experiment.md) · `KB-AI-20260608-ai-first-gate-review-experiment` |
 | 2026-06-08 | AI 编程时代 Code Review 升级：表面合格、熟悉度盲区与五维审查 | `code-review`, `ai-coding`, `legacy-code`, `vue` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-coding-era-review-upgrade.md) · `KB-AI-20260608-ai-coding-era-review-upgrade` |
 | 2026-06-08 | AI 辅助 Code Review 方法论：提 PR 前自查、分层检查与有效意见 | `code-review`, `self-review`, `layered-review` | [笔记](../notes/ai-tools/code-review/2026-06-08-ai-code-review-workflow-methodology.md) · `KB-AI-20260608-ai-code-review-workflow-methodology` |
@@ -100,6 +101,7 @@
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-09 | 新建 | [生产事故驱动 10 维 Review 审判点](../notes/ai-tools/code-review/2026-06-09-production-incident-review-checkpoints.md)（ING-20260609-001） |
 | 2026-06-08 | 新建 | [zeng-code-review-deep 多智能体 Skill](../notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md)（ING-20260608-016） |
 | 2026-06-08 | 新建 | [16 个提升 AI 评审质量方案](../notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md)（ING-20260608-015） |
 | 2026-06-08 | 新建 | [AI Code Review 下一波机会](../notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md)（ING-20260608-014） |
