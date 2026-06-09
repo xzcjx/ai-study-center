@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 15 |
+| AI 工具 | 16 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
 | 其他 | 0 |
-| **合计** | **15** |
+| **合计** | **16** |
 
 ---
 
@@ -40,6 +40,12 @@
 ## AI 工具 · ai-tools
 
 > 主题子目录见 [`registry.yaml`](../knowledge/registry.yaml) → `topics`
+
+### geo · GEO 与 AI 增长
+
+| 日期 | 标题 | 标签 | 文件 |
+|------|------|------|------|
+| 2026-06-09 | AI 电商时代：GEO 思维、意图经济与品牌双主体营销 | `geo`, `ai-ecommerce`, `intent-economy`, `brand-marketing`, `market-trend` | [笔记](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md) · `KB-AI-20260609-ai-ecommerce-geo-brand-strategy` |
 
 ### code-review · AI 代码审查
 
@@ -95,12 +101,13 @@
 
 ## 标签云（手动维护）
 
-`code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`geo` · `ai-ecommerce` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-09 | 新建 | [AI 电商时代 GEO 品牌策略](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md)（ING-20260609-002） |
 | 2026-06-10 | 更新 | [生产事故 DR 责任链](../notes/ai-tools/code-review/2026-06-09-production-incident-review-checkpoints.md) v3：+4 DR、GitLab MR 附录 |
 | 2026-06-08 | 新建 | [zeng-code-review-deep 多智能体 Skill](../notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md)（ING-20260608-016） |
 | 2026-06-08 | 新建 | [16 个提升 AI 评审质量方案](../notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md)（ING-20260608-015） |

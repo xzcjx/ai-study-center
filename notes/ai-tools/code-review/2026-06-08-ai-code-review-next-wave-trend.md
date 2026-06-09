@@ -12,7 +12,7 @@ source:
 tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck, tool-landscape, team-rollout, cursor, copilot]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-first-gate-review-experiment, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-review-quality-16-schemes, KB-AI-20260608-zeng-deep-code-review-skill]
+related: [KB-AI-20260608-ai-coding-era-review-upgrade, KB-AI-20260608-ai-code-review-workflow-methodology, KB-AI-20260608-ai-code-review-prompt-guide, KB-AI-20260608-ai-first-gate-review-experiment, KB-ARCH-20260608-ai-business-code-review, KB-AI-20260608-ai-review-quality-16-schemes, KB-AI-20260608-zeng-deep-code-review-skill, KB-AI-20260609-ai-ecommerce-geo-brand-strategy]
 ingest_id: ING-20260608-014
 updated: 2026-06-08
 ---

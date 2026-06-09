@@ -92,6 +92,13 @@ topics:
     description: AI 生成 UI、anti-slop、设计 Skill、DESIGN.md、Vibe Coding
     keywords: [frontend-design, anti-slop, ui, design-md, slop, vibe-coding, 前端审美, 好看]
 
+  geo:
+    label: GEO 与 AI 增长
+    module: ai-tools
+    path: notes/ai-tools/geo
+    description: Generative Engine Optimization、AI 电商导购、意图经济、品牌 AI 推荐权
+    keywords: [geo, generative-engine-optimization, ai-ecommerce, intent-economy, brand-marketing, 豆包, 通义, aidso]
+
 # 文件命名
 naming:
   pattern: "{date}-{slug}.md"

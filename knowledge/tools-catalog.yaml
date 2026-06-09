@@ -550,7 +550,17 @@ entries:
     registry_id: zeng-code-review-deep
     kb_notes: [notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）
+# 分类筛选别名（/kb-recommend 汇总模式）  - id: github-copilot-code-review
+    name: GitHub Copilot code review
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 平台内置
+    tags: [code-review, ai-coding, pr-workflow, market-trend, review-bottleneck]
+    homepage: https://docs.github.com/en/copilot/using-github-copilot/code-review
+    installable: false
+    kb_notes: [notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md]
+    ingest_ids: [ING-20260609-002]
+
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }
