@@ -1,0 +1,25 @@
+knowledge/tools-catalog.yaml
+  8d47fd72ce921204 662-666,671
+notes/ai-tools/geo/2026-06-09-ai-ecommerce-design-main-image-poster-workflow.md
+  8d47fd72ce921204 160-163
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "01dd9ce01a0658ee718c5aee21cca7b125e41e4e",
+  "prompts": {
+    "8d47fd72ce921204": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "dcf3a64d-1e36-400e-b7a9-27e2e98022d0",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 13,
+      "total_deletions": 32,
+      "accepted_lines": 14,
+      "overriden_lines": 0
+    }
+  }
+}
