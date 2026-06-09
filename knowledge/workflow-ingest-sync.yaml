@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260609-002"
+last_ingest_id: "ING-20260609-003"
 
 playbook_notes:
   fe-demo-shell:
@@ -33,6 +33,7 @@ playbook_notes:
     - notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md
     - notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md
     - notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md
+    - notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -171,6 +172,13 @@ keywords:
     - doubao
     - content-strategy
     - aidso
+    - ai-live-commerce
+    - digital-human
+    - wechat
+    - jd-tencent
+    - agent
+    - compliance
+    - sme
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -231,13 +239,13 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260609-002
+  - ingest_id: ING-20260609-003
+    note: notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md
+    kb_id: KB-AI-20260609-wechat-ai-live-commerce-landscape
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-09
+  - ingest_id: ING-20260609-003
     note: notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md
     kb_id: KB-AI-20260609-ai-ecommerce-geo-brand-strategy
     workflows: ["fe-full-pipeline"]
     at: 2026-06-09
-  - ingest_id: ING-20260609-002
-    note: notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md
-    kb_id: KB-AI-20260608-ai-code-review-next-wave-trend
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-08

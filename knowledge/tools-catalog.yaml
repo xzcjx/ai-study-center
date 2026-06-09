@@ -570,7 +570,17 @@ entries:
     installable: false
     kb_notes: [notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md]
 
-# 分类筛选别名（/kb-recommend 汇总模式）
+# 分类筛选别名（/kb-recommend 汇总模式）  - id: tool
+    name: 腾讯智影
+    category: resources
+    positioning: 待补充（H13b 自动入库）
+    summary: 数字人形象、脚本、口播视频合成
+    tags: [ai-ecommerce, ai-live-commerce, digital-human, wechat, jd-tencent]
+    homepage: https://zenvideo.qq.com/
+    installable: false
+    kb_notes: [notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md]
+    ingest_ids: [ING-20260609-003]
+
 catalog_filters:
   前端工具汇总: { categories: [skills, apps, mcp, reference-site, workflow, design-tools, resources] }
   前端skills: { categories: [skills] }

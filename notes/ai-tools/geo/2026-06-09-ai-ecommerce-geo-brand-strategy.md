@@ -12,7 +12,7 @@ source:
 tags: [geo, ai-ecommerce, intent-economy, brand-marketing, llm, doubao, content-strategy, market-trend, aidso]
 difficulty: intermediate
 status: active
-related: [KB-AI-20260608-ai-code-review-next-wave-trend]
+related: [KB-AI-20260608-ai-code-review-next-wave-trend, KB-AI-20260609-wechat-ai-live-commerce-landscape]
 ingest_id: ING-20260609-002
 updated: 2026-06-09
 ---
@@ -123,6 +123,7 @@ updated: 2026-06-09
 - 原文性质：用户粘贴营销长文（AIDSO / AI增长实验室）
 - 工具：[AIDSO爱搜 GEO 平台](https://geo.aidso.com)
 - 项目内：[AI Code Review 下一波机会](../code-review/2026-06-08-ai-code-review-next-wave-trend.md)（`KB-AI-20260608-ai-code-review-next-wave-trend`，同为 AI 时代入口变迁类趋势）
+- 项目内：[微信 AI 带货与 AI+电商落地](2026-06-09-wechat-ai-live-commerce-landscape.md)（`KB-AI-20260609-wechat-ai-live-commerce-landscape`，带货执行与平台落地）
 
 ## 变更记录
 
