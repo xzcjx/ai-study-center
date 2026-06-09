@@ -1,0 +1,29 @@
+notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md
+  eeacf909e56d1c7c 1-131
+docs/INDEX.md
+  eeacf909e56d1c7c 13,18,44-49,104,110
+notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md
+  eeacf909e56d1c7c 15
+knowledge/registry.yaml
+  eeacf909e56d1c7c 95-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "17b823c738ebf511e4d3770d30b134379b9525e4",
+  "prompts": {
+    "eeacf909e56d1c7c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "5f03eaac-6a1c-49b0-9740-0f41411fae79",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 282,
+      "total_deletions": 7,
+      "accepted_lines": 279,
+      "overriden_lines": 0
+    }
+  }
+}
