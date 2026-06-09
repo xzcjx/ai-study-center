@@ -12,7 +12,7 @@ source:
 tags: [ai-ecommerce, solo-store, product-selection, prompt, deepseek, tongyi-wanxiang, sme, market-trend, geo]
 difficulty: beginner
 status: active
-related: [KB-AI-20260609-wechat-ai-live-commerce-landscape, KB-AI-20260609-ai-ecommerce-geo-brand-strategy, KB-AI-20260609-ai-ecommerce-trend-policy-koc, KB-AI-20260609-618-ai-ecommerce-platform-landscape]
+related: [KB-AI-20260609-wechat-ai-live-commerce-landscape, KB-AI-20260609-ai-ecommerce-geo-brand-strategy, KB-AI-20260609-ai-ecommerce-trend-policy-koc, KB-AI-20260609-618-ai-ecommerce-platform-landscape, KB-AI-20260609-ai-ecommerce-design-main-image-poster-workflow]
 ingest_id: ING-20260609-004
 updated: 2026-06-09
 ---
