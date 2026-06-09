@@ -1,0 +1,33 @@
+docs/INDEX.md
+  8d47fd72ce921204 13,18,49,107,113
+notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md
+  8d47fd72ce921204 15,211
+notes/ai-tools/geo/2026-06-09-ai-ecommerce-geo-brand-strategy.md
+  8d47fd72ce921204 15,128
+notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md
+  8d47fd72ce921204 1-173
+notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md
+  8d47fd72ce921204 15,154
+knowledge/tools-catalog.yaml
+  8d47fd72ce921204 605-626
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "7b9b335203b45aa5cc9730b9f679e72953b4d2a8",
+  "prompts": {
+    "8d47fd72ce921204": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "dcf3a64d-1e36-400e-b7a9-27e2e98022d0",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 215,
+      "total_deletions": 15,
+      "accepted_lines": 206,
+      "overriden_lines": 0
+    }
+  }
+}
