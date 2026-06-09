@@ -10,12 +10,12 @@
 | 前端 | 0 |
 | 后端 | 0 |
 | 测试 | 0 |
-| AI 工具 | 21 |
+| AI 工具 | 23 |
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
 | 其他 | 0 |
-| **合计** | **21** |
+| **合计** | **23** |
 
 ---
 
@@ -50,6 +50,9 @@
 | 2026-06-09 | 2026 AI+电商趋势：内容产能击穿、KOC 组织力与六部门政策红利 | `ai-ecommerce`, `market-trend`, `koc`, `content-factory`, `seedance`, `policy`, `sme` | [笔记](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md) · `KB-AI-20260609-ai-ecommerce-trend-policy-koc` |
 | 2026-06-09 | 微信 AI 带货与 AI+电商落地：入口变革、数字人爆发与叫好叫座之辩 | `ai-live-commerce`, `digital-human`, `wechat`, `jd-tencent`, `compliance`, `sme` | [笔记](../notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md) · `KB-AI-20260609-wechat-ai-live-commerce-landscape` |
 | 2026-06-09 | AI+电商一人店：低成本测试系统与选品出图上架 SOP | `ai-ecommerce`, `solo-store`, `product-selection`, `prompt`, `deepseek`, `sme` | [笔记](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md) · `KB-AI-20260609-ai-ecommerce-solo-store-playbook` |
+| 2026-06-09 | 跨境 OpenClaw 工作流：Hard Engineering 与亚马逊运营自动化 | `cross-border`, `amazon`, `openclaw`, `hard-engineering`, `listing`, `automation` | [笔记](../notes/ai-tools/geo/2026-06-09-cross-border-amazon-openclaw-ops-automation.md) · `KB-AI-20260609-cross-border-amazon-openclaw-ops-automation` |
+| 2026-06-09 | 电商增长团队全栈 AI Coding：TRAE Spec-First 与测试驱动工作流 | `ai-coding`, `spec-first`, `trae`, `playwright`, `test-driven`, `merchant-growth` | [笔记](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-team-ai-coding-workflow.md) · `KB-AI-20260609-ai-ecommerce-team-ai-coding-workflow` |
+| 2026-06-09 | 电商设计师 AI 主图与品牌海报：策划先行全流程 SOP | `ai-ecommerce`, `ecom-design`, `main-image`, `brand-poster`, `prompt`, `photoshop` | [笔记](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-design-main-image-poster-workflow.md) · `KB-AI-20260609-ai-ecommerce-design-main-image-poster-workflow` |
 
 ### code-review · AI 代码审查
 
@@ -111,6 +114,8 @@
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-09 | 新建 | [跨境 OpenClaw 运营自动化](../notes/ai-tools/geo/2026-06-09-cross-border-amazon-openclaw-ops-automation.md) + [增长团队 AI Coding](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-team-ai-coding-workflow.md)（ING-20260609-008） |
+| 2026-06-09 | 新建 | [电商设计师 AI 主图/海报 SOP](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-design-main-image-poster-workflow.md)（ING-20260609-007） |
 | 2026-06-09 | 新建 | [2026 618 AI 电商平台格局](../notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md)（ING-20260609-006） |
 | 2026-06-09 | 新建 | [2026 AI+电商趋势与政策红利](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-trend-policy-koc.md)（ING-20260609-005） |
 | 2026-06-09 | 新建 | [AI+电商一人店 SOP](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-solo-store-playbook.md)（ING-20260609-004） |

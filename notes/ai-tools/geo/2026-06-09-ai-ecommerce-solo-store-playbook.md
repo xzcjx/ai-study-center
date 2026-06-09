@@ -12,7 +12,7 @@ source:
 tags: [ai-ecommerce, solo-store, product-selection, prompt, deepseek, tongyi-wanxiang, sme, market-trend, geo]
 difficulty: beginner
 status: active
-related: [KB-AI-20260609-wechat-ai-live-commerce-landscape, KB-AI-20260609-ai-ecommerce-geo-brand-strategy, KB-AI-20260609-ai-ecommerce-trend-policy-koc, KB-AI-20260609-618-ai-ecommerce-platform-landscape, KB-AI-20260609-ai-ecommerce-design-main-image-poster-workflow]
+related: [KB-AI-20260609-wechat-ai-live-commerce-landscape, KB-AI-20260609-ai-ecommerce-geo-brand-strategy, KB-AI-20260609-ai-ecommerce-trend-policy-koc, KB-AI-20260609-618-ai-ecommerce-platform-landscape, KB-AI-20260609-ai-ecommerce-design-main-image-poster-workflow, KB-AI-20260609-cross-border-amazon-openclaw-ops-automation]
 ingest_id: ING-20260609-004
 updated: 2026-06-09
 ---
@@ -208,7 +208,7 @@ AI 可输出详情页结构（核心卖点、痛点、场景、转化话术）�
 - 来源：用户粘贴三篇公众号（AI 电商机会叙事 + 选品出图上架四步 + 选品运营客服一人店框架）
 - 项目内：[微信 AI 带货与 AI+电商落地](2026-06-09-wechat-ai-live-commerce-landscape.md)（`KB-AI-20260609-wechat-ai-live-commerce-landscape`）
 - 项目内：[AI 电商时代 GEO 品牌策略](2026-06-09-ai-ecommerce-geo-brand-strategy.md)（`KB-AI-20260609-ai-ecommerce-geo-brand-strategy`）
-- 项目内：[2026 618 AI 电商平台格局](2026-06-09-618-ai-ecommerce-platform-landscape.md)（`KB-AI-20260609-618-ai-ecommerce-platform-landscape`，大平台意图购物与 GEO 冲击）
+- 项目内：[跨境 OpenClaw 运营自动化](2026-06-09-cross-border-amazon-openclaw-ops-automation.md)（`KB-AI-20260609-cross-border-amazon-openclaw-ops-automation`，Listing/广告 Skill）
 
 ## 变更记录
 
