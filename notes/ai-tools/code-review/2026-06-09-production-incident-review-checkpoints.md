@@ -6,7 +6,7 @@ topic: code-review
 title: "生产质量报告沉淀：AI Code Review 责任链 R01–R08 + DR 检测规则"
 source:
   type: paste
-  url: "internal: chenjunxi04_quality_report + chenlu_quality_report (2026-01~2026-05, master)"
+  url: "internal: chenjunxi04/chenlu quality reports + GitLab MR sample-import review"
   accessed: "2026-06-09"
 tags: [code-review, review-checklist, quality-audit, detection-rule, responsibility-chain, incident-driven, agent-prompt, p0-gate]
 difficulty: advanced
@@ -17,14 +17,14 @@ related:
   - KB-AI-20260608-ai-code-review-prompt-guide
   - KB-AI-20260608-ai-review-quality-16-schemes
 ingest_id: ING-20260609-001
-updated: "2026-06-09"
+updated: "2026-06-10"
 ---
 
 # 生产质量报告沉淀：AI Code Review 责任链 R01–R08 + DR 检测规则
 
 ## TL;DR
 
-- 从 **123 commits / 47 bugs** 两份质量报告抽象为 **Review 责任链 R01→R08** + **24 条 DR（Detection Rule）**；DR 只描述**不变量与违反信号**，技术栈与业务名词 relegated 到附录实例映射。
+- 从 **123 commits / 47 bugs** 两份质量报告 + **GitLab MR 样本导入评审** 抽象为 **Review 责任链 R01→R08** + **27 条 DR**；DR 只描述**不变量与违反信号**，技术栈与业务名词 relegated 到附录实例映射。
 - **输出 SSOT**：[`templates/review-report.md`](../../../templates/review-report.md)——Findings 表必须带 `DR 编号 + 严重度 + 违反不变量`，禁止写成「维度 1 问题列表」。
 - **审判问句 = DR 的不变量问法**，一条 DR 一问；禁止在问句里出现具体中间件 API、业务字段或 OMSEC 编号。
 - **P0 门禁**：命中任意 `默认严重度=P0` 的 DR → R08 Gate=**阻断合入**。
@@ -87,7 +87,7 @@ Review {review_id} · {gate}
 |------------------|------------|
 | 鉴权、查询、导出、多租户数据 | SEC + ISO |
 | 异步、队列、回调、重试 | DUR + OBS + LIFE |
-| 事务、缓存、双写、限流计数 | ATOM + OBS |
+| 事务、缓存、双写、限流计数、**锁+事务** | ATOM + OBS |
 | 批量组装、模板、多路列映射 | ID + CTR |
 | 线程池、锁、共享入参 | ISO + LIFE |
 | 分页、导出、外部 IO、循环调用 | CAP + LIFE |
@@ -129,6 +129,7 @@ gate: 命中是否阻断合入（P0=true）
 | **DR-DUR-01** | 进行中工作崩溃后须可恢复或可追查 | 进程异常终止时，已认领未完成的工作是否会无声消失？ | 用易失介质替代持久「处理中」状态；认领与执行非一体 | P0 |
 | **DR-DUR-02** | 异步协作须覆盖最晚完成窗口 | 异步流程是否在「对方仍可能响应」之前就销毁了关联状态？ | 回调/迟到事件到达时上下文已被删除 | P0 |
 | **DR-DUR-03** | 重试须可终止 | 是否存在失败路径会无限占用执行槽位？ | 无上限重试环；阻塞 worker 且无超时/放弃策略 | P0 |
+| **DR-DUR-04** | 恢复/断点依据失败时不得无声丢失 | 用于断点续作或幂等恢复的状态写入失败时，流程是否仍继续？ | 恢复依据写入静默吞异常；失败无告警、无终态、无阻断 | P0 |
 
 #### ATOM · 原子与一致边界
 
@@ -136,7 +137,8 @@ gate: 命中是否阻断合入（P0=true）
 |----|--------|----------|------------------|------|
 | **DR-ATOM-01** | 多副本/多介质状态变更须有一致的成败边界 | 若一半写入成功、一半失败，系统是否定义并可执行一致化策略？ | 双写无补偿；失败吞掉导致永久不一致 | P1 |
 | **DR-ATOM-02** | 声明的原子边界须真实生效 | 代码声称的原子/事务边界，在运行时是否实际包住所有关键副作用？ | 装饰性事务；边界内混入不参与回滚的副作用 | P1 |
-| **DR-ATOM-03** | 并发更新同一逻辑实体须互斥或幂等 | 两个并发执行路径能否以「后写覆盖」造成 Lost Update？ | 读-改-写无 CAS/锁/版本号；状态机 GET-CHECK-SET | P1 |
+| **DR-ATOM-03** | 并发更新同一逻辑实体须互斥或幂等 | 两个并发执行路径能否以「后写覆盖」造成 Lost Update？ | 读-改-写无 CAS/锁/版本号；状态机 GET-CHECK-SET；**多步远程状态迁移拆成独立命令且无原子封装** | P1 |
+| **DR-ATOM-04** | 互斥锁释放不得早于持久化事务成功提交 | 持锁路径内存在尚未提交的持久化变更时，锁是否可能在提交前被释放？ | 锁在 finally 释放但事务边界尚未 commit；回滚后下一等待者基于已失效状态决策 | P0 |
 
 #### ID · 标识与关联
 
@@ -150,7 +152,7 @@ gate: 命中是否阻断合入（P0=true）
 
 | DR | 不变量 | 审判问句 | 违反信号（抽象） | 默认 |
 |----|--------|----------|------------------|------|
-| **DR-OBS-01** | 失败不得以空/假/默认成功冒充成功 | 调用方能否在失败时被误导为「正常完成」？ | catch 后 return null/false/empty；缺错误态 | P1 |
+| **DR-OBS-01** | 失败不得以空/假/默认成功冒充成功 | 调用方能否在失败时被误导为「正常完成」？ | catch 后 return null/false/empty；缺错误态；**关键路径仅 log 不阻断** | P1 |
 | **DR-OBS-02** | 已消耗的可计量资源在失败路径须对称 | 失败时是否仍占用配额/令牌/次数而无退还或记录？ | 先扣后用；异常路径无补偿 | P1 |
 | **DR-OBS-03** | 异步流程须产生可查询终态 | 长轮询/等待方能否在合理时间内区分成功、失败、超时？ | 异步失败仅打日志；无终态写入 | P1 |
 
@@ -166,8 +168,9 @@ gate: 命中是否阻断合入（P0=true）
 
 | DR | 不变量 | 审判问句 | 违反信号（抽象） | 默认 |
 |----|--------|----------|------------------|------|
-| **DR-LIFE-01** | 并发资源创建与释放须成对 | 是否存在创建了池/客户端/执行器却无对称 shutdown 的路径？ | 双初始化单销毁；每请求 new 池 | P0 |
+| **DR-LIFE-01** | 并发资源创建与释放须成对 | 是否存在创建了池/客户端/执行器却无对称 shutdown 的路径？ | 双初始化单销毁；每请求 new 池；**长生命周期组件内反复创建销毁执行器** | P0 |
 | **DR-LIFE-02** | 阻塞型工作与计算型共享池应隔离 | IO/阻塞任务是否运行在共享计算池上且无隔离？ | 默认公共池跑阻塞调用 | P1 |
+| **DR-LIFE-03** | 资源销毁应等待在途工作达到可接受终态 | 销毁执行器/连接时，是否在途任务被强制中断且未定义补偿？ | 使用强制中断式 shutdown 且不 await 完成；高并发导入路径尤其危险 | P1 |
 
 #### CAP · 容量与边界
 
@@ -190,7 +193,8 @@ gate: 命中是否阻断合入（P0=true）
 | DR | 不变量 | 审判问句 | 违反信号（抽象） | 默认 |
 |----|--------|----------|------------------|------|
 | **DR-CHG-01** | 变更体量须可被人工或 Agent 完整审阅 | 单次变更是否过大或夹带无关产物，导致审查失效？ | 单 MR 数千行；文档/脚手架 >50% | P1 |
-| **DR-CHG-02** | 同一概念不应重复实现而无边界 | 是否引入与现有模块并行的第二实现？ | 同名/同责类多份；复制粘贴常量 | P2 |
+| **DR-CHG-02** | 同一概念不应重复实现而无边界 | 是否引入与现有模块并行的第二实现？ | 同名/同责逻辑多份；复制粘贴常量 | P2 |
+| **DR-CHG-03** | 不可达代码不应占用维护面 | 是否存在已无引用且未文档化保留理由的代码或常量？ | 未引用常量/方法仍保留；「待删」注释却无跟进 | P2 |
 
 ---
 
@@ -210,10 +214,12 @@ gate: 命中是否阻断合入（P0=true）
 
 > 以下**不得**写入 DR 或审判问句；仅用于证明 DR 来自真实审计。
 
-| DR | 两报告中的实例（摘要） |
-|----|------------------------|
+#### 5.1 质量报告（chenjunxi04 + chenlu）
+
+| DR | 实例（摘要） |
+|----|--------------|
 | DR-SEC-01 | 生产 API 密钥进 git |
-| DR-SEC-04 | 停车统计无租户校验；SQL `OR client_id IS NULL` |
+| DR-SEC-04 | 停车统计无租户校验；SQL 隔离条件扩大 |
 | DR-DUR-01 | 持久队列改进程内集合 |
 | DR-DUR-02 | 异步 HTTP 失败 finally 删 task |
 | DR-DUR-03 | 限流 while 无限重试 |
@@ -229,7 +235,19 @@ gate: 命中是否阻断合入（P0=true）
 | DR-CAP-01 | 内存扫全表导出 Excel |
 | DR-CHG-01 | 单需求 1.2 万行；plan.backup 进 git |
 
-**统计结论（仍有效）**：膨胀变更与 bug 数正相关——由 **DR-CHG-01** 覆盖，不单独设业务 DR。
+#### 5.2 GitLab MR · 样本导入 / checkpoint / 容量锁（Maintainer 评审）
+
+| DR | 实例（摘要） | 修复方向（L3，非 DR 正文） |
+|----|--------------|---------------------------|
+| DR-CHG-02 | `normalizeCorrectResult` 仍存在于 Controller 与 Assembler 两处 | 收敛到单一实现 |
+| DR-CHG-03 | `Const.java` 中 3 个 `DEFAULT_SAMPLE_*` 未引用仍保留 | 删除或文档化保留理由 |
+| DR-LIFE-01 | Spring 单例方法内每次 `newFixedThreadPool` | 复用共享池或注入 Bean 级 executor |
+| DR-LIFE-03 | 上述路径 `finally` 用强制中断式 shutdown 且不 await | 优雅 shutdown + 超时等待 |
+| DR-ATOM-03 | 断点流程 `isImportDone→load→delete→markDone` 多步非原子 | 单原子操作封装（如脚本/事务块） |
+| DR-ATOM-04 | `@Transactional` 方法内锁在 finally 释放，早于事务 commit | 锁释放移到 afterCommit 或缩小锁粒度 |
+| DR-DUR-04 | `saveCheckpointQuietly` 吞掉 Redis 抖动异常 | 失败须 ERROR + 阻断或显式降级策略 |
+
+**统计结论（仍有效）**：膨胀变更与 bug 数正相关——由 **DR-CHG-01** 覆盖。
 
 ---
 
@@ -273,7 +291,7 @@ Diff：【…】
 ## 相关链接
 
 - 报告模板：[`templates/review-report.md`](../../../templates/review-report.md)
-- 溯源：`chenjunxi04_quality_report.md`、`chenlu_quality_report.md`
+- 溯源：`chenjunxi04_quality_report.md`、`chenlu_quality_report.md`、GitLab MR 样本导入评审（Maintainer @yiyongfu）
 - 项目内：[AI Code Review 方法论](2026-06-08-ai-code-review-workflow-methodology.md) · `KB-AI-20260608-ai-code-review-workflow-methodology`
 - 项目内：[AI 编程时代 Review 升级](2026-06-08-ai-coding-era-review-upgrade.md) · `KB-AI-20260608-ai-coding-era-review-upgrade`
 
@@ -281,5 +299,6 @@ Diff：【…】
 
 | 日期 | 说明 |
 |------|------|
-| 2026-06-09 | v2：改为 R01–R08 责任链 + 24 条 DR；审判问句抽象为不变量；新增 review-report 模板；技术/业务细节下沉附录 |
+| 2026-06-10 | v3：新增 DR-ATOM-04 / DR-DUR-04 / DR-CHG-03 / DR-LIFE-03；扩充 ATOM-03/LIFE-01/OBS-01 信号；附录 §5.2 GitLab MR 7 条实例 |
+| 2026-06-09 | v2：改为 R01–R08 责任链 + 24 条 DR；审判问句抽象为不变量；新增 review-report 模板 |
 | 2026-06-09 | v1（ING-20260609-001）：初稿 10 维清单（已废弃结构） |

@@ -101,7 +101,7 @@
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
-| 2026-06-09 | 新建 | [生产事故驱动 10 维 Review 审判点](../notes/ai-tools/code-review/2026-06-09-production-incident-review-checkpoints.md)（ING-20260609-001） |
+| 2026-06-10 | 更新 | [生产事故 DR 责任链](../notes/ai-tools/code-review/2026-06-09-production-incident-review-checkpoints.md) v3：+4 DR、GitLab MR 附录 |
 | 2026-06-08 | 新建 | [zeng-code-review-deep 多智能体 Skill](../notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md)（ING-20260608-016） |
 | 2026-06-08 | 新建 | [16 个提升 AI 评审质量方案](../notes/ai-tools/code-review/2026-06-08-ai-review-quality-16-schemes.md)（ING-20260608-015） |
 | 2026-06-08 | 新建 | [AI Code Review 下一波机会](../notes/ai-tools/code-review/2026-06-08-ai-code-review-next-wave-trend.md)（ING-20260608-014） |
