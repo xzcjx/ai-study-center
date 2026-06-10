@@ -1,0 +1,57 @@
+notes/ai-tools/frontend-design/2026-06-08-three-ways-remove-ai-slop.md
+  f537e3184d8b8ef1 14
+docs/MODULES.md
+  f537e3184d8b8ef1 49
+knowledge/registry.yaml
+  f537e3184d8b8ef1 102-108
+notes/ai-tools/prompt-writing/2026-06-10-natural-writing-anti-ai-tone-prompt.md
+  f537e3184d8b8ef1 1-213
+docs/INDEX.md
+  f537e3184d8b8ef1 13,18,44-49,126
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "a7ce5aad7f0704b161f9f5b16daf8e95215a1f3a",
+  "prompts": {
+    "442e39f08d863155": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7a42230c-6381-4b1f-9821-9a282c739e32",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 219,
+      "total_deletions": 11,
+      "accepted_lines": 218,
+      "overriden_lines": 0
+    },
+    "dfdf38c8e7ea846d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ce6440f0-123d-4c32-8277-062e3014ca4b",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 171,
+      "total_deletions": 147,
+      "accepted_lines": 168,
+      "overriden_lines": 0
+    },
+    "f537e3184d8b8ef1": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "bb1e6355-0c55-4f61-b7ef-87d6b9e20f78",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 449,
+      "total_deletions": 8,
+      "accepted_lines": 444,
+      "overriden_lines": 0
+    }
+  }
+}
