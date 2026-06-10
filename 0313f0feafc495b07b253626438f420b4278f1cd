@@ -1,0 +1,31 @@
+docs/INDEX.md
+  94e91630b72c7f14 13,18,48,114,120
+notes/ai-tools/code-review/2026-06-08-zeng-deep-code-review-skill.md
+  94e91630b72c7f14 15
+notes/ai-tools/geo/2026-06-09-codex-ecommerce-ops-automation-workflow.md
+  94e91630b72c7f14 15,17
+notes/ai-tools/geo/2026-06-09-wechat-ai-live-commerce-landscape.md
+  94e91630b72c7f14 15
+notes/ai-tools/geo/2026-06-10-coze-3-multi-agent-media-team.md
+  94e91630b72c7f14 1-171
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "0313f0feafc495b07b253626438f420b4278f1cd",
+  "prompts": {
+    "94e91630b72c7f14": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c6ed759e-b9c9-4767-a9f0-412e737f9e80",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 358,
+      "total_deletions": 14,
+      "accepted_lines": 351,
+      "overriden_lines": 0
+    }
+  }
+}
