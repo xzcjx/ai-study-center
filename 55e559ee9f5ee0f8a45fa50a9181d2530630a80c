@@ -1,0 +1,31 @@
+notes/ai-tools/geo/2026-06-10-coze-3-multi-agent-media-team.md
+  3e540f5ab0b1b231 15,163
+docs/INDEX.md
+  3e540f5ab0b1b231 13,18,54,121,127
+notes/ai-tools/geo/2026-06-09-codex-ecommerce-ops-automation-workflow.md
+  3e540f5ab0b1b231 15
+notes/ai-tools/geo/2026-06-09-cross-border-amazon-openclaw-ops-automation.md
+  3e540f5ab0b1b231 15
+notes/ai-tools/geo/2026-06-10-kuse-workflow-natural-language-automation.md
+  3e540f5ab0b1b231 1-209
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "55e559ee9f5ee0f8a45fa50a9181d2530630a80c",
+  "prompts": {
+    "3e540f5ab0b1b231": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58bc49f9-97fd-4ddc-8e8f-ecfecd6cdbdc",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 436,
+      "total_deletions": 16,
+      "accepted_lines": 426,
+      "overriden_lines": 0
+    }
+  }
+}
