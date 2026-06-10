@@ -1,0 +1,29 @@
+notes/ai-tools/geo/2026-06-10-coze-3-multi-agent-media-team.md
+  3e540f5ab0b1b231 15
+notes/ai-tools/workflow-automation/2026-06-10-coze-dify-n8n-vs-coding-agent-landscape.md
+  3e540f5ab0b1b231 14,212
+docs/INDEX.md
+  3e540f5ab0b1b231 13,18,54,134
+notes/ai-tools/workflow-automation/2026-06-10-dify-coze-n8n-selection-guide.md
+  3e540f5ab0b1b231 1-240
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "d1ec84f7b4a6239abe4d48114d49acc39f0d1bc2",
+  "prompts": {
+    "3e540f5ab0b1b231": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58bc49f9-97fd-4ddc-8e8f-ecfecd6cdbdc",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 249,
+      "total_deletions": 6,
+      "accepted_lines": 247,
+      "overriden_lines": 0
+    }
+  }
+}
