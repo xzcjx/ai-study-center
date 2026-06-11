@@ -73,10 +73,101 @@ const KNOWN_ALIASES = {
 
 
 // ======================================================================
-// Part 2: 纯 JS 指纹采集 — 模拟浏览器环境
+// Part 2: 动态模块顺序匹配 — 生成当前 tdc.js 的 37 个 cd 值
 // ======================================================================
-// 在真实浏览器中直接取 window 对象
-// 在 Node.js 中需要补环境（见 Part 4）
+// 每个 tdc.js 加载时 37 个模块的 ID 顺序随机变化。
+// 但通过浏览器中运行 tdc.js 再抓取每个模块的 .get() 返回值，
+// 结合指纹规则匹配类型，即可动态确定顺序。
+
+/**
+ * 指纹值 → 模块名 的映射助手
+ * 每个指纹规则输出一个可匹配的特征字符串
+ */
+function matchModule(value, id) {
+  for (const rule of MODULE_FINGERPRINTS) {
+    if (rule.strings.length === 0) continue;
+    const v = String(value);
+    const allMatch = rule.strings.every(s => v.includes(s));
+    if (allMatch) return rule.name;
+  }
+  return null; // 通用模块，需结构区分
+}
+
+/**
+ * 从当前 tdc.js 的 37 个模块返回值动态生成 cd 数组
+ *
+ * @param {Array} rawValues — window.TDC.getAllModuleValues() 返回的 37 个值的数组（按实际调用顺序）
+ *                           在浏览器中可以通过 Hook TDC.sd 的 .get 来获取
+ */
+function orderModules(rawValues) {
+  const cd = new Array(37).fill("");
+  let genericIdx = 0;
+
+  for (let i = 0; i < rawValues.length; i++) {
+    const matched = matchModule(rawValues[i], i);
+    if (matched) {
+      cd[i] = String(rawValues[i]);
+    } else {
+      // 通用模块 — 按结构特征识别（指令数、entry 地址等）
+      // 在反汇编中可以获取 .get 函数的字节码长度来判断
+      cd[i] = String(rawValues[i]);
+    }
+  }
+
+  return cd;  // 顺序就是当前 tdc.js 的实际排列
+}
+
+/**
+ * 最简单的方案：在浏览器中直接执行 tdc.js，然后通过
+ * Hook window.TDC.getInfo/sd 来 dump 实际值。
+ *
+ * 在没有浏览器环境时，提供模拟模块值（用于测试）
+ */
+
+function buildCDFromProfile(fpData) {
+  // 模拟 37 个模块的输出值（每个值就是 .get() 的返回值）
+  // 这些值的**排列顺序**必须匹配当前 tdc.js 的模块顺序
+  // 此处仅作结构示例，实际使用时需要用 orderModules() 动态排序
+  return [
+    fpData.userAgent,
+    fpData.canvasHash,
+    fpData.webglRenderer,
+    fpData.webglVendor,
+    String(fpData.timezoneOffset),
+    String(fpData.webdriver),
+    fpData.webrtcCandidates || "",
+    fpData.productSub,
+    fpData.appVersion,
+    String(fpData.screenWidth),
+    String(fpData.screenHeight),
+    String(fpData.colorDepth),
+    String(fpData.pixelDepth),
+    fpData.language,
+    fpData.platform,
+    String(fpData.cookieEnabled),
+    String(fpData.doNotTrack),
+    String(fpData.hardwareConcurrency),
+    String(fpData.deviceMemory),
+    String(fpData.pluginsCount),
+    String(fpData.mimeTypesCount),
+    String(fpData.localStorageEnabled),
+    String(fpData.sessionStorageEnabled),
+    String(fpData.indexedDBEnabled),
+    fpData.timeEval,
+    fpData.timeGetTime,
+    String(fpData.innerWidth),
+    String(fpData.outerWidth),
+    String(fpData.touchSupport),
+    String(fpData.pdfViewerEnabled),
+    String(fpData.chromeDetected),
+    String(fpData.historyLength),
+    fpData.documentKeys,
+    fpData.errorStackTrace,
+    fpData.timeNow,
+    fpData.connectionType,
+    fpData.stringHookResult
+  ];
+}
 
 function buildFingerprintData(profile) {
   // profile: 模拟的浏览器指纹配置（在 Node.js 中使用）
@@ -226,48 +317,9 @@ function finalizeBase64(base64Str) {
  * @param {string} eks         — eks envelope data
  * @param {string} trajectory  — 轨迹 JSON 字符串
  */
-function buildCollect(fpData, token, trial, eks, trajectory) {
-  // === Chunk 1: 轨迹前的指纹 + token ===
-  const cd = [
-    fpData.userAgent,
-    fpData.canvasHash,
-    fpData.webglRenderer,
-    fpData.webglVendor,
-    fpData.timezoneOffset,
-    fpData.webdriver,
-    fpData.webrtcCandidates,
-    fpData.productSub,
-    fpData.appVersion,
-    fpData.screenWidth,
-    fpData.screenHeight,
-    fpData.colorDepth,
-    fpData.pixelDepth,
-    fpData.browserLanguage || fpData.language,
-    fpData.platform,
-    String(fpData.cookieEnabled),
-    String(fpData.doNotTrack),
-    String(fpData.hardwareConcurrency),
-    String(fpData.deviceMemory),
-    String(fpData.pluginsCount),
-    String(fpData.mimeTypesCount),
-    fpData.localStorageEnabled,
-    fpData.sessionStorageEnabled,
-    fpData.indexedDBEnabled,
-    fpData.timeEval,
-    fpData.timeGetTime,
-    String(fpData.innerWidth),
-    String(fpData.outerWidth),
-    String(fpData.touchSupport),
-    String(fpData.pdfViewerEnabled),
-    String(fpData.chromeDetected),
-    // remaining generic modules
-    String(fpData.historyLength),
-    String(fpData.documentKeys),
-    String(fpData.errorStackTrace),
-    fpData.timeNow,
-    String(fpData.connectionType),
-    fpData.stringHookResult
-  ];
+function buildCollect(moduleValues, token, trial, eks, trajectory) {
+  // === Chunk 1: 指纹数据 — 按当前 tdc.js 的实际 37 模块排列 ===
+  const cd = moduleValues;
 
   // chunk1 的 JSON 结构
   const chunk1Data = {
@@ -415,9 +467,15 @@ const fpData = buildFingerprintData(mockProfile);
 const token = "1234567890:987654321";
 const trial = 1;
 const trajectory = "[]";
-const collect = buildCollect(fpData, token, trial, null, trajectory);
+// 从 profile 构建 37 个模块值（顺序取决于运行时 tdc.js 的模块排列！）
+const moduleValues = buildCDFromProfile(fpData);
+const collect = buildCollect(moduleValues, token, trial, null, trajectory);
 
 console.log("");
 console.log("=== 构造的 collect（示例，XTEA key 为占位符） ===");
+console.log(`cd 模块数: ${moduleValues.length}`);
 console.log(`collect length: ${collect.length}`);
 console.log(`collect (前 200 字符): ${collect.substring(0, 200)}...`);
+console.log("");
+console.log("⚠ 重要：模块值顺序在不同 tdc.js 版本中随机变化");
+console.log("⚠ 在浏览器中运行 tdc.js 后，实际模块排列需要通过指纹匹配动态确定");
