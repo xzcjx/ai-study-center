@@ -1,0 +1,33 @@
+knowledge/registry.yaml
+  3e540f5ab0b1b231 109-115
+docs/INDEX.md
+  3e540f5ab0b1b231 13,18,50-56,133-134
+docs/MODULES.md
+  3e540f5ab0b1b231 25,51
+notes/ai-tools/workflow-automation/2026-06-10-coze-dify-n8n-vs-coding-agent-landscape.md
+  3e540f5ab0b1b231 1-220
+notes/ai-tools/workflow-automation/2026-06-10-kuse-workflow-natural-language-automation.md
+  3e540f5ab0b1b231 1-210
+notes/ai-tools/geo/2026-06-10-coze-3-multi-agent-media-team.md
+  3e540f5ab0b1b231 15,163-164
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "2f8a844842b792b3ab8efd290af699396945d99b",
+  "prompts": {
+    "3e540f5ab0b1b231": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58bc49f9-97fd-4ddc-8e8f-ecfecd6cdbdc",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 459,
+      "total_deletions": 12,
+      "accepted_lines": 453,
+      "overriden_lines": 0
+    }
+  }
+}

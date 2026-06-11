@@ -1,0 +1,79 @@
+plan/PUBLISH_IMAGE_SPEC.md
+  dfdf38c8e7ea846d 313,378,380,392,394-399,401,403-409
+  185f77d5525c1f67 227
+scripts/requirements-publish-images.txt
+  185f77d5525c1f67 5
+docs/PUBLISH.md
+  dfdf38c8e7ea846d 142
+  442e39f08d863155 102
+scripts/kb_publish.py
+  442e39f08d863155 329-334
+plan/ADR.md
+  dfdf38c8e7ea846d 77-78,81,83,85-95
+knowledge/platforms-registry.yaml
+  442e39f08d863155 11-12,16-18,30-35
+  dfdf38c8e7ea846d 56-57,72-74
+templates/redbook-carousel-paradigm.md
+  dfdf38c8e7ea846d 1,3,5-6,10,12-18,20,22-24,28,30,32-38,40,42-44,46,50,52,55-57,60,63-64,67,69,71,73,75,77,79,81-84,87-90,93,95,97-131,135,138-142,150-156,163-166,182,184
+  185f77d5525c1f67 169
+templates/redbook-article-paradigm.md
+  442e39f08d863155 1-194
+.cursor/skills/knowledge-publish/SKILL.md
+  442e39f08d863155 161-162,166,169,327
+  dfdf38c8e7ea846d 175,177-178,180,182-186,188,197,201-203
+  185f77d5525c1f67 218,220-222,226-227,229,232,234
+scripts/validate-publish-images.sh
+  dfdf38c8e7ea846d 47
+docs/SPEC.md
+  dfdf38c8e7ea846d 106-107
+scripts/collect-publish-image.sh
+  185f77d5525c1f67 1-12
+scripts/collect-publish-image.py
+  185f77d5525c1f67 1-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "c0d86f5deb3a5bc67bc26ca1dfb8afe35c38a0c0",
+  "prompts": {
+    "185f77d5525c1f67": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "aff8f621-1356-41bf-b3ee-fbd104350f12",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 89,
+      "total_deletions": 6,
+      "accepted_lines": 113,
+      "overriden_lines": 0
+    },
+    "442e39f08d863155": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7a42230c-6381-4b1f-9821-9a282c739e32",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 217,
+      "overriden_lines": 0
+    },
+    "dfdf38c8e7ea846d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ce6440f0-123d-4c32-8277-062e3014ca4b",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 165,
+      "overriden_lines": 0
+    }
+  }
+}

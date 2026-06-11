@@ -1,0 +1,48 @@
+notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md
+  8d47fd72ce921204 15
+.cursor/rules/publish-pipeline.mdc
+  8d47fd72ce921204 16
+AGENTS.md
+  8d47fd72ce921204 68-69,83-84
+templates/publish-report.md
+  8d47fd72ce921204 12
+docs/PUBLISH.md
+  8d47fd72ce921204 26-27,29,42,116-124,153-158
+scripts/kb_publish.py
+  8d47fd72ce921204 193-241,254-256,294-295,308-313
+.cursor/skills/knowledge-publish/SKILL.md
+  8d47fd72ce921204 35,37,65-103,127-134,161-162,281,284-289,305
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.15-yd",
+  "base_commit_sha": "b3399041aa60e5242bc11b44d423e201825b6c0f",
+  "prompts": {
+    "8ab0b1ca6dea7afc": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7ca254a1-2e30-47e4-806b-1ce7bbdaa667",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 29,
+      "total_deletions": 8,
+      "accepted_lines": 29,
+      "overriden_lines": 0
+    },
+    "8d47fd72ce921204": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "dcf3a64d-1e36-400e-b7a9-27e2e98022d0",
+        "model": "composer-2.5"
+      },
+      "human_author": "chenlu <chenlu24@corp.netease.com>",
+      "messages": [],
+      "total_additions": 150,
+      "total_deletions": 20,
+      "accepted_lines": 147,
+      "overriden_lines": 2
+    }
+  }
+}
