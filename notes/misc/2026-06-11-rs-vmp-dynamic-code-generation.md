@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, vmp, anti-crawler, security, code-generation, obfuscation]
 difficulty: advanced
 status: active
-related: []
+related: [KB-MISC-20260611-sdenv-node-addon-document-all]
 ingest_id: ING-20260611-001
 updated: "2026-06-11"
 ---
@@ -215,8 +215,7 @@ GitHub 项目完整代码：https://github.com/pysunday/rs-reverse
 
 - [原文：瑞数vmp-动态代码生成原理](https://blog.howduudu.tech/article/95f60638eaa0647bcf327fb4f2c2887c/)
 - [GitHub：rs-reverse 逆向分析项目](https://github.com/pysunday/rs-reverse)
-- 上篇：[补环境框架：sdenv与浏览器生成cookie的一致性验证](https://blog.hdud.xyz/article/9269aac48f459faada768f97fe6156d1/)
-- 下篇：[瑞数vmp-代码格式化后无法正常运行原因分析](https://blog.hdud.xyz/article/420dc80bfb66280ddbb93d87864cadd1/)
+- 项目内：[补环境框架：document.all 的 C++ Node Addon 方案](./2026-06-11-sdenv-node-addon-document-all.md) (`KB-MISC-20260611-sdenv-node-addon-document-all`)
 
 ## 变更记录
 

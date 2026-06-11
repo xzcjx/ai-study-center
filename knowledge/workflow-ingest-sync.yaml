@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260611-001"
+last_ingest_id: "ING-20260611-002"
 
 playbook_notes:
   fe-demo-shell:
@@ -41,6 +41,7 @@ playbook_notes:
     - notes/ai-tools/geo/2026-06-09-ai-ecommerce-team-ai-coding-workflow.md
     - notes/ai-tools/geo/2026-06-09-cross-border-amazon-openclaw-ops-automation.md
     - notes/misc/2026-06-11-rs-vmp-dynamic-code-generation.md
+    - notes/misc/2026-06-11-sdenv-node-addon-document-all.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -224,6 +225,11 @@ keywords:
     - security
     - code-generation
     - obfuscation
+    - sdenv
+    - node-addon
+    - v8
+    - node-gyp
+    - browser-emulation
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -284,7 +290,12 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260611-001
+  - ingest_id: ING-20260611-002
+    note: notes/misc/2026-06-11-sdenv-node-addon-document-all.md
+    kb_id: KB-MISC-20260611-sdenv-node-addon-document-all
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-11
+  - ingest_id: ING-20260611-002
     note: notes/misc/2026-06-11-rs-vmp-dynamic-code-generation.md
     kb_id: KB-MISC-20260611-rs-vmp-dynamic-code-generation
     workflows: ["fe-full-pipeline"]
