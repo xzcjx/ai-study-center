@@ -17,6 +17,7 @@ related:
   - "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering"
   - "KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis"
   - "KB-CR-20260611-rs-vmp-dynamic-code-generation"
+  - "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha"
 ingest_id: "ING-20260611-006"
 updated: "2026-06-11"
 ---
@@ -202,6 +203,7 @@ const result = escodegen.generate(ast);
   - [某数字 4.3.2 绕过 OB 直捣 JSVMP mns0301 分析](../crawler/2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md) (`KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis`) — **动态插桩法**：不还原 OB 直接运行时追踪
   - [某Q音乐 JSVMP 逆向还原实战](../crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md) (`KB-CR-20260611-qqmusic-jsvmp-reverse-engineering`) — 解释器定位→插桩→指令还原
   - [瑞数 VMP 动态代码生成逆向分析](../crawler/2026-06-11-rs-vmp-dynamic-code-generation.md) (`KB-CR-20260611-rs-vmp-dynamic-code-generation`) — VMP 逆向通用方法论
+  - [AI 白盒还原腾讯 CHAOS VM 验证码端到端](../crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md) (`KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha`) — 纯 Python 从零构造 collect + JS Reverse MCP 工具
 
 ## 变更记录
 

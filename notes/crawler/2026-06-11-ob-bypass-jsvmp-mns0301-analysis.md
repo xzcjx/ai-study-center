@@ -18,6 +18,7 @@ related:
   - "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering"
   - "KB-CR-20260611-rs-vmp-dynamic-code-generation"
   - "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature"
+  - "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha"
 ingest_id: "ING-20260611-005"
 updated: "2026-06-11"
 ---
@@ -194,6 +195,7 @@ RC4 变换后得到字节串，经魔改 Base64 编码为最终传输格式。
   - [某Q音乐 JSVMP 逆向还原实战](../crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md) (`KB-CR-20260611-qqmusic-jsvmp-reverse-engineering`) — 另一篇 apply 层插桩实战
   - [瑞数 VMP 动态代码生成逆向](../crawler/2026-06-11-rs-vmp-dynamic-code-generation.md) (`KB-CR-20260611-rs-vmp-dynamic-code-generation`) — VMP 逆向通用方法论
   - [AST 还原 JSVMP X-Bogus/_signature 全流程](../crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md) (`KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature`) — **静态还原路径**：AST 节点替换 VMP 代码
+  - [AI 白盒还原腾讯 CHAOS VM 验证码端到端](../crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md) (`KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha`) — 纯 Python 从零构造 collect + JS Reverse MCP 工具
 
 ## 变更记录
 

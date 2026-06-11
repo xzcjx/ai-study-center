@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260611-006"
+last_ingest_id: "ING-20260611-007"
 
 playbook_notes:
   fe-demo-shell:
@@ -50,6 +50,7 @@ playbook_notes:
     - notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md
     - notes/crawler/2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md
     - notes/crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md
+    - notes/crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -266,6 +267,13 @@ keywords:
     - estraverse
     - x-bogus
     - signature
+    - xtea
+    - captcha
+    - tdc
+    - chaos-vm
+    - ocr
+    - fingerprint
+    - cdap
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -326,32 +334,42 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260611-006
-    note: notes/crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md
-    kb_id: KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature
+  - ingest_id: ING-20260611-007
+    note: notes/crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md
+    kb_id: KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha
     workflows: ["fe-full-pipeline"]
     at: 2026-06-11
-  - ingest_id: ING-20260611-006
+  - ingest_id: ING-20260611-007
     note: notes/crawler/2026-06-11-jsvmp-overview-protection-landscape.md
     kb_id: KB-CR-20260611-jsvmp-overview-protection-landscape
     workflows: ["fe-full-pipeline"]
     at: 2026-06-11
-  - ingest_id: ING-20260611-006
+  - ingest_id: ING-20260611-007
     note: notes/crawler/2026-06-11-jsvmp-virtualization-pipeline.md
     kb_id: KB-CR-20260611-jsvmp-virtualization-pipeline
     workflows: ["fe-full-pipeline"]
     at: 2026-06-11
-  - ingest_id: ING-20260611-006
-    note: notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md
-    kb_id: KB-CR-20260611-qqmusic-jsvmp-reverse-engineering
+  - ingest_id: ING-20260611-007
+    note: notes/crawler/2026-06-11-jsvmp-interpreter-design.md
+    kb_id: KB-CR-20260611-jsvmp-interpreter-design
     workflows: ["fe-full-pipeline"]
     at: 2026-06-11
-  - ingest_id: ING-20260611-006
+  - ingest_id: ING-20260611-007
+    note: notes/crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md
+    kb_id: KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-11
+  - ingest_id: ING-20260611-007
     note: notes/crawler/2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md
     kb_id: KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis
     workflows: ["fe-full-pipeline"]
     at: 2026-06-11
-  - ingest_id: ING-20260611-006
+  - ingest_id: ING-20260611-007
+    note: notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md
+    kb_id: KB-CR-20260611-qqmusic-jsvmp-reverse-engineering
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-11
+  - ingest_id: ING-20260611-007
     note: notes/crawler/2026-06-11-rs-vmp-dynamic-code-generation.md
     kb_id: KB-CR-20260611-rs-vmp-dynamic-code-generation
     workflows: ["fe-full-pipeline"]

@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, vmp, anti-crawler, security, code-generation, obfuscation]
 difficulty: advanced
 status: active
-related: [KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design, KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis, KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature]
+related: [KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design, KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis, KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature, KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha]
 ingest_id: ING-20260611-001
 updated: "2026-06-11"
 ---
@@ -218,6 +218,7 @@ GitHub 项目完整代码：https://github.com/pysunday/rs-reverse
 - 项目内：[补环境框架：document.all 的 C++ Node Addon 方案](./2026-06-11-sdenv-node-addon-document-all.md) (`KB-CR-20260611-sdenv-node-addon-document-all`)
   - [某数字 4.3.2 绕过 OB 直捣 JSVMP mns0301 分析](./2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md) (`KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis`) — ob+JSVMP 双层保护的动态插桩实战
   - [AST 还原 JSVMP X-Bogus/_signature 全流程](./2026-06-11-ast-restore-jsvmp-x-bogus-signature.md) (`KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature`) — 静态还原路径：AST 节点替换 VMP 代码
+  - [AI 白盒还原腾讯 CHAOS VM 验证码端到端](./2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md) (`KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha`) — 纯 Python 从零构造 collect + JS Reverse MCP 工具
 
 ## 变更记录
 

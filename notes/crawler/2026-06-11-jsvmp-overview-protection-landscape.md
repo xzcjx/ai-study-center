@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, code-protection, obfuscation, wasm, security, jsvmp-theory]
 difficulty: intermediate
 status: active
-related: ["KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering", "KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis", "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature"]
+related: ["KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering", "KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis", "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature", "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha"]
 ingest_id: "ING-20260611-003"
 updated: "2026-06-11"
 ---
@@ -194,6 +194,7 @@ WASM 作为 JSVMP 的技术基座，在**安全性**和**可用性**两个维度
   - [补环境框架：document.all C++ Addon 方案](../crawler/2026-06-11-sdenv-node-addon-document-all.md) (`KB-CR-20260611-sdenv-node-addon-document-all`) — 补环境对抗的另一路径
   - [某数字 4.3.2 绕过 OB 直捣 JSVMP mns0301 分析](../crawler/2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md) (`KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis`) — ob+JSVMP 双层保护的动态插桩实战
   - [AST 还原 JSVMP X-Bogus/_signature 全流程](../crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md) (`KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature`) — 静态还原路径：AST 节点替换 VMP 代码
+  - [AI 白盒还原腾讯 CHAOS VM 验证码端到端](../crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md) (`KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha`) — 纯 Python 从零构造 collect + JS Reverse MCP 工具
 
 ## 变更记录
 

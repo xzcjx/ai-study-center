@@ -14,9 +14,9 @@
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
-| 爬虫 | 8 |
+| 爬虫 | 9 |
 | 其他 | 0 |
-| **合计** | **31** |
+| **合计** | **32** |
 
 ---
 
@@ -111,6 +111,7 @@
 | 2026-06-11 | 瑞数vmp动态代码生成原理逆向分析 | `js-reverse`, `vmp`, `anti-crawler`, `security`, `code-generation`, `obfuscation` | [笔记](../notes/crawler/2026-06-11-rs-vmp-dynamic-code-generation.md) · `KB-CR-20260611-rs-vmp-dynamic-code-generation` |
 | 2026-06-11 | 某数字 4.3.2：绕过 OB 直捣 JSVMP 的 mns0301 参数逆向全流程 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `obfuscation`, `hook`, `instrumentation`, `log-analysis`, `rc4`, `base64`, `chacha20`, `ai-assisted`, `real-case` | [笔记](../notes/crawler/2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md) · `KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis` |
 | 2026-06-11 | 记一次 AST 还原 JSVMP：某音 X-Bogus / _signature 静态还原全流程 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `ast`, `deobfuscation`, `esprima`, `escodegen`, `estraverse`, `x-bogus`, `signature`, `real-case` | [笔记](../notes/crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md) · `KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature` |
+| 2026-06-11 | AI 辅助白盒还原腾讯 CHAOS VM：点选验证码纯 Python 端到端方案 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `ai-assisted`, `xtea`, `bytecode`, `deobfuscation`, `captcha`, `tdc`, `chaos-vm`, `real-case`, `ocr`, `fingerprint`, `cdp`, `mcp` | [笔记](../notes/crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md) · `KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha` |
 
 ## 其他 · misc
 
@@ -122,12 +123,13 @@
 
 ## 标签云（手动维护）
 
-`618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference` · `js-reverse` · `jsvmp` · `jsvmp-theory` · `vmp` · `anti-crawler` · `security` · `code-protection` · `code-generation` · `obfuscation` · `ast` · `bytecode` · `instruction-encoding` · `intermediate-code` · `wasm` · `emscripten` · `virtual-interpreter` · `dispatcher` · `handler` · `vmcontext` · `hook` · `instrumentation` · `deobfuscation` · `real-case` · `qqmusic` · `sdenv` · `node-addon` · `v8` · `node-gyp` · `browser-emulation` · `log-analysis` · `rc4` · `base64` · `chacha20` · `ai-assisted` · `esprima` · `escodegen` · `estraverse` · `x-bogus` · `signature`
+`618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference` · `js-reverse` · `jsvmp` · `jsvmp-theory` · `vmp` · `anti-crawler` · `security` · `code-protection` · `code-generation` · `obfuscation` · `ast` · `bytecode` · `instruction-encoding` · `intermediate-code` · `wasm` · `emscripten` · `virtual-interpreter` · `dispatcher` · `handler` · `vmcontext` · `hook` · `instrumentation` · `deobfuscation` · `real-case` · `qqmusic` · `sdenv` · `node-addon` · `v8` · `node-gyp` · `browser-emulation` · `log-analysis` · `rc4` · `base64` · `chacha20` · `ai-assisted` · `esprima` · `escodegen` · `estraverse` · `x-bogus` · `signature` · `xtea` · `captcha` · `tdc` · `chaos-vm` · `ocr` · `fingerprint` · `cdp` · `mcp`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-11 | 新建 | [AI 白盒还原腾讯 CHAOS VM 验证码端到端](../notes/crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md)（ING-20260611-007） |
 | 2026-06-11 | 新建 | [AST 还原 JSVMP X-Bogus/_signature 全流程](../notes/crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md)（ING-20260611-006） |
 | 2026-06-11 | 新建 | [某数字 4.3.2 绕过 OB 直捣 JSVMP mns0301 全流程](../notes/crawler/2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md)（ING-20260611-005） |
 | 2026-06-11 | 新建 | [某Q音乐 JSVMP 逆向还原实战](../notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md)（ING-20260611-004） |
