@@ -10,6 +10,7 @@
 | `extract_bytecode.js` | 从 tdc.js 中提取 45,700 条字节码 | `tdc.js` | `$TMPDIR/bc.json` |
 | `disasm.js` | 按 opcode arity 精确反汇编 | `$TMPDIR/bc.json` | 反汇编文本 |
 | `reconstruct.js` | 符号执行 → JS 伪代码还原 | `$TMPDIR/bc.json` | JS 伪代码文本 |
+| `tdc_reconstructed.js` | **纯 JS 还原成品**：模块指纹 + XTEA + collect 构造 | 浏览器/Node.js | `collect` 字段 |
 | `tdc.js` | 原始混淆源码（54KB） | — | — |
 
 ## 快速开始
