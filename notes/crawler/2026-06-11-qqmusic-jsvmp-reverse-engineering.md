@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, hook, instrumentation, bytecode, deobfuscation, real-case, qqmusic]
 difficulty: advanced
 status: active
-related: [KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design, KB-CR-20260611-rs-vmp-dynamic-code-generation, KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis]
+related: [KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design, KB-CR-20260611-rs-vmp-dynamic-code-generation, KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis, KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature]
 ingest_id: "ING-20260611-004"
 updated: "2026-06-11"
 ---
@@ -334,6 +334,7 @@ console.log(JSON.stringify(traceLog));
   - [瑞数 VMP 动态代码生成逆向分析](../crawler/2026-06-11-rs-vmp-dynamic-code-generation.md) (`KB-CR-20260611-rs-vmp-dynamic-code-generation`) — 另一商业 VMP 实战逆向
   - [补环境框架：document.all C++ Addon](../crawler/2026-06-11-sdenv-node-addon-document-all.md) (`KB-CR-20260611-sdenv-node-addon-document-all`) — 补环境对抗 VMP 的另一路径
   - [某数字 4.3.2 绕过 OB 直捣 JSVMP mns0301 分析](../crawler/2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md) (`KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis`) — ob+JSVMP 双层保护的动态插桩实战
+  - [AST 还原 JSVMP X-Bogus/_signature 全流程](../crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md) (`KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature`) — 静态还原路径：AST 节点替换 VMP 代码
 
 ## 变更记录
 
