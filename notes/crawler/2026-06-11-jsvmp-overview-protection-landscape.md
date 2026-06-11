@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, code-protection, obfuscation, wasm, security, jsvmp-theory]
 difficulty: intermediate
 status: active
-related: ["KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation"]
+related: ["KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering"]
 ingest_id: "ING-20260611-003"
 updated: "2026-06-11"
 ---
@@ -187,6 +187,7 @@ WASM 作为 JSVMP 的技术基座，在**安全性**和**可用性**两个维度
 
 - 原文汇总：[JSVMP 原理分析](https://blog.jsvmp.com/jsvmpfenxi/)（共 12 篇文章，2023-03 ~ 2023-11）
 - 项目内：
+  - [某Q音乐 JSVMP 逆向还原实战](../crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md) (`KB-CR-20260611-qqmusic-jsvmp-reverse-engineering`) — 理论对照的实战案例
   - [JSVMP 虚拟化流水线](../crawler/2026-06-11-jsvmp-virtualization-pipeline.md) (`KB-CR-20260611-jsvmp-virtualization-pipeline`) — AST 拆分到字节码编码的完整流程
   - [JSVMP 虚拟解释器设计](../crawler/2026-06-11-jsvmp-interpreter-design.md) (`KB-CR-20260611-jsvmp-interpreter-design`) — WASM 解释器架构与组件
   - [瑞数 VMP 动态代码生成逆向分析](../crawler/2026-06-11-rs-vmp-dynamic-code-generation.md) (`KB-CR-20260611-rs-vmp-dynamic-code-generation`) — 商业 VMP 实现的实战逆向

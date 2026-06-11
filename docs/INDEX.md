@@ -14,9 +14,9 @@
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
-| 爬虫 | 5 |
+| 爬虫 | 6 |
 | 其他 | 0 |
-| **合计** | **28** |
+| **合计** | **29** |
 
 ---
 
@@ -103,6 +103,7 @@
 
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
+| 2026-06-11 | 某Q音乐前端 JSVMP 逆向还原实战：解释器定位→插桩→指令还原 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `hook`, `instrumentation`, `bytecode`, `deobfuscation`, `real-case`, `qqmusic` | [笔记](../notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md) · `KB-CR-20260611-qqmusic-jsvmp-reverse-engineering` |
 | 2026-06-11 | JSVMP 概述与 JS 代码保护全景 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `code-protection`, `obfuscation`, `wasm`, `security`, `jsvmp-theory` | [笔记](../notes/crawler/2026-06-11-jsvmp-overview-protection-landscape.md) · `KB-CR-20260611-jsvmp-overview-protection-landscape` |
 | 2026-06-11 | JSVMP 虚拟化流水线：AST 拆分→字节码编码 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `ast`, `bytecode`, `instruction-encoding`, `intermediate-code`, `obfuscation`, `jsvmp-theory` | [笔记](../notes/crawler/2026-06-11-jsvmp-virtualization-pipeline.md) · `KB-CR-20260611-jsvmp-virtualization-pipeline` |
 | 2026-06-11 | JSVMP 虚拟解释器设计：WASM 编译、组件架构与调用 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `wasm`, `emscripten`, `virtual-interpreter`, `dispatcher`, `handler`, `vmcontext`, `jsvmp-theory` | [笔记](../notes/crawler/2026-06-11-jsvmp-interpreter-design.md) · `KB-CR-20260611-jsvmp-interpreter-design` |
@@ -119,12 +120,13 @@
 
 ## 标签云（手动维护）
 
-`618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference` · `js-reverse` · `jsvmp` · `jsvmp-theory` · `vmp` · `anti-crawler` · `security` · `code-protection` · `code-generation` · `obfuscation` · `ast` · `bytecode` · `instruction-encoding` · `intermediate-code` · `wasm` · `emscripten` · `virtual-interpreter` · `dispatcher` · `handler` · `vmcontext` · `sdenv` · `node-addon` · `v8` · `node-gyp` · `browser-emulation`
+`618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference` · `js-reverse` · `jsvmp` · `jsvmp-theory` · `vmp` · `anti-crawler` · `security` · `code-protection` · `code-generation` · `obfuscation` · `ast` · `bytecode` · `instruction-encoding` · `intermediate-code` · `wasm` · `emscripten` · `virtual-interpreter` · `dispatcher` · `handler` · `vmcontext` · `hook` · `instrumentation` · `deobfuscation` · `real-case` · `qqmusic` · `sdenv` · `node-addon` · `v8` · `node-gyp` · `browser-emulation`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-11 | 新建 | [某Q音乐 JSVMP 逆向还原实战](../notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md)（ING-20260611-004） |
 | 2026-06-11 | 新建 | [JSVMP 概述与保护全景](../notes/crawler/2026-06-11-jsvmp-overview-protection-landscape.md) + [虚拟化流水线](../notes/crawler/2026-06-11-jsvmp-virtualization-pipeline.md) + [解释器设计](../notes/crawler/2026-06-11-jsvmp-interpreter-design.md)（ING-20260611-003：blog.jsvmp.com 12 篇综合） |
 | 2026-06-11 | 新建 | [补环境框架：document.all C++ Addon 方案](../notes/crawler/2026-06-11-sdenv-node-addon-document-all.md)（ING-20260611-002） |
 | 2026-06-11 | 新建 | [瑞数vmp动态代码生成原理逆向分析](../notes/crawler/2026-06-11-rs-vmp-dynamic-code-generation.md)（ING-20260611-001） |

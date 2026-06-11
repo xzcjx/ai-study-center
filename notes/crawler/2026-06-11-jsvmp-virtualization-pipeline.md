@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, ast, bytecode, instruction-encoding, intermediate-code, obfuscation, jsvmp-theory]
 difficulty: advanced
 status: active
-related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation"]
+related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering"]
 ingest_id: "ING-20260611-003"
 updated: "2026-06-11"
 ---
@@ -277,6 +277,7 @@ function generateOpcodeMap(instructions) {
 - 项目内：
   - [JSVMP 概述与保护全景](../crawler/2026-06-11-jsvmp-overview-protection-landscape.md) (`KB-CR-20260611-jsvmp-overview-protection-landscape`)
   - [JSVMP 虚拟解释器设计](../crawler/2026-06-11-jsvmp-interpreter-design.md) (`KB-CR-20260611-jsvmp-interpreter-design`)
+  - [某Q音乐 JSVMP 逆向还原实战](../crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md) (`KB-CR-20260611-qqmusic-jsvmp-reverse-engineering`)
   - [瑞数 VMP 动态代码生成逆向分析](../crawler/2026-06-11-rs-vmp-dynamic-code-generation.md) (`KB-CR-20260611-rs-vmp-dynamic-code-generation`)
 
 ## 变更记录

@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, wasm, emscripten, virtual-interpreter, dispatcher, handler, vmcontext, jsvmp-theory]
 difficulty: advanced
 status: active
-related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-rs-vmp-dynamic-code-generation"]
+related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering"]
 ingest_id: "ING-20260611-003"
 updated: "2026-06-11"
 ---
@@ -373,6 +373,7 @@ void handler_get(int prop_info) {
 - 项目内：
   - [JSVMP 概述与保护全景](../crawler/2026-06-11-jsvmp-overview-protection-landscape.md) (`KB-CR-20260611-jsvmp-overview-protection-landscape`)
   - [JSVMP 虚拟化流水线](../crawler/2026-06-11-jsvmp-virtualization-pipeline.md) (`KB-CR-20260611-jsvmp-virtualization-pipeline`)
+  - [某Q音乐 JSVMP 逆向还原实战](../crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md) (`KB-CR-20260611-qqmusic-jsvmp-reverse-engineering`)
   - [瑞数 VMP 动态代码生成逆向分析](../crawler/2026-06-11-rs-vmp-dynamic-code-generation.md) (`KB-CR-20260611-rs-vmp-dynamic-code-generation`)
   - [补环境框架：document.all C++ Addon 方案](../crawler/2026-06-11-sdenv-node-addon-document-all.md) (`KB-CR-20260611-sdenv-node-addon-document-all`)
 

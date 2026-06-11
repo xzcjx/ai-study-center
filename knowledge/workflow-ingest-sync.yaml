@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260611-003"
+last_ingest_id: "ING-20260611-004"
 
 playbook_notes:
   fe-demo-shell:
@@ -47,6 +47,7 @@ playbook_notes:
     - notes/crawler/2026-06-11-jsvmp-interpreter-design.md
     - notes/crawler/2026-06-11-rs-vmp-dynamic-code-generation.md
     - notes/crawler/2026-06-11-sdenv-node-addon-document-all.md
+    - notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -248,6 +249,11 @@ keywords:
     - dispatcher
     - handler
     - vmcontext
+    - hook
+    - instrumentation
+    - deobfuscation
+    - real-case
+    - qqmusic
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -308,28 +314,23 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260611-003
+  - ingest_id: ING-20260611-004
+    note: notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md
+    kb_id: KB-CR-20260611-qqmusic-jsvmp-reverse-engineering
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-11
+  - ingest_id: ING-20260611-004
     note: notes/crawler/2026-06-11-jsvmp-overview-protection-landscape.md
     kb_id: KB-CR-20260611-jsvmp-overview-protection-landscape
     workflows: ["fe-full-pipeline"]
     at: 2026-06-11
-  - ingest_id: ING-20260611-003
+  - ingest_id: ING-20260611-004
     note: notes/crawler/2026-06-11-jsvmp-virtualization-pipeline.md
     kb_id: KB-CR-20260611-jsvmp-virtualization-pipeline
     workflows: ["fe-full-pipeline"]
     at: 2026-06-11
-  - ingest_id: ING-20260611-003
+  - ingest_id: ING-20260611-004
     note: notes/crawler/2026-06-11-jsvmp-interpreter-design.md
     kb_id: KB-CR-20260611-jsvmp-interpreter-design
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-11
-  - ingest_id: ING-20260611-003
-    note: notes/crawler/2026-06-11-rs-vmp-dynamic-code-generation.md
-    kb_id: KB-CR-20260611-rs-vmp-dynamic-code-generation
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-11
-  - ingest_id: ING-20260611-003
-    note: notes/crawler/2026-06-11-sdenv-node-addon-document-all.md
-    kb_id: KB-CR-20260611-sdenv-node-addon-document-all
     workflows: ["fe-full-pipeline"]
     at: 2026-06-11
