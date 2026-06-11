@@ -2,7 +2,7 @@
 name: knowledge-ingest
 description: >-
   将用户提供的文章、链接、技巧按责任链（H01–H12）结构化入库到 AI 学习中心知识库。
-  自动分类到 frontend/backend/testing/ai-tools/devops/database/architecture/misc 模块，
+  自动分类到 frontend/backend/testing/ai-tools/devops/database/architecture/crawler/misc 模块，
   更新 INDEX、去重、交叉引用并校验。
   Use when user says 整合/收录/入库/学习笔记/文章/帮我整理,
   sends /ingest, or asks to add knowledge to AI Learning Center.
@@ -95,6 +95,17 @@ grep -ri "{关键词}" notes/ docs/INDEX.md
 **打分**：registry.yaml keywords 每命中 +1；标题命中 +2；用户 hint +5。
 
 跨模块 → split，每个模块独立笔记 + 互相 related。
+
+**模块路由速查**：
+- 逆向 / 反爬 / 补环境 / JSVMP / 爬虫 → `crawler`
+- AI / LLM / Agent / Prompt → `ai-tools`
+- 前端 / CSS / React → `frontend`
+- 后端 / API / 服务端 → `backend`
+- 测试 / E2E / TDD → `testing`
+- DevOps / CI/CD / Docker → `devops`
+- 数据库 / SQL / ORM → `database`
+- 架构 / 系统设计 → `architecture`
+- 以上都不匹配 → `misc`
 
 ## H05 Decompose
 

@@ -46,7 +46,7 @@
 
 ## 产出约束
 
-- 笔记 → `notes/{module}/`（8 模块，见 registry.yaml）
+- 笔记 → `notes/{module}/`（9 模块，见 registry.yaml）
 - 每篇必须有 YAML frontmatter + TL;DR + 适用场景
 - 入库后必须更新 INDEX + 运行 `scripts/validate-note.sh` + `scripts/publish-ingest.sh`
 - 中文撰写，技术术语保留英文
