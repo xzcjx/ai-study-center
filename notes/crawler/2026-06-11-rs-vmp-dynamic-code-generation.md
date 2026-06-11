@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, vmp, anti-crawler, security, code-generation, obfuscation]
 difficulty: advanced
 status: active
-related: [KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design]
+related: [KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design, KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis]
 ingest_id: ING-20260611-001
 updated: "2026-06-11"
 ---
@@ -216,6 +216,7 @@ GitHub 项目完整代码：https://github.com/pysunday/rs-reverse
 - [原文：瑞数vmp-动态代码生成原理](https://blog.howduudu.tech/article/95f60638eaa0647bcf327fb4f2c2887c/)
 - [GitHub：rs-reverse 逆向分析项目](https://github.com/pysunday/rs-reverse)
 - 项目内：[补环境框架：document.all 的 C++ Node Addon 方案](./2026-06-11-sdenv-node-addon-document-all.md) (`KB-CR-20260611-sdenv-node-addon-document-all`)
+  - [某数字 4.3.2 绕过 OB 直捣 JSVMP mns0301 分析](./2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md) (`KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis`) — ob+JSVMP 双层保护的动态插桩实战
 
 ## 变更记录
 
