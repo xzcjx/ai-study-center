@@ -8,7 +8,7 @@
 | 文件 | 作用 | 输入 | 输出 |
 |------|------|------|------|
 | `extract_bytecode.js` | 从 tdc.js 中提取 45,700 条字节码 | `tdc.js` | `$TMPDIR/bc.json` |
-| `disasm2.js` | 按 opcode arity 精确反汇编 | `$TMPDIR/bc.json` | 反汇编文本 |
+| `disasm.js` | 按 opcode arity 精确反汇编 | `$TMPDIR/bc.json` | 反汇编文本 |
 | `reconstruct.js` | 符号执行 → JS 伪代码还原 | `$TMPDIR/bc.json` | JS 伪代码文本 |
 | `tdc.js` | 原始混淆源码（54KB） | — | — |
 
@@ -21,13 +21,13 @@ cd tools/chaos-vm
 node extract_bytecode.js 2>/dev/null > $TMPDIR/bc.json
 
 # Step 2: 反汇编（查看前 200 条指令）
-node disasm2.js --start=0 --limit=200
+node disasm.js --start=0 --limit=200
 
 # Step 3: 符号执行还原（200 个基本块 → JS 伪代码）
 node reconstruct.js --start=0 --limit=200
 
 # Full 全量反汇编
-node disasm2.js --full --limit=30000
+node disasm.js --full --limit=30000
 
 # Full 符号执行还原
 node reconstruct.js --start=0 --limit=600
