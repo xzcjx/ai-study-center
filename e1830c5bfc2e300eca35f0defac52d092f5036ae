@@ -1,0 +1,27 @@
+notes/misc/2026-06-11-rs-vmp-dynamic-code-generation.md
+  41224437b856ba18 13,218
+notes/misc/2026-06-11-sdenv-node-addon-document-all.md
+  41224437b856ba18 1-248
+docs/INDEX.md
+  41224437b856ba18 17-18,105,112,118
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.16-yd",
+  "base_commit_sha": "e1830c5bfc2e300eca35f0defac52d092f5036ae",
+  "prompts": {
+    "41224437b856ba18": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62677ed7-9c72-4dc4-97f5-3c6571e61389",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "chenjunxi04 <chenjunxi04@corp.netease.com>",
+      "messages": [],
+      "total_additions": 255,
+      "total_deletions": 6,
+      "accepted_lines": 255,
+      "overriden_lines": 0
+    }
+  }
+}
