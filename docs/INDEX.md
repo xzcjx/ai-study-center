@@ -14,8 +14,8 @@
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
-| 其他 | 0 |
-| **合计** | **23** |
+| 其他 | 1 |
+| **合计** | **24** |
 
 ---
 
@@ -102,18 +102,19 @@
 
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
-| — | *暂无笔记* | — | — |
+| 2026-06-11 | 瑞数vmp动态代码生成原理逆向分析 | `js-reverse`, `vmp`, `anti-crawler`, `security`, `code-generation`, `obfuscation` | [笔记](../notes/misc/2026-06-11-rs-vmp-dynamic-code-generation.md) · `KB-MISC-20260611-rs-vmp-dynamic-code-generation` |
 
 ---
 
 ## 标签云（手动维护）
 
-`618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference`
+`618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference` · `js-reverse` · `vmp` · `anti-crawler` · `security` · `code-generation` · `obfuscation`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-06-11 | 新建 | [瑞数vmp动态代码生成原理逆向分析](../notes/misc/2026-06-11-rs-vmp-dynamic-code-generation.md)（ING-20260611-001） |
 | 2026-06-09 | 新建 | [跨境 OpenClaw 运营自动化](../notes/ai-tools/geo/2026-06-09-cross-border-amazon-openclaw-ops-automation.md) + [增长团队 AI Coding](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-team-ai-coding-workflow.md)（ING-20260609-008） |
 | 2026-06-09 | 新建 | [电商设计师 AI 主图/海报 SOP](../notes/ai-tools/geo/2026-06-09-ai-ecommerce-design-main-image-poster-workflow.md)（ING-20260609-007） |
 | 2026-06-09 | 新建 | [2026 618 AI 电商平台格局](../notes/ai-tools/geo/2026-06-09-618-ai-ecommerce-platform-landscape.md)（ING-20260609-006） |
