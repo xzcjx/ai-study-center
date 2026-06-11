@@ -1,0 +1,52 @@
+notes/crawler/2026-06-11-ob-bypass-jsvmp-mns0301-analysis.md
+  3b01274c8911bbb2 1-200
+notes/crawler/2026-06-11-jsvmp-overview-protection-landscape.md
+  3b01274c8911bbb2 13,195
+docs/INDEX.md
+  3b01274c8911bbb2 17,19,112,124,130
+notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md
+  3b01274c8911bbb2 13,336
+notes/crawler/2026-06-11-jsvmp-virtualization-pipeline.md
+  3b01274c8911bbb2 13,282
+notes/crawler/2026-06-11-rs-vmp-dynamic-code-generation.md
+  3b01274c8911bbb2 13,219
+notes/crawler/2026-06-11-jsvmp-interpreter-design.md
+  3b01274c8911bbb2 13,379
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.16-yd",
+  "base_commit_sha": "a1331667308a82acba1cb26c8bde78491c5af74d",
+  "prompts": {
+    "3b01274c8911bbb2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05037577-6637-42be-8238-2b6e606eff33",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "xzcjx <1986243742@qq.com>",
+      "messages": [],
+      "total_additions": 215,
+      "total_deletions": 8,
+      "accepted_lines": 215,
+      "overriden_lines": 0
+    },
+    "bcc41204ba370aac": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "82191165-59ae-45b6-a998-4238a911518f",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "xzcjx <1986243742@qq.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0,
+      "custom_attributes": {
+        "gitai_bash_ai_deletions": "0",
+        "gitai_bash_ai_additions": "0"
+      }
+    }
+  }
+}
