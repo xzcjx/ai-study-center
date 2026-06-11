@@ -22,7 +22,7 @@ fi
 REQUIRED_FIELDS=(id module module_id title ingest_id updated status difficulty)
 # topic：ai-tools 下已注册主题的笔记必填
 MODULE=$(sed -n '/^---$/,/^---$/p' "$FILE" | grep '^module:' | head -1 | sed 's/module: *//' | tr -d '"'"'"'"')
-TOPIC=$(sed -n '/^---$/,/^---$/p' "$FILE" | grep '^topic:' | head -1 | sed 's/topic: *//' | tr -d '"'"'"'"')
+TOPIC=$(sed -n '/^---$/,/^---$/p' "$FILE" | grep '^topic:' | head -1 | sed 's/topic: *//' | tr -d '"'"'"'"' || true)
 if [[ "$MODULE" == "ai-tools" && -z "$TOPIC" ]]; then
   red "ai-tools 模块笔记须填写 topic（见 registry.yaml topics）"
 fi
@@ -52,7 +52,8 @@ else
 fi
 
 # 禁止敏感模式
-if grep -qiE '(api[_-]?key|secret|password|token|Bearer\s+[A-Za-z0-9])' "$FILE"; then
+# 禁止敏感模式（排除技术文档中作为术语出现的 token/tokenid/cookie 等）
+if grep -qiE '(api[_-]?key\s*[=:]\s*["\x27]|secret\s*[=:]\s*["\x27]|password\s*[=:]\s*["\x27]|Bearer\s+[A-Za-z0-9+/=]{20,})' "$FILE"; then
   red "检测到可能的密钥/Token，请移除后再入库"
 fi
 
