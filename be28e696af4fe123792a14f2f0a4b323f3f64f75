@@ -1,0 +1,35 @@
+notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md
+  bcc41204ba370aac 1-341
+notes/crawler/2026-06-11-jsvmp-virtualization-pipeline.md
+  bcc41204ba370aac 13,280
+docs/INDEX.md
+  bcc41204ba370aac 17,19,106,123,129
+notes/crawler/2026-06-11-jsvmp-interpreter-design.md
+  bcc41204ba370aac 13,376
+notes/crawler/2026-06-11-jsvmp-overview-protection-landscape.md
+  bcc41204ba370aac 13,190
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.16-yd",
+  "base_commit_sha": "be28e696af4fe123792a14f2f0a4b323f3f64f75",
+  "prompts": {
+    "bcc41204ba370aac": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "82191165-59ae-45b6-a998-4238a911518f",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "xzcjx <1986243742@qq.com>",
+      "messages": [],
+      "total_additions": 352,
+      "total_deletions": 6,
+      "accepted_lines": 353,
+      "overriden_lines": 0,
+      "custom_attributes": {
+        "gitai_bash_ai_additions": "0",
+        "gitai_bash_ai_deletions": "0"
+      }
+    }
+  }
+}
