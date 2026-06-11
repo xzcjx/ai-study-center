@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, vmp, anti-crawler, security, code-generation, obfuscation]
 difficulty: advanced
 status: active
-related: [KB-CR-20260611-sdenv-node-addon-document-all]
+related: [KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design]
 ingest_id: ING-20260611-001
 updated: "2026-06-11"
 ---
