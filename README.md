@@ -48,7 +48,7 @@ notes/{module}/*.md  +  docs/INDEX.md
 |------|------|
 | [`AGENTS.md`](AGENTS.md) | Agent 入口指令 |
 | [`docs/WORKFLOW.md`](docs/WORKFLOW.md) | **责任链 SSOT**（H01–H12） |
-| [`docs/MODULES.md`](docs/MODULES.md) | 8 大知识模块 |
+| [`docs/MODULES.md`](docs/MODULES.md) | 9 大知识模块 |
 | [`docs/KNOWLEDGE_SCHEMA.md`](docs/KNOWLEDGE_SCHEMA.md) | 笔记 Schema |
 | [`knowledge/registry.yaml`](knowledge/registry.yaml) | 模块机器可读注册表 |
 | [`knowledge/tools-registry.yaml`](knowledge/tools-registry.yaml) | 可安装工具目录 |
@@ -62,7 +62,7 @@ notes/{module}/*.md  +  docs/INDEX.md
 | [`.cursor/skills/knowledge-consume/`](.cursor/skills/knowledge-consume/) | 消费 Skill |
 | [`.cursor/skills/knowledge-publish/`](.cursor/skills/knowledge-publish/) | 发布 Skill |
 | [`.cursor/rules/`](.cursor/rules/) | 全局 + 流水线规则 |
-| [`notes/`](notes/) | 知识正文（8 模块） |
+| [`notes/`](notes/) | 知识正文（9 模块） |
 | [`scripts/validate-note.sh`](scripts/validate-note.sh) | 笔记校验工具 |
 | [`scripts/publish-ingest.sh`](scripts/publish-ingest.sh) | 入库后自动 commit + push |
 | [`scripts/query-tools.sh`](scripts/query-tools.sh) | 检索可安装工具 |
@@ -83,6 +83,7 @@ notes/{module}/*.md  +  docs/INDEX.md
 | DevOps | `notes/devops` |
 | 数据库 | `notes/database` |
 | 架构 | `notes/architecture` |
+| 爬虫 | `notes/crawler` |
 | 其他 | `notes/misc` |
 
 ## 责任链一览

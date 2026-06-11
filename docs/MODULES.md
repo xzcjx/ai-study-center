@@ -14,6 +14,7 @@
 | MOD-OPS | `notes/devops` | DevOps | CI/CD/Docker/K8s/监控 |
 | MOD-DB | `notes/database` | 数据库 | SQL/NoSQL/ORM/优化 |
 | MOD-ARCH | `notes/architecture` | 架构 | 系统设计/模式/微服务 |
+| MOD-CR | `notes/crawler` | 爬虫 | 逆向/反爬/补环境/JSVMP/自动化采集 |
 | MOD-MISC | `notes/misc` | 其他 | 工具/效率/兜底 |
 
 ## 分类决策树
@@ -35,7 +36,9 @@
                                                ├─ 是 → MOD-FE
                                                └─ 否 → 是否服务端/API？
                                                         ├─ 是 → MOD-BE
-                                                        └─ 否 → MOD-MISC
+                                                        └─ 否 → 是否逆向/反爬/爬虫？
+                                                                 ├─ 是 → MOD-CR
+                                                                 └─ 否 → MOD-MISC
 ```
 
 ## 主题子目录（topic）

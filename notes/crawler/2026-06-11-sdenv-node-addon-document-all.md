@@ -1,7 +1,7 @@
 ---
-id: KB-MISC-20260611-sdenv-node-addon-document-all
-module: misc
-module_id: MOD-MISC
+id: KB-CR-20260611-sdenv-node-addon-document-all
+module: crawler
+module_id: MOD-CR
 title: "补环境框架：document.all 的 C++ Node Addon 方案"
 source:
   type: url
@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, anti-crawler, sdenv, node-addon, v8, node-gyp, browser-emulation]
 difficulty: advanced
 status: active
-related: [KB-MISC-20260611-rs-vmp-dynamic-code-generation]
+related: [KB-CR-20260611-rs-vmp-dynamic-code-generation]
 ingest_id: ING-20260611-002
 updated: "2026-06-11"
 ---
@@ -239,7 +239,7 @@ sdenv 项目：https://github.com/pysunday/sdenv
 - [MDN: Document.all](https://developer.mozilla.org/en-US/docs/Web/API/Document/all)
 - [Node Addon 官方文档](https://nodejs.org/api/addons.html)
 - [V8 ObjectTemplate API](https://v8.github.io/api/head/classv8_1_1ObjectTemplate.html)
-- 项目内：[瑞数vmp动态代码生成原理逆向分析](./2026-06-11-rs-vmp-dynamic-code-generation.md) (`KB-MISC-20260611-rs-vmp-dynamic-code-generation`)
+- 项目内：[瑞数vmp动态代码生成原理逆向分析](./2026-06-11-rs-vmp-dynamic-code-generation.md) (`KB-CR-20260611-rs-vmp-dynamic-code-generation`)
 
 ## 变更记录
 

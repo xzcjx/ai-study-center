@@ -1,7 +1,7 @@
 ---
-id: KB-MISC-20260611-rs-vmp-dynamic-code-generation
-module: misc
-module_id: MOD-MISC
+id: KB-CR-20260611-rs-vmp-dynamic-code-generation
+module: crawler
+module_id: MOD-CR
 title: "瑞数vmp动态代码生成原理逆向分析"
 source:
   type: url
@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, vmp, anti-crawler, security, code-generation, obfuscation]
 difficulty: advanced
 status: active
-related: [KB-MISC-20260611-sdenv-node-addon-document-all]
+related: [KB-CR-20260611-sdenv-node-addon-document-all]
 ingest_id: ING-20260611-001
 updated: "2026-06-11"
 ---
@@ -215,7 +215,7 @@ GitHub 项目完整代码：https://github.com/pysunday/rs-reverse
 
 - [原文：瑞数vmp-动态代码生成原理](https://blog.howduudu.tech/article/95f60638eaa0647bcf327fb4f2c2887c/)
 - [GitHub：rs-reverse 逆向分析项目](https://github.com/pysunday/rs-reverse)
-- 项目内：[补环境框架：document.all 的 C++ Node Addon 方案](./2026-06-11-sdenv-node-addon-document-all.md) (`KB-MISC-20260611-sdenv-node-addon-document-all`)
+- 项目内：[补环境框架：document.all 的 C++ Node Addon 方案](./2026-06-11-sdenv-node-addon-document-all.md) (`KB-CR-20260611-sdenv-node-addon-document-all`)
 
 ## 变更记录
 

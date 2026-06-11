@@ -1,5 +1,5 @@
 # AI 学习中心 · 知识模块注册表（SSOT）
-# 新增模块须同步更新：docs/MODULES.md、docs/INDEX.md、.cursor/skills/knowledge-ingest/pipeline.md
+# 新增模块须同步更新：docs/MODULES.md、docs/INDEX.md、.claude/skills/knowledge-ingest/SKILL.md
 
 version: "1.0"
 
@@ -59,6 +59,14 @@ modules:
     description: 系统设计、设计模式、微服务、DDD
     keywords: [architecture, microservice, ddd, design pattern, 架构, 系统设计]
     tags_prefix: arch
+
+  crawler:
+    id: MOD-CR
+    label: 爬虫
+    path: notes/crawler
+    description: 逆向工程、反爬对抗、补环境、JSVMP、自动化采集、签名还原
+    keywords: [crawler, spider, reverse, anti-crawler, vmp, jsvmp, 爬虫, 逆向, 补环境, 反爬, 签名, hook, addon, sdenv, node-addon]
+    tags_prefix: cr
 
   misc:
     id: MOD-MISC
