@@ -1,0 +1,23 @@
+tools/chaos-vm/tdc_reconstructed.js
+  bcc41204ba370aac 76,78-170,320-322,470-472,476,479-481
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.16-yd",
+  "base_commit_sha": "68adf85a4d3761e361b75ff026dbfa8087662a5f",
+  "prompts": {
+    "bcc41204ba370aac": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "82191165-59ae-45b6-a998-4238a911518f",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "xzcjx <1986243742@qq.com>",
+      "messages": [],
+      "total_additions": 104,
+      "total_deletions": 46,
+      "accepted_lines": 104,
+      "overriden_lines": 0
+    }
+  }
+}
