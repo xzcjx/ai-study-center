@@ -11,6 +11,7 @@
 | `disasm.js` | 按 opcode arity 精确反汇编 | `$TMPDIR/bc.json` | 反汇编文本 |
 | `reconstruct.js` | 符号执行 → JS 伪代码还原 | `$TMPDIR/bc.json` | JS 伪代码文本 |
 | `tdc_reconstructed.js` | **纯 JS 还原成品**：模块指纹 + XTEA + collect 构造 | 浏览器/Node.js | `collect` 字段 |
+| `pipeline.js` | **自动提取管道**：当前 tdc.js 的模块排列+指纹+XTEA key | tdc.js | JSON report |
 | `tdc.js` | 原始混淆源码（54KB） | — | — |
 
 ## 快速开始
