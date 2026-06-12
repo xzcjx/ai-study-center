@@ -1,0 +1,55 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.16-yd",
+  "base_commit_sha": "f7c242fa8618e07307a9c26551dec5044e6c369d",
+  "prompts": {
+    "41224437b856ba18": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62677ed7-9c72-4dc4-97f5-3c6571e61389",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "xzcjx <1986243742@qq.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 470,
+      "accepted_lines": 0,
+      "overriden_lines": 0,
+      "custom_attributes": {
+        "gitai_bash_ai_additions": "0",
+        "gitai_bash_ai_deletions": "470"
+      }
+    },
+    "aff5959e1570e5ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9972e6b2-00d4-4aca-b27a-95124d8a73a3",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "xzcjx <1986243742@qq.com>",
+      "messages": [],
+      "total_additions": 1152,
+      "total_deletions": 786,
+      "accepted_lines": 643,
+      "overriden_lines": 0
+    },
+    "bcc41204ba370aac": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "82191165-59ae-45b6-a998-4238a911518f",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "xzcjx <1986243742@qq.com>",
+      "messages": [],
+      "total_additions": 377,
+      "total_deletions": 417,
+      "accepted_lines": 201,
+      "overriden_lines": 0,
+      "custom_attributes": {
+        "gitai_bash_ai_additions": "198",
+        "gitai_bash_ai_deletions": "198"
+      }
+    }
+  }
+}
