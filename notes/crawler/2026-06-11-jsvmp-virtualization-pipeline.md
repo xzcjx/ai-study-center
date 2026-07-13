@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, ast, bytecode, instruction-encoding, intermediate-code, obfuscation, jsvmp-theory]
 difficulty: advanced
 status: active
-related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering", "KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis", "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature", "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha", "KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated", "KB-CR-20260713-jsdun-protect-analysis"]
+related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260611-qqmusic-jsvmp-reverse-engineering", "KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis", "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature", "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha", "KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated", "KB-CR-20260713-jsdun-protect-analysis", "KB-CR-20260713-jsvmp-decompile-restore-full-workflow"]
 ingest_id: "ING-20260611-003"
 updated: "2026-06-11"
 ---

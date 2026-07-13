@@ -11,7 +11,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, code-protection, js-shield, jsdun, virtual-method-table, dispatcher, opcode, eval-iife, obfuscation, shell, real-case]
 difficulty: advanced
 status: active
-related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated", "KB-CR-20260713-amap-alibaba-security-reverse"]
+related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-rs-vmp-dynamic-code-generation", "KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated", "KB-CR-20260713-amap-alibaba-security-reverse", "KB-CR-20260713-jsvmp-decompile-restore-full-workflow"]
 ingest_id: "ING-20260713-002"
 updated: "2026-07-13"
 ---

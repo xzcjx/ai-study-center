@@ -19,6 +19,7 @@ related:
   - "KB-CR-20260611-rs-vmp-dynamic-code-generation"
   - "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha"
   - "KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated"
+  - "KB-CR-20260713-jsvmp-decompile-restore-full-workflow"
 ingest_id: "ING-20260611-006"
 updated: "2026-06-11"
 ---
