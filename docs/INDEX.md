@@ -14,9 +14,9 @@
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
-| 爬虫 | 11 |
+| 爬虫 | 12 |
 | 其他 | 0 |
-| **合计** | **34** |
+| **合计** | **35** |
 
 ---
 
@@ -103,6 +103,7 @@
 
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
+| 2026-07-13 | 某德地图阿里系安全防护逆向实战：bx-ua / x-dc 补环境分析与 AI 辅助方法论 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `browser-emulation`, `sdenv`, `webgl-mock`, `fireyejs`, `baxia`, `bx-ua`, `x-dc`, `aes-cbc`, `ai-assisted`, `chrome-devtools-mcp`, `device-fingerprint`, `real-case` | [笔记](../notes/crawler/2026-07-13-amap-alibaba-security-reverse.md) · `KB-CR-20260713-amap-alibaba-security-reverse` |
 | 2026-07-13 | JS 盾（JS DUN PROTECT）加固逆向分析：虚拟方法表、双层 VM 与壳机制 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `code-protection`, `js-shield`, `jsdun`, `virtual-method-table`, `dispatcher`, `opcode`, `eval-iife`, `obfuscation`, `shell`, `real-case` | [笔记](../notes/crawler/2026-07-13-jsdun-protect-analysis.md) · `KB-CR-20260713-jsdun-protect-analysis` |
 | 2026-07-13 | JSVMP 类型 a_bogus 补环境复现：基于 Claude Code 与 DeepSeek V4 的 AI 加速实践 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `browser-emulation`, `sdenv`, `fake-env`, `trace`, `proxy`, `signature`, `a-bogus`, `ai-assisted`, `claude-code`, `deepseek`, `tls-fingerprint`, `persistent-signer`, `real-case` | [笔记](../notes/crawler/2026-07-13-a-bogus-env-spoofing-ai-accelerated.md) · `KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated` |
 | 2026-06-11 | 某Q音乐前端 JSVMP 逆向还原实战：解释器定位→插桩→指令还原 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `hook`, `instrumentation`, `bytecode`, `deobfuscation`, `real-case`, `qqmusic` | [笔记](../notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md) · `KB-CR-20260611-qqmusic-jsvmp-reverse-engineering` |
@@ -125,12 +126,13 @@
 
 ## 标签云（手动维护）
 
-`618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference` · `js-reverse` · `jsvmp` · `jsvmp-theory` · `vmp` · `anti-crawler` · `a-bogus` · `deepseek` · `fake-env` · `trace` · `proxy` · `tls-fingerprint` · `persistent-signer` · `security` · `code-protection` · `js-shield` · `jsdun` · `virtual-method-table` · `opcode` · `eval-iife` · `shell` · `code-generation` · `obfuscation` · `ast` · `bytecode` · `instruction-encoding` · `intermediate-code` · `wasm` · `emscripten` · `virtual-interpreter` · `dispatcher` · `handler` · `vmcontext` · `hook` · `instrumentation` · `deobfuscation` · `real-case` · `qqmusic` · `sdenv` · `node-addon` · `v8` · `node-gyp` · `browser-emulation` · `log-analysis` · `rc4` · `base64` · `chacha20` · `ai-assisted` · `esprima` · `escodegen` · `estraverse` · `x-bogus` · `signature` · `xtea` · `captcha` · `tdc` · `chaos-vm` · `ocr` · `fingerprint` · `cdp` · `mcp`
+`618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference` · `js-reverse` · `jsvmp` · `jsvmp-theory` · `vmp` · `anti-crawler` · `a-bogus` · `deepseek` · `fake-env` · `trace` · `proxy` · `tls-fingerprint` · `persistent-signer` · `webgl-mock` · `fireyejs` · `baxia` · `bx-ua` · `x-dc` · `aes-cbc` · `chrome-devtools-mcp` · `device-fingerprint` · `security` · `code-protection` · `js-shield` · `jsdun` · `virtual-method-table` · `opcode` · `eval-iife` · `shell` · `code-generation` · `obfuscation` · `ast` · `bytecode` · `instruction-encoding` · `intermediate-code` · `wasm` · `emscripten` · `virtual-interpreter` · `dispatcher` · `handler` · `vmcontext` · `hook` · `instrumentation` · `deobfuscation` · `real-case` · `qqmusic` · `sdenv` · `node-addon` · `v8` · `node-gyp` · `browser-emulation` · `log-analysis` · `rc4` · `base64` · `chacha20` · `ai-assisted` · `esprima` · `escodegen` · `estraverse` · `x-bogus` · `signature` · `xtea` · `captcha` · `tdc` · `chaos-vm` · `ocr` · `fingerprint` · `cdp` · `mcp`
 
 ## 最近更新
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-07-13 | 新建 | [某德地图阿里系安全防护逆向实战](../notes/crawler/2026-07-13-amap-alibaba-security-reverse.md)（ING-20260713-003） |
 | 2026-07-13 | 新建 | [JS盾加固逆向分析](../notes/crawler/2026-07-13-jsdun-protect-analysis.md)（ING-20260713-002） |
 | 2026-07-13 | 新建 | [a_bogus 补环境 + AI 加速全流程](../notes/crawler/2026-07-13-a-bogus-env-spoofing-ai-accelerated.md)（ING-20260713-001） |
 | 2026-06-11 | 新建 | [AI 白盒还原腾讯 CHAOS VM 验证码端到端](../notes/crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md)（ING-20260611-007） |

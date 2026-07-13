@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260713-002"
+last_ingest_id: "ING-20260713-003"
 
 playbook_notes:
   fe-demo-shell:
@@ -53,6 +53,7 @@ playbook_notes:
     - notes/crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md
     - notes/crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md
     - notes/crawler/2026-07-13-jsdun-protect-analysis.md
+    - notes/crawler/2026-07-13-amap-alibaba-security-reverse.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -299,6 +300,14 @@ keywords:
     - opcode
     - eval-iife
     - shell
+    - webgl-mock
+    - fireyejs
+    - baxia
+    - bx-ua
+    - x-dc
+    - aes-cbc
+    - chrome-devtools-mcp
+    - device-fingerprint
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -375,33 +384,23 @@ router_triggers:
     - 前端
 
 sync_log:
-  - ingest_id: ING-20260713-002
-    note: notes/crawler/2026-07-13-jsdun-protect-analysis.md
-    kb_id: KB-CR-20260713-jsdun-protect-analysis
+  - ingest_id: ING-20260713-003
+    note: notes/crawler/2026-07-13-amap-alibaba-security-reverse.md
+    kb_id: KB-CR-20260713-amap-alibaba-security-reverse
     workflows: ["fe-full-pipeline"]
     at: 2026-07-13
-  - ingest_id: ING-20260713-002
-    note: notes/crawler/2026-06-11-jsvmp-overview-protection-landscape.md
-    kb_id: KB-CR-20260611-jsvmp-overview-protection-landscape
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-11
-  - ingest_id: ING-20260713-002
-    note: notes/crawler/2026-06-11-jsvmp-virtualization-pipeline.md
-    kb_id: KB-CR-20260611-jsvmp-virtualization-pipeline
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-11
-  - ingest_id: ING-20260713-002
-    note: notes/crawler/2026-06-11-jsvmp-interpreter-design.md
-    kb_id: KB-CR-20260611-jsvmp-interpreter-design
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-11
-  - ingest_id: ING-20260713-002
-    note: notes/crawler/2026-06-11-rs-vmp-dynamic-code-generation.md
-    kb_id: KB-CR-20260611-rs-vmp-dynamic-code-generation
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-11
-  - ingest_id: ING-20260713-002
+  - ingest_id: ING-20260713-003
     note: notes/crawler/2026-07-13-a-bogus-env-spoofing-ai-accelerated.md
     kb_id: KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated
     workflows: ["fe-from-scratch", "fe-polish-existing"]
     at: 2026-07-13
+  - ingest_id: ING-20260713-003
+    note: notes/crawler/2026-07-13-jsdun-protect-analysis.md
+    kb_id: KB-CR-20260713-jsdun-protect-analysis
+    workflows: ["fe-full-pipeline"]
+    at: 2026-07-13
+  - ingest_id: ING-20260713-003
+    note: notes/crawler/2026-06-11-sdenv-node-addon-document-all.md
+    kb_id: KB-CR-20260611-sdenv-node-addon-document-all
+    workflows: ["fe-full-pipeline"]
+    at: 2026-06-11
