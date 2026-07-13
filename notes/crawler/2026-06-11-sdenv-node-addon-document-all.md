@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, anti-crawler, sdenv, node-addon, v8, node-gyp, browser-emulation]
 difficulty: advanced
 status: active
-related: [KB-CR-20260611-rs-vmp-dynamic-code-generation, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design]
+related: [KB-CR-20260611-rs-vmp-dynamic-code-generation, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design, KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated]
 ingest_id: ING-20260611-002
 updated: "2026-06-11"
 ---

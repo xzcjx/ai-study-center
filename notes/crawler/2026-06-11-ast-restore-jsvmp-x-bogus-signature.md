@@ -18,6 +18,7 @@ related:
   - "KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis"
   - "KB-CR-20260611-rs-vmp-dynamic-code-generation"
   - "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha"
+  - "KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated"
 ingest_id: "ING-20260611-006"
 updated: "2026-06-11"
 ---
