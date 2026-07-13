@@ -11,7 +11,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, browser-emulation, sdenv, fake-env, trace, proxy, signature, a-bogus, ai-assisted, claude-code, deepseek, tls-fingerprint, persistent-signer, real-case]
 difficulty: advanced
 status: active
-related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-sdenv-node-addon-document-all", "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature", "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha"]
+related: ["KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-sdenv-node-addon-document-all", "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature", "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha", "KB-CR-20260713-jsdun-protect-analysis"]
 ingest_id: "ING-20260713-001"
 updated: "2026-07-13"
 ---
