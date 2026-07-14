@@ -12,6 +12,7 @@ tags: [js-reverse, jsvmp, vmp, anti-crawler, decompile, bytecode, ast, handler, 
 difficulty: advanced
 status: active
 related:
+  - "KB-CR-20260713-jsvmp-reverse-master-guide"
   - "KB-CR-20260611-jsvmp-overview-protection-landscape"
   - "KB-CR-20260611-jsvmp-virtualization-pipeline"
   - "KB-CR-20260611-jsvmp-interpreter-design"
