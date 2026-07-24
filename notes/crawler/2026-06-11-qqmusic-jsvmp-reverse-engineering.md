@@ -10,7 +10,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, hook, instrumentation, bytecode, deobfuscation, real-case, qqmusic]
 difficulty: advanced
 status: active
-related: [KB-CR-20260713-jsvmp-reverse-master-guide, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design, KB-CR-20260611-rs-vmp-dynamic-code-generation, KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis, KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature, KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha, KB-CR-20260713-jsvmp-decompile-restore-full-workflow]
+related: [KB-CR-20260713-jsvmp-reverse-master-guide, KB-CR-20260611-jsvmp-overview-protection-landscape, KB-CR-20260611-jsvmp-virtualization-pipeline, KB-CR-20260611-jsvmp-interpreter-design, KB-CR-20260611-rs-vmp-dynamic-code-generation, KB-CR-20260611-sdenv-node-addon-document-all, KB-CR-20260611-ob-bypass-jsvmp-mns0301-analysis, KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature, KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha, KB-CR-20260713-jsvmp-decompile-restore-full-workflow, KB-CR-20260724-qmusic-vmp-sha1-aes-gcm]
 ingest_id: "ING-20260611-004"
 updated: "2026-06-11"
 ---

@@ -1011,6 +1011,20 @@ def _load_sync_overlay(path: Path) -> dict[str, Any]:
     if rt_m and rt_m.group(1).strip() not in ("{}", ""):
         for rid, block in re.findall(r"^  (\S+):\n((?:    - .+\n)*)", rt_m.group(1), re.MULTILINE):
             overlay["router_triggers"][rid] = [_strip_quotes(ln.strip()[2:]) for ln in block.splitlines() if ln.strip().startswith("-")]
+    log_m = re.search(r"^sync_log:\n(.*)\Z", text, re.MULTILINE | re.DOTALL)
+    if log_m:
+        chunks = re.split(r"\n  - ingest_id: ", "\n" + log_m.group(1).strip())
+        for chunk in chunks[1:]:
+            block = "  - ingest_id: " + chunk
+            entry = {
+                "ingest_id": re.match(r"[^\n]*", chunk).group(0).strip(),
+                "note": _field(block, "note", indent=4),
+                "kb_id": _field(block, "kb_id", indent=4),
+                "workflows": _parse_inline_list(_field(block, "workflows", indent=4) or "[]"),
+                "at": _field(block, "at", indent=4),
+            }
+            if entry["note"]:
+                overlay["sync_log"].append(entry)
     return overlay
 
 
@@ -1369,7 +1383,8 @@ def cmd_sync_workflow(args: argparse.Namespace) -> int:
             "workflows": sorted(wf_targets),
             "at": fm.get("updated", ""),
         }
-        overlay["sync_log"].append(entry)
+        if not any(existing.get("note") == rel and existing.get("ingest_id") == ingest_id for existing in overlay["sync_log"]):
+            overlay["sync_log"].append(entry)
         report_entries.append(entry)
 
     overlay["last_ingest_id"] = ingest_id

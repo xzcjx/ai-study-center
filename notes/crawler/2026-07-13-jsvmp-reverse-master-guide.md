@@ -23,6 +23,7 @@ related:
   - "KB-CR-20260611-sdenv-node-addon-document-all"
   - "KB-CR-20260713-jsdun-protect-analysis"
   - "KB-CR-20260713-amap-alibaba-security-reverse"
+  - "KB-CR-20260724-qmusic-vmp-sha1-aes-gcm"
 ingest_id: "ING-20260713-005"
 updated: "2026-07-13"
 ---
