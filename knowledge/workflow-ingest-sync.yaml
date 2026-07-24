@@ -464,18 +464,3 @@ sync_log:
     kb_id: KB-CR-20260724-qmusic-vmp-sha1-aes-gcm
     workflows: ["fe-full-pipeline"]
     at: 2026-07-24
-  - ingest_id: ING-20260724-001
-    note: notes/crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md
-    kb_id: KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-11
-  - ingest_id: ING-20260724-001
-    note: notes/crawler/2026-06-11-qqmusic-jsvmp-reverse-engineering.md
-    kb_id: KB-CR-20260611-qqmusic-jsvmp-reverse-engineering
-    workflows: ["fe-full-pipeline"]
-    at: 2026-06-11
-  - ingest_id: ING-20260724-001
-    note: notes/crawler/2026-07-13-jsvmp-reverse-master-guide.md
-    kb_id: KB-CR-20260713-jsvmp-reverse-master-guide
-    workflows: ["fe-full-pipeline"]
-    at: 2026-07-13
