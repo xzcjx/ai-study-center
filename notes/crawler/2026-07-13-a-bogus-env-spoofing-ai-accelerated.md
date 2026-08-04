@@ -11,7 +11,7 @@ source:
 tags: [js-reverse, jsvmp, vmp, anti-crawler, browser-emulation, sdenv, fake-env, trace, proxy, signature, a-bogus, ai-assisted, claude-code, deepseek, tls-fingerprint, persistent-signer, real-case]
 difficulty: advanced
 status: active
-related: ["KB-CR-20260713-jsvmp-reverse-master-guide", "KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-sdenv-node-addon-document-all", "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature", "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha", "KB-CR-20260713-jsdun-protect-analysis", "KB-CR-20260713-amap-alibaba-security-reverse"]
+related: ["KB-CR-20260713-jsvmp-reverse-master-guide", "KB-CR-20260611-jsvmp-overview-protection-landscape", "KB-CR-20260611-jsvmp-virtualization-pipeline", "KB-CR-20260611-jsvmp-interpreter-design", "KB-CR-20260611-sdenv-node-addon-document-all", "KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature", "KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha", "KB-CR-20260713-jsdun-protect-analysis", "KB-CR-20260713-amap-alibaba-security-reverse", "KB-CR-20260804-akamai-sensor-data-engineering"]
 ingest_id: "ING-20260713-001"
 updated: "2026-07-13"
 ---
@@ -247,6 +247,7 @@ resp = cffi_requests.get(
   - [补环境框架：document.all C++ Addon](../crawler/2026-06-11-sdenv-node-addon-document-all.md) (`KB-CR-20260611-sdenv-node-addon-document-all`) — 补环境对抗的另一路径
   - [AST 还原 JSVMP X-Bogus/_signature 全流程](../crawler/2026-06-11-ast-restore-jsvmp-x-bogus-signature.md) (`KB-CR-20260611-ast-restore-jsvmp-x-bogus-signature`) — **静态还原路径**：与本篇补环境路径互补
   - [AI 白盒还原腾讯 CHAOS VM 验证码](../crawler/2026-06-11-ai-tencent-chaos-vm-captcha-reverse.md) (`KB-CR-20260611-ai-restore-tencent-chaos-vm-captcha`) — 另一篇 AI 辅助 VMP 逆向实战
+  - [Akamai sensor_data 全参数拆解与工程实现](../crawler/2026-08-04-akamai-sensor-data-engineering.md) (`KB-CR-20260804-akamai-sensor-data-engineering`) — AST、补环境与浏览器指纹参数拆解
 
 ## 变更记录
 

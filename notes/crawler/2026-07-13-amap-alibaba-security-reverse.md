@@ -19,6 +19,7 @@ related:
   - "KB-CR-20260611-jsvmp-interpreter-design"
   - "KB-CR-20260611-sdenv-node-addon-document-all"
   - "KB-CR-20260713-jsdun-protect-analysis"
+  - "KB-CR-20260804-akamai-sensor-data-engineering"
 ingest_id: "ING-20260713-003"
 updated: "2026-07-13"
 ---
@@ -229,6 +230,7 @@ if (!getStore(CONST_BAXIA_PROMPT_INIT)) {
   - [JSVMP 虚拟解释器设计](../crawler/2026-06-11-jsvmp-interpreter-design.md) (`KB-CR-20260611-jsvmp-interpreter-design`) — 解释器架构
   - [补环境框架：document.all C++ Addon](../crawler/2026-06-11-sdenv-node-addon-document-all.md) (`KB-CR-20260611-sdenv-node-addon-document-all`) — 补环境底层方案
   - [JS盾加固逆向分析](../crawler/2026-07-13-jsdun-protect-analysis.md) (`KB-CR-20260713-jsdun-protect-analysis`) — 另一商业 JSVMP 加固逆向
+  - [Akamai sensor_data 全参数拆解与工程实现](../crawler/2026-08-04-akamai-sensor-data-engineering.md) (`KB-CR-20260804-akamai-sensor-data-engineering`) — 浏览器指纹参数与多阶段 sensor_data 流程
 
 ## 变更记录
 

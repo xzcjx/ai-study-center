@@ -14,7 +14,7 @@
 | DevOps | 0 |
 | 数据库 | 0 |
 | 架构 | 0 |
-| 爬虫 | 15 |
+| 爬虫 | 16 |
 | 其他 | 0 |
 | **合计** | **38** |
 
@@ -103,6 +103,7 @@
 
 | 日期 | 标题 | 标签 | 文件 |
 |------|------|------|------|
+| 2026-08-04 | Akamai sensor_data 全参数拆解与工程实现 | `akamai`, `sensor-data`, `anti-crawler`, `device-fingerprint`, `js-reverse`, `ast`, `browser-emulation`, `hook`, `mouse-fingerprint`, `jsvmp`, `ai-assisted`, `real-case` | [笔记](../notes/crawler/2026-08-04-akamai-sensor-data-engineering.md) · `KB-CR-20260804-akamai-sensor-data-engineering` |
 | 2026-07-24 | QQ 音乐 VMP 初始化分析：SHA-1 特征识别与 AES-GCM 请求体解密 | `jsvmp`, `qqmusic`, `sha1`, `aes-gcm`, `instrumentation` | [笔记](../notes/crawler/2026-07-24-qmusic-vmp-sha1-aes-gcm.md) · `KB-CR-20260724-qmusic-vmp-sha1-aes-gcm` |
 | 2026-07-13 | ★ JSVMP 逆向方法论总纲：四条路径、决策树与完整工具链 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `core-methodology`, `decision-tree`, `path-selection`, `env-spoofing`, `hook`, `instrumentation`, `bytecode`, `ast`, `handler`, `deobfuscation`, `ai-assisted`, `master-guide` | [笔记](../notes/crawler/2026-07-13-jsvmp-reverse-master-guide.md) · `KB-CR-20260713-jsvmp-reverse-master-guide` |
 | 2026-07-13 | JSVMP 反编译还原全流程：从字节码解析到 AST 生成的完整方法论 | `js-reverse`, `jsvmp`, `vmp`, `anti-crawler`, `decompile`, `bytecode`, `ast`, `handler`, `dispatcher`, `register-vm`, `stream-cipher`, `instruction-decode`, `opcode-mapping`, `deobfuscation`, `real-case`, `core-methodology` | [笔记](../notes/crawler/2026-07-13-jsvmp-decompile-restore-full-workflow.md) · `KB-CR-20260713-jsvmp-decompile-restore-full-workflow` |
@@ -129,7 +130,7 @@
 
 ## 标签云（手动维护）
 
-新增标签：`sha1` · `aes-gcm` · `response-decode`
+新增标签：`akamai` · `sensor-data` · `mouse-fingerprint` · `sha1` · `aes-gcm` · `response-decode`
 
 `618` · `intent-commerce` · `qianwen` · `doubao` · `rufus` · `jd-ai-shop` · `digital-human` · `wechat` · `jd-tencent` · `compliance` · `sme` · `intent-economy` · `brand-marketing` · `content-strategy` · `aidso` · `code-review` · `multi-agent` · `agent-skill` · `deep-review` · `fix-pass` · `governance` · `review-quality` · `diff-context` · `test-generation` · `visualization` · `market-trend` · `pr-workflow` · `tool-landscape` · `review-bottleneck` · `team-rollout` · `team-process` · `review-atrophy` · `human-review` · `ai-coding` · `legacy-code` · `over-engineering` · `review-checklist` · `self-review` · `layered-review` · `pr-description` · `reviewer-workflow` · `security-review` · `codacy` · `sonarqube` · `copilot` · `rag` · `gitlab` · `webhook` · `incident-response` · `diff-processing` · `vibe-coding` · `design-prompt` · `designprompts` · `screenshot` · `taste-skill` · `impeccable` · `anthropic` · `awesome-list` · `awesome-design-md` · `design-md` · `aura-build` · `google-ai-studio` · `gemini` · `agent-skill` · `frontend-design` · `anti-slop` · `claude-code` · `aesthetic-direction` · `cursor` · `slash-commands` · `design-system` · `motion` · `mcp` · `ui-generation` · `ui-reference` · `js-reverse` · `jsvmp` · `jsvmp-theory` · `vmp` · `anti-crawler` · `master-guide` · `decision-tree` · `path-selection` · `env-spoofing` · `decompile` · `register-vm` · `stream-cipher` · `instruction-decode` · `opcode-mapping` · `core-methodology` · `a-bogus` · `deepseek` · `fake-env` · `trace` · `proxy` · `tls-fingerprint` · `persistent-signer` · `webgl-mock` · `fireyejs` · `baxia` · `bx-ua` · `x-dc` · `aes-cbc` · `chrome-devtools-mcp` · `device-fingerprint` · `security` · `code-protection` · `js-shield` · `jsdun` · `virtual-method-table` · `opcode` · `eval-iife` · `shell` · `code-generation` · `obfuscation` · `ast` · `bytecode` · `instruction-encoding` · `intermediate-code` · `wasm` · `emscripten` · `virtual-interpreter` · `dispatcher` · `handler` · `vmcontext` · `hook` · `instrumentation` · `deobfuscation` · `real-case` · `qqmusic` · `sdenv` · `node-addon` · `v8` · `node-gyp` · `browser-emulation` · `log-analysis` · `rc4` · `base64` · `chacha20` · `ai-assisted` · `esprima` · `escodegen` · `estraverse` · `x-bogus` · `signature` · `xtea` · `captcha` · `tdc` · `chaos-vm` · `ocr` · `fingerprint` · `cdp`
 
@@ -137,6 +138,7 @@
 
 | 日期 | 操作 | 笔记 |
 |------|------|------|
+| 2026-08-04 | 新建 | [Akamai sensor_data 全参数拆解与工程实现](../notes/crawler/2026-08-04-akamai-sensor-data-engineering.md)（ING-20260804-001） |
 | 2026-07-24 | 新建 | [QQ 音乐 VMP 初始化分析：SHA-1 + AES-GCM](../notes/crawler/2026-07-24-qmusic-vmp-sha1-aes-gcm.md)（ING-20260724-001） |
 | 2026-07-13 | 新建 | ★ [JSVMP 逆向方法论总纲](../notes/crawler/2026-07-13-jsvmp-reverse-master-guide.md)（ING-20260713-005） |
 | 2026-07-13 | 新建 | [JSVMP 反编译还原全流程：字节码→AST方法论](../notes/crawler/2026-07-13-jsvmp-decompile-restore-full-workflow.md)（ING-20260713-004） |

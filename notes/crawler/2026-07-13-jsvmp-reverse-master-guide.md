@@ -24,6 +24,7 @@ related:
   - "KB-CR-20260713-jsdun-protect-analysis"
   - "KB-CR-20260713-amap-alibaba-security-reverse"
   - "KB-CR-20260724-qmusic-vmp-sha1-aes-gcm"
+  - "KB-CR-20260804-akamai-sensor-data-engineering"
 ingest_id: "ING-20260713-005"
 updated: "2026-07-13"
 ---
@@ -563,6 +564,7 @@ AI 加入的时机：
 
 - 知识库内：见第五章导航表（12 篇笔记全部双向链接）
 - 外部参考：[blog.jsvmp.com](https://blog.jsvmp.com/jsvmpfenxi/) — JSVMP 正向理论
+- 项目内：[Akamai sensor_data 全参数拆解与工程实现](2026-08-04-akamai-sensor-data-engineering.md)（`KB-CR-20260804-akamai-sensor-data-engineering`）— 浏览器指纹参数、AST 锁点与多阶段请求状态
 
 ## 变更记录
 

@@ -2,7 +2,7 @@
 # 由 scripts/sync-workflow.sh 维护
 
 version: "1.0"
-last_ingest_id: "ING-20260724-001"
+last_ingest_id: "ING-20260804-001"
 
 playbook_notes:
   fe-demo-shell:
@@ -57,6 +57,7 @@ playbook_notes:
     - notes/crawler/2026-07-13-jsvmp-decompile-restore-full-workflow.md
     - notes/crawler/2026-07-13-jsvmp-reverse-master-guide.md
     - notes/crawler/2026-07-24-qmusic-vmp-sha1-aes-gcm.md
+    - notes/crawler/2026-08-04-akamai-sensor-data-engineering.md
   fe-polish-existing:
     - notes/ai-tools/frontend-design/2026-06-08-anthropic-frontend-design-skill.md
     - notes/ai-tools/frontend-design/2026-06-08-awesome-ai-tools-for-ui.md
@@ -328,6 +329,9 @@ keywords:
     - sha1
     - aes-gcm
     - response-decode
+    - akamai
+    - sensor-data
+    - mouse-fingerprint
   fe-polish-existing:
     - anthropic
     - frontend-design
@@ -405,16 +409,6 @@ router_triggers:
 
 sync_log:
   - ingest_id: ING-20260713-005
-    note: notes/crawler/2026-07-13-jsdun-protect-analysis.md
-    kb_id: KB-CR-20260713-jsdun-protect-analysis
-    workflows: ["fe-full-pipeline"]
-    at: 2026-07-13
-  - ingest_id: ING-20260713-005
-    note: notes/crawler/2026-07-13-amap-alibaba-security-reverse.md
-    kb_id: KB-CR-20260713-amap-alibaba-security-reverse
-    workflows: ["fe-full-pipeline"]
-    at: 2026-07-13
-  - ingest_id: ING-20260713-005
     note: notes/crawler/2026-06-11-jsvmp-overview-protection-landscape.md
     kb_id: KB-CR-20260611-jsvmp-overview-protection-landscape
     workflows: ["fe-full-pipeline"]
@@ -464,3 +458,23 @@ sync_log:
     kb_id: KB-CR-20260724-qmusic-vmp-sha1-aes-gcm
     workflows: ["fe-full-pipeline"]
     at: 2026-07-24
+  - ingest_id: ING-20260804-001
+    note: notes/crawler/2026-08-04-akamai-sensor-data-engineering.md
+    kb_id: KB-CR-20260804-akamai-sensor-data-engineering
+    workflows: ["fe-full-pipeline"]
+    at: 2026-08-04
+  - ingest_id: ING-20260804-001
+    note: notes/crawler/2026-07-13-jsvmp-reverse-master-guide.md
+    kb_id: KB-CR-20260713-jsvmp-reverse-master-guide
+    workflows: ["fe-full-pipeline"]
+    at: 2026-07-13
+  - ingest_id: ING-20260804-001
+    note: notes/crawler/2026-07-13-amap-alibaba-security-reverse.md
+    kb_id: KB-CR-20260713-amap-alibaba-security-reverse
+    workflows: ["fe-full-pipeline"]
+    at: 2026-07-13
+  - ingest_id: ING-20260804-001
+    note: notes/crawler/2026-07-13-a-bogus-env-spoofing-ai-accelerated.md
+    kb_id: KB-CR-20260713-a-bogus-env-spoofing-ai-accelerated
+    workflows: ["fe-from-scratch", "fe-polish-existing"]
+    at: 2026-07-13
